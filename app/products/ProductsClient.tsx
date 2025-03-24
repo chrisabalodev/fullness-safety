@@ -442,15 +442,15 @@ export default function ProductsClient({
                             </div>
                           )}
                         </div>
-                        <div className="p-2 sm:p-4">
-                          <h3 className="font-medium text-sm sm:text-lg text-center group-hover:text-primary transition-colors line-clamp-2">
+                        <div className="p-2 sm:p-4"> 
+                          <h5 className="font-medium text-sm sm:text-lg text-center group-hover:text-primary transition-colors line-clamp-2">
                             {product.name}
-                          </h3>
-                          {product.description && (
+                          </h5>
+                          {/* {product.description && (
                             <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground text-center line-clamp-2 hidden sm:block">
                               {product.description}
                             </p>
-                          )}
+                          )} */}
                         </div>
                       </Card>
                     </Link>

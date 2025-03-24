@@ -113,12 +113,12 @@ export default function ProductDetails({
       color: "text-blue-500",
       bgColor: "bg-blue-500/10",
     },
-    {
-      icon: Repeat,
-      label: "Retour gratuit",
-      color: "text-purple-500",
-      bgColor: "bg-purple-500/10",
-    }
+    // {
+    //   icon: Repeat,
+    //   label: "Retour gratuit",
+    //   color: "text-purple-500",
+    //   bgColor: "bg-purple-500/10",
+    // }
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -251,7 +251,7 @@ export default function ProductDetails({
                 onClick={handleWhatsAppClick}
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp
+                Contacter par whatsApp
               </Button>
             </div>
           </div>
@@ -351,7 +351,7 @@ export default function ProductDetails({
               </div>
 
               {/* Features Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {features.map((feature) => (
                   <div
                     key={feature.label}
@@ -364,7 +364,7 @@ export default function ProductDetails({
               </div>
 
               {/* Quick Specifications */}
-              {formattedSpecifications.length > 0 && (
+              {/* {formattedSpecifications.length > 0 && (
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {formattedSpecifications.slice(0, 3).map(({ key, value, icon: Icon, label }) => (
                     <div key={key} className="bg-muted/50 rounded-lg p-4">
@@ -376,10 +376,138 @@ export default function ProductDetails({
                     </div>
                   ))}
                 </div>
-              )}
+              )} */}
 
               {/* Quote Form */}
-              <Card className="overflow-hidden border-primary/10">
+            
+              {/* Specifications & Documentation */}
+              <Tabs defaultValue="specifications" className="w-full">
+                <TabsList className="grid grid-cols-2 w-full">
+                  <TabsTrigger value="specifications" className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4" />
+                    Spécifications
+                  </TabsTrigger>
+                  <TabsTrigger value="documentation" className="flex items-center gap-2">
+                    <FileText className="w-4 h-4" />
+                    Documentation
+                  </TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="specifications" className="mt-6">
+                  {formattedSpecifications.length > 0 ? (
+                    <Accordion type="single" collapsible className="w-full">
+                      {formattedSpecifications.map(({ key, value, icon: Icon, label }, index) => (
+                        <AccordionItem 
+                          key={key} 
+                          value={key}
+                          className="animate-in fade-in-50"
+                          style={{ animationDelay: `${index * 50}ms` }}
+                        >
+                          <AccordionTrigger className="py-4 hover:no-underline">
+                            <div className="flex items-center gap-3">
+                              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                                <Icon className="w-4 h-4 text-primary" />
+                              </div>
+                              <span className="font-medium capitalize">{label}</span>
+                            </div>
+                          </AccordionTrigger>
+                          <AccordionContent className="pl-11">
+                            <p className="text-muted-foreground">{value}</p>
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                  ) : (
+                    <div className="text-center py-8 text-muted-foreground">
+                      <AlertTriangle className="w-8 h-8 mx-auto mb-4 text-muted-foreground/50" />
+                      <p>Aucune spécification disponible pour ce produit</p>
+                    </div>
+                  )}
+                </TabsContent>
+                
+                <TabsContent value="documentation" className="mt-6 space-y-6">
+                  {/* Documentation content */}
+                  {product.documentation.technicalSheet && (
+                    <Card className="overflow-hidden">
+                      <div className="p-6">
+                        <div className="flex items-center justify-between mb-4">
+                          <h3 className="text-lg font-semibold">Fiche technique</h3>
+                          <Badge variant="secondary" className="font-mono">
+                            {product.documentation.technicalSheet.format}
+                          </Badge>
+                        </div>
+                        
+                        <div className="grid gap-3">
+                          <div className="flex items-center text-sm text-muted-foreground">
+                            <Download className="w-4 h-4 mr-2" />
+                            Taille : {product.documentation.technicalSheet.size}
+                          </div>
+                          <div className="flex items-center text-sm text-muted-foreground">
+                            <Calendar className="w-4 h-4 mr-2" />
+                            Dernière mise à jour : {product.documentation.technicalSheet.lastUpdate}
+                          </div>
+                        </div>
+                        
+                        <Button 
+                          className="w-full mt-4 group"
+                          variant="outline"
+                          asChild
+                        >
+                          <Link 
+                            href={product.documentation.technicalSheet.url}
+                            target="_blank"
+                          >
+                            <Download className="w-4 h-4 mr-2 transition-transform group-hover:-translate-y-1" />
+                            Télécharger
+                          </Link>
+                        </Button>
+                      </div>
+                    </Card>
+                  )}
+
+                  {/* Certifications */}
+                  {product.documentation.certifications && (
+                    <div className="space-y-4">
+                      {product.documentation.certifications.map((cert, index) => (
+                        <Card key={index} className="overflow-hidden">
+                          <div className="p-6">
+                            <div className="flex items-center justify-between">
+                              <div>
+                                <h4 className="font-semibold">{cert.name}</h4>
+                                <p className="text-sm text-muted-foreground">N° {cert.number}</p>
+                                <div className="flex items-center text-sm text-muted-foreground mt-1">
+                                  <Calendar className="w-4 h-4 mr-1" />
+                                  Valide jusqu'au {cert.validUntil}
+                                </div>
+                              </div>
+                              <Button
+                                variant="ghost"
+                                size="icon"
+                                className="shrink-0"
+                                asChild
+                              >
+                                <Link href={cert.url} target="_blank">
+                                  <Download className="w-4 h-4" />
+                                </Link>
+                              </Button>
+                            </div>
+                          </div>
+                        </Card>
+                      ))}
+                    </div>
+                  )}
+
+                  {!product.documentation.technicalSheet && !product.documentation.certifications && (
+                    <div className="text-center py-8 text-muted-foreground">
+                      <AlertTriangle className="w-8 h-8 mx-auto mb-4 text-muted-foreground/50" />
+                      <p>Aucune documentation disponible pour ce produit</p>
+                    </div>
+                  )}
+                </TabsContent>
+              </Tabs>
+
+                 {/* Quote Form */}
+                 <Card className="overflow-hidden border-primary/10">
                 <div className="p-6 space-y-6">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
@@ -525,132 +653,6 @@ export default function ProductDetails({
                   </div>
                 </div>
               </Card>
-
-              {/* Specifications & Documentation */}
-              <Tabs defaultValue="specifications" className="w-full">
-                <TabsList className="grid grid-cols-2 w-full">
-                  <TabsTrigger value="specifications" className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4" />
-                    Spécifications
-                  </TabsTrigger>
-                  <TabsTrigger value="documentation" className="flex items-center gap-2">
-                    <FileText className="w-4 h-4" />
-                    Documentation
-                  </TabsTrigger>
-                </TabsList>
-                
-                <TabsContent value="specifications" className="mt-6">
-                  {formattedSpecifications.length > 0 ? (
-                    <Accordion type="single" collapsible className="w-full">
-                      {formattedSpecifications.map(({ key, value, icon: Icon, label }, index) => (
-                        <AccordionItem 
-                          key={key} 
-                          value={key}
-                          className="animate-in fade-in-50"
-                          style={{ animationDelay: `${index * 50}ms` }}
-                        >
-                          <AccordionTrigger className="py-4 hover:no-underline">
-                            <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                                <Icon className="w-4 h-4 text-primary" />
-                              </div>
-                              <span className="font-medium capitalize">{label}</span>
-                            </div>
-                          </AccordionTrigger>
-                          <AccordionContent className="pl-11">
-                            <p className="text-muted-foreground">{value}</p>
-                          </AccordionContent>
-                        </AccordionItem>
-                      ))}
-                    </Accordion>
-                  ) : (
-                    <div className="text-center py-8 text-muted-foreground">
-                      <AlertTriangle className="w-8 h-8 mx-auto mb-4 text-muted-foreground/50" />
-                      <p>Aucune spécification disponible pour ce produit</p>
-                    </div>
-                  )}
-                </TabsContent>
-                
-                <TabsContent value="documentation" className="mt-6 space-y-6">
-                  {/* Documentation content */}
-                  {product.documentation.technicalSheet && (
-                    <Card className="overflow-hidden">
-                      <div className="p-6">
-                        <div className="flex items-center justify-between mb-4">
-                          <h3 className="text-lg font-semibold">Fiche technique</h3>
-                          <Badge variant="secondary" className="font-mono">
-                            {product.documentation.technicalSheet.format}
-                          </Badge>
-                        </div>
-                        
-                        <div className="grid gap-3">
-                          <div className="flex items-center text-sm text-muted-foreground">
-                            <Download className="w-4 h-4 mr-2" />
-                            Taille : {product.documentation.technicalSheet.size}
-                          </div>
-                          <div className="flex items-center text-sm text-muted-foreground">
-                            <Calendar className="w-4 h-4 mr-2" />
-                            Dernière mise à jour : {product.documentation.technicalSheet.lastUpdate}
-                          </div>
-                        </div>
-                        
-                        <Button 
-                          className="w-full mt-4 group"
-                          variant="outline"
-                          asChild
-                        >
-                          <Link 
-                            href={product.documentation.technicalSheet.url}
-                            target="_blank"
-                          >
-                            <Download className="w-4 h-4 mr-2 transition-transform group-hover:-translate-y-1" />
-                            Télécharger
-                          </Link>
-                        </Button>
-                      </div>
-                    </Card>
-                  )}
-
-                  {/* Certifications */}
-                  {product.documentation.certifications && (
-                    <div className="space-y-4">
-                      {product.documentation.certifications.map((cert, index) => (
-                        <Card key={index} className="overflow-hidden">
-                          <div className="p-6">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <h4 className="font-semibold">{cert.name}</h4>
-                                <p className="text-sm text-muted-foreground">N° {cert.number}</p>
-                                <div className="flex items-center text-sm text-muted-foreground mt-1">
-                                  <Calendar className="w-4 h-4 mr-1" />
-                                  Valide jusqu'au {cert.validUntil}
-                                </div>
-                              </div>
-                              <Button
-                                variant="ghost"
-                                size="icon"
-                                className="shrink-0"
-                                asChild
-                              >
-                                <Link href={cert.url} target="_blank">
-                                  <Download className="w-4 h-4" />
-                                </Link>
-                              </Button>
-                            </div>
-                          </div>
-                        </Card>
-                      ))}
-                    </div>
-                  )}
-
-                  {!product.documentation.technicalSheet && !product.documentation.certifications && (
-                    <div className="text-center py-8 text-muted-foreground">
-                      <AlertTriangle className="w-8 h-8 mx-auto mb-4 text-muted-foreground/50" />
-                      <p>Aucune documentation disponible pour ce produit</p>
-                    </div>
-                  )}
-                </TabsContent>
-              </Tabs>
             </div>
           </div>
         </div>
@@ -696,7 +698,7 @@ export default function ProductDetails({
               ))}
             </div>
           </div>
-        )}
+        )} 
 
         {/* Back to Top Button */}
         {showBackToTop && (

@@ -861,75 +861,137 @@
       ]
     }
 
-  ],
-  "products": [
+    ],
+    "products": [
     {
-      "id": "1",
-      "name": "Casque de chantier Premium",
-      "description": "Casque de protection haute résistance avec aération optimale",
-      "price": 29.99,
-      "imageUrl": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+      "id": "2",
+      "name": "Bouchon d'oreille anti-bruit EARLINE",
+      "description": "Bouchons d'oreille en mousse de polyuréthane avec cordelette bleue, offrant une adaptation optimale au conduit auditif pour une protection efficace contre le bruit.",
+      "price": 9.99,
+      "imageUrl": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue principale du casque"
+          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue principale des bouchons d'oreille"
         },
         {
-          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue latérale du casque"
+          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue rapprochée des bouchons d'oreille"
         },
         {
-          "url": "https://images.unsplash.com/photo-1574134935230-9f40a5a4d657?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue arrière du casque"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue intérieure du casque"
+          "url": "https://images.unsplash.com/photo-1625772297628-87a274f4a559?auto=format&fit=crop&q=80&w=800",
+          "alt": "Bouchons d'oreille portés"
         }
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique.pdf",
+      "technicalSheetUrl": "https://example.com/fiche-technique-bouchon-oreille.pdf",
       "specifications": {
-        "norme": "EN 397",
-        "materiau": "ABS",
-        "poids": "380",
-        "taille": "53-63cm",
-        "ventile": true
+        "norme": "EN 352-2",
+        "materiau": "Mousse de polyuréthane",
+        "forme": "Conique",
+        "cordelette": "Oui (bleue)",
+        "attenuation": "26 dB",
+        "secteurs": ["Industries lourdes", "BTP", "Loisirs bruyants"]
       },
-      "subCategoryId": "1",
+      "categoryId": "6",
+      "subCategoryId": "4",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique.pdf",
+          "url": "https://example.com/fiche-technique-bouchon-oreille.pdf",
           "format": "PDF",
-          "size": "2.4 MB",
-          "lastUpdate": "2024-03-15"
+          "size": "1.8 MB",
+          "lastUpdate": "2024-03-20"
         },
         "certifications": [
           {
-            "name": "EN 397",
-            "number": "12345-ABC",
+            "name": "EN 352-2",
+            "number": "54321-DEF",
             "validUntil": "2025-12-31",
-            "url": "https://example.com/certification-en397.pdf"
+            "url": "https://example.com/certification-en352-2.pdf"
           },
           {
-            "name": "ISO 9001:2015",
-            "number": "67890-XYZ",
-            "validUntil": "2026-06-30",
-            "url": "https://example.com/certification-iso9001.pdf"
+            "name": "Règlement UE 2016",
+            "number": "EU-2016-425",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-ue2016.pdf"
           }
         ],
         "instructions": [
           {
             "title": "Guide d'utilisation",
-            "url": "https://example.com/guide-utilisation.pdf",
+            "url": "https://example.com/guide-utilisation-bouchons.pdf",
             "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "name": "Casque antibruit professionnel",
+      "description": "Casque antibruit conçu pour les environnements très bruyants avec atténuation de 28 dB, offrant confort et isolation électrique jusqu'à 1000Vac/1500Vdc. Idéal pour les secteurs industriels et travaux publics.",
+      "price": 89.99,
+      "imageUrl": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant du casque antibruit"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des coquilles rembourrées"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
+          "alt": "Casque porté par un utilisateur"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-casque-antibruit.pdf",
+      "specifications": {
+        "norme": "EN 352-1, EN 352-3, EN 50365",
+        "attenuation": "28 dB",
+        "isolation electrique": "1000Vac / 1500Vdc",
+        "type": "Passif",
+        "poids": "420 g",
+        "materiau coquilles": "Polycarbonate",
+        "confort": "Coussinets remplis de liquide, bande anti-sudation",
+        "secteurs": [
+          "Aéroports",
+          "Industrie automobile",
+          "Métallurgie",
+          "BTP"
+        ]
+      },
+      "categoryId": "6",
+      "subCategoryId": "4",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-casque-antibruit.pdf",
+          "format": "PDF",
+          "size": "2.5 MB",
+          "lastUpdate": "2024-04-10"
+        },
+        "certifications": [
+          {
+            "name": "EN 352-1",
+            "number": "EU-3521-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en352-1.pdf"
           },
           {
-            "title": "Guide d'entretien",
-            "url": "https://example.com/guide-entretien.pdf",
+            "name": "Règlement UE 2016/425",
+            "number": "UE-EPI-2024",
+            "validUntil": "2027-06-30",
+            "url": "https://example.com/certification-ue2016.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation et d'entretien",
+            "url": "https://example.com/guide-casque-antibruit.pdf",
             "language": "Français"
           }
         ]
       }
     }
+
   ]
 }

@@ -21,12 +21,12 @@ const features = [
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
   },
-  {
-    icon: Repeat,
-    label: "Retour gratuit",
-    color: "text-purple-500",
-    bgColor: "bg-purple-500/10",
-  }
+  // {
+  //   icon: Repeat,
+  //   label: "Retour gratuit",
+  //   color: "text-purple-500",
+  //   bgColor: "bg-purple-500/10",
+  // }
 ];
 
 export default function ProductFeatures() {
