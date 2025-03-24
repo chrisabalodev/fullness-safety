@@ -10,10 +10,23 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Separator } from "@/components/ui/separator";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Package, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, Filter, Search, X, Scale, Ruler, AlignCenterVertical as Certificate, Calendar, ShieldCheck, Boxes } from "lucide-react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter } from "@/components/ui/sheet";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetFooter,
+} from "@/components/ui/sheet";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const ITEMS_PER_PAGE = 12;
@@ -43,16 +56,6 @@ export default function ProductsClient({
   const [showFilters, setShowFilters] = useState(false);
   const [subCategories, setSubCategories] = useState<SubCategory[]>(initialSubCategories);
 
-  // Fonction pour nettoyer et séparer les valeurs
-  const cleanAndSplitValues = (value: any): string[] => {
-    if (Array.isArray(value)) {
-      return value.map(v => v?.toString().trim()).filter(v => v);
-    }
-    return value?.toString().split(',')
-      .map((v: string) => v.trim())
-      .filter((v: string) => v.length > 0) || [];
-  };
-
   useEffect(() => {
     const fetchSubCategories = async () => {
       if (initialCategoryId) {
@@ -79,14 +82,12 @@ export default function ProductsClient({
     if (!product.specifications) return acc;
     
     Object.entries(product.specifications).forEach(([key, value]) => {
-      if (value === undefined || value === null) return;
+      if (!value) return;
       
       if (!acc[key]) {
         acc[key] = new Set();
       }
-      
-      const values = cleanAndSplitValues(value);
-      values.forEach(v => acc[key].add(v));
+      acc[key].add(value.toString());
     });
     
     return acc;
@@ -99,24 +100,16 @@ export default function ProductsClient({
 
   // Apply all filters
   const filteredProducts = filteredBySubCategory.filter(product => {
-    // Filtre par recherche texte
-    const matchesSearch = !localSearch || 
-      [product.name, product.description, product.sku]
-        .some(field => field?.toLowerCase().includes(localSearch.toLowerCase()));
+    const matchesSearch = localSearch
+      ? product.name.toLowerCase().includes(localSearch.toLowerCase()) ||
+        product.description?.toLowerCase().includes(localSearch.toLowerCase())
+      : true;
 
-    // Filtre par spécifications
-    const matchesSpecifications = Object.entries(selectedSpecifications)
-      .every(([filterKey, filterValues]) => {
-        if (filterValues.length === 0) return true;
-        
-        const productValue = product.specifications?.[filterKey];
-        if (productValue === undefined || productValue === null) return false;
-        
-        const productValues = cleanAndSplitValues(productValue);
-        return filterValues.some(filterValue => 
-          productValues.includes(filterValue)
-        );
-      });
+    const matchesSpecifications = Object.entries(selectedSpecifications).every(([key, values]) => {
+      if (values.length === 0) return true;
+      const productValue = product.specifications?.[key]?.toString();
+      return productValue && values.includes(productValue);
+    });
 
     return matchesSearch && matchesSpecifications;
   }).sort((a, b) => {
@@ -152,12 +145,17 @@ export default function ProductsClient({
   };
 
   const handleSpecificationToggle = (specKey: string, value: string) => {
-    setSelectedSpecifications(prev => ({
-      ...prev,
-      [specKey]: prev[specKey]?.includes(value)
-        ? prev[specKey].filter(v => v !== value)
-        : [...(prev[specKey] || []), value]
-    }));
+    setSelectedSpecifications(prev => {
+      const current = prev[specKey] || [];
+      const updated = current.includes(value)
+        ? current.filter(v => v !== value)
+        : [...current, value];
+      
+      return {
+        ...prev,
+        [specKey]: updated
+      };
+    });
     setPage(1);
   };
 
@@ -166,23 +164,30 @@ export default function ProductsClient({
     setSelectedSpecifications({});
     setSortBy("newest");
     setPage(1);
-    updateUrl({ 
-      search: undefined,
-      category: undefined,
-      subcategory: undefined 
-    });
+    updateUrl({ search: undefined });
   };
 
   const updateUrl = (params: { 
-    category?: string | undefined, 
-    subcategory?: string | undefined, 
-    search?: string | undefined 
+    category?: string, 
+    subcategory?: string, 
+    search?: string 
   }) => {
-    const newParams = new URLSearchParams();
+    const newParams = new URLSearchParams(searchParams.toString());
     
-    if (params.category) newParams.set('category', params.category);
-    if (params.subcategory) newParams.set('subcategory', params.subcategory);
-    if (params.search) newParams.set('search', params.search);
+    if (params.category !== undefined) {
+      if (params.category) newParams.set('category', params.category);
+      else newParams.delete('category');
+    }
+    
+    if (params.subcategory !== undefined) {
+      if (params.subcategory) newParams.set('subcategory', params.subcategory);
+      else newParams.delete('subcategory');
+    }
+    
+    if (params.search !== undefined) {
+      if (params.search) newParams.set('search', params.search);
+      else newParams.delete('search');
+    }
     
     router.push(`/products?${newParams.toString()}`);
   };
@@ -192,28 +197,12 @@ export default function ProductsClient({
   };
 
   const getActiveFiltersCount = () => {
-    let count = 0;
-    if (localSearch) count++;
-    if (initialCategoryId) count++;
-    if (initialSubCategoryId) count++;
-    if (sortBy !== "newest") count++;
-    
-    return count + Object.values(selectedSpecifications)
-      .reduce((sum, values) => sum + values.length, 0);
+    return Object.values(selectedSpecifications).reduce(
+      (count, values) => count + values.length,
+      0
+    ) + (sortBy !== "newest" ? 1 : 0);
   };
 
-  // Fonction pour obtenir une icône dynamique
-  const getDynamicIcon = (key: string) => {
-    const iconMap: Record<string, React.ReactNode> = {
-      poids: <Scale className="w-4 h-4 text-primary" />,
-      taille: <Ruler className="w-4 h-4 text-primary" />,
-      materiau: <Boxes className="w-4 h-4 text-primary" />,
-      couleur: <div className="w-4 h-4 rounded-full bg-current" />,
-      default: <Certificate className="w-4 h-4 text-primary" />
-    };
-    
-    return iconMap[key.toLowerCase()] || iconMap.default;
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted">
@@ -288,7 +277,10 @@ export default function ProductsClient({
                             <AccordionTrigger className="py-4 hover:no-underline">
                               <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                                  {getDynamicIcon(key)}
+                                  {key === 'poids' ? <Scale className="w-4 h-4 text-primary" /> :
+                                   key === 'taille' ? <Ruler className="w-4 h-4 text-primary" /> :
+                                   key === 'materiau' ? <Boxes className="w-4 h-4 text-primary" /> :
+                                   <Certificate className="w-4 h-4 text-primary" />}
                                 </div>
                                 <span className="font-medium capitalize">{key}</span>
                               </div>
@@ -296,15 +288,18 @@ export default function ProductsClient({
                             <AccordionContent>
                               <div className="space-y-3 pl-11">
                                 {values.map((value) => (
-                                  <div key={`${key}-${value}`} className="flex items-center space-x-2">
+                                  <div key={value} className="flex items-center space-x-2">
                                     <Checkbox
                                       id={`${key}-${value}`}
                                       checked={(selectedSpecifications[key] || []).includes(value)}
                                       onCheckedChange={() => handleSpecificationToggle(key, value)}
                                     />
-                                    <Label htmlFor={`${key}-${value}`} className="cursor-pointer">
+                                    <label
+                                      htmlFor={`${key}-${value}`}
+                                      className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    >
                                       {value}
-                                    </Label>
+                                    </label>
                                   </div>
                                 ))}
                               </div>
@@ -382,7 +377,7 @@ export default function ProductsClient({
                       className="cursor-pointer hover:bg-destructive/10"
                       onClick={() => handleSpecificationToggle(key, value)}
                     >
-                      <span className="capitalize">{key}</span>: {value}
+                      {key}: {value}
                       <X className="w-3 h-3 ml-1" />
                     </Badge>
                   ))
@@ -413,142 +408,81 @@ export default function ProductsClient({
               <div className="text-center py-12">
                 <Package className="h-12 w-12 mx-auto text-muted-foreground/50 mb-4" />
                 <p className="text-lg text-muted-foreground">
-                  Aucun produit ne correspond à vos critères
+                  {localSearch || getActiveFiltersCount() > 0
+                    ? "Aucun produit ne correspond à vos critères"
+                    : "Aucun produit trouvé dans cette catégorie"
+                  }
                 </p>
                 <Button 
                   className="mt-4"
                   onClick={clearFilters}
                 >
-                  Afficher tous les produits
+                  Réinitialiser les filtres
                 </Button>
               </div>
             ) : (
               <>
                 <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
                   {paginatedProducts.map((product) => (
-                    // <Link
-                    //   key={product.id}
-                    //   href={`/products/${product.id}`}
-                    //   className="group"
-                    // >
-                    //   <Card className="overflow-hidden hover:border-primary/20 transition-all duration-300 h-full">
-                    //     <div className="aspect-square relative overflow-hidden bg-muted">
-                    //       {product.imageUrl ? (
-                    //         <img
-                    //           src={product.imageUrl}
-                    //           alt={product.name}
-                    //           className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-                    //           loading="lazy"
-                    //         />
-                    //       ) : (
-                    //         <div className="w-full h-full flex items-center justify-center">
-                    //           <Package className="w-12 h-12 text-muted-foreground/50" />
-                    //         </div>
-                    //       )}
-                    //       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                          
-                    //       {/* Show key specifications */}
-                    //       {product.specifications && Object.entries(product.specifications).length > 0 && (
-                    //         <div className="absolute bottom-2 left-2 flex flex-wrap gap-1">
-                    //           {Object.entries(product.specifications).slice(0, 2).map(([key, value]) => {
-                    //             const displayValues = cleanAndSplitValues(value).slice(0, 2);
-                    //             return displayValues.map((v, i) => (
-                    //               <Badge
-                    //                 key={`${key}-${i}`}
-                    //                 variant="secondary"
-                    //                 className="bg-black/50 text-white text-[10px] sm:text-xs capitalize"
-                    //               >
-                    //                 {key}: {v}
-                    //               </Badge>
-                    //             ));
-                    //           })}
-                    //           {Object.entries(product.specifications).length > 2 && (
-                    //             <Badge
-                    //               variant="secondary"
-                    //               className="bg-black/50 text-white text-[10px] sm:text-xs"
-                    //             >
-                    //               +{Object.entries(product.specifications).length - 2}
-                    //             </Badge>
-                    //           )}
-                    //         </div>
-                    //       )}
-                    //     </div>
-                    //     <div className="p-2 sm:p-4"> 
-                    //       <h5 className="font-medium text-sm sm:text-lg text-center group-hover:text-primary transition-colors line-clamp-2">
-                    //         {product.name}
-                    //       </h5>
-                    //       {product.description && (
-                    //         <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground text-center line-clamp-2 hidden sm:block">
-                    //           {product.description}
-                    //         </p>
-                    //       )}
-                    //     </div>
-                    //   </Card>
-                    // </Link>
-
                     <Link
-                        key={product.id}
-                        href={`/products/${product.id}`}
-                        className="group block h-full focus:outline-none"
-                      >
-                        <div className="flex h-full flex-col overflow-hidden rounded-lg border transition-all duration-300 hover:shadow-md">
-                          {/* Image container */}
-                          <div className="relative aspect-square bg-gray-50">
-                            {product.imageUrl ? (
-                              <>
-                                <img
-                                  src={product.imageUrl}
-                                  alt={product.name}
-                                  className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-102"
-                                  loading="lazy"
-                                />
-                                {/* Subtle overlay on hover */}
-                                <div className="absolute inset-0 bg-black/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                              </>
-                            ) : (
-                              <div className="flex h-full w-full items-center justify-center bg-gray-100">
-                                <Package className="h-12 w-12 text-gray-300" />
-                              </div>
-                            )}
-                          </div>
-
-                          {/* Product info - Simple and clean */}
-                          <div className="flex flex-1 flex-col p-4">
-                            <h3 className="mb-1 text-sm font-medium text-gray-900 line-clamp-2 md:text-base">
-                              {product.name}
-                            </h3>
-                            
-                            {/* Specifications as minimalist chips */}
-                            {product.specifications && (
-                              <div className="mt-1 flex flex-wrap gap-1">
-                                {Object.entries(product.specifications)
-                                  .slice(0, 2)
-                                  .map(([key, value]) => {
-                                    const displayValue = cleanAndSplitValues(value)[0];
-                                    return (
-                                      <span 
-                                        key={`${key}-${displayValue}`}
-                                        className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-600"
-                                      >
-                                        {displayValue}
-                                      </span>
-                                    );
-                                  })}
-                              </div>
-                            )}
-
-                            {/* View button (appears on hover) */}
-                            <div className="mt-auto pt-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                              <span className="text-xs font-medium text-primary underline-offset-4 group-hover:underline md:text-sm">
-                                Voir détails
-                              </span>
+                      key={product.id}
+                      href={`/products/${product.id}`}
+                      className="group"
+                    >
+                      <Card className="overflow-hidden hover:border-primary/20 transition-all duration-300 h-full">
+                        <div className="aspect-square relative overflow-hidden bg-muted">
+                          {product.imageUrl ? (
+                            <img
+                              src={product.imageUrl}
+                              alt={product.name}
+                              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                              loading="lazy"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center">
+                              <Package className="w-12 h-12 text-muted-foreground/50" />
                             </div>
-                          </div>
+                          )}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          
+                          {/* Show key specifications */}
+                          {product.specifications && Object.entries(product.specifications).length > 0 && (
+                            <div className="absolute bottom-2 left-2 flex flex-wrap gap-1">
+                              {Object.entries(product.specifications).slice(0, 2).map(([key, value]) => (
+                                <Badge
+                                  key={key}
+                                  variant="secondary"
+                                  className="bg-black/50 text-white text-[10px] sm:text-xs capitalize"
+                                >
+                                  {key}: {value}
+                                </Badge>
+                              ))}
+                              {Object.entries(product.specifications).length > 2 && (
+                                <Badge
+                                  variant="secondary"
+                                  className="bg-black/50 text-white text-[10px] sm:text-xs"
+                                >
+                                  +{Object.entries(product.specifications).length - 2}
+                                </Badge>
+                              )}
+                            </div>
+                          )}
                         </div>
-                      </Link>
+                        <div className="p-2 sm:p-4"> 
+                          <h5 className="font-medium text-sm sm:text-lg text-center group-hover:text-primary transition-colors line-clamp-2">
+                            {product.name}
+                          </h5>
+                          {/* {product.description && (
+                            <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground text-center line-clamp-2 hidden sm:block">
+                              {product.description}
+                            </p>
+                          )} */}
+                        </div>
+                      </Card>
+                    </Link>
                   ))}
                 </div>
- 
+
                 {/* Pagination */}
                 {totalPages > 1 && (
                   <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">

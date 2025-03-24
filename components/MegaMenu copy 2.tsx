@@ -7,6 +7,7 @@ import { HardHat, ShieldAlert, HandMetal, Footprints, Eye, ShieldCheck } from "l
 import { useEffect, useState } from "react";
 import { Category, SubCategory, getCategories, getSubCategories } from "@/lib/db";
 
+// Map des icônes par catégorie
 const categoryIcons: Record<string, any> = {
   casques: HardHat,
   vetements: ShieldAlert,
@@ -29,9 +30,11 @@ export function MegaMenu({ onClose }: MegaMenuProps) {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Récupérer toutes les catégories
         const categoriesData = await getCategories();
         setCategories(categoriesData);
 
+        // Récupérer les sous-catégories pour chaque catégorie
         const subCategoriesMap: Record<string, SubCategory[]> = {};
         await Promise.all(
           categoriesData.map(async (category) => {
@@ -54,14 +57,20 @@ export function MegaMenu({ onClose }: MegaMenuProps) {
     return (
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div key={i} className="block space-y-1 rounded-lg p-3 animate-pulse">
+          <div
+            key={i}
+            className="block space-y-1 rounded-lg p-3 animate-pulse"
+          >
             <div className="flex items-center gap-2 mb-2">
               <div className="w-8 h-8 rounded-lg bg-muted" />
               <div className="h-4 w-24 bg-muted rounded" />
             </div>
             <div className="space-y-1">
               {[1, 2, 3].map((j) => (
-                <div key={j} className="h-3 w-full bg-muted rounded" />
+                <div
+                  key={j}
+                  className="h-3 w-full bg-muted rounded"
+                />
               ))}
             </div>
           </div>
@@ -79,10 +88,10 @@ export function MegaMenu({ onClose }: MegaMenuProps) {
         return (
           <Link
             key={category.id}
-            href={`/products?category=${category.id}`} // Utilisation de l'ID plutôt que du slug
+            href={`/products?category=${category.slug}`}
             className={cn(
               "block select-none space-y-1 rounded-lg p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-              pathname.startsWith('/products') && new URLSearchParams(window.location.search).get('category') === category.id && "bg-accent"
+              pathname === `/products?category=${category.slug}` && "bg-accent"
             )}
             onClick={onClose}
           >
@@ -94,14 +103,12 @@ export function MegaMenu({ onClose }: MegaMenuProps) {
             </div>
             <div className="space-y-1">
               {categorySubCategories.map((sub) => (
-                <Link
+                <div
                   key={sub.id}
-                  href={`/products?category=${category.id}&subcategory=${sub.id}`}
-                  className="block text-xs text-muted-foreground hover:text-primary transition-colors line-clamp-1"
-                  onClick={onClose}
+                  className="text-xs text-muted-foreground hover:text-primary transition-colors line-clamp-1"
                 >
                   {sub.name}
-                </Link>
+                </div>
               ))}
             </div>
           </Link>
