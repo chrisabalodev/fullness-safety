@@ -169,8 +169,143 @@ export default function ProductsClient({
     </Button>
   </div>
 ) : (
-  // ... reste du code ...
+  <>
+    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+      {paginatedProducts.map((product) => (
+        <Link
+          key={product.id}
+          href={`/products/${product.id}`}
+          className="group"
+        >
+          <Card className="overflow-hidden hover:border-primary/20 transition-all duration-300 h-full">
+            <div className="aspect-square relative overflow-hidden bg-muted">
+              {product.imageUrl ? (
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <Package className="w-12 h-12 text-muted-foreground/50" />
+                </div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              {/* Affichage des spécifications clés */}
+              {product.specifications && Object.entries(product.specifications).length > 0 && (
+                <div className="absolute bottom-2 left-2 flex flex-wrap gap-1">
+                  {Object.entries(product.specifications).slice(0, 2).map(([key, value]) => {
+                    // Gestion des valeurs multiples pour l'affichage
+                    const displayValues = cleanAndSplitValues(value).slice(0, 2);
+                    return displayValues.map((v, i) => (
+                      <Badge
+                        key={`${key}-${i}`}
+                        variant="secondary"
+                        className="bg-black/50 text-white text-[10px] sm:text-xs capitalize"
+                      >
+                        {key}: {v}
+                      </Badge>
+                    ));
+                  })}
+                  {Object.entries(product.specifications).length > 2 && (
+                    <Badge
+                      variant="secondary"
+                      className="bg-black/50 text-white text-[10px] sm:text-xs"
+                    >
+                      +{Object.entries(product.specifications).length - 2}
+                    </Badge>
+                  )}
+                </div>
+              )}
+            </div>
+            <div className="p-2 sm:p-4"> 
+              <h5 className="font-medium text-sm sm:text-lg text-center group-hover:text-primary transition-colors line-clamp-2">
+                {product.name}
+              </h5>
+              {product.description && (
+                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground text-center line-clamp-2 hidden sm:block">
+                  {product.description}
+                </p>
+              )}
+            </div>
+          </Card>
+        </Link>
+      ))}
+    </div>
 
+    {/* Pagination */}
+    {totalPages > 1 && (
+      <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex items-center gap-2">
+          <Button
+            variant="outline"
+            size="icon"
+            disabled={page === 1}
+            onClick={() => handlePageChange(1)}
+            className="hidden sm:inline-flex"
+          >
+            <ChevronFirst className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            disabled={page === 1}
+            onClick={() => handlePageChange(page - 1)}
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+
+          <div className="flex items-center gap-2">
+            {Array.from({ length: totalPages }, (_, i) => i + 1)
+              .filter(p => {
+                if (totalPages <= 7) return true;
+                if (p === 1 || p === totalPages) return true;
+                if (p >= page - 1 && p <= page + 1) return true;
+                return false;
+              })
+              .map((p, i, arr) => (
+                <div key={p}>
+                  {i > 0 && arr[i - 1] !== p - 1 && (
+                    <span className="px-2 text-muted-foreground">...</span>
+                  )}
+                  <Button
+                    variant={p === page ? "default" : "outline"}
+                    size="icon"
+                    className="w-10"
+                    onClick={() => handlePageChange(p)}
+                  >
+                    {p}
+                  </Button>
+                </div>
+              ))}
+          </div>
+
+          <Button
+            variant="outline"
+            size="icon"
+            disabled={page === totalPages}
+            onClick={() => handlePageChange(page + 1)}
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            disabled={page === totalPages}
+            onClick={() => handlePageChange(totalPages)}
+            className="hidden sm:inline-flex"
+          >
+            <ChevronLast className="h-4 w-4" />
+          </Button>
+        </div>
+        <div className="text-sm text-muted-foreground">
+          Page {page} sur {totalPages}
+        </div>
+      </div>
+    )}
+  </>
 )}
 
   const activeCategory = initialCategories.find(c => c.id === initialCategoryId);

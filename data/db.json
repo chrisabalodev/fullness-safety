@@ -306,561 +306,925 @@
           }
         ]
       },
-    {
-      "id": "7",
-      "name": "Casques de chantier ventilés",
-      "categoryId": "1",
-      "slug": "casques-chantier-ventiles",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "materiau",
-          "label": "Matériau",
-          "type": "select",
-          "required": true,
-          "options": ["ABS", "PE-HD", "Polycarbonate"],
-          "icon": "Box"
-        },
-        {
-          "id": "spec3",
-          "name": "poids",
-          "label": "Poids",
-          "type": "number",
-          "required": true,
-          "unit": "g",
-          "icon": "Scale"
-        },
-        {
-          "id": "spec4",
-          "name": "ventilation",
-          "label": "Ventilation",
-          "type": "boolean",
-          "required": true,
-          "icon": "Wind"
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "name": "Gants anti-coupure",
-      "categoryId": "3",
-      "slug": "gants-anti-coupure",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "materiau",
-          "label": "Matériau",
-          "type": "text",
-          "required": true,
-          "icon": "Box"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["S", "M", "L", "XL"],
-          "icon": "Ruler"
-        },
-        {
-          "id": "spec4",
-          "name": "protection_niveau",
-          "label": "Niveau de protection",
-          "type": "select",
-          "required": true,
-          "options": ["Niveau 1", "Niveau 2", "Niveau 3"],
-          "icon": "Shield"
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "name": "Chaussures de sécurité hautes",
-      "categoryId": "5",
-      "slug": "chaussures-securite-hautes",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "matériau_semelle",
-          "label": "Matériau de la semelle",
-          "type": "text",
-          "required": true,
-          "icon": "Box"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
-          "icon": "Ruler"
-        },
-        {
-          "id": "spec4",
-          "name": "poids",
-          "label": "Poids",
-          "type": "number",
-          "required": true,
-          "unit": "g",
-          "icon": "Scale"
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "name": "Masques anti-poussière",
-      "categoryId": "4",
-      "slug": "masques-anti-poussiere",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "type_filtration",
-          "label": "Type de filtration",
-          "type": "select",
-          "required": true,
-          "options": ["FFP1", "FFP2", "FFP3"],
-          "icon": "Shield"
-        },
-        {
-          "id": "spec3",
-          "name": "quantite",
-          "label": "Quantité",
-          "type": "number",
-          "required": true,
-          "unit": "pièces",
-          "icon": "Box"
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "name": "Chaussettes de sécurité",
-      "categoryId": "5",
-      "slug": "chaussettes-securite",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "matériau",
-          "label": "Matériau",
-          "type": "text",
-          "required": true,
-          "icon": "Box"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["M", "L", "XL"],
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "12",
-      "name": "Gants de manutention",
-      "categoryId": "3",
-      "slug": "gants-manutention",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "matériau",
-          "label": "Matériau",
-          "type": "text",
-          "required": true,
-          "icon": "Box"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["M", "L", "XL"],
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "13",
-      "name": "Écrans faciaux",
-      "categoryId": "5",
-      "slug": "ecrans-faciaux",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["M", "L", "XL"],
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "14",
-      "name": "Panneaux de signalisation",
-      "categoryId": "7",
-      "slug": "panneaux-signalisation",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "dimension",
-          "label": "Dimension",
-          "type": "text",
-          "required": true,
-          "icon": "Ruler"
-        },
-        {
-          "id": "spec3",
-          "name": "type",
-          "label": "Type",
-          "type": "select",
-          "required": true,
-          "options": ["Avertissement", "Interdiction", "Obligation", "Information"],
-          "icon": "Signpost"
-        }
-      ]
-    },
-    {
-      "id": "15",
-      "name": "Chaussures de sécurité imperméables",
-      "categoryId": "5",
-      "slug": "chaussures-securite-impermeables",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "matériau_semelle",
-          "label": "Matériau de la semelle",
-          "type": "text",
-          "required": true,
-          "icon": "Box"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "16",
-      "name": "Gants isolants électriciens",
-      "categoryId": "3",
-      "slug": "gants-isolants-electriciens",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "niveau_isolation",
-          "label": "Niveau d'isolation",
-          "type": "select",
-          "required": true,
-          "options": ["Classe 0", "Classe 1", "Classe 2", "Classe 3", "Classe 4"],
-          "icon": "Bolt"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["S", "M", "L", "XL"],
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "17",
-      "name": "Protection visuelle anti-chaleur",
-      "categoryId": "5",
-      "slug": "protection-visuelle-anti-chaleur",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "filtration_uv",
-          "label": "Filtration UV",
-          "type": "boolean",
-          "required": true,
-          "icon": "Sun"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["M", "L", "XL"],
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "18",
-      "name": "Harnais de sécurité avec coussins",
-      "categoryId": "6",
-      "slug": "harnais-securite-coussins",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["S", "M", "L", "XL"],
-          "icon": "Ruler"
-        },
-        {
-          "id": "spec3",
-          "name": "poids_max",
-          "label": "Poids maximal supporté",
-          "type": "number",
-          "required": true,
-          "unit": "kg",
-          "icon": "Scale"
-        }
-      ]
-    },
-    {
-      "id": "19",
-      "name": "Gilets haute visibilité rétroréfléchissants",
-      "categoryId": "7",
-      "slug": "gilets-haute-visibilite-retroreflechissants",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "couleur",
-          "label": "Couleur",
-          "type": "select",
-          "required": true,
-          "options": ["Jaune", "Orange", "Vert"],
-          "icon": "Palette"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["S", "M", "L", "XL"],
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "20",
-      "name": "Cônes de signalisation en caoutchouc",
-      "categoryId": "7",
-      "slug": "cones-signalisation-caoutchouc",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "hauteur",
-          "label": "Hauteur",
-          "type": "number",
-          "required": true,
-          "unit": "cm",
-          "icon": "Ruler"
-        },
-        {
-          "id": "spec3",
-          "name": "diametre_base",
-          "label": "Diamètre de la base",
-          "type": "number",
-          "required": true,
-          "unit": "cm",
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "21",
-      "name": "Blouses de protection chimique",
-      "categoryId": "2",
-      "slug": "blouses-protection-chimique",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "matériau",
-          "label": "Matériau",
-          "type": "select",
-          "required": true,
-          "options": ["Polyester", "PVC", "Tyvek"],
-          "icon": "Box"
-        },
-        {
-          "id": "spec3",
-          "name": "taille",
-          "label": "Taille",
-          "type": "select",
-          "required": true,
-          "options": ["S", "M", "L", "XL"],
-          "icon": "Ruler"
-        }
-      ]
-    },
-    {
-      "id": "22",
-      "name": "Ventilateurs de chantier",
-      "categoryId": "8",
-      "slug": "ventilateurs-chantier",
-      "specificationFields": [
-        {
-          "id": "spec1",
-          "name": "norme",
-          "label": "Norme",
-          "type": "text",
-          "required": true,
-          "icon": "Shield"
-        },
-        {
-          "id": "spec2",
-          "name": "puissance",
-          "label": "Puissance",
-          "type": "number",
-          "required": true,
-          "unit": "W",
-          "icon": "Bolt"
-        },
-        {
-          "id": "spec3",
-          "name": "débit_air",
-          "label": "Débit d'air",
-          "type": "number",
-          "required": true,
-          "unit": "m³/h",
-          "icon": "Wind"
-        }
-      ]
-    }
-
+      {
+        "id": "7",
+        "name": "Casques de chantier ventilés",
+        "categoryId": "1",
+        "slug": "casques-chantier-ventiles",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "materiau",
+            "label": "Matériau",
+            "type": "select",
+            "required": true,
+            "options": ["ABS", "PE-HD", "Polycarbonate"],
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "poids",
+            "label": "Poids",
+            "type": "number",
+            "required": true,
+            "unit": "g",
+            "icon": "Scale"
+          },
+          {
+            "id": "spec4",
+            "name": "ventilation",
+            "label": "Ventilation",
+            "type": "boolean",
+            "required": true,
+            "icon": "Wind"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "name": "Gants anti-coupure",
+        "categoryId": "3",
+        "slug": "gants-anti-coupure",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "materiau",
+            "label": "Matériau",
+            "type": "text",
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["S", "M", "L", "XL"],
+            "icon": "Ruler"
+          },
+          {
+            "id": "spec4",
+            "name": "protection_niveau",
+            "label": "Niveau de protection",
+            "type": "select",
+            "required": true,
+            "options": ["Niveau 1", "Niveau 2", "Niveau 3"],
+            "icon": "Shield"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "name": "Chaussures de sécurité hautes",
+        "categoryId": "5",
+        "slug": "chaussures-securite-hautes",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "matériau_semelle",
+            "label": "Matériau de la semelle",
+            "type": "text",
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
+            "icon": "Ruler"
+          },
+          {
+            "id": "spec4",
+            "name": "poids",
+            "label": "Poids",
+            "type": "number",
+            "required": true,
+            "unit": "g",
+            "icon": "Scale"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "name": "Masques anti-poussière",
+        "categoryId": "4",
+        "slug": "masques-anti-poussiere",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "type_filtration",
+            "label": "Type de filtration",
+            "type": "select",
+            "required": true,
+            "options": ["FFP1", "FFP2", "FFP3"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec3",
+            "name": "quantite",
+            "label": "Quantité",
+            "type": "number",
+            "required": true,
+            "unit": "pièces",
+            "icon": "Box"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "name": "Chaussettes de sécurité",
+        "categoryId": "5",
+        "slug": "chaussettes-securite",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "matériau",
+            "label": "Matériau",
+            "type": "text",
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["M", "L", "XL"],
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "name": "Gants de manutention",
+        "categoryId": "3",
+        "slug": "gants-manutention",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "matériau",
+            "label": "Matériau",
+            "type": "text",
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["M", "L", "XL"],
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Écrans faciaux",
+        "categoryId": "5",
+        "slug": "ecrans-faciaux",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["M", "L", "XL"],
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "name": "Panneaux de signalisation",
+        "categoryId": "7",
+        "slug": "panneaux-signalisation",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "dimension",
+            "label": "Dimension",
+            "type": "text",
+            "required": true,
+            "icon": "Ruler"
+          },
+          {
+            "id": "spec3",
+            "name": "type",
+            "label": "Type",
+            "type": "select",
+            "required": true,
+            "options": ["Avertissement", "Interdiction", "Obligation", "Information"],
+            "icon": "Signpost"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "name": "Chaussures de sécurité imperméables",
+        "categoryId": "5",
+        "slug": "chaussures-securite-impermeables",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "matériau_semelle",
+            "label": "Matériau de la semelle",
+            "type": "text",
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["37", "38", "39", "40", "41", "42", "43", "44", "45"],
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "name": "Gants isolants électriciens",
+        "categoryId": "3",
+        "slug": "gants-isolants-electriciens",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "niveau_isolation",
+            "label": "Niveau d'isolation",
+            "type": "select",
+            "required": true,
+            "options": ["Classe 0", "Classe 1", "Classe 2", "Classe 3", "Classe 4"],
+            "icon": "Bolt"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["S", "M", "L", "XL"],
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "name": "Protection visuelle anti-chaleur",
+        "categoryId": "5",
+        "slug": "protection-visuelle-anti-chaleur",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "filtration_uv",
+            "label": "Filtration UV",
+            "type": "boolean",
+            "required": true,
+            "icon": "Sun"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["M", "L", "XL"],
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "name": "Harnais de sécurité avec coussins",
+        "categoryId": "6",
+        "slug": "harnais-securite-coussins",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["S", "M", "L", "XL"],
+            "icon": "Ruler"
+          },
+          {
+            "id": "spec3",
+            "name": "poids_max",
+            "label": "Poids maximal supporté",
+            "type": "number",
+            "required": true,
+            "unit": "kg",
+            "icon": "Scale"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "name": "Gilets haute visibilité rétroréfléchissants",
+        "categoryId": "7",
+        "slug": "gilets-haute-visibilite-retroreflechissants",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "couleur",
+            "label": "Couleur",
+            "type": "select",
+            "required": true,
+            "options": ["Jaune", "Orange", "Vert"],
+            "icon": "Palette"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["S", "M", "L", "XL"],
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "name": "Cônes de signalisation en caoutchouc",
+        "categoryId": "7",
+        "slug": "cones-signalisation-caoutchouc",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "hauteur",
+            "label": "Hauteur",
+            "type": "number",
+            "required": true,
+            "unit": "cm",
+            "icon": "Ruler"
+          },
+          {
+            "id": "spec3",
+            "name": "diametre_base",
+            "label": "Diamètre de la base",
+            "type": "number",
+            "required": true,
+            "unit": "cm",
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "name": "Blouses de protection chimique",
+        "categoryId": "2",
+        "slug": "blouses-protection-chimique",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "matériau",
+            "label": "Matériau",
+            "type": "select",
+            "required": true,
+            "options": ["Polyester", "PVC", "Tyvek"],
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "taille",
+            "label": "Taille",
+            "type": "select",
+            "required": true,
+            "options": ["S", "M", "L", "XL"],
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "22",
+        "name": "Ventilateurs de chantier",
+        "categoryId": "8",
+        "slug": "ventilateurs-chantier",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "puissance",
+            "label": "Puissance",
+            "type": "number",
+            "required": true,
+            "unit": "W",
+            "icon": "Bolt"
+          },
+          {
+            "id": "spec3",
+            "name": "débit_air",
+            "label": "Débit d'air",
+            "type": "number",
+            "required": true,
+            "unit": "m³/h",
+            "icon": "Wind"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "name": "Casquettes de protection",
+        "categoryId": "1",
+        "slug": "casquettes-protection",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "materiau_coque",
+            "label": "Matériau coque",
+            "type": "select",
+            "options": ["ABS", "Polycarbonate", "Composite"],
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "visiere",
+            "label": "Visière",
+            "type": "boolean",
+            "required": false,
+            "icon": "Eye"
+          },
+          {
+            "id": "spec4",
+            "name": "ventilation",
+            "label": "Système ventilation",
+            "type": "select",
+            "options": ["Grille", "Orifices", "Aucun"],
+            "required": false,
+            "icon": "Wind"
+          },
+          {
+            "id": "spec5",
+            "name": "elements_reflechissants",
+            "label": "Éléments réfléchissants",
+            "type": "boolean",
+            "required": false,
+            "icon": "Sun"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "name": "Casques Style Baseball",
+        "categoryId": "1",
+        "slug": "casques-baseball",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "style_visiere",
+            "label": "Style Visière",
+            "type": "select",
+            "options": ["Fixe", "Amovible", "Réversible"],
+            "required": true,
+            "icon": "Eye"
+          },
+          {
+            "id": "spec3",
+            "name": "systeme_serrage",
+            "label": "Système de Serrage",
+            "type": "text",
+            "required": true,
+            "icon": "Lock"
+          },
+          {
+            "id": "spec4",
+            "name": "ajustement",
+            "label": "Ajustement Tour de Tête",
+            "type": "text",
+            "required": true,
+            "icon": "User"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Bouchons d'Oreille",
+        "categoryId": "6",
+        "slug": "bouchons-oreille",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec2",
+            "name": "type_materiau",
+            "label": "Type de Matériau",
+            "type": "select",
+            "options": ["Mousse PU", "Silicone", "Cire"],
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec3",
+            "name": "attache",
+            "label": "Système d'attache",
+            "type": "select",
+            "options": ["Cordelette", "Arc", "Aucun"],
+            "required": false,
+            "icon": "Link"
+          },
+          {
+            "id": "spec4",
+            "name": "attenuation",
+            "label": "Niveau d'atténuation (SNR)",
+            "type": "number",
+            "unit": "dB",
+            "required": true,
+            "icon": "Volume"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "name": "Lunettes de Protection",
+        "categoryId": "3",
+        "slug": "lunettes-protection",
+        "specificationFields": [
+          {"name": "type_verre", "label": "Type de verre", "type": "select", "options": ["Incolore", "Fumé", "Teinté"]},
+          {"name": "compatibilite", "label": "Compatibilité lunettes", "type": "boolean"}
+        ]
+      },
+      {
+        "id": "27",
+        "name": "Vêtements haute visibilité",
+        "categoryId": "2",
+        "slug": "vetements-haute-visibilite",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield",
+            "description": "Ex: EN ISO 20471"
+          },
+          {
+            "id": "spec2",
+            "name": "materiau",
+            "label": "Matériau",
+            "type": "text",
+            "required": true,
+            "icon": "Box",
+            "description": "Composition du tissu"
+          },
+          {
+            "id": "spec3",
+            "name": "grammage",
+            "label": "Grammage",
+            "type": "number",
+            "required": true,
+            "unit": "g/m²",
+            "icon": "Scale"
+          },
+          {
+            "id": "spec4",
+            "name": "couleur",
+            "label": "Couleur",
+            "type": "select",
+            "required": true,
+            "options": ["Jaune", "Orange", "Rouge", "Jaune/Noir", "Orange/Noir"],
+            "icon": "Palette"
+          },
+          {
+            "id": "spec5",
+            "name": "classe_visibilite",
+            "label": "Classe de visibilité",
+            "type": "select",
+            "required": true,
+            "options": ["Classe 1", "Classe 2", "Classe 3"],
+            "icon": "Eye",
+            "description": "Selon EN ISO 20471"
+          },
+          {
+            "id": "spec6",
+            "name": "poches",
+            "label": "Nombre de poches",
+            "type": "number",
+            "required": false,
+            "icon": "Pocket"
+          },
+          {
+            "id": "spec7",
+            "name": "traitement_tissu",
+            "label": "Traitement spécial",
+            "type": "select",
+            "required": false,
+            "options": ["Déperlant", "Anti-tache", "Ignifugé", "Aucun"],
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec8",
+            "name": "tailles",
+            "label": "Tailles disponibles",
+            "type": "multiselect",
+            "required": true,
+            "options": ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"],
+            "icon": "Ruler"
+          },
+          {
+            "id": "spec9",
+            "name": "fermeture",
+            "label": "Type de fermeture",
+            "type": "select",
+            "options": ["Zip", "Boutons", "Velcro"],
+            "icon": "Zap"
+          },
+          {
+            "id": "spec10",
+            "name": "bandes_reflechissantes",
+            "label": "Nombre de bandes réfléchissantes",
+            "type": "number",
+            "icon": "Reflector"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Équipements de Flottabilité",
+        "categoryId": "2", 
+        "slug": "equipements-flottabilite",
+        "specificationFields": [
+          {
+            "id": "spec1",
+            "name": "norme",
+            "label": "Norme",
+            "type": "text",
+            "required": true,
+            "icon": "Shield",
+            "description": "Ex: EN ISO 12402-4"
+          },
+          {
+            "id": "spec2",
+            "name": "niveau_flottabilite",
+            "label": "Niveau de flottabilité (N)",
+            "type": "number",
+            "required": true,
+            "unit": "Newtons",
+            "icon": "LifeBuoy"
+          },
+          {
+            "id": "spec3",
+            "name": "materiau",
+            "label": "Matériau",
+            "type": "text",
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec4",
+            "name": "couleur",
+            "label": "Couleur",
+            "type": "select",
+            "required": true,
+            "options": ["Orange", "Jaune", "Rouge", "Vert"],
+            "icon": "Palette"
+          },
+          {
+            "id": "spec5",
+            "name": "accessoires",
+            "label": "Accessoires inclus",
+            "type": "multiselect",
+            "required": false,
+            "options": ["Sifflet", "Lampe", "Harnais", "Poches"],
+            "icon": "PlusCircle"
+          },
+          {
+            "id": "spec6",
+            "name": "fermeture",
+            "label": "Type de fermeture",
+            "type": "select",
+            "required": true,
+            "options": ["Zip", "Sangles", "Velcro"],
+            "icon": "Zap"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "name": "Ensembles HV Imperméables",
+        "categoryId": "2",
+        "slug": "ensembles-hv-impermeables",
+        "specificationFields": [
+          {
+            "id": "spec35",
+            "name": "niveau_imperméabilité",
+            "label": "Indice d'imperméabilité (mm)",
+            "type": "number",
+            "min": 1000,
+            "required": true
+          },
+          {
+            "id": "spec36",
+            "name": "respirabilite",
+            "label": "Respirabilité (g/m²/24h)",
+            "type": "number",
+            "required": true
+          },
+          {
+            "id": "spec37",
+            "name": "type_etancheite",
+            "label": "Système d'étanchéité",
+            "type": "select",
+            "options": ["Membrane", "Enduction", "Laminé"],
+            "required": true
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "name": "Protection Thermique Soudage",
+        "categoryId": "2",
+        "slug": "protection-soudage",
+        "specificationFields": [
+          {
+            "id": "spec38",
+            "name": "type_cuir",
+            "label": "Type de cuir",
+            "type": "select",
+            "options": ["Vachette", "Buffle", "Chèvre", "Synthétique"],
+            "required": true
+          },
+          {
+            "id": "spec39",
+            "name": "classe_protection",
+            "label": "Classe EN ISO 11611",
+            "type": "select",
+            "options": ["Classe 1", "Classe 2"],
+            "required": true
+          },
+          {
+            "id": "spec40",
+            "name": "epaisseur",
+            "label": "Épaisseur (mm)",
+            "type": "number",
+            "step": 0.1,
+            "min": 0.8,
+            "required": true
+          }
+        ]
+      }
+ 
     ],
     "products": [
     {
@@ -991,7 +1355,2523 @@
           }
         ]
       }
+    },
+    {
+      "id": "4",
+      "name": "Lunettes de sécurité fumée FULLNESS",
+      "description": "Lunettes de protection extra légères et confortables avec verres fumés, offrant une protection latérale, anti-rayures, anti-buée et anti-UV. Idéales pour les secteurs industriels et le BTP.",
+      "price": 24.99,
+      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant des lunettes de sécurité"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des branches ajustables"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
+          "alt": "Lunettes portées par un utilisateur"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-lunettes-fumee.pdf",
+      "specifications": {
+        "norme": "EN 166, EN 170",
+        "materiau_monture": "Polycarbonate + PVC",
+        "materiau_branches": "Polycarbonate + PVC",
+        "protection": "Anti-rayures, Anti-buée, Anti-UV",
+        "type_verre": "Fumé (option clair disponible)",
+        "ventilation": "Oui",
+        "confort": "Pont nasal réglable, branches auto-ajustables",
+        "secteurs": [
+          "BTP",
+          "Industrie lourde",
+          "Collectivités"
+        ]
+      },
+      "categoryId": "3",
+      "subCategoryId": "13",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-lunettes-fumee.pdf",
+          "format": "PDF",
+          "size": "1.5 MB",
+          "lastUpdate": "2024-05-15"
+        },
+        "certifications": [
+          {
+            "name": "EN 166",
+            "number": "EN166-2024-FULL",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en166.pdf"
+          },
+          {
+            "name": "EN 170",
+            "number": "EN170-2024-FULL",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en170.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation et nettoyage",
+            "url": "https://example.com/guide-lunettes-securite.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "name": "Lunettes-masque Ultra Vision",
+      "description": "Lunettes-masque de protection avec oculaire en polycarbonate (2,4 mm), traitement anti-rayures et anti-buée. Conçues pour résister aux impacts, aux produits chimiques et aux poussières dans les environnements industriels.",
+      "price": 34.99,
+      "imageUrl": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant des lunettes-masque"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des aérations et monture"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
+          "alt": "Lunettes-masque portées en situation"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-lunettes-masque.pdf",
+      "specifications": {
+        "norme": "EN 166, EN 170",
+        "materiau_monture": "PVC",
+        "materiau_oculaire": "Polycarbonate (2,4 mm)",
+        "protection": "Anti-rayures, Anti-buée, Résistance aux impacts",
+        "aérations": "4 (anti-poussière/éclaboussures)",
+        "couleur": "Bleu",
+        "resistance": "Températures extrêmes, projections chimiques",
+        "secteurs": [
+          "Industrie chimique",
+          "BTP",
+          "Pharmaceutique"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "13",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-lunettes-masque.pdf",
+          "format": "PDF",
+          "size": "2.0 MB",
+          "lastUpdate": "2024-06-01"
+        },
+        "certifications": [
+          {
+            "name": "EN 166",
+            "number": "EN166-2024-UV",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en166.pdf"
+          },
+          {
+            "name": "EN 170",
+            "number": "EN170-2024-UV",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en170.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement et d'entretien",
+            "url": "https://example.com/guide-lunettes-masque.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "name": "Lunette Masque Incolore",
+      "description": "Masque de protection incolore avec oculaire en polycarbonate, résistant aux impacts (120 m/s) et aux températures extrêmes. Conçu pour une utilisation avec lunettes correctives et adapté aux risques mécaniques et chimiques.",
+      "price": 29.99,
+      "imageUrl": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant du masque incolore"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de l'élastique ajustable"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
+          "alt": "Masque porté avec lunettes correctives"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-masque-incolore.pdf",
+      "specifications": {
+        "norme": "EN 166, EN 170",
+        "materiau": "PVC (corps), Polycarbonate (oculaire)",
+        "protection": "Anti-UV, Résistance aux impacts (120 m/s)",
+        "aérations": "Oui (orifices d'aération)",
+        "type_verre": "Incolore (Classe 1)",
+        "compatibilite": "Utilisable avec lunettes correctives",
+        "resistance": "Températures extrêmes",
+        "secteurs": [
+          "BTP",
+          "Industrie",
+          "Laboratoires"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "13",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-masque-incolore.pdf",
+          "format": "PDF",
+          "size": "1.8 MB",
+          "lastUpdate": "2024-06-15"
+        },
+        "certifications": [
+          {
+            "name": "EN 166",
+            "number": "EN166-2024-INC",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en166.pdf"
+          },
+          {
+            "name": "EN 170",
+            "number": "EN170-2024-INC",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en170.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement et compatibilité",
+            "url": "https://example.com/guide-masque-incolore.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8",
+      "name": "Lunette de Sécurité Incolore",
+      "description": "Lunettes de protection avec branches réglables en nylon et polycarbonate, offrant 99% de protection UV et résistance aux rayures. Adaptées aux environnements industriels et au bricolage.",
+      "price": 22.99,
+      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant des lunettes de sécurité"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des branches réglables"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
+          "alt": "Lunettes portées en situation"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-lunettes-incolores.pdf",
+      "specifications": {
+        "norme": "EN 166, EN 170, EN 172",
+        "materiau": "Nylon et polycarbonate",
+        "type_verre": "Transparent",
+        "protection": "UV 99%, Anti-rayures",
+        "anti_buee": "Non",
+        "branches": "Réglables",
+        "revetement": "Anti-rayures",
+        "secteurs": [
+          "Industrie",
+          "Bricolage"
+        ]
+      },
+      "categoryId": "3",
+      "subCategoryId": "26",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-lunettes-incolores.pdf",
+          "format": "PDF",
+          "size": "1.5 MB",
+          "lastUpdate": "2024-06-25"
+        },
+        "certifications": [
+          {
+            "name": "EN 166",
+            "number": "EN166-2024-TRANS",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en166.pdf"
+          },
+          {
+            "name": "EN 170",
+            "number": "EN170-2024-TRANS",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en170.pdf"
+          },
+          {
+            "name": "EN 172",
+            "number": "EN172-2024-TRANS",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en172.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement des branches",
+            "url": "https://example.com/guide-lunettes-securite.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "9",
+      "name": "Lunette de Sécurité Classic FULLNESS",
+      "description": "Lunette de sécurité monobloc en polycarbonate avec branches réglables, offrant 99% de protection UV et une excellente protection latérale. Idéale pour tous types de travaux industriels.",
+      "price": 24.99,
+      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la lunette Classic bleue"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des branches réglables"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
+          "alt": "Lunette portée avec cordon"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-lunette-classic.pdf",
+      "specifications": {
+        "norme": "EN 166, EN 170, EN 172",
+        "materiau": "Polycarbonate",
+        "type": "Monobloc avec coques latérales",
+        "couleur": "Bleu",
+        "protection": "UV 99%, Anti-rayures",
+        "branches": "Réglables",
+        "accessoires": "Cordon inclus",
+        "secteurs": [
+          "Industrie",
+          "BTP",
+          "Ateliers"
+        ]
+      },
+      "categoryId": "3",
+      "subCategoryId": "26",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-lunette-classic.pdf",
+          "format": "PDF",
+          "size": "1.6 MB",
+          "lastUpdate": "2024-07-01"
+        },
+        "certifications": [
+          {
+            "name": "EN 166",
+            "number": "EN166-2024-CLASSIC",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en166.pdf"
+          },
+          {
+            "name": "EN 170",
+            "number": "EN170-2024-CLASSIC",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en170.pdf"
+          },
+          {
+            "name": "EN 172",
+            "number": "EN172-2024-CLASSIC",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en172.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation et d'entretien",
+            "url": "https://example.com/guide-lunette-classic.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "name": "Lunette de Protection FULLNESS",
+      "description": "Lunettes de protection incolores extra légères avec monture en polycarbonate+PVC, offrant une protection latérale, anti-rayures, anti-buée et anti-UV. Confort optimal grâce aux branches auto-ajustables et pont nasal réglable.",
+      "price": 27.99,
+      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant des lunettes de protection"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du pont nasal réglable"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
+          "alt": "Lunettes portées en situation de travail"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-lunette-protection.pdf",
+      "specifications": {
+        "norme": "EN 166, EN 170",
+        "materiau_monture": "Polycarbonate + PVC",
+        "materiau_branches": "Polycarbonate + PVC",
+        "protection": "Anti-rayures, Anti-buée, Anti-UV",
+        "type_verre": "Incolore",
+        "confort": "Branches auto-ajustables, Pont nasal réglable",
+        "ventilation": "Zone oculaire ventilée",
+        "poids": "Extra léger",
+        "secteurs": [
+          "BTP",
+          "Industrie lourde",
+          "Collectivités"
+        ]
+      },
+      "categoryId": "3",
+      "subCategoryId": "26",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-lunette-protection.pdf",
+          "format": "PDF",
+          "size": "1.7 MB",
+          "lastUpdate": "2024-07-10"
+        },
+        "certifications": [
+          {
+            "name": "EN 166",
+            "number": "EN166-2024-PRO",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en166.pdf"
+          },
+          {
+            "name": "EN 170",
+            "number": "EN170-2024-PRO",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en170.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement et d'entretien",
+            "url": "https://example.com/guide-lunette-protection.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "11",
+      "name": "Coquilles Anti-Bruit",
+      "description": "Coquilles de protection auditive à clipser offrant un excellent niveau d'atténuation sonore. Compatibles avec les casques Endurance et Endurance Monteur. Matériaux: ABS, Polystyrène et Acier.",
+      "price": 49.99,
+      "imageUrl": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant des coquilles anti-bruit"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du mécanisme de clip"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
+          "alt": "Coquilles montées sur casque"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-coquilles-antibruit.pdf",
+      "specifications": {
+        "norme": "EN 352, EN 352-3",
+        "materiaux": "ABS, Polystyrène, Acier",
+        "type": "Coquilles à clipser",
+        "compatibilite": "Casques Endurance et Endurance Monteur",
+        "atténuation": "Variable selon casque",
+        "fonction": "Peut être relevé quand non utilisé",
+        "secteurs": [
+          "Aéroports",
+          "Industrie automobile",
+          "BTP",
+          "Industrie lourde"
+        ]
+      },
+      "categoryId": "6",
+      "subCategoryId": "4",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-coquilles-antibruit.pdf",
+          "format": "PDF",
+          "size": "2.1 MB",
+          "lastUpdate": "2024-07-15"
+        },
+        "certifications": [
+          {
+            "name": "EN 352-3",
+            "number": "EN3523-2024-COQ",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en352-3.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'installation sur casque",
+            "url": "https://example.com/guide-coquilles-antibruit.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "12",
+      "name": "Casquette Anti-Heurte FULLNESS",
+      "description": "Casquette de protection moderne avec ventilation optimale grâce à sa grille supérieure. Conçue en nylon avec coque intérieure ABS et coussin EVA pour un confort maximal. Visière de 5cm et liseré réfléchissant pour une meilleure visibilité.",
+      "price": 39.99,
+      "imageUrl": "https://images.unsplash.com/photo-1578874691223-64558a3ca096?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1578874691223-64558a3ca096?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la casquette anti-heurte"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la grille de ventilation"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+          "alt": "Casquette portée en situation de travail"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-casquette-antiheurte.pdf",
+      "specifications": {
+        "norme": "EN 812",
+        "materiau_coque": "ABS",
+        "visiere": true,
+        "ventilation": "Grille",
+        "elements_reflechissants": true,
+        "materiau_exterieur": "100% Nylon",
+        "rembourrage": "EVA",
+        "longueur_visiere": "5cm",
+        "reglage": "Boucle ajustable",
+        "secteurs": [
+          "Industrie légère",
+          "BTP",
+          "Ateliers",
+          "Maintenance"
+        ]
+      },
+      "categoryId": "1",
+      "subCategoryId": "23",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-casquette-antiheurte.pdf",
+          "format": "PDF",
+          "size": "1.9 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 812",
+            "number": "EN812-2023-CAP",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en812.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement et d'entretien",
+            "url": "https://example.com/guide-casquette-antiheurte.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "13",
+      "name": "Casque de Chantier Professionnel",
+      "description": "Casque de sécurité en polypropylène haute densité avec harnais 4 points, isolation électrique jusqu'à 1000Vac/1500Vdc et bandeau anti-transpiration. Conforme aux normes EN 397 et EN 50365.",
+      "price": 34.99,
+      "imageUrl": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant du casque de chantier"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du harnais 4 points"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1574134935230-9f40a5a4d657?auto=format&fit=crop&q=80&w=800",
+          "alt": "Casque porté avec accessoires"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-casque-chantier.pdf",
+      "specifications": {
+        "norme": "EN 397, EN 50365",
+        "materiau": "Polypropylène haute densité",
+        "harnais": "4 points en plastique",
+        "reglage_taille": "55-62 cm",
+        "isolation_electrique": "1000Vac / 1500Vdc",
+        "temperature": "-30°C à +50°C",
+        "accessoires": "Bandeau anti-transpiration inclus",
+        "compatibilite": "Casques antibruit clipsables",
+        "couleurs": ["Jaune", "Bleu", "Rouge", "Blanc"],
+        "secteurs": [
+          "Gros œuvre",
+          "Second œuvre",
+          "Travaux publics"
+        ]
+      },
+      "categoryId": "1",
+      "subCategoryId": "1",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-casque-chantier.pdf",
+          "format": "PDF",
+          "size": "2.2 MB",
+          "lastUpdate": "2024-07-20"
+        },
+        "certifications": [
+          {
+            "name": "EN 397",
+            "number": "EN397-2024-CHANTIER",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en397.pdf"
+          },
+          {
+            "name": "EN 50365",
+            "number": "EN50365-2024-CHANTIER",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en50365.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement du harnais",
+            "url": "https://example.com/guide-casque-chantier.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "14",
+      "name": "Casque Baseball Diamond V",
+      "description": "Casque de chantier style baseball en ABS avec forme innovante pour une meilleure vision verticale. Coiffe polyamide à 3 bandeaux textiles, système de serrage 'colour to colour' et ajustement de 53 à 63 cm. Conforme EN 397 et EN 50365.",
+      "price": 44.99,
+      "imageUrl": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant du casque style baseball"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du système de serrage"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1574134935230-9f40a5a4d657?auto=format&fit=crop&q=80&w=800",
+          "alt": "Casque porté avec visière"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-casque-baseball.pdf",
+      "specifications": {
+        "norme": "EN 397, EN 50365",
+        "materiau": "ABS",
+        "style": "Baseball",
+        "coiffe": "Polyamide (3 bandeaux textiles, 8 points de fixation)",
+        "serrage": "Système 'colour to colour'",
+        "ajustement": "53-63 cm",
+        "isolation_electrique": "440V AC",
+        "temperature": "-30°C à +50°C",
+        "visiere": "Amovible (avant/arrière)",
+        "secteurs": [
+          "BTP",
+          "Industrie lourde",
+          "Pétrole/Gaz"
+        ]
+      },
+      "categoryId": "1",
+      "subCategoryId": "24",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-casque-baseball.pdf",
+          "format": "PDF",
+          "size": "2.3 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 397",
+            "number": "EN397-2023-BB",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en397.pdf"
+          },
+          {
+            "name": "EN 50365",
+            "number": "EN50365-2023-BB",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en50365.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement et d'utilisation",
+            "url": "https://example.com/guide-casque-baseball.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "15",
+      "name": "Casque Anti-Bruit Professionnel",
+      "description": "Casque de protection auditive avec atténuation de 28 dB, coquilles profilées remplies de liquide pour un confort optimal et isolation électrique jusqu'à 1000Vac/1500Vdc. Conforme aux normes EN 352 et EN 50365.",
+      "price": 89.99,
+      "imageUrl": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant du casque anti-bruit"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des coussinets remplis de liquide"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
+          "alt": "Casque porté en situation industrielle"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-casque-antibruit.pdf",
+      "specifications": {
+        "norme": "EN 352-1, EN 352-3, EN 50365",
+        "attenuation": "28 dB",
+        "type": "Passe-tête",
+        "isolation_electrique": "1000Vac / 1500Vdc",
+        "confort": "Coussinets liquides, bande anti-sudation",
+        "materiau_coquilles": "Polycarbonate",
+        "poids": "420 g",
+        "reglage": "Arceau profilé ajustable",
+        "secteurs": [
+          "Aéroports",
+          "Industrie automobile",
+          "Métallurgie",
+          "BTP"
+        ]
+      },
+      "categoryId": "6",
+      "subCategoryId": "4",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-casque-antibruit.pdf",
+          "format": "PDF",
+          "size": "2.5 MB",
+          "lastUpdate": "2024-07-25"
+        },
+        "certifications": [
+          {
+            "name": "EN 352-1",
+            "number": "EN3521-2024-AB",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en3521.pdf"
+          },
+          {
+            "name": "EN 50365",
+            "number": "EN50365-2024-AB",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en50365.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement et d'entretien",
+            "url": "https://example.com/guide-casque-antibruit.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "16",
+      "name": "Bouchons d'Oreille EARLINE",
+      "description": "Bouchons d'oreille en mousse polyuréthane avec cordelette bleue, forme conique pour une adaptation optimale au conduit auditif. Protection idéale contre les bruits industriels.",
+      "price": 12.99,
+      "imageUrl": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Paire de bouchons d'oreille avec cordelette"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la forme conique"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1625772297628-87a274f4a559?auto=format&fit=crop&q=80&w=800",
+          "alt": "Bouchons portés autour du cou"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-bouchons-oreille.pdf",
+      "specifications": {
+        "norme": "EN 352-2",
+        "materiau": "Mousse de polyuréthane",
+        "forme": "Conique",
+        "attache": "Cordelette bleue",
+        "attenuation": "SNR 27 dB (moyenne)",
+        "quantite": "Paire",
+        "lavable": "Non",
+        "reutilisable": "Oui (nettoyage superficiel)",
+        "secteurs": [
+          "Industrie lourde",
+          "BTP",
+          "Loisirs bruyants"
+        ]
+      },
+      "categoryId": "6",
+      "subCategoryId": "25",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-bouchons-oreille.pdf",
+          "format": "PDF",
+          "size": "1.2 MB",
+          "lastUpdate": "2024-07-30"
+        },
+        "certifications": [
+          {
+            "name": "EN 352-2",
+            "number": "EN3522-2024-EAR",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-en3522.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation et d'hygiène",
+            "url": "https://example.com/guide-bouchons-oreille.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "17",
+      "name": "Bottes de Pluie de Sécurité",
+      "description": "Bottes de sécurité en caoutchouc avec semelle antidérapante, offrant une protection complète contre l'humidité et les environnements boueux. Conforme à la norme EN ISO 20345.",
+      "price": 79.99,
+      "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant des bottes de pluie de sécurité"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la semelle antidérapante"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Bottes portées en situation de travail"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-bottes-pluie.pdf",
+      "specifications": {
+        "norme": "EN ISO 20345",
+        "materiau": "Caoutchouc",
+        "semelle": "Caoutchouc antidérapant",
+        "doublure": "Mousse",
+        "proprietes": ["Antistatique", "Absorption d'énergie"],
+        "resistance_glissement": "SRC (niveau maximal)",
+        "hauteur": "Standard",
+        "pointure": ["38", "39", "40", "41", "42", "43", "44", "45"],
+        "secteurs": [
+          "BTP",
+          "Agriculture",
+          "Industrie chimique",
+          "Paysagisme"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "6",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-bottes-pluie.pdf",
+          "format": "PDF",
+          "size": "2.0 MB",
+          "lastUpdate": "2024-08-01"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20345",
+            "number": "ISO20345-2024-BP",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-iso20345.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien des bottes",
+            "url": "https://example.com/guide-bottes-pluie.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "18",
+      "name": "Chaussure de Sécurité Classic",
+      "description": "Chaussure de sécurité légère et flexible avec embout 200J, semelle anti-perforation et propriétés anti-statiques. Conforme EN ISO 20345, idéale pour les environnements industriels et chimiques.",
+      "price": 129.99,
+      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la chaussure de sécurité"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la semelle anti-perforation"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Chaussure portée en situation industrielle"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-chaussure-classic.pdf",
+      "specifications": {
+        "norme": "EN ISO 20345:2011 S3 SRC",
+        "materiau": "Textile technique",
+        "embout": "200 Joules (sans métal)",
+        "semelle": "Anti-perforation, Monodensité",
+        "proprietes": [
+          "Antistatique",
+          "Absorption chocs talon",
+          "Résistance hydrocarbures",
+          "Hydrofuge"
+        ],
+        "doublure": "Anti-odeur et antibactérienne",
+        "semelle_interne": "Orthopédique sur mesure",
+        "glissement": "SRC (niveau maximal)",
+        "pointures": ["40", "41", "42", "43", "44", "45", "46"],
+        "secteurs": [
+          "Industrie lourde",
+          "Chimie/Pharma",
+          "BTP",
+          "Second œuvre"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "6",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-chaussure-classic.pdf",
+          "format": "PDF",
+          "size": "2.4 MB",
+          "lastUpdate": "2024-08-05"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20345 S3 SRC",
+            "number": "ISO20345-2024-CL",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-iso20345.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien professionnel",
+            "url": "https://example.com/guide-chaussure-securite.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "19",
+      "name": "Chaussure de Sécurité Fullness PRO",
+      "description": "Chaussure de sécurité haute gamme S3 avec tige en cuir, semelle zéroperforation et coque composite. Protection supérieure (antichoc, antidérapante SRC, hydrofuge) et confort optimal (semelle intérieure antibactérienne amovible).",
+      "price": 149.99,
+      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la chaussure PRO"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la semelle zéroperforation"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Chaussure portée avec biais réfléchissant"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-fullness-pro.pdf",
+      "specifications": {
+        "norme": "EN ISO 20345:2011 S3 SRC",
+        "materiau": "Cuir pleine fleur",
+        "coque": "Composite 200J",
+        "semelle": {
+          "intermediaire": "Zéroperforation synthétique",
+          "exterieure": "PU/PU antidérapante",
+          "interieure": "Amovible antibactérienne"
+        },
+        "protection": [
+          "Sur-embout renforcé",
+          "Talon antichoc (E)",
+          "Résistance hydrocarbures",
+          "Biais réfléchissant"
+        ],
+        "confort": [
+          "Tige respirante",
+          "Système hydrofuge",
+          "Cran sécurité échelle"
+        ],
+        "pointures": ["39", "40", "41", "42", "43", "44", "45", "46"],
+        "poids": "650g (taille 42)",
+        "secteurs": [
+          "Industrie lourde",
+          "Pétrochimie",
+          "BTP haut risque",
+          "Travaux en hauteur"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "6",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-fullness-pro.pdf",
+          "format": "PDF",
+          "size": "2.8 MB",
+          "lastUpdate": "2024-08-10"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20345 S3 SRC",
+            "number": "ISO20345-2024-PRO",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-iso20345-pro.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien professionnel",
+            "url": "https://example.com/guide-fullness-pro.pdf",
+            "language": "Français"
+          },
+          {
+            "title": "Notice remplacement semelle intérieure",
+            "url": "https://example.com/notice-semelle-fullness.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "20",
+      "name": "Chaussure de Sécurité POWER FULL",
+      "description": "Chaussure de sécurité à tige haute en cuir hydrofuge avec embout composite 200J et semelle anti-perforation. Conforme EN ISO 20345 S3, offrant protection maximale et confort respirant pour les environnements industriels exigeants.",
+      "price": 139.99,
+      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la chaussure POWER FULL"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la semelle anti-perforation"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Chaussure portée en situation industrielle"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-power-full.pdf",
+      "specifications": {
+        "norme": "EN ISO 20345:2011 S3 SRC",
+        "materiau": {
+          "tige": "Cuir imprimé hydrofuge",
+          "doublure_ext": "Synthétique respirant",
+          "doublure_int": "Polyamide thermoformé"
+        },
+        "embout": "Composite TOP RETURN 200J",
+        "semelle": {
+          "materiau": "PU/TPU",
+          "perforation": "Zero Perforation APT PLATE",
+          "glissement": "SRC"
+        },
+        "proprietes": [
+          "Antistatique (coutures conductrices)",
+          "Absorption chocs talon",
+          "Résistance hydrocarbures",
+          "Thermorégulante"
+        ],
+        "confort": [
+          "Tige respirante",
+          "Doublure anti-abrasion",
+          "Forme anatomique"
+        ],
+        "couleur": "Noir",
+        "pointures": ["39", "40", "41", "42", "43", "44", "45", "46"],
+        "poids": "720g (taille 42)",
+        "secteurs": [
+          "Industrie lourde",
+          "Chimie/Pharma",
+          "BTP",
+          "Maintenance industrielle"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "6",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-power-full.pdf",
+          "format": "PDF",
+          "size": "2.5 MB",
+          "lastUpdate": "2024-08-15"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20345 S3 SRC",
+            "number": "ISO20345-2024-PF",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-iso20345-pf.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien professionnel",
+            "url": "https://example.com/guide-power-full.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "21",
+      "name": "Chaussure de Sécurité S3 SRC Bleu",
+      "description": "Chaussure de sécurité ultralégère avec embout aluminium et semelle PU nouvelle génération. Certification EN ISO 20345 S3 SRC, offrant protection maximale avec un poids minimal pour une liberté de mouvement exceptionnelle.",
+      "price": 159.99,
+      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la chaussure S3 SRC bleue"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la semelle PU nouvelle génération"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Chaussure portée en environnement industriel"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-s3-src-bleu.pdf",
+      "specifications": {
+        "norme": "EN ISO 20345:2011 S3 SRC",
+        "embout": "Aluminium 200J",
+        "technologies": [
+          "Save & Flex Air (anti-perforation)",
+          "U-Power Original (semelle amovible)",
+          "Film anti-abrasion avant"
+        ],
+        "semelle": {
+          "materiau": "PU nouvelle génération",
+          "proprietes": [
+            "Antidérapante SRC",
+            "Résistante aux hydrocarbures",
+            "Antistatique",
+            "Anti-abrasion"
+          ]
+        },
+        "poids": "550g (taille 42) - 30% plus léger que la moyenne",
+        "caracteristiques": [
+          "Hydrofuge",
+          "Absorption chocs talon",
+          "Respirante",
+          "Semelle résistante à la perforation"
+        ],
+        "couleur": "Bleu",
+        "pointures": ["39", "40", "41", "42", "43", "44", "45", "46"],
+        "secteurs": [
+          "Industrie lourde",
+          "Pétrochimie",
+          "BTP",
+          "Maintenance industrielle"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "6",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-s3-src-bleu.pdf",
+          "format": "PDF",
+          "size": "2.7 MB",
+          "lastUpdate": "2024-08-20"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20345 S3 SRC",
+            "number": "ISO20345-2024-SRC",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-iso20345-src.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation et d'entretien",
+            "url": "https://example.com/guide-s3-src.pdf",
+            "language": "Français"
+          },
+          {
+            "title": "Notice remplacement semelle U-Power",
+            "url": "https://example.com/notice-u-power.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "22",
+      "name": "Chaussure de Sécurité S3 SRC Vert",
+      "description": "Chaussure de sécurité ultralégère vert avec embout aluminium et semelle PU nouvelle génération. Certification EN ISO 20345 S3 SRC, combinant protection maximale et légèreté exceptionnelle pour les professionnels exigeants.",
+      "price": 159.99,
+      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la chaussure S3 SRC verte"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la semelle PU nouvelle génération"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Chaussure verte portée en environnement industriel"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-s3-src-vert.pdf",
+      "specifications": {
+        "norme": "EN ISO 20345:2011 S3 SRC",
+        "embout": "Aluminium 200J",
+        "technologies": [
+          "Save & Flex Air (anti-perforation)",
+          "U-Power Original (semelle amovible)",
+          "Film anti-abrasion avant"
+        ],
+        "semelle": {
+          "materiau": "PU nouvelle génération",
+          "proprietes": [
+            "Antidérapante SRC",
+            "Résistante aux hydrocarbures",
+            "Antistatique",
+            "Anti-abrasion"
+          ]
+        },
+        "poids": "550g (taille 42) - 30% plus léger que la moyenne",
+        "caracteristiques": [
+          "Hydrofuge",
+          "Absorption chocs talon",
+          "Respirante",
+          "Semelle résistante à la perforation"
+        ],
+        "couleur": "Vert",
+        "pointures": ["39", "40", "41", "42", "43", "44", "45", "46"],
+        "secteurs": [
+          "Industrie lourde",
+          "Pétrochimie",
+          "BTP",
+          "Maintenance industrielle"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "6",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-s3-src-vert.pdf",
+          "format": "PDF",
+          "size": "2.7 MB",
+          "lastUpdate": "2024-08-25"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20345 S3 SRC",
+            "number": "ISO20345-2024-SRC-VERT",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-iso20345-src-vert.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation et d'entretien",
+            "url": "https://example.com/guide-s3-src-vert.pdf",
+            "language": "Français"
+          },
+          {
+            "title": "Notice remplacement semelle U-Power",
+            "url": "https://example.com/notice-u-power-vert.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "23",
+      "name": "Chaussure de Sécurité S3 SRC",
+      "description": "Chaussure de sécurité ultralégère avec embout aluminium et semelle PU nouvelle génération. Certification EN ISO 20345 S3 SRC, offrant le parfait équilibre entre protection maximale et légèreté extrême pour les professionnels.",
+      "price": 159.99,
+      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la chaussure S3 SRC"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la technologie Save & Flex Air"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Démonstration de la légèreté"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-s3-src-base.pdf",
+      "specifications": {
+        "norme": "EN ISO 20345:2011 S3 SRC",
+        "embout": "Aluminium 200J",
+        "technologies_cle": [
+          "Save & Flex Air (protection anti-perforation)",
+          "U-Power Original (semelle intérieure amovible)",
+          "Film anti-abrasion avant"
+        ],
+        "semelle": {
+          "composition": "PU nouvelle génération",
+          "proprietes": [
+            "Résistance SRC (glissement)",
+            "Anti-hydrocarbures",
+            "Antistatique",
+            "Durabilité accrue"
+          ]
+        },
+        "poids": "550g (taille 42)",
+        "avantages": [
+          "30% plus léger que la moyenne marché",
+          "Liberté de mouvement exceptionnelle",
+          "Réduction de la fatigue",
+          "Performance accrue"
+        ],
+        "couleurs_disponibles": ["Noir", "Bleu", "Vert"],
+        "pointures": ["39", "40", "41", "42", "43", "44", "45", "46"],
+        "secteurs": [
+          "Industrie lourde",
+          "Pétrochimie",
+          "BTP",
+          "Maintenance industrielle"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "6",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-s3-src-base.pdf",
+          "format": "PDF",
+          "size": "2.8 MB",
+          "lastUpdate": "2024-08-30"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20345 S3 SRC",
+            "number": "ISO20345-2024-SRC-BASE",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-iso20345-src-base.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation principal",
+            "url": "https://example.com/guide-s3-src-base.pdf",
+            "language": "Français"
+          },
+          {
+            "title": "Notice système U-Power",
+            "url": "https://example.com/notice-u-power-base.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "24",
+      "name": "Fullness POWER Composite Ultra",
+      "description": "Chaussure de sécurité haut de gamme avec embout acier et semelle résistante à 150°C. Conforme EN ISO 20345:2011 S3, offrant protection thermique, antidérapante SRC et confort optimal pour les environnements extrêmes.",
+      "price": 179.99,
+      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant de la Fullness POWER"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la semelle résistante à 150°C"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Démonstration du rembourrage de cheville"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-fullness-power-v2.pdf",
+      "specifications": {
+        "collection": "Composite Ultra",
+        "norme": "EN ISO 20345:2011 S3",
+        "materiaux": {
+          "tige": "Cuir résistant à l'eau",
+          "semelle": "PU/PU",
+          "embout": "Acier 200J",
+          "semelle_interne": "Acier anti-perforation"
+        },
+        "proprietes": [
+          "Résistance chaleur 150°C",
+          "Antidérapant SRC",
+          "Antistatique",
+          "Résistant hydrocarbures",
+          "Zone absorption énergie"
+        ],
+        "confort": [
+          "Col rembourré",
+          "Panneaux rembourrés cheville",
+          "Semelle intérieure amortissante"
+        ],
+        "certifications": [
+          "CE",
+          "EN ISO 20345:2011 S3"
+        ],
+        "poids": "850g (taille 42)",
+        "couleurs_disponibles": ["Noir", "Brun"],
+        "pointures": ["39", "40", "41", "42", "43", "44", "45", "46"],
+        "secteurs": [
+          "Industrie lourde",
+          "Pétrochimie",
+          "Métallurgie",
+          "Chantiers haute température"
+        ]
+      },
+      "categoryId": "5",
+      "subCategoryId": "6",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-fullness-power-v2.pdf",
+          "format": "PDF",
+          "size": "3.0 MB",
+          "lastUpdate": "2024-09-01"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20345:2011 S3",
+            "number": "ISO20345-2024-POWER2",
+            "validUntil": "2027-12-31",
+            "url": "https://example.com/certification-iso20345-power2.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation haute température",
+            "url": "https://example.com/guide-fullness-power-v2.pdf",
+            "language": "Français"
+          },
+          {
+            "title": "Notice sécurité thermique",
+            "url": "https://example.com/notice-thermique-power.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "25",
+      "name": "Combinaison de Travail Haute Visibilité",
+      "description": "Combinaison de protection haute visibilité avec bandes réfléchissantes sur les bras, jambes, poitrine et épaules. Dotée de 4 poches de rangement, d'une ceinture élastiquée et d'un tissu déperlant anti-tache pour un confort optimal au quotidien.",
+      "price": 59.99,
+      "imageUrl": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Combinaison haute visibilité - vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Combinaison haute visibilité - vue arrière"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des bandes réfléchissantes"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-combinaison-hv.pdf",
+      "specifications": {
+        "norme": "EN ISO 20471",
+        "materiau": "80% Polyester, 20% Coton",
+        "grammage": "280 g/m²",
+        "poches": "4",
+        "ceinture": "Élastiquée",
+        "braguette": "Zip caché",
+        "traitement": "Tissu déperlant anti-tache Texpel",
+        "tailles_disponibles": ["S", "M", "L", "XL", "XXL", "3XL"],
+        "secteurs": ["BTP", "Voirie", "Espaces Verts", "Logistique", "Maintenance"]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-combinaison-hv.pdf",
+          "format": "PDF",
+          "size": "2.1 MB",
+          "lastUpdate": "2024-03-15"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "67890-GHI",
+            "validUntil": "2025-12-31",
+            "url": "https://example.com/certification-iso20471.pdf"
+          },
+          {
+            "name": "Règlement UE 2016/425",
+            "number": "EU-2016-425",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-ue2016.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien",
+            "url": "https://example.com/guide-entretien-combinaison.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "26",
+      "name": "Gilet Haute Visibilité à Manches Longues (2 Bandes)",
+      "description": "Gilet léger en polyester à manches longues avec bandes réfléchissantes pour une visibilité optimale. Confortable et polyvalent grâce à sa coupe ample et sa fermeture zippée continue. Conforme aux normes EN ISO 20471 et EN ISO 13688.",
+      "price": 34.99,
+      "imageUrl": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gilet HV - Vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1584735422187-78335bf11cff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des bandes réfléchissantes"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-hv.pdf",
+      "specifications": {
+        "norme": "EN ISO 20471, EN ISO 13688",
+        "materiau": "100% Polyester (tissage en chaîne)",
+        "grammage": 120,
+        "couleur": "Vert",
+        "classe_visibilite": "Classe 1",
+        "fermeture": "Zip avant",
+        "bandes_reflechissantes": 2,
+        "tailles": ["S", "M", "L", "XL"]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gilet-hv.pdf",
+          "format": "PDF",
+          "size": "1.5 MB",
+          "lastUpdate": "2024-03-25"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "78901-JKL",
+            "validUntil": "2025-12-31",
+            "url": "https://example.com/certification-iso20471.pdf"
+          },
+          {
+            "name": "EN ISO 13688",
+            "number": "78902-MNO",
+            "validUntil": "2026-06-30",
+            "url": "https://example.com/certification-iso13688.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "27",
+      "name": "Gilet de Sauvetage (Norme EN ISO 12402-4)",
+      "description": "Gilet de sauvetage ergonomique avec appuie-tête pour protéger la tête et le cou. Doté d'un sifflet d'urgence, d'un harnais, et d'un zip frontal pour un enfilage facile. Tissu non absorbant à séchage rapide, idéal pour les activités nautiques.",
+      "price": 49.99,
+      "imageUrl": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gilet de sauvetage - Vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du sifflet et harnais"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-sauvetage.pdf",
+      "specifications": {
+        "norme": "EN ISO 12402-4, EN ISO 20471",
+        "niveau_flottabilite": 100,
+        "materiau": "Polyester non absorbant",
+        "couleur": "Orange",
+        "accessoires": ["Sifflet", "Harnais"],
+        "fermeture": "Zip",
+        "poids": "400 g",
+        "tailles": ["S", "M", "L", "XL"]
+      },
+      "categoryId": "2",  
+      "subCategoryId": "28",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gilet-sauvetage.pdf",
+          "format": "PDF",
+          "size": "2.2 MB",
+          "lastUpdate": "2024-04-10"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 12402-4",
+            "number": "89012-PQR",
+            "validUntil": "2027-05-31",
+            "url": "https://example.com/certification-iso12402.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation et d'entretien",
+            "url": "https://example.com/guide-gilet-sauvetage.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "28",
+      "name": "Gilet Haute Visibilité Baudrier (Maillet Ajouré)",
+      "description": "Gilet de sécurité réfléchissant en maille ajourée vert fluorescent, ajustable par velcro. Léger, respirant et résistant à l'usure avec bandes réfléchissantes pour une visibilité optimale. Conforme à la norme EN ISO 20471.",
+      "price": 29.99,
+      "imageUrl": "https://images.unsplash.com/photo-1584735422187-78335bf11cff?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1584735422187-78335bf11cff?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gilet HV Baudrier - Vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des bandes réfléchissantes et velcro"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-baudrier.pdf",
+      "specifications": {
+        "norme": "EN ISO 20471",
+        "materiau": "Polyester/PVC (maille ajourée)",
+        "grammage": 150,
+        "couleur": "Vert fluorescent, Orange fluorescent",
+        "classe_visibilite": "Classe 1",
+        "fermeture": "Velcro ajustable",
+        "bandes_reflechissantes": 2,
+        "respirabilite": "Haute perméabilité à l'air",
+        "tailles": ["S", "M", "L", "XL"],
+        "applications": [
+          "Travaux municipaux", 
+          "Construction", 
+          "Sécurité routière", 
+          "Sports outdoor"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",  
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gilet-baudrier.pdf",
+          "format": "PDF",
+          "size": "1.7 MB",
+          "lastUpdate": "2024-04-15"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "90123-STU",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien",
+            "url": "https://example.com/guide-entretien-baudrier.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "29",
+      "name": "Gilet Haute Visibilité Multicolor (2 Poches, Porte-Badge)",
+      "description": "Gilet de sécurité multicolor en polyester avec fermeture zippée, deux poches plaquées et porte-badge double entrée. Conforme à la norme AS/NZS 4602.1 pour une visibilité maximale sur les chantiers et espaces publics.",
+      "price": 27.99,
+      "imageUrl": "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gilet Multicolor - Vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1583947581924-a6d4a7e75a9f?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des poches et porte-badge"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-multicolor.pdf",
+      "specifications": {
+        "norme": "AS/NZS 4602.1",
+        "materiau": "100% Polyester (tissage en chaîne)",
+        "grammage": 130,
+        "couleur": "Multicolor",
+        "classe_visibilite": "Classe 1",
+        "fermeture": "Zip",
+        "poches": 2,
+        "porte_badge": "Double entrée (portrait/paysage)",
+        "tailles": ["S", "M", "L", "XL"],
+        "applications": [
+          "BTP", 
+          "Voirie", 
+          "Logistique", 
+          "Déménagement"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27", 
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gilet-multicolor.pdf",
+          "format": "PDF",
+          "size": "1.6 MB",
+          "lastUpdate": "2024-04-20"
+        },
+        "certifications": [
+          {
+            "name": "AS/NZS 4602.1",
+            "number": "AS-4602-2024",
+            "validUntil": "2027-06-30",
+            "url": "https://example.com/certification-asnzs4602.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien",
+            "url": "https://example.com/guide-entretien-multicolor.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "30",
+      "name": "Gilet Haute Visibilité Multipoche (Boucle Radio, Porte-Badge)",
+      "description": "Gilet de sécurité multifonctionnel avec 2 poches plaquées, boucle radio et porte-badge à double entrée. Idéal pour les professionnels nécessitant un accès rapide aux outils et badges. Conforme à la norme AS/NZS 4602.1.",
+      "price": 32.99,
+      "imageUrl": "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gilet Multipoche - Vue avant montrant les poches"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la boucle radio et porte-badge"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-multipoche.pdf",
+      "specifications": {
+        "norme": "AS/NZS 4602.1",
+        "materiau": "100% Polyester (tissage en chaîne)",
+        "grammage": 140,
+        "couleur": "Orange/Noir", 
+        "classe_visibilite": "Classe 1",
+        "fermeture": "Zip",
+        "poches": 2,
+        "porte_badge": "Double entrée (portrait/paysage)",
+        "boucle_radio": "Oui",
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "applications": [
+          "Chantiers BTP", 
+          "Sécurité privée", 
+          "Logistique", 
+          "Équipes municipales"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27", 
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gilet-multipoche.pdf",
+          "format": "PDF",
+          "size": "1.9 MB",
+          "lastUpdate": "2024-05-01"
+        },
+        "certifications": [
+          {
+            "name": "AS/NZS 4602.1",
+            "number": "AS-4602-2024-MP",
+            "validUntil": "2027-06-30",
+            "url": "https://example.com/certification-asnzs4602-multipoche.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'utilisation des poches et accessoires",
+            "url": "https://example.com/guide-multipoche.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "31",
+      "name": "Gilet Haute Visibilité Journaliste (11 Poches, Maille Respirante)",
+      "description": "Gilet multifonctionnel conçu pour les journalistes et activités outdoor, avec 11 poches (9 avant + 2 latérales), fermeture éclair centrale et maille intérieure respirante. Tissu sergé 65% polyester/35% coton pour un confort durable. Conforme à la norme EN ISO 20471.",
+      "price": 39.99,
+      "imageUrl": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gilet Journaliste - Vue avant montrant les poches multiples"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la maille intérieure et fermeture éclair"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-journaliste.pdf",
+      "specifications": {
+        "norme": "EN ISO 20471",
+        "materiau": "65% Polyester, 35% Coton (sergé 200g/m²)",
+        "grammage": 200,
+        "couleur": "Gris",
+        "classe_visibilite": "Classe 2",
+        "fermeture": "Zip central",
+        "poches": {
+          "total": 11,
+          "avant": 9,
+          "laterales": 2
+        },
+        "doublure": "Maille respirante",
+        "tailles": ["S", "M", "L", "XL"],
+        "applications": [
+          "Reportage terrain", 
+          "Chasse/Pêche", 
+          "Randonnée", 
+          "Bricolage"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",  
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gilet-journaliste.pdf",
+          "format": "PDF",
+          "size": "2.3 MB",
+          "lastUpdate": "2024-05-10"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "EN20471-JOUR-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-journaliste.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'organisation des poches",
+            "url": "https://example.com/guide-poches-journaliste.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "32",
+      "name": "Gilet Haute Visibilité Ignifugé (Bande Parallèle)",
+      "description": "Gilet de sécurité ignifugé avec bande réfléchissante résistante aux flammes et fermeture par bandes auto-agrippantes. Conforme à la norme EN ISO 20471. Doit être porté sur des vêtements de protection index 2 ou 3 pour une protection optimale.",
+      "price": 45.99,
+      "imageUrl": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gilet ignifugé - Vue avant montrant la bande parallèle"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1583947581924-a6d4a7e75a9f?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la fermeture auto-agrippante"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-ignifuge.pdf",
+      "specifications": {
+        "norme": "EN ISO 20471",
+        "materiau": "Tissu ignifugé (composition non spécifiée)",
+        "bandes_reflechissantes": 1,
+        "type_bande": "Parallèle résistante aux flammes",
+        "fermeture": "Bandes auto-agrippantes",
+        "ignifugation": {
+          "niveau": "Requiert vêtements index 2 ou 3",
+          "test": "Résistance aux flammes confirmée"
+        },
+        "couleur": "Orange",
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "applications": [
+          "Industrie pétrochimique", 
+          "Travaux électriques", 
+          "Chantiers à risques"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27", 
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gilet-ignifuge.pdf",
+          "format": "PDF",
+          "size": "2.1 MB",
+          "lastUpdate": "2024-05-15"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "EN20471-FR-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-ignifuge.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Notice d'utilisation ignifuge",
+            "url": "https://example.com/notice-ignifuge.pdf",
+            "language": "Français",
+            "warning": "À porter sur des vêtements de protection index 2 ou 3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "33",
+      "name": "Polo Haute Visibilité Bicolore à Manches Longues",
+      "description": "Polo de protection professionnel en polyester nid d'abeille (175g/m²), offrant confort, respirabilité et haute visibilité. Conforme à la norme EN ISO 20471. Idéal pour les chantiers BTP, la logistique et les artisans.",
+      "price": 36.99,
+      "imageUrl": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
+          "alt": "Polo HV bicolore - Vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la patte de boutonnage et ouverture dissimulée"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-polo-hv.pdf",
+      "specifications": {
+        "norme": "EN ISO 20471",
+        "materiau": "100% Polyester nid d'abeille",
+        "grammage": 175,
+        "couleur": "Bicolore (Orange/Noir)", 
+        "classe_visibilite": "Classe 1",
+        "manches": "Longues",
+        "fermeture": "Patte de boutonnage + ouverture dissimulée",
+        "respirabilite": "Haute (tissu nid d'abeille)",
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "applications": [
+          "Chantiers BTP", 
+          "Artisans", 
+          "Logistique", 
+          "Services techniques"
+        ]
+      },
+      "categoryId": "2", 
+      "subCategoryId": "27", 
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-polo-hv.pdf",
+          "format": "PDF",
+          "size": "1.8 MB",
+          "lastUpdate": "2024-05-20"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "EN20471-POLO-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-polo.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien du polyester nid d'abeille",
+            "url": "https://example.com/guide-entretien-polo.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "34",
+      "name": "Polo Confort Haute Visibilité à Manches Longues (UV Protection)",
+      "description": "Polo professionnel en coton/polyester (55%/45%) avec bande HIVsTex pour une visibilité optimale. Tissu respirant et absorbant l'humidité (175 g/m²) offrant une protection UPF 35+ contre les UV. Col contrastant pour un style professionnel. Conforme à la norme EN ISO 20471.",
+      "price": 42.99,
+      "imageUrl": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
+          "alt": "Polo Confort HV - Vue avant montrant le col contrastant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du tissu et de la bande HIVsTex"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-polo-confort.pdf",
+      "specifications": {
+        "norme": "EN ISO 20471",
+        "materiau": "55% Coton, 45% Polyester (tricot 175g/m²)",
+        "proprietes": [
+          "Respirant",
+          "Anti-UV (UPF 35+)",
+          "Absorbant l'humidité"
+        ],
+        "couleur": "Bicolore (col contrastant)",
+        "classe_visibilite": "Classe 2",
+        "manches": "Longues",
+        "protection_uv": "UPF 35+ (97% des UV bloqués)",
+        "bande_visibilite": "HIVsTex",
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "applications": [
+          "Chantiers extérieurs", 
+          "Travail en milieu ensoleillé", 
+          "Supervision de chantier",
+          "Logistique"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-polo-confort.pdf",
+          "format": "PDF",
+          "size": "2.0 MB",
+          "lastUpdate": "2024-05-25"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "EN20471-CONF-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-confort.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien pour tissu technique",
+            "url": "https://example.com/guide-entretien-confort.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "35",
+      "name": "Polo de Travail Haute Visibilité (Manches Longues, 5 Bandes Réfléchissantes)",
+      "description": "Polo professionnel FULLNESS en coton/polyester avec 5 bandes réfléchissantes (corps + épaules), col élastiqué et bandeau de transpiration. Conforme aux normes EN ISO 20471 et 13688. Confort optimal grâce aux évents latéraux et tissu respirant. Couleur : Orange fluo.",
+      "price": 44.99,
+      "imageUrl": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
+          "alt": "Polo Travail HV - Vue avant montrant les bandes réfléchissantes"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du col élastiqué et évents latéraux"
+        }
+      ],
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/DF6ZWffPSfBTXad/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20Hi-Vis-compressed.pdf",
+      "specifications": {
+        "normes": ["EN ISO 20471", "EN ISO 13688"],
+        "materiau": "Coton/Polyester (ratio non spécifié)",
+        "grammage": 180,
+        "couleur": "Orange fluorescent",
+        "classe_visibilite": "Classe 2",
+        "bandes_reflechissantes": {
+          "total": 5,
+          "corps": 2,
+          "epaules": 2,
+          "manches": 1
+        },
+        "confort": [
+          "Bandeau de transpiration",
+          "Évents latéraux",
+          "Col et poignets élastiqués"
+        ],
+        "fermeture": "3 boutons",
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "marque": "FULLNESS",
+        "applications": [
+          "Chantiers BTP", 
+          "Travaux artisanaux", 
+          "Manutention logistique"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://s02.swdrive.fr/s/DF6ZWffPSfBTXad/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20Hi-Vis-compressed.pdf",
+          "format": "PDF",
+          "size": "2.2 MB",
+          "lastUpdate": "2024-06-01"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "EN20471-FULL-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-fullness.pdf"
+          },
+          {
+            "name": "EN ISO 13688",
+            "number": "EN13688-FULL-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso13688.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien professionnel",
+            "url": "https://example.com/guide-entretien-fullness.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "36",
+      "name": "Polo Haute Visibilité Manches Courtes (UPF 50+, 3 Normes Internationales)",
+      "description": "Polo technique en polyester nid d'abeille (175g/m²) avec col contrastant et protection UV 50+. Confort optimal grâce au tissu respirant et finition anti-taches. Conforme aux normes EN ISO 20471, AS/NZS 4602 et ANSI/ISEA 107 pour une utilisation mondiale.",
+      "price": 47.99,
+      "imageUrl": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
+          "alt": "Polo Hi-Vis - Vue avant montrant le col contrastant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du tissu nid d'abeille"
+        }
+      ],
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/DF6ZWffPSfBTXad/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20Hi-Vis-compressed.pdf",
+      "specifications": {
+        "normes": ["EN ISO 20471", "AS/NZS 4602", "ANSI/ISEA 107"],
+        "materiau": "100% Polyester nid d'abeille",
+        "grammage": 175,
+        "couleur": "Fluorescent (col contrastant)",
+        "classe_visibilite": "Classe 2",
+        "protection_uv": "UPF 50+ (98% UV bloqués)",
+        "proprietes": [
+          "Respirant",
+          "Anti-humidité",
+          "Séchage rapide",
+          "Résistant aux taches"
+        ],
+        "manches": "Courtes",
+        "col": "Contrastant avec liseré fluorescent",
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "applications": [
+          "Chantiers chauds", 
+          "Travail en extérieur", 
+          "Zones à fort ensoleillement"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://s02.swdrive.fr/s/DF6ZWffPSfBTXad/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20Hi-Vis-compressed.pdf",
+          "format": "PDF",
+          "size": "2.4 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "EN20471-GLB-2023",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-global.pdf"
+          },
+          {
+            "name": "AS/NZS 4602",
+            "number": "AS4602-2023",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-asnzs4602.pdf"
+          },
+          {
+            "name": "ANSI/ISEA 107",
+            "number": "ANSI107-2023",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-ansi107.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide des normes internationales",
+            "url": "https://example.com/guide-normes-hi-vis.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "37",
+      "name": "Polo Haute Visibilité Manches Courtes (Anti-UV & Antibactérien)",
+      "description": "Polo technique en coton/polyester piqué avec bandes réfléchissantes segmentées. Double certification EN ISO 20471 (visibilité) et EN 13758-2 (UV). Traitement antibactérien et propriétés d'évacuation de la transpiration pour un confort optimal en conditions chaudes.",
+      "price": 49.99,
+      "imageUrl": "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&q=80&w=800",
+          "alt": "Polo HV - Vue avant montrant les bandes segmentées"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du tissu piqué et fentes latérales"
+        }
+      ],
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/H4NtcWb4Pi7EBLJ/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20HV-compressed.pdf",
+      "specifications": {
+        "normes": ["EN ISO 20471", "EN 13758-2"],
+        "materiau": "Coton/Polyester piqué",
+        "traitements": [
+          "Anti-UV",
+          "Antibactérien",
+          "Séchage rapide"
+        ],
+        "couleur": "Orange fluorescent",
+        "classe_visibilite": "Classe 2",
+        "bandes_reflechissantes": "Segmentées",
+        "fermeture": "3 boutons",
+        "ventilation": "Fentes latérales",
+        "proprietes": [
+          "Évacuation de la transpiration",
+          "Respirant",
+          "Neutralisation des odeurs"
+        ],
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "applications": [
+          "Chantiers estivaux", 
+          "Travail en milieu humide", 
+          "Zones à forte transpiration"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://s02.swdrive.fr/s/H4NtcWb4Pi7EBLJ/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20HV-compressed.pdf",
+          "format": "PDF",
+          "size": "2.3 MB",
+          "lastUpdate": "2024-06-10"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "EN20471-AB-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-antibactérien.pdf"
+          },
+          {
+            "name": "EN 13758-2",
+            "number": "EN13758-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en13758.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Protocole d'entretien pour propriétés antibactériennes",
+            "url": "https://example.com/guide-antibactérien.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "38",
+      "name": "Tenue de Travail Professionnelle Haute Visibilité (Complet Veste/Pantalon)",
+      "description": "Ensemble professionnel complet (veste + pantalon) en polyester-coton avec bandes rétro-réfléchissantes 360°. Conforme à la norme EN ISO 20471. Veste à fermeture glissière et coupe ergonomique pour les métiers exigeants. Idéal pour les travaux de voirie, BTP et maintenance.",
+      "price": 89.99,
+      "imageUrl": "https://images.unsplash.com/photo-1595959183085-6b91b1f0c3c6?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1595959183085-6b91b1f0c3c6?auto=format&fit=crop&q=80&w=800",
+          "alt": "Tenue HV complète - Vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des bandes réfléchissantes bras/jambes"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-tenue-professionnelle.pdf",
+      "specifications": {
+        "norme": "EN ISO 20471",
+        "composition": "Polyester-Coton (sergé)",
+        "elements": [
+          "Veste à fermeture glissière",
+          "Pantalon de travail",
+          "Bandes 360° (bras/taille/jambes)"
+        ],
+        "classe_visibilite": "Classe 3",
+        "caracteristiques": [
+          "Montage parallèle pour durabilité",
+          "Manches longues ajustables",
+          "Coutures renforcées"
+        ],
+        "couleur": "Orange Fluorescent",
+        "tailles": {
+          "veste": ["S", "M", "L", "XL", "XXL"],
+          "pantalon": ["S", "M", "L", "XL", "XXL"]
+        },
+        "poids": "1200g (ensemble complet)",
+        "applications": [
+          "Travaux routiers",
+          "Maintenance industrielle",
+          "Services techniques municipaux"
+        ]
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-tenue-professionnelle.pdf",
+          "format": "PDF",
+          "size": "2.5 MB",
+          "lastUpdate": "2024-06-15"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471 Classe 3",
+            "number": "EN20471-PRO-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-pro.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'ajustement professionnel",
+            "url": "https://example.com/guide-ajustement-pro.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "39",
+      "name": "Veste de Soudage en Cuir (Norme EN ISO 11611)",
+      "description": "Veste professionnelle en cuir de vachette 1.3mm avec coutures en fil para-aramide. Protection certifiée EN ISO 11611 contre les projections de soudage. Poignets réglables et fermeture auto-agrippante pour un ajustement sécurisé.",
+      "price": 149.99,
+      "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800",
+          "alt": "Veste de soudage - Vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des coutures renforcées"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-veste-soudage.pdf",
+      "specifications": {
+        "norme": "EN ISO 11611",
+        "materiau": "Cuir de vachette fendu 1.3mm",
+        "renforts": "Fil para-aramide",
+        "fermeture": "Bandes auto-agrippantes",
+        "poignets": "Réglables",
+        "poids": "2.1 kg",
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "couleur": "Naturel"
+      },
+      "categoryId": "2",
+      "subCategoryId": "27",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-veste-soudage.pdf",
+          "format": "PDF",
+          "size": "2.5 MB",
+          "lastUpdate": "2024-06-20"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 11611",
+            "number": "EN11611-SD-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso11611.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien du cuir de soudage",
+            "url": "https://example.com/guide-entretien-cuir.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    },
+    {
+      "id": "40",
+      "name": "Ensemble HV Imperméable (Veste + Pantalon)",
+      "description": "Ensemble complet anti-pluie haute visibilité en polyester 100%. Veste avec poignets élastiqués et bandes réfléchissantes sur le buste/jambes. Conforme aux normes EN ISO 20471 (HV) et EN 343 (imperméabilité). Idéal pour travaux extérieurs par intempéries.",
+      "price": 129.99,
+      "imageUrl": "https://images.unsplash.com/photo-1595959183085-6b91b1f0c3c6?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1595959183085-6b91b1f0c3c6?auto=format&fit=crop&q=80&w=800",
+          "alt": "Ensemble complet - Vue avant"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des poignets élastiqués"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-ensemble-impermeable.pdf",
+      "specifications": {
+        "normes": ["EN ISO 20471", "EN 343"],
+        "materiau": "100% Polyester",
+        "type": "Veste + Pantalon",
+        "caracteristiques": [
+          "Imperméable et respirant",
+          "Poignets élastiqués",
+          "Bandes réfléchissantes 360°"
+        ],
+        "poids": "1.5 kg (ensemble)",
+        "tailles": ["S", "M", "L", "XL", "XXL"],
+        "couleur": "Orange fluorescent"
+      },
+      "categoryId": "2",
+      "subCategoryId": "30",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-ensemble-impermeable.pdf",
+          "format": "PDF",
+          "size": "2.3 MB",
+          "lastUpdate": "2024-06-25"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471",
+            "number": "EN20471-IMP-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-impermeable.pdf"
+          },
+          {
+            "name": "EN 343",
+            "number": "EN343-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en343.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien des vêtements imperméables",
+            "url": "https://example.com/guide-impermeable.pdf",
+            "language": "Français"
+          }
+        ]
+      }
+    }, 
+    {
+      "id": "30",
+      "name": "Ensemble Pluie HV Imperméable (Classe 3)",
+      "description": "Ensemble complet haute visibilité (veste + pantalon) en jaune fluo avec bandes rétro-réfléchissantes. Protection optimale contre la pluie et le froid tout en offrant une respirabilité maximale. Conforme EN ISO 20471 Classe 3 et EN 343.",
+      "price": 139.99,
+      "imageUrl": "https://images.unsplash.com/photo-1620207418303-39a0d6d4c51b?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1620207418303-39a0d6d4c51b?auto=format&fit=crop&q=80&w=800",
+          "alt": "Ensemble pluie HV - Vue complète"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1620207418304-39a0d6d4c51c?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des bandes réfléchissantes"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-ensemble-pluie.pdf",
+      "specifications": {
+        "normes": ["EN ISO 20471 Classe 3", "EN 343"],
+        "composition": "100% Polyester",
+        "couleur": "Jaune fluo",
+        "caracteristiques": [
+          "Imperméable et respirant",
+          "Protection contre le froid",
+          "Montage parallèle renforcé",
+          "Bandes 360° cousues"
+        ],
+        "poids": "1.8 kg (ensemble)",
+        "tailles": ["S", "M", "L", "XL", "XXL", "3XL"]
+      },
+      "categoryId": "2",
+      "subCategoryId": "30",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-ensemble-pluie.pdf",
+          "format": "PDF",
+          "size": "2.4 MB",
+          "lastUpdate": "2024-06-28"
+        },
+        "certifications": [
+          {
+            "name": "EN ISO 20471 Classe 3",
+            "number": "EN20471-PLU-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-iso20471-pluie.pdf"
+          },
+          {
+            "name": "EN 343 Classe 3",
+            "number": "EN343-PLU-2024",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en343-pluie.pdf"
+          }
+        ],
+        "instructions": [
+          {
+            "title": "Guide d'entretien des vêtements de pluie",
+            "url": "https://example.com/guide-pluie.pdf",
+            "language": "Français"
+          }
+        ]
+      }
     }
-
+ 
   ]
 }

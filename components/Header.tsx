@@ -130,7 +130,7 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0">
               <ShieldCheck className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold hidden sm:inline">Fullness Safety</span>
+              {/* <span className="text-xl font-bold hidden sm:inline">Fullness Safety</span> */}
             </Link>
 
             {/* Navigation desktop */}

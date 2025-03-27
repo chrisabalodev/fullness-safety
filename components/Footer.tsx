@@ -225,7 +225,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 font-bold text-xl">
               <ShieldCheck className="h-6 w-6" />
-              <span>Fullness Safety</span>
+              {/* <span>Fullness Safety</span> */}
             </Link>
             <p className="text-muted-foreground">
               Votre partenaire de confiance pour tous vos équipements de protection individuelle.

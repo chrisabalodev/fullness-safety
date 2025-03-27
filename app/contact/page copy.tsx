@@ -26,7 +26,7 @@ export default function ContactPage() {
     email: "",
     phone: "",
     message: "",
-    subject: ""
+    category: ""
   });
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function ContactPage() {
       email: "",
       phone: "",
       message: "",
-      subject: ""
+      category: ""
     });
 
     setLoading(false);
@@ -65,23 +65,23 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@fullness-safety.com",
-      link: "mailto:contact@fullness-safety.com",
+      value: "contact@fullness-safety.fr",
+      link: "mailto:contact@fullness-safety.fr",
       color: "text-blue-500",
       bgColor: "bg-blue-500/10"
     },
     {
       icon: Phone,
       title: "Téléphone",
-      value: "91 21 82 26",
-      link: "tel:0022891218226",
+      value: "01 23 45 67 89",
+      link: "tel:0123456789",
       color: "text-emerald-500",
       bgColor: "bg-emerald-500/10"
     },
     {
       icon: MapPin,
       title: "Adresse",
-      value: "immeuble st Hubert, 01 BP 2440, 55 KTM, Rue Koketi, Lomé",
+      value: "123 Rue de la Sécurité, 75001 Paris",
       link: "https://maps.google.com",
       color: "text-amber-500",
       bgColor: "bg-amber-500/10"
@@ -93,14 +93,6 @@ export default function ContactPage() {
       color: "text-purple-500",
       bgColor: "bg-purple-500/10"
     }
-  ];
-
-  const subjects = [
-    "Service client",
-    "Demande de devis",
-    "Informations produits",
-    "Support technique",
-    "Autres"
   ];
 
   return (
@@ -192,9 +184,9 @@ export default function ContactPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="font-semibold mb-2">Notre boutique</h3>
+                    <h3 className="font-semibold mb-2">Nos Bureaux</h3>
                     <p className="text-sm text-white/80">
-                    immeuble st Hubert, 01 BP 2440, 55 KTM, Rue Koketi, Lomé Togo
+                      123 Rue de la Sécurité, 75001 Paris
                     </p>
                   </div>
                 </div>
@@ -249,20 +241,20 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                        Objet
+                      <label htmlFor="category" className="block text-sm font-medium mb-2">
+                        Catégorie de produits
                       </label>
                       <Select
-                        value={formData.subject}
-                        onValueChange={(value) => setFormData(prev => ({ ...prev, subject: value }))}
+                        value={formData.category}
+                        onValueChange={(value) => setFormData(prev => ({ ...prev, category: value }))}
                       >
                         <SelectTrigger className="h-12">
-                          <SelectValue placeholder="Sélectionnez un objet" />
+                          <SelectValue placeholder="Sélectionnez une catégorie" />
                         </SelectTrigger>
                         <SelectContent>
-                          {subjects.map((subject) => (
-                            <SelectItem key={subject} value={subject}>
-                              {subject}
+                          {categories.map((category) => (
+                            <SelectItem key={category.id} value={category.id}>
+                              {category.name}
                             </SelectItem>
                           ))}
                         </SelectContent>
