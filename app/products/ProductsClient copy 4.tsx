@@ -1,20 +1,17 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { Category, Product, SubCategory, getSubCategories } from "@/lib/db";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { 
-  Package, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, 
-  Filter, Search, X, Scale, Ruler, AlignCenterVertical as Certificate, 
-  Calendar, ShieldCheck, Boxes 
-} from "lucide-react";
+import { Package, ChevronFirst, ChevronLast, ChevronLeft, ChevronRight, Filter, Search, X, Scale, Ruler, AlignCenterVertical as Certificate, Calendar, ShieldCheck, Boxes } from "lucide-react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetFooter } from "@/components/ui/sheet";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -34,7 +31,6 @@ export default function ProductsClient({
 }: ProductsClientProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
   
   const initialCategoryId = searchParams.get('category') || undefined;
   const initialSubCategoryId = searchParams.get('subcategory') || undefined;
@@ -46,79 +42,16 @@ export default function ProductsClient({
   const [sortBy, setSortBy] = useState<string>("newest");
   const [showFilters, setShowFilters] = useState(false);
   const [subCategories, setSubCategories] = useState<SubCategory[]>(initialSubCategories);
-  const [specificationOptions, setSpecificationOptions] = useState<Record<string, string[]>>({});
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
 
-  // Fonction de nettoyage des valeurs
-  const cleanAndSplitValues = useCallback((value: any, key?: string): string[] => {
-    if (!value) return [];
-    
-    const valuesArray = Array.isArray(value) 
-      ? value.map(v => v?.toString().trim())
-      : value.toString().split(',').map((v: string) => v.trim());
-
-    const cleanedValues = valuesArray
-      .filter(v => v && v.length > 0)
-      .map(v => {
-        let cleaned = v
-          .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-          .toLowerCase()
-          .replace(/\s+/g, ' ')
-          .trim();
-
-        if (key) {
-          const lowerKey = key.toLowerCase();
-          if (lowerKey.includes('dimension') || lowerKey.includes('taille') || lowerKey.includes('poids')) {
-            cleaned = cleaned.replace(/(\d)\s*([x×*])\s*(\d)/g, '$1x$3')
-                           .replace(/\s*(mm|cm|m|kg|g)\s*/g, '$1');
-          } else if (lowerKey.includes('couleur')) {
-            cleaned = cleaned.replace(/[^a-zA-Zéèàêâîôû]/g, '');
-          }
-        }
-
-        return cleaned;
-      });
-
-    return [...new Set(cleanedValues)]
-      .map(v => v.charAt(0).toUpperCase() + v.slice(1));
-  }, []);
-
-  // Vérification de la position de défilement
-  const checkScrollPosition = useCallback(() => {
-    if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+  // Fonction pour nettoyer et séparer les valeurs
+  const cleanAndSplitValues = (value: any): string[] => {
+    if (Array.isArray(value)) {
+      return value.map(v => v?.toString().trim()).filter(v => v);
     }
-  }, []);
-
-  // Défilement gauche
-  const scrollLeft = useCallback(() => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: -200,
-        behavior: 'smooth'
-      });
-    }
-  }, []);
-
-  // Défilement droit
-  const scrollRight = useCallback(() => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({
-        left: 200,
-        behavior: 'smooth'
-      });
-    }
-  }, []);
-
-  // Vérification initiale et après redimensionnement
-  useEffect(() => {
-    checkScrollPosition();
-    window.addEventListener('resize', checkScrollPosition);
-    return () => window.removeEventListener('resize', checkScrollPosition);
-  }, [checkScrollPosition]);
+    return value?.toString().split(',')
+      .map((v: string) => v.trim())
+      .filter((v: string) => v.length > 0) || [];
+  };
 
   useEffect(() => {
     const fetchSubCategories = async () => {
@@ -132,40 +65,7 @@ export default function ProductsClient({
     fetchSubCategories();
   }, [initialCategoryId]);
 
-  useEffect(() => {
-    const filteredByCategory = initialCategoryId 
-      ? initialProducts.filter(product => product.categoryId === initialCategoryId)
-      : initialProducts;
-
-    const filteredBySubCategory = initialSubCategoryId
-      ? filteredByCategory.filter(product => product.subCategoryId === initialSubCategoryId)
-      : filteredByCategory;
-
-    const newSpecs = filteredBySubCategory.reduce((acc, product) => {
-      if (!product.specifications) return acc;
-      
-      Object.entries(product.specifications).forEach(([key, value]) => {
-        if (value === undefined || value === null) return;
-        
-        if (!acc[key]) {
-          acc[key] = new Set();
-        }
-        
-        const values = cleanAndSplitValues(value, key);
-        values.forEach(v => acc[key].add(v));
-      });
-      
-      return acc;
-    }, {} as Record<string, Set<string>>);
-
-    const sortedSpecs = Object.entries(newSpecs).reduce((acc, [key, values]) => {
-      acc[key] = Array.from(values).sort((a, b) => a.localeCompare(b));
-      return acc;
-    }, {} as Record<string, string[]>);
-
-    setSpecificationOptions(sortedSpecs);
-  }, [initialProducts, initialCategoryId, initialSubCategoryId, cleanAndSplitValues]);
-
+  // Filter products by category and subcategory
   const filteredByCategory = initialCategoryId 
     ? initialProducts.filter(product => product.categoryId === initialCategoryId)
     : initialProducts;
@@ -174,11 +74,37 @@ export default function ProductsClient({
     ? filteredByCategory.filter(product => product.subCategoryId === initialSubCategoryId)
     : filteredByCategory;
 
+  // Extract specifications from filtered products
+  const allSpecifications = filteredBySubCategory.reduce((acc, product) => {
+    if (!product.specifications) return acc;
+    
+    Object.entries(product.specifications).forEach(([key, value]) => {
+      if (value === undefined || value === null) return;
+      
+      if (!acc[key]) {
+        acc[key] = new Set();
+      }
+      
+      const values = cleanAndSplitValues(value);
+      values.forEach(v => acc[key].add(v));
+    });
+    
+    return acc;
+  }, {} as Record<string, Set<string>>);
+
+  const specificationOptions = Object.entries(allSpecifications).reduce((acc, [key, values]) => {
+    acc[key] = Array.from(values).sort();
+    return acc;
+  }, {} as Record<string, string[]>);
+
+  // Apply all filters
   const filteredProducts = filteredBySubCategory.filter(product => {
+    // Filtre par recherche texte
     const matchesSearch = !localSearch || 
       [product.name, product.description, product.sku]
         .some(field => field?.toLowerCase().includes(localSearch.toLowerCase()));
 
+    // Filtre par spécifications
     const matchesSpecifications = Object.entries(selectedSpecifications)
       .every(([filterKey, filterValues]) => {
         if (filterValues.length === 0) return true;
@@ -186,7 +112,7 @@ export default function ProductsClient({
         const productValue = product.specifications?.[filterKey];
         if (productValue === undefined || productValue === null) return false;
         
-        const productValues = cleanAndSplitValues(productValue, filterKey);
+        const productValues = cleanAndSplitValues(productValue);
         return filterValues.some(filterValue => 
           productValues.includes(filterValue)
         );
@@ -252,45 +178,17 @@ export default function ProductsClient({
     subcategory?: string | undefined, 
     search?: string | undefined 
   }) => {
-    const newParams = new URLSearchParams(searchParams.toString());
+    const newParams = new URLSearchParams();
     
-    if (params.category !== undefined) {
-      if (params.category) {
-        newParams.set('category', params.category);
-      } else {
-        newParams.delete('category');
-      }
-    }
-    
-    if (params.subcategory !== undefined) {
-      if (params.subcategory) {
-        newParams.set('subcategory', params.subcategory);
-      } else {
-        newParams.delete('subcategory');
-      }
-    }
-    
-    if (params.search !== undefined) {
-      if (params.search) {
-        newParams.set('search', params.search);
-      } else {
-        newParams.delete('search');
-      }
-    }
+    if (params.category) newParams.set('category', params.category);
+    if (params.subcategory) newParams.set('subcategory', params.subcategory);
+    if (params.search) newParams.set('search', params.search);
     
     router.push(`/products?${newParams.toString()}`);
   };
 
   const handleSubCategoryClick = (subCategoryId: string) => {
-    const newParams = new URLSearchParams(searchParams.toString());
-    
-    if (subCategoryId) {
-      newParams.set('subcategory', subCategoryId);
-    } else {
-      newParams.delete('subcategory');
-    }
-    
-    router.push(`/products?${newParams.toString()}`);
+    updateUrl({ subcategory: subCategoryId });
   };
 
   const getActiveFiltersCount = () => {
@@ -304,6 +202,7 @@ export default function ProductsClient({
       .reduce((sum, values) => sum + values.length, 0);
   };
 
+  // Fonction pour obtenir une icône dynamique
   const getDynamicIcon = (key: string) => {
     const iconMap: Record<string, React.ReactNode> = {
       poids: <Scale className="w-4 h-4 text-primary" />,
@@ -324,6 +223,7 @@ export default function ProductsClient({
 
         <div className="container mx-auto py-12 px-4 relative">
           <div className="flex flex-col gap-8">
+            {/* Category Title */}
             {activeCategory && (
               <div>
                 <h1 className="text-3xl font-bold">{activeCategory.name}</h1>
@@ -333,6 +233,7 @@ export default function ProductsClient({
               </div>
             )}
 
+            {/* Filters and search */}
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
               <div className="flex items-center gap-4">
                 <Sheet open={showFilters} onOpenChange={setShowFilters}>
@@ -353,6 +254,7 @@ export default function ProductsClient({
                     </SheetHeader>
                     <ScrollArea className="h-[calc(100vh-8rem)] pr-4">
                       <Accordion type="multiple" className="w-full">
+                        {/* Tri */}
                         <AccordionItem value="sort">
                           <AccordionTrigger className="py-4 hover:no-underline">
                             <div className="flex items-center gap-3">
@@ -380,6 +282,7 @@ export default function ProductsClient({
                           </AccordionContent>
                         </AccordionItem>
 
+                        {/* Dynamic Specifications Filters */}
                         {Object.entries(specificationOptions).map(([key, values]) => (
                           <AccordionItem key={key} value={key}>
                             <AccordionTrigger className="py-4 hover:no-underline">
@@ -448,27 +351,11 @@ export default function ProductsClient({
               </div>
             </div>
 
+            {/* Subcategories Navigation */}
             {initialCategoryId && subCategories.length > 0 && (
-              <div className="relative group overflow-hidden">
-                {canScrollLeft && (
-                  <div className="absolute left-0 top-0 bottom-0 flex items-center z-10">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-background"
-                      onClick={scrollLeft}
-                    >
-                      <ChevronLeft className="h-4 w-4" />
-                    </Button>
-                  </div>
-                )}
-                
+              <div className="relative">
                 <ScrollArea className="w-full whitespace-nowrap rounded-md border">
-                  <div 
-                    ref={scrollContainerRef}
-                    className="flex space-x-2 p-4"
-                    onScroll={checkScrollPosition}
-                  >
+                  <div className="flex space-x-2 p-4">
                     {subCategories.map((subCategory) => (
                       <Button
                         key={subCategory.id}
@@ -481,29 +368,10 @@ export default function ProductsClient({
                     ))}
                   </div>
                 </ScrollArea>
-                
-                {canScrollRight && (
-                  <div className="absolute right-0 top-0 bottom-0 flex items-center z-10">
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8 rounded-full bg-background/80 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity shadow-md hover:bg-background"
-                      onClick={scrollRight}
-                    >
-                      <ChevronRight className="h-4 w-4" />
-                    </Button>
-                  </div>
-                )}
-
-                <div className={`absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-background via-background/80 to-transparent pointer-events-none z-0 ${
-                  !canScrollLeft ? 'opacity-0' : ''
-                }`} />
-                <div className={`absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-background via-background/80 to-transparent pointer-events-none z-0 ${
-                  !canScrollRight ? 'opacity-0' : ''
-                }`} />
               </div>
             )}
 
+            {/* Active Filters */}
             {getActiveFiltersCount() > 0 && (
               <div className="flex flex-wrap gap-2">
                 {Object.entries(selectedSpecifications).map(([key, values]) =>
@@ -540,6 +408,7 @@ export default function ProductsClient({
               </div>
             )}
 
+            {/* Products Grid */}
             {filteredProducts.length === 0 ? (
               <div className="text-center py-12">
                 <Package className="h-12 w-12 mx-auto text-muted-foreground/50 mb-4" />
@@ -563,6 +432,7 @@ export default function ProductsClient({
                       className="group block h-full focus:outline-none"
                     >
                       <div className="flex h-full flex-col overflow-hidden rounded-lg border transition-all duration-300 hover:shadow-md">
+                        {/* Image container with fixed size */}
                         <div className="relative h-72 w-full bg-gray-50 sm:h-72">
                           {product.imageUrl ? (
                             <>
@@ -577,6 +447,7 @@ export default function ProductsClient({
                                   objectFit: 'cover'
                                 }}
                               />
+                              {/* Subtle overlay on hover */}
                               <div className="absolute inset-0 bg-black/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                             </>
                           ) : (
@@ -586,17 +457,19 @@ export default function ProductsClient({
                           )}
                         </div>
 
+                        {/* Product info - Simple and clean */}
                         <div className="flex flex-1 flex-col p-4">
                           <h3 className="mb-1 text-sm font-medium text-gray-900 line-clamp-2 md:text-base">
                             {product.name}
                           </h3>
                           
+                          {/* Specifications as minimalist chips */}
                           {product.specifications && (
                             <div className="mt-1 flex flex-wrap gap-1">
                               {Object.entries(product.specifications)
                                 .slice(0, 2)
                                 .map(([key, value]) => {
-                                  const displayValue = cleanAndSplitValues(value, key)[0];
+                                  const displayValue = cleanAndSplitValues(value)[0];
                                   return (
                                     <span 
                                       key={`${key}-${displayValue}`}
@@ -609,6 +482,7 @@ export default function ProductsClient({
                             </div>
                           )}
 
+                          {/* View button (appears on hover) */}
                           <div className="mt-auto pt-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                             <span className="text-xs font-medium text-primary underline-offset-4 group-hover:underline md:text-sm">
                               Voir détails
@@ -620,6 +494,7 @@ export default function ProductsClient({
                   ))}
                 </div>
  
+                {/* Pagination */}
                 {totalPages > 1 && (
                   <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
                     <div className="flex items-center gap-2">

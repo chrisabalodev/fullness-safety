@@ -49,6 +49,13 @@
         "description": "Équipements de signalisation et accessoires de sécurité",
         "slug": "signalisation-accessoires",
         "imageUrl": "https://images.unsplash.com/photo-1568910837157-7c10c89917a2?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "id": "8",
+        "name": "Protection des Mains",
+        "description": "Gants de protection professionnels conformes aux normes de sécurité pour différents risques (thermique, mécanique, chimique).",
+        "slug": "protection-mains",
+        "imageUrl": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800"
       }
     ],
     "subCategories": [
@@ -350,48 +357,6 @@
       },
       {
         "id": "8",
-        "name": "Gants anti-coupure",
-        "categoryId": "3",
-        "slug": "gants-anti-coupure",
-        "specificationFields": [
-          {
-            "id": "spec1",
-            "name": "norme",
-            "label": "Norme",
-            "type": "text",
-            "required": true,
-            "icon": "Shield"
-          },
-          {
-            "id": "spec2",
-            "name": "materiau",
-            "label": "Matériau",
-            "type": "text",
-            "required": true,
-            "icon": "Box"
-          },
-          {
-            "id": "spec3",
-            "name": "taille",
-            "label": "Taille",
-            "type": "select",
-            "required": true,
-            "options": ["S", "M", "L", "XL"],
-            "icon": "Ruler"
-          },
-          {
-            "id": "spec4",
-            "name": "protection_niveau",
-            "label": "Niveau de protection",
-            "type": "select",
-            "required": true,
-            "options": ["Niveau 1", "Niveau 2", "Niveau 3"],
-            "icon": "Shield"
-          }
-        ]
-      },
-      {
-        "id": "9",
         "name": "Chaussures de sécurité hautes",
         "categoryId": "5",
         "slug": "chaussures-securite-hautes",
@@ -433,7 +398,7 @@
         ]
       },
       {
-        "id": "10",
+        "id": "9",
         "name": "Masques anti-poussière",
         "categoryId": "4",
         "slug": "masques-anti-poussiere",
@@ -467,7 +432,7 @@
         ]
       },
       {
-        "id": "11",
+        "id": "10",
         "name": "Chaussettes de sécurité",
         "categoryId": "5",
         "slug": "chaussettes-securite",
@@ -500,40 +465,7 @@
         ]
       },
       {
-        "id": "12",
-        "name": "Gants de manutention",
-        "categoryId": "3",
-        "slug": "gants-manutention",
-        "specificationFields": [
-          {
-            "id": "spec1",
-            "name": "norme",
-            "label": "Norme",
-            "type": "text",
-            "required": true,
-            "icon": "Shield"
-          },
-          {
-            "id": "spec2",
-            "name": "matériau",
-            "label": "Matériau",
-            "type": "text",
-            "required": true,
-            "icon": "Box"
-          },
-          {
-            "id": "spec3",
-            "name": "taille",
-            "label": "Taille",
-            "type": "select",
-            "required": true,
-            "options": ["M", "L", "XL"],
-            "icon": "Ruler"
-          }
-        ]
-      },
-      {
-        "id": "13",
+        "id": "11",
         "name": "Écrans faciaux",
         "categoryId": "5",
         "slug": "ecrans-faciaux",
@@ -558,7 +490,7 @@
         ]
       },
       {
-        "id": "14",
+        "id": "12",
         "name": "Panneaux de signalisation",
         "categoryId": "7",
         "slug": "panneaux-signalisation",
@@ -591,7 +523,7 @@
         ]
       },
       {
-        "id": "15",
+        "id": "13",
         "name": "Chaussures de sécurité imperméables",
         "categoryId": "5",
         "slug": "chaussures-securite-impermeables",
@@ -624,7 +556,7 @@
         ]
       },
       {
-        "id": "16",
+        "id": "14",
         "name": "Gants isolants électriciens",
         "categoryId": "3",
         "slug": "gants-isolants-electriciens",
@@ -658,7 +590,7 @@
         ]
       },
       {
-        "id": "17",
+        "id": "15",
         "name": "Protection visuelle anti-chaleur",
         "categoryId": "5",
         "slug": "protection-visuelle-anti-chaleur",
@@ -691,7 +623,7 @@
         ]
       },
       {
-        "id": "18",
+        "id": "16",
         "name": "Harnais de sécurité avec coussins",
         "categoryId": "6",
         "slug": "harnais-securite-coussins",
@@ -725,7 +657,7 @@
         ]
       },
       {
-        "id": "19",
+        "id": "17",
         "name": "Gilets haute visibilité rétroréfléchissants",
         "categoryId": "7",
         "slug": "gilets-haute-visibilite-retroreflechissants",
@@ -759,7 +691,7 @@
         ]
       },
       {
-        "id": "20",
+        "id": "18",
         "name": "Cônes de signalisation en caoutchouc",
         "categoryId": "7",
         "slug": "cones-signalisation-caoutchouc",
@@ -793,7 +725,7 @@
         ]
       },
       {
-        "id": "21",
+        "id": "19",
         "name": "Blouses de protection chimique",
         "categoryId": "2",
         "slug": "blouses-protection-chimique",
@@ -827,9 +759,9 @@
         ]
       },
       {
-        "id": "22",
+        "id": "20",
         "name": "Ventilateurs de chantier",
-        "categoryId": "8",
+        "categoryId": "",
         "slug": "ventilateurs-chantier",
         "specificationFields": [
           {
@@ -861,7 +793,7 @@
         ]
       },
       {
-        "id": "23",
+        "id": "21",
         "name": "Casquettes de protection",
         "categoryId": "1",
         "slug": "casquettes-protection",
@@ -911,7 +843,7 @@
         ]
       },
       {
-        "id": "24",
+        "id": "22",
         "name": "Casques Style Baseball",
         "categoryId": "1",
         "slug": "casques-baseball",
@@ -952,7 +884,7 @@
         ]
       },
       {
-        "id": "25",
+        "id": "23",
         "name": "Bouchons d'Oreille",
         "categoryId": "6",
         "slug": "bouchons-oreille",
@@ -995,7 +927,7 @@
         ]
       },
       {
-        "id": "26",
+        "id": "24",
         "name": "Lunettes de Protection",
         "categoryId": "3",
         "slug": "lunettes-protection",
@@ -1005,7 +937,7 @@
         ]
       },
       {
-        "id": "27",
+        "id": "25",
         "name": "Vêtements haute visibilité",
         "categoryId": "2",
         "slug": "vetements-haute-visibilite",
@@ -1100,7 +1032,7 @@
         ]
       },
       {
-        "id": "28",
+        "id": "26",
         "name": "Équipements de Flottabilité",
         "categoryId": "2", 
         "slug": "equipements-flottabilite",
@@ -1161,7 +1093,7 @@
         ]
       },
       {
-        "id": "30",
+        "id": "27",
         "name": "Ensembles HV Imperméables",
         "categoryId": "2",
         "slug": "ensembles-hv-impermeables",
@@ -1192,7 +1124,7 @@
         ]
       },
       {
-        "id": "31",
+        "id": "28",
         "name": "Protection Thermique Soudage",
         "categoryId": "2",
         "slug": "protection-soudage",
@@ -1223,8 +1155,719 @@
             "required": true
           }
         ]
+      },
+      {
+        "id": "29",
+        "name": "Gants Thermiques",
+        "categoryId": "8",
+        "slug": "gants-thermiques",
+        "specificationFields": [
+          {
+            "id": "spec41",
+            "name": "norme_thermique",
+            "label": "Norme thermique",
+            "type": "select",
+            "required": true,
+            "options": ["EN 407", "EN 12477", "ISO 15383"],
+            "icon": "Flame"
+          },
+          {
+            "id": "spec42",
+            "name": "resistance_temperature",
+            "label": "Résistance température max",
+            "type": "number",
+            "unit": "°C",
+            "required": true,
+            "icon": "Thermometer"
+          },
+          {
+            "id": "spec43",
+            "name": "materiau",
+            "label": "Matériau principal",
+            "type": "select",
+            "options": ["Cuir", "Kevlar", "Aluminisé", "Tissu ignifugé"],
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec44",
+            "name": "type_protection",
+            "label": "Type de protection",
+            "type": "multiselect",
+            "options": ["Contact chaud", "Flammes", "Étincelles", "Radiations", "Projections métal"],
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec45",
+            "name": "taille",
+            "label": "Tailles disponibles",
+            "type": "multiselect",
+            "options": ["S", "M", "L", "XL", "XXL"],
+            "required": true,
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "name": "Gants Anti-Coupure",
+        "categoryId": "8",
+        "slug": "gants-anti-coupure",
+        "specificationFields": [
+          {
+            "id": "spec46",
+            "name": "norme",
+            "label": "Norme de protection",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "Règlement UE 2016"],
+            "icon": "Shield",
+            "description": "Normes de résistance mécanique"
+          },
+          {
+            "id": "spec47",
+            "name": "niveau_coupure",
+            "label": "Niveau de résistance (EN 388)",
+            "type": "text",
+            "required": true,
+            "icon": "AlertCircle",
+            "description": "Ex: 4543 (selon la norme EN 388)"
+          },
+          {
+            "id": "spec48",
+            "name": "materiau",
+            "label": "Fibres techniques",
+            "type": "text",
+            "required": true,
+            "icon": "Box",
+            "description": "Ex: Fibres haute performance (Dyneema, Kevlar, etc.)"
+          },
+          {
+            "id": "spec49",
+            "name": "tricotage",
+            "label": "Type de tricotage",
+            "type": "text",
+            "required": true,
+            "icon": "Grid",
+            "description": "Ex: Jauge 13 sans couture"
+          },
+          {
+            "id": "spec50",
+            "name": "environnement",
+            "label": "Environnement d'utilisation",
+            "type": "select",
+            "required": true,
+            "options": ["Milieu sec", "Milieu humide", "Mixte"],
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec51",
+            "name": "couleur",
+            "label": "Couleur disponible",
+            "type": "select",
+            "options": ["Gris", "Noir", "Bleu"],
+            "required": true,
+            "icon": "Palette"
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "name": "Gants de Manutention Légère",
+        "categoryId": "8",
+        "slug": "gants-manutention-legere",
+        "specificationFields": [
+          {
+            "id": "spec52",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec53",
+            "name": "composition",
+            "label": "Composition textile",
+            "type": "text",
+            "required": true,
+            "icon": "Box",
+            "description": "Ex: 65% Polyester, 35% Coton"
+          },
+          {
+            "id": "spec54",
+            "name": "enduction",
+            "label": "Type d'enduction",
+            "type": "select",
+            "options": ["PVC", "Nitrile", "Latex", "Aucune"],
+            "required": true,
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec55",
+            "name": "tricotage",
+            "label": "Type de tricotage",
+            "type": "text",
+            "required": true,
+            "icon": "Grid",
+            "description": "Ex: Tricot 5 doigts sans couture"
+          },
+          {
+            "id": "spec56",
+            "name": "couleur",
+            "label": "Couleurs disponibles",
+            "type": "multiselect",
+            "options": ["Bleu/Blanc", "Noir", "Gris", "Orange"],
+            "required": true,
+            "icon": "Palette"
+          },
+          {
+            "id": "spec57",
+            "name": "environnement",
+            "label": "Environnement d'utilisation",
+            "type": "select",
+            "options": ["Milieu sec", "Milieu humide", "Mixte"],
+            "required": true,
+            "icon": "Cloud"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "name": "Gants de Travaux Lourds en Cuir",
+        "categoryId": "8",
+        "slug": "gants-travaux-lourds-cuir",
+        "specificationFields": [
+          {
+            "id": "spec58",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec59",
+            "name": "type_cuir",
+            "label": "Type de cuir",
+            "type": "select",
+            "required": true,
+            "options": ["Croûte bovin", "Cuir pleine fleur", "Cuir synthétique"],
+            "icon": "Box",
+            "description": "Qualité du cuir utilisé"
+          },
+          {
+            "id": "spec60",
+            "name": "renforts",
+            "label": "Zones renforcées",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Dos", "Pouce palmé", "Doigts rapportés", "Artère protégée"],
+            "icon": "Zap"
+          },
+          {
+            "id": "spec61",
+            "name": "doublure",
+            "label": "Matériau de doublure",
+            "type": "select",
+            "required": true,
+            "options": ["Coton", "Tissu technique", "Sans doublure"],
+            "icon": "Layers"
+          },
+          {
+            "id": "spec62",
+            "name": "montage",
+            "label": "Type de montage",
+            "type": "select",
+            "required": true,
+            "options": ["Américain", "Européen", "Hybride"],
+            "icon": "Settings"
+          },
+          {
+            "id": "spec63",
+            "name": "environnement",
+            "label": "Environnement d'utilisation",
+            "type": "select",
+            "required": true,
+            "options": ["Sec", "Légèrement humide", "Humide"],
+            "icon": "Cloud"
+          },
+          {
+            "id": "spec64",
+            "name": "couleur",
+            "label": "Couleurs disponibles",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Cuir naturel/Toile bleu", "Noir", "Marron", "Jaune"],
+            "icon": "Palette"
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "name": "Gants de Maîtrise en Cuir",
+        "categoryId": "8",
+        "slug": "gants-maitrise-cuir",
+        "specificationFields": [
+          {
+            "id": "spec65",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec66",
+            "name": "type_cuir",
+            "label": "Type de cuir",
+            "type": "select",
+            "required": true,
+            "options": ["Tout fleur vachette", "Croûte bovin", "Cuir chevreau"],
+            "icon": "Box",
+            "description": "Qualité du cuir utilisé"
+          },
+          {
+            "id": "spec67",
+            "name": "ergonomie",
+            "label": "Caractéristiques ergonomiques",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Pouce palmé", "Élastique de serrage", "Seconde peau", "Dextérité améliorée"],
+            "icon": "Activity"
+          },
+          {
+            "id": "spec68",
+            "name": "couleur",
+            "label": "Couleurs disponibles",
+            "type": "select",
+            "required": true,
+            "options": ["Cuir naturel/Gris", "Noir", "Marron", "Beige"],
+            "icon": "Palette"
+          },
+          {
+            "id": "spec69",
+            "name": "environnement",
+            "label": "Environnement d'utilisation",
+            "type": "select",
+            "required": true,
+            "options": ["Sec", "Légèrement humide"],
+            "icon": "Cloud"
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "name": "Gants de Manutention Légère Enduits",
+        "categoryId": "8",
+        "slug": "gants-manutention-leger-enduits",
+        "specificationFields": [
+          {
+            "id": "spec70",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec71",
+            "name": "materiau_tricot",
+            "label": "Matériau du tricot",
+            "type": "select",
+            "required": true,
+            "options": ["100% Polyamide", "Polyamide/Coton", "Polyester"],
+            "icon": "Box"
+          },
+          {
+            "id": "spec72",
+            "name": "enduction",
+            "label": "Type d'enduction",
+            "type": "select",
+            "required": true,
+            "options": ["Polyuréthane", "Nitrile", "Latex", "PVC"],
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec73",
+            "name": "zones_enduites",
+            "label": "Zones enduites",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Paume", "Extrémités des doigts", "Phalanges"],
+            "icon": "Layout"
+          },
+          {
+            "id": "spec74",
+            "name": "poignet",
+            "label": "Type de poignet",
+            "type": "select",
+            "required": true,
+            "options": ["Élastique", "Ouvert", "Serrage velcro"],
+            "icon": "Watch"
+          },
+          {
+            "id": "spec75",
+            "name": "couleur",
+            "label": "Couleurs disponibles",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Orange", "Vert", "Bleu", "Noir"],
+            "icon": "Palette"
+          },
+          {
+            "id": "spec76",
+            "name": "respirabilite",
+            "label": "Respirabilité",
+            "type": "boolean",
+            "required": true,
+            "icon": "Wind"
+          }
+        ]
+      },
+      {
+        "id": "35",
+        "name": "Gants de Manutention Lourde Enduits",
+        "categoryId": "8",
+        "slug": "gants-manutention-lourde-enduits",
+        "specificationFields": [
+          {
+            "id": "spec77",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec78",
+            "name": "materiau_tricot",
+            "label": "Matériau du tricot",
+            "type": "select",
+            "required": true,
+            "options": ["Polyester/Coton", "100% Polyamide", "Polyester"],
+            "icon": "Box"
+          },
+          {
+            "id": "spec79",
+            "name": "enduction",
+            "label": "Type d'enduction",
+            "type": "select",
+            "required": true,
+            "options": ["Latex épais", "Nitrile", "Polyuréthane renforcé"],
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec80",
+            "name": "resistance_chimique",
+            "label": "Résistance chimique",
+            "type": "multiselect",
+            "required": false,
+            "options": ["Acides", "Détergents", "Solvants", "Huiles"],
+            "icon": "Flask"
+          },
+          {
+            "id": "spec81",
+            "name": "couleur",
+            "label": "Couleur disponible",
+            "type": "select",
+            "required": true,
+            "options": ["Jaune", "Noir", "Orange"],
+            "icon": "Palette"
+          },
+          {
+            "id": "spec82",
+            "name": "poids",
+            "label": "Poids moyen",
+            "type": "number",
+            "unit": "g/paire",
+            "required": true,
+            "icon": "Scale"
+          }
+        ]
+      },
+      {
+        "id": "36",
+        "name": "Gants Nitrile Technique",
+        "categoryId": "8",
+        "slug": "gants-nitrile-technique",
+        "specificationFields": [
+          {
+            "id": "spec83",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec84",
+            "name": "type_enduction",
+            "label": "Type d'enduction nitrile",
+            "type": "select",
+            "required": true,
+            "options": ["Mousse", "Lisse", "Picots"],
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec85",
+            "name": "zones_enduites",
+            "label": "Zones enduites",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Paume", "Doigts", "Phalanges"],
+            "icon": "Layout"
+          },
+          {
+            "id": "spec86",
+            "name": "texture",
+            "label": "Texture de surface",
+            "type": "select",
+            "required": true,
+            "options": ["Picots", "Striée", "Lisse"],
+            "icon": "Grid"
+          },
+          {
+            "id": "spec87",
+            "name": "respirabilite",
+            "label": "Respirabilité",
+            "type": "boolean",
+            "required": true,
+            "icon": "Wind"
+          },
+          {
+            "id": "spec88",
+            "name": "couleur",
+            "label": "Couleur disponible",
+            "type": "select",
+            "required": true,
+            "options": ["Gris/Argent", "Noir", "Bleu"],
+            "icon": "Palette"
+          }
+        ]
+      },
+      {
+        "id": "37",
+        "name": "Gants Chimiques PVC",
+        "categoryId": "8",
+        "slug": "gants-chimiques-pvc",
+        "specificationFields": [
+          {
+            "id": "spec89",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 374-1", "EN 374-2", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec90",
+            "name": "type_pvc",
+            "label": "Type de PVC",
+            "type": "select",
+            "required": true,
+            "options": ["Double trempage", "Enduction totale", "Finition sablée"],
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec91",
+            "name": "resistance_chimique",
+            "label": "Résistance chimique",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Huiles", "Graisses", "Acides dilués", "Solvants organiques"],
+            "icon": "Flask"
+          },
+          {
+            "id": "spec92",
+            "name": "texture",
+            "label": "Texture de surface",
+            "type": "select",
+            "required": true,
+            "options": ["Sablée", "Lisse", "Striée"],
+            "icon": "Grid"
+          },
+          {
+            "id": "spec93",
+            "name": "doublure",
+            "label": "Type de doublure",
+            "type": "select",
+            "required": true,
+            "options": ["Jersey coton", "Sans doublure", "Tissu technique"],
+            "icon": "Layers"
+          },
+          {
+            "id": "spec94",
+            "name": "couleur",
+            "label": "Couleurs disponibles",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Vert", "Rouge", "Noir", "Bleu"],
+            "icon": "Palette"
+          }
+        ]
+      },
+      {
+        "id": "38",
+        "name": "Gants Anti-Coupure Haute Performance",
+        "categoryId": "8",
+        "slug": "gants-anti-coupure-haute-performance",
+        "specificationFields": [
+          {
+            "id": "spec95",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec96",
+            "name": "niveau_coupure",
+            "label": "Niveau de protection (EN 388)",
+            "type": "select",
+            "required": true,
+            "options": ["Niveau 5", "Niveau 6", "Niveau A"],
+            "icon": "AlertTriangle"
+          },
+          {
+            "id": "spec97",
+            "name": "composition",
+            "label": "Composition des fibres",
+            "type": "multiselect",
+            "required": true,
+            "options": [
+              "Acier inoxydable", 
+              "Polyéthylène haute densité", 
+              "Polyamide texturé",
+              "Fibre de verre"
+            ],
+            "icon": "Box"
+          },
+          {
+            "id": "spec98",
+            "name": "enduction",
+            "label": "Type d'enduction",
+            "type": "select",
+            "required": true,
+            "options": ["CLEAN PU®", "Nitrile", "Latex", "Sans enduction"],
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec99",
+            "name": "renforts",
+            "label": "Zones renforcées",
+            "type": "multiselect",
+            "required": true,
+            "options": [
+              "Paume", 
+              "Extrémités des doigts", 
+              "Pouce-index", 
+              "Dos de la main"
+            ],
+            "icon": "Zap"
+          },
+          {
+            "id": "spec100",
+            "name": "couleur",
+            "label": "Couleurs disponibles",
+            "type": "select",
+            "required": true,
+            "options": ["Noir/Gris", "Bleu", "Orange", "Noir"],
+            "icon": "Palette"
+          },
+          {
+            "id": "spec101",
+            "name": "jauge_tricot",
+            "label": "Jauge de tricotage",
+            "type": "number",
+            "required": true,
+            "unit": "",
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "39",
+        "name": "Gants de Manutention en Cuir Renforcé",
+        "categoryId": "8",
+        "slug": "gants-manutention-cuir-renforce",
+        "specificationFields": [
+          {
+            "id": "spec102",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec103",
+            "name": "type_cuir",
+            "label": "Type de cuir",
+            "type": "select",
+            "required": true,
+            "options": ["Croûte de vache", "Pleine fleur", "Cuir synthétique"],
+            "icon": "Box",
+            "description": "Partie du cuir utilisée"
+          },
+          {
+            "id": "spec104",
+            "name": "zones_renforcees",
+            "label": "Zones renforcées",
+            "type": "multiselect",
+            "required": true,
+            "options": ["Paume", "Doigts", "Pouce", "Dos"],
+            "icon": "Zap"
+          },
+          {
+            "id": "spec105",
+            "name": "montage",
+            "label": "Type de montage",
+            "type": "select",
+            "required": true,
+            "options": ["Américain", "Européen", "Hybride"],
+            "icon": "Settings"
+          },
+          {
+            "id": "spec106",
+            "name": "poignet",
+            "label": "Fermeture du poignet",
+            "type": "select",
+            "required": true,
+            "options": ["Élastique", "Sangle velcro", "Ouvert"],
+            "icon": "Watch"
+          },
+          {
+            "id": "spec107",
+            "name": "reutilisable",
+            "label": "Réutilisable",
+            "type": "boolean",
+            "required": true,
+            "icon": "Repeat"
+          },
+          {
+            "id": "spec108",
+            "name": "couleur",
+            "label": "Couleur disponible",
+            "type": "select",
+            "required": true,
+            "options": ["Jaune", "Marron", "Noir"],
+            "icon": "Palette"
+          }
+        ]
       }
- 
+      
     ],
     "products": [
     {
@@ -2028,75 +2671,6 @@
           {
             "title": "Guide d'ajustement et d'utilisation",
             "url": "https://example.com/guide-casque-baseball.pdf",
-            "language": "Français"
-          }
-        ]
-      }
-    },
-    {
-      "id": "15",
-      "name": "Casque Anti-Bruit Professionnel",
-      "description": "Casque de protection auditive avec atténuation de 28 dB, coquilles profilées remplies de liquide pour un confort optimal et isolation électrique jusqu'à 1000Vac/1500Vdc. Conforme aux normes EN 352 et EN 50365.",
-      "price": 89.99,
-      "imageUrl": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
-      "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant du casque anti-bruit"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des coussinets remplis de liquide"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
-          "alt": "Casque porté en situation industrielle"
-        }
-      ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-casque-antibruit.pdf",
-      "specifications": {
-        "norme": "EN 352-1, EN 352-3, EN 50365",
-        "attenuation": "28 dB",
-        "type": "Passe-tête",
-        "isolation_electrique": "1000Vac / 1500Vdc",
-        "confort": "Coussinets liquides, bande anti-sudation",
-        "materiau_coquilles": "Polycarbonate",
-        "poids": "420 g",
-        "reglage": "Arceau profilé ajustable",
-        "secteurs": [
-          "Aéroports",
-          "Industrie automobile",
-          "Métallurgie",
-          "BTP"
-        ]
-      },
-      "categoryId": "6",
-      "subCategoryId": "4",
-      "documentation": {
-        "technicalSheet": {
-          "url": "https://example.com/fiche-technique-casque-antibruit.pdf",
-          "format": "PDF",
-          "size": "2.5 MB",
-          "lastUpdate": "2024-07-25"
-        },
-        "certifications": [
-          {
-            "name": "EN 352-1",
-            "number": "EN3521-2024-AB",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en3521.pdf"
-          },
-          {
-            "name": "EN 50365",
-            "number": "EN50365-2024-AB",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en50365.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement et d'entretien",
-            "url": "https://example.com/guide-casque-antibruit.pdf",
             "language": "Français"
           }
         ]
@@ -3779,7 +4353,7 @@
         "couleur": "Orange fluorescent"
       },
       "categoryId": "2",
-      "subCategoryId": "30",
+      "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
           "url": "https://example.com/fiche-technique-ensemble-impermeable.pdf",
@@ -3811,7 +4385,7 @@
       }
     }, 
     {
-      "id": "30",
+      "id": "41",
       "name": "Ensemble Pluie HV Imperméable (Classe 3)",
       "description": "Ensemble complet haute visibilité (veste + pantalon) en jaune fluo avec bandes rétro-réfléchissantes. Protection optimale contre la pluie et le froid tout en offrant une respirabilité maximale. Conforme EN ISO 20471 Classe 3 et EN 343.",
       "price": 139.99,
@@ -3841,7 +4415,7 @@
         "tailles": ["S", "M", "L", "XL", "XXL", "3XL"]
       },
       "categoryId": "2",
-      "subCategoryId": "30",
+      "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
           "url": "https://example.com/fiche-technique-ensemble-pluie.pdf",
@@ -3871,7 +4445,613 @@
           }
         ]
       }
+    },
+    {
+      "id": "42",
+      "name": "Gant Anti-Chaleur Rouge",
+      "description": "Gants en cuir épais avec double tissus pour une protection optimale contre les flammes, les étincelles et la chaleur. Excellente résistance à l'abrasion. Conforme aux normes EN 388 et EN 407.",
+      "price": 49.99,
+      "imageUrl": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant des gants anti-chaleur rouges"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du cuir épais et du double tissus"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1604176354204-92633f6a6e1c?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gants utilisés dans un environnement industriel"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gants-anti-chaleur.pdf",
+      "specifications": {
+        "norme": "EN 388, EN 407, Règlement (UE) 2016",
+        "materiau": "Cuir épais avec double tissus",
+        "couleurs": ["Rouge", "Gris"],
+        "resistance": ["Flammes", "Étincelles", "Chaleur", "Abrasion"],
+        "tailles": ["S", "M", "L", "XL"],
+        "secteurs": [
+          "Sidérurgie/Métallurgie",
+          "Industrie",
+          "Travaux à proximité de fours",
+          "Soudage manuel"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "29",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gants-anti-chaleur.pdf",
+          "format": "PDF",
+          "size": "1.5 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GAC",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          },
+          {
+            "name": "EN 407",
+            "number": "EN407-2023-GAC",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en407.pdf"
+          }
+        ]
+      }
+      
+    },
+    {
+      "id": "43",
+      "name": "Gant Anti-Coupure Gris",
+      "description": "Gant tricoté jauge 13 sans couture en fibres techniques pour une résistance maximale à la coupure (niveau 4543). Confort, souplesse et accroche optimale. Conforme à la norme EN 388. Idéal pour la manutention en milieu sec.",
+      "price": 34.99,
+      "imageUrl": "https://images.unsplash.com/photo-1590152881280-7532d7f4c2c1?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1590152881280-7532d7f4c2c1?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant anti-coupure gris en situation d'utilisation"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du tricotage sans couture"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-anti-coupure.pdf",
+      "specifications": {
+        "norme": [
+          "EN 388", 
+        "Règlement UE 2016"
+      ],
+        "niveau_coupure": "4543",
+        "materiau": "Fibres techniques haute résistance",
+        "tricotage": "Jauge 13 sans couture",
+        "environnement": "Milieu sec",
+        "couleur": "Gris",
+        "secteurs": [
+          "Manutention",
+          "Logistique",
+          "Agroalimentaire",
+          "Maintenance industrielle"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "30",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-anti-coupure.pdf",
+          "format": "PDF",
+          "size": "1.2 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GAC",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          }
+        ]
+      }
+      
+    },
+    {
+      "id": "44",
+      "name": "Gant Coton Enduit PVC",
+      "description": "Gant tricoté 5 doigts sans couture (65% Polyester, 35% Coton) avec enduction PVC pour une adhérence optimale. Résistance à la déchirure. Idéal pour la manutention d'objets glissants en milieu sec. Conforme aux normes EN 388 et EN 420.",
+      "price": 12.99,
+      "imageUrl": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant coton/PVC bleu et blanc"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1584735422184-97bb1e3a56a5?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de l'enduction PVC sur la paume"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-coton-pvc.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "composition": "65% Polyester, 35% Coton (poignet), 100% Polyamide (corps)",
+        "enduction": "PVC",
+        "tricotage": "Tricot 5 doigts sans couture",
+        "couleur": "Bleu/Blanc",
+        "environnement": "Milieu sec",
+        "proprietes": ["Résistance à la déchirure", "Adhérence améliorée"],
+        "secteurs": [
+          "Mécanique",
+          "Manutention légère",
+          "Logistique",
+          "Agroalimentaire (sec)"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "31",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-coton-pvc.pdf",
+          "format": "PDF",
+          "size": "1.0 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GCOT",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          },
+          {
+            "name": "EN 420",
+            "number": "EN420-2023-GCOT",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en420.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "45",
+      "name": "Gant Docker Croûte Bovin",
+      "description": "Gant de protection lourd en cuir croûte bovin avec renforts sur le dos, pouce palmé et doigts rapportés. Doublure intérieure en coton pour un confort optimal. Montage américain avec manchette renforcée. Conforme aux normes EN 388 et EN 420. Idéal pour les travaux industriels et la manutention lourde.",
+      "price": 45.99,
+      "imageUrl": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant docker en cuir bovin avec toile bleue"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1584735422184-97bb1e3a56a5?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des renforts et coutures"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-docker.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "type_cuir": "Croûte bovin",
+        "renforts": ["Dos", "Pouce palmé", "Doigts rapportés", "Artère protégée"],
+        "doublure": "Coton",
+        "montage": "Américain",
+        "environnement": ["Sec", "Légèrement humide"],
+        "couleur": "Cuir naturel/Toile bleu",
+        "caracteristiques": [
+          "Manchette en toile renforcée",
+          "Serrage élastique au dos",
+          "Cousu en fil de coton"
+        ],
+        "secteurs": [
+          "Construction",
+          "Industrie lourde",
+          "Transport",
+          "Agriculture",
+          "Espaces verts"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "32",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-docker.pdf",
+          "format": "PDF",
+          "size": "1.5 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GDOC",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          }
+        ]
+      }
+      
+    },
+    {
+      "id": "46",
+      "name": "Gant Maîtrise en Cuir Vachette",
+      "description": "Gant haut de gamme en cuir tout fleur de vachette offrant une dextérité exceptionnelle et une sensation seconde peau. Pouce palmé et élastique de serrage pour un maintien optimal. Idéal pour les travaux de précision et la manutention courante en environnement sec. Conforme aux normes EN 388 et EN 420.",
+      "price": 39.99,
+      "imageUrl": "https://images.unsplash.com/photo-1596727147705-61a532a659bd?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1596727147705-61a532a659bd?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant maîtrise en cuir vachette gris/naturel"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du pouce palmé et de l'élastique"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-maitrise.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "type_cuir": "Tout fleur vachette",
+        "ergonomie": ["Pouce palmé", "Élastique de serrage", "Seconde peau", "Dextérité améliorée"],
+        "couleur": "Cuir naturel/Gris",
+        "environnement": "Sec",
+        "avantages": [
+          "Souplesse exceptionnelle",
+          "Résistance mécanique",
+          "Confort prolongé"
+        ],
+        "secteurs": [
+          "Espaces verts",
+          "Déménagement",
+          "Agriculture",
+          "Artisanat",
+          "Manutention légère"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "33",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-maitrise.pdf",
+          "format": "PDF",
+          "size": "1.3 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GMAI",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "47",
+      "name": "Gant Manutention Léger Enduit PU",
+      "description": "Gant tricoté sans couture en 100% polyamide avec enduction polyuréthane sur la paume et les doigts pour une adhérence optimale. Poignet élastique et conception respirante. Idéal pour la maintenance, l'automobile et les ateliers. Conforme aux normes EN 388 et EN 420.",
+      "price": 15.99,
+      "imageUrl": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant orange enduit PU en situation d'atelier"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de l'enduction polyuréthane"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-pu.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "materiau_tricot": "100% Polyamide",
+        "enduction": "Polyuréthane",
+        "zones_enduites": ["Paume", "Extrémités des doigts"],
+        "poignet": "Élastique",
+        "couleur": ["Orange", "Vert", "Bleu"],
+        "respirabilite": true,
+        "avantages": [
+          "Léger et respirant",
+          "Adhérence améliorée",
+          "Confort prolongé"
+        ],
+        "secteurs": [
+          "Maintenance industrielle",
+          "Automobile",
+          "Ateliers mécaniques",
+          "Logistique légère"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "34",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-pu.pdf",
+          "format": "PDF",
+          "size": "1.1 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GPU",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "48",
+      "name": "Gant Manutention Lourde VE799 Latex",
+      "description": "Gant anatomique en tricot polyester/coton enduit de latex épais pour une protection renforcée. Résistant aux déchirures, fissures, acides et détergents. Conception sans couture pour éviter les irritations. Idéal pour la construction et la manipulation de matériaux abrasifs. Conforme aux normes EN 388 et EN 420.",
+      "price": 27.99,
+      "imageUrl": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant jaune enduit latex en situation chantier"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de l'enduction latex épais"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-ve799.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "materiau_tricot": "Polyester/Coton",
+        "enduction": "Latex épais",
+        "resistance_chimique": ["Acides", "Détergents"],
+        "couleur": "Jaune",
+        "poids": 120,
+        "avantages": [
+          "Forme anatomique",
+          "Résistance accrue",
+          "Confort sans couture"
+        ],
+        "secteurs": [
+          "Construction",
+          "Transport lourd",
+          "Travaux publics",
+          "Manutention abrasive"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "35",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-ve799.pdf",
+          "format": "PDF",
+          "size": "1.4 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GVE799",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "49",
+      "name": "Gant Nitrile à Picots Gris/Argent",
+      "description": "Gant technique enduit de nitrile en mousse avec picots sur la paume pour une adhérence optimale en milieux secs ou humides. Doublure sans couture respirante pour un confort prolongé. Idéal pour les travaux de mécanique de précision. Conforme aux normes EN 388 et EN 420.",
+      "price": 22.99,
+      "imageUrl": "https://images.unsplash.com/photo-1621972750741-1470a6b20e24?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1621972750741-1470a6b20e24?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant nitrile gris/argent avec picots"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1596727147705-61a532a659bd?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des picots et enduction nitrile"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-nitrile.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "type_enduction": "Mousse",
+        "zones_enduites": ["Paume", "Doigts"],
+        "texture": "Picots",
+        "respirabilite": true,
+        "couleur": "Gris/Argent",
+        "avantages": [
+          "Adhérence renforcée",
+          "Précision de manipulation",
+          "Résistance aux liquides"
+        ],
+        "secteurs": [
+          "Mécanique automobile",
+          "Maintenance industrielle",
+          "Électronique",
+          "Montage de précision"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "36",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-nitrile.pdf",
+          "format": "PDF",
+          "size": "1.2 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GNIT",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "50",
+      "name": "Gant Chimique PVC Double Trempage",
+      "description": "Gant de protection chimique en PVC à double trempage avec finition sablée pour une adhérence optimale. Doublure jersey coton pour un confort prolongé. Résistant aux huiles, graisses et produits chimiques. Conforme aux normes EN 388, EN 374-1 et EN 374-2.",
+      "price": 19.99,
+      "imageUrl": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant PVC vert/rouge en situation industrielle"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la finition sablée et de la doublure"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-pvc.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 374-1", "EN 374-2"],
+        "type_pvc": "Double trempage",
+        "resistance_chimique": ["Huiles", "Graisses", "Acides dilués"],
+        "texture": "Sablée",
+        "doublure": "Jersey coton",
+        "couleur": ["Vert", "Rouge"],
+        "epaisseur": "0.8 mm",
+        "secteurs": [
+          "Industrie chimique",
+          "Nettoyage industriel",
+          "Maintenance mécanique",
+          "Traitement des déchets"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "37",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-pvc.pdf",
+          "format": "PDF",
+          "size": "1.3 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 374-1",
+            "number": "EN374-2023-GPVC",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en374.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "51",
+      "name": "Gant Anti-Coupure Niveau 5 Noir/Gris",
+      "description": "Gant haute performance en tricot jauge 10 avec fibres d'acier inoxydable et polyéthylène haute densité pour une protection maximale contre les coupures (niveau 5 EN 388). Enduction CLEAN PU® grise sur la paume et les doigts pour une adhérence optimale. Renfort entre pouce et index. Conforme aux normes EN 388 et EN 420.",
+      "price": 59.99,
+      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant noir/gris avec fibres métalliques visibles"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de l'enduction CLEAN PU® et des renforts"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-niveau5.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "niveau_coupure": "Niveau 5",
+        "composition": ["Acier inoxydable", "Polyéthylène haute densité", "Polyamide texturé"],
+        "enduction": "CLEAN PU®",
+        "renforts": ["Paume", "Extrémités des doigts", "Pouce-index"],
+        "couleur": "Noir/Gris",
+        "jauge_tricot": 10,
+        "poids": "85 g/paire",
+        "secteurs": [
+          "Automobile",
+          "Métallurgie",
+          "Travail du verre",
+          "Maintenance lourde",
+          "Caoutchouc"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "38",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-niveau5.pdf",
+          "format": "PDF",
+          "size": "1.6 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388 Niveau 5",
+            "number": "EN388-5-2023-GAC5",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388-n5.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "52",
+      "name": "Gant Manutention Cuir Croûte Jaune",
+      "description": "Gant robuste en cuir de vache avec paume renforcée en croûte de cuir pour une durabilité accrue. Montage américain et poignet élastique pour un ajustement sécurisé. Idéal pour les travaux agricoles, la logistique et les déménagements. Conforme aux normes EN 388 et EN 420.",
+      "price": 34.99,
+      "imageUrl": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant jaune en cuir croûte avec détails de couture"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail de la paume renforcée et du poignet élastique"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-cuir-croute.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "type_cuir": "Croûte de vache",
+        "zones_renforcees": ["Paume", "Pouce"],
+        "montage": "Américain",
+        "poignet": "Élastique",
+        "reutilisable": true,
+        "couleur": "Jaune",
+        "poids": "180 g/paire",
+        "secteurs": [
+          "Agriculture",
+          "Espaces verts",
+          "Logistique",
+          "Déménagement",
+          "Transport"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "39",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-cuir-croute.pdf",
+          "format": "PDF",
+          "size": "1.4 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 388",
+            "number": "EN388-2023-GCCR",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en388.pdf"
+          }
+        ]
+      }
     }
- 
   ]
 }
