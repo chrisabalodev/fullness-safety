@@ -16,13 +16,6 @@
         "imageUrl": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800"
       },
       {
-        "id": "3",
-        "name": "Protection Oculaire",
-        "description": "Lunettes et sur-lunettes de sécurité",
-        "slug": "protection-oculaire",
-        "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800"
-      },
-      {
         "id": "4",
         "name": "Protection Respiratoire",
         "description": "Masques et systèmes de filtration pour une protection optimale",
@@ -56,6 +49,13 @@
         "description": "Gants de protection professionnels conformes aux normes de sécurité pour différents risques (thermique, mécanique, chimique).",
         "slug": "protection-mains",
         "imageUrl": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "id": "9",
+        "name": "Protection des Pieds",
+        "description": "Chaussures et bottes de sécurité conformes aux normes pour protéger contre les risques mécaniques, chimiques et thermiques.",
+        "slug": "protection-pieds",
+        "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800"
       }
     ],
     "subCategories": [
@@ -274,7 +274,7 @@
       {
         "id": "6",
         "name": "Bottes de sécurité",
-        "categoryId": "5",
+        "categoryId": "9",
         "slug": "bottes-securite",
         "specificationFields": [
           {
@@ -358,7 +358,7 @@
       {
         "id": "8",
         "name": "Chaussures de sécurité hautes",
-        "categoryId": "5",
+        "categoryId": "9",
         "slug": "chaussures-securite-hautes",
         "specificationFields": [
           {
@@ -434,7 +434,7 @@
       {
         "id": "10",
         "name": "Chaussettes de sécurité",
-        "categoryId": "5",
+        "categoryId": "9",
         "slug": "chaussettes-securite",
         "specificationFields": [
           {
@@ -525,7 +525,7 @@
       {
         "id": "13",
         "name": "Chaussures de sécurité imperméables",
-        "categoryId": "5",
+        "categoryId": "9",
         "slug": "chaussures-securite-impermeables",
         "specificationFields": [
           {
@@ -558,7 +558,7 @@
       {
         "id": "14",
         "name": "Gants isolants électriciens",
-        "categoryId": "3",
+        "categoryId": "8",
         "slug": "gants-isolants-electriciens",
         "specificationFields": [
           {
@@ -625,7 +625,7 @@
       {
         "id": "16",
         "name": "Harnais de sécurité avec coussins",
-        "categoryId": "6",
+        "categoryId": "7",
         "slug": "harnais-securite-coussins",
         "specificationFields": [
           {
@@ -659,7 +659,7 @@
       {
         "id": "17",
         "name": "Gilets haute visibilité rétroréfléchissants",
-        "categoryId": "7",
+        "categoryId": "2",
         "slug": "gilets-haute-visibilite-retroreflechissants",
         "specificationFields": [
           {
@@ -929,7 +929,7 @@
       {
         "id": "24",
         "name": "Lunettes de Protection",
-        "categoryId": "3",
+        "categoryId": "5",
         "slug": "lunettes-protection",
         "specificationFields": [
           {"name": "type_verre", "label": "Type de verre", "type": "select", "options": ["Incolore", "Fumé", "Teinté"]},
@@ -1866,6 +1866,153 @@
             "icon": "Palette"
           }
         ]
+      },
+      {
+        "id": "40",
+        "name": "Gants de Soudage Haute Température",
+        "categoryId": "8",
+        "slug": "gants-soudage-haute-temp",
+        "specificationFields": [
+          {
+            "id": "spec112",
+            "name": "norme",
+            "label": "Normes conformes",
+            "type": "multiselect",
+            "required": true,
+            "options": ["EN 388", "EN 407", "EN 420", "Règlement UE 2016"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec113",
+            "name": "type_soudage",
+            "label": "Type de soudage",
+            "type": "select",
+            "required": true,
+            "options": ["TIG/Argon", "MIG-MAG", "MMA", "Plasma"],
+            "icon": "Zap"
+          },
+          {
+            "id": "spec114",
+            "name": "materiau_principal",
+            "label": "Cuir principal",
+            "type": "select",
+            "required": true,
+            "options": ["Fleur d'agneau", "Fleur de caprin", "Cuir de cerf"],
+            "icon": "Box",
+            "description": "Cuir de la main pour dextérité"
+          },
+          {
+            "id": "spec115",
+            "name": "materiau_manchette",
+            "label": "Matériau manchette",
+            "type": "select",
+            "required": true,
+            "options": ["Croûte de bovin", "Aluminisé", "Kevlar"],
+            "icon": "Shield"
+          },
+          {
+            "id": "spec116",
+            "name": "longueur_manchette",
+            "label": "Longueur manchette",
+            "type": "number",
+            "unit": "cm",
+            "required": true,
+            "icon": "Ruler"
+          },
+          {
+            "id": "spec117",
+            "name": "couleur",
+            "label": "Couleurs disponibles",
+            "type": "select",
+            "required": true,
+            "options": ["Blanc/Gris", "Noir", "Beige"],
+            "icon": "Palette"
+          }
+        ]
+      },
+      {
+        "id": "41",
+        "name": "Bottes de Sécurité",
+        "categoryId": "9",
+        "slug": "bottes-securite",
+        "specificationFields": [
+          {
+            "id": "spec118",
+            "name": "norme",
+            "label": "Normes",
+            "type": "multiselect",
+            "options": ["EN ISO 20345", "EN ISO 20346", "EN ISO 20347"],
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id": "spec119",
+            "name": "embout",
+            "label": "Type d'embout",
+            "type": "select",
+            "options": ["Acier", "Composite", "Aluminium"],
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec120",
+            "name": "semelle",
+            "label": "Semelle",
+            "type": "select",
+            "options": ["Antidérapante SRC", "Antistatique", "Résistante aux hydrocarbures"],
+            "required": true,
+            "icon": "Footprints"
+          },
+          {
+            "id": "spec121",
+            "name": "hauteur",
+            "label": "Hauteur (cm)",
+            "type": "number",
+            "required": true,
+            "icon": "Ruler"
+          }
+        ]
+      },
+      {
+        "id": "42",
+        "name": "Chaussures Basses",
+        "categoryId": "9",
+        "slug": "chaussures-basses",
+        "specificationFields": [
+          {
+            "id": "spec122",
+            "name": "respirabilite",
+            "label": "Respirabilité",
+            "type": "boolean",
+            "required": true,
+            "icon": "Wind"
+          },
+          {
+            "id": "spec123",
+            "name": "poids",
+            "label": "Poids (g/paire)",
+            "type": "number",
+            "required": true,
+            "icon": "Scale"
+          }
+        ]
+      },
+      {
+        "id": "43",
+        "name": "Chaussures Anti-Perforation",
+        "categoryId": "9",
+        "slug": "anti-perforation",
+        "specificationFields": [
+          {
+            "id": "spec124",
+            "name": "materiau_semelle",
+            "label": "Semelle anti-perfo",
+            "type": "select",
+            "options": ["Kevlar", "Acier", "Composite"],
+            "required": true,
+            "icon": "Shield"
+          }
+        ]
       }
       
     ],
@@ -2234,8 +2381,8 @@
           "Bricolage"
         ]
       },
-      "categoryId": "3",
-      "subCategoryId": "26",
+      "categoryId": "5",
+      "subCategoryId": "24",
       "documentation": {
         "technicalSheet": {
           "url": "https://example.com/fiche-technique-lunettes-incolores.pdf",
@@ -2844,7 +2991,7 @@
           "Second œuvre"
         ]
       },
-      "categoryId": "5",
+      "categoryId": "9",
       "subCategoryId": "6",
       "documentation": {
         "technicalSheet": {
@@ -5049,6 +5196,110 @@
             "number": "EN388-2023-GCCR",
             "validUntil": "2026-12-31",
             "url": "https://example.com/certification-en388.pdf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "53",
+      "name": "Gant Docker Cuir Croûte - Paume Renforcée",
+      "description": "Gant professionnel en cuir croûte de bovin avec renforts stratégiques (paume, dos, pouce palmé) et doigts rapportés pour une protection maximale. Montage américain avec manchette en toile Bayadère et serrage élastique. Idéal pour les travaux lourds en construction ou industrie. Conforme EN 388/420.",
+      "price": 47.99,
+      "imageUrl": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant docker cuir naturel avec toile bleue"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des renforts et coutures renforcées"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-docker-pro.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 420"],
+        "type_cuir": "Croûte de bovin",
+        "renforts_specifiques": [
+          "Paume double épaisseur",
+          "Dos renforcé",
+          "Pouce palmé",
+          "Doigts rapportés"
+        ],
+        "materiau_manchette": "Toile Bayadère",
+        "montage": "Américain",
+        "couleur": "Cuir naturel/Dos bleu",
+        "poids": "220 g/paire",
+        "secteurs": [
+          "Construction lourde",
+          "Industrie métallurgique",
+          "Transport de marchandises",
+          "Agriculture intensive"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "32",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-docker-pro.pdf",
+          "format": "PDF",
+          "size": "1.7 MB",
+          "lastUpdate": "2023-06-16"
+        }
+      }
+    },
+    {
+      "id": "54",
+      "name": "Gant Soudeur Argon - Cuir Fleur d'Agneau",
+      "description": "Gant professionnel pour soudage TIG/Argon en cuir fleur d'agneau offrant dextérité et protection thermique (EN 407). Manchette longue en croûte de bovin et montage 'tourchette' pour un retrait rapide. Conforme aux normes EN 388, EN 407 et EN 420. Idéal pour la métallurgie et le BTP.",
+      "price": 89.99,
+      "imageUrl": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant soudeur blanc/gris avec manchette longue"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail du cuir fleur d'agneau et des coutures"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-technique-gant-argon.pdf",
+      "specifications": {
+        "norme": ["EN 388", "EN 407", "EN 420"],
+        "type_soudage": "TIG/Argon",
+        "materiau_principal": "Fleur d'agneau",
+        "materiau_manchette": "Croûte de bovin",
+        "longueur_manchette": 25,
+        "couleur": "Blanc/Gris",
+        "temperature_max": "500°C (court terme)",
+        "caracteristiques": [
+          "Montage tourchette",
+          "Retrait rapide",
+          "Coutures coton ignifugé"
+        ],
+        "secteurs": [
+          "Sidérurgie/Métallurgie",
+          "Chantiers BTP",
+          "Aéronautique",
+          "Maintenance industrielle"
+        ]
+      },
+      "categoryId": "8",
+      "subCategoryId": "40",
+      "documentation": {
+        "technicalSheet": {
+          "url": "https://example.com/fiche-technique-gant-argon.pdf",
+          "format": "PDF",
+          "size": "1.8 MB",
+          "lastUpdate": "2023-06-16"
+        },
+        "certifications": [
+          {
+            "name": "EN 407 Classe 2",
+            "number": "EN407-2023-GARG",
+            "validUntil": "2026-12-31",
+            "url": "https://example.com/certification-en407.pdf"
           }
         ]
       }

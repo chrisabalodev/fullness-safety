@@ -64,9 +64,9 @@ const images = [
   {
     url: "https://s02.swdrive.fr/s/djcHKTPbsn2yqg9/preview",
     alt: "Protection individuelle"
-  },
+  }, 
   {
-    url: "https://s02.swdrive.fr/s/MD6aQYGi7ALMeKr?auto=format&fit=crop&q=80&w=800",
+    url: "https://s02.swdrive.fr/s/MD6aQYGi7ALMeKr/preview?auto=format&fit=crop&q=80&w=800",
     alt: "Équipement professionnel"
   },
   {

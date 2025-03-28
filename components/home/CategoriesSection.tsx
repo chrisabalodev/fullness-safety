@@ -4,46 +4,52 @@ import Link from "next/link";
 
 const categories = [
   {
-    name: "Casques",
+    id: 1,
+    name: "Protection de la tête",
     slug: "casques",
     description: "Protection de la tête certifiée",
     icon: HardHat,
-    bgImage: "https://images.unsplash.com/photo-1578874691223-64558a3ca096?auto=format&fit=crop&q=80&w=1200"
+    bgImage: "https://s02.swdrive.fr/s/RNcniPJfKWMNe4r/preview?auto=format&fit=crop&q=80&w=1200"
   },
   {
+    id: 2,
     name: "Vêtements",
     slug: "vetements",
     description: "Vêtements professionnels",
     icon: ShieldAlert,
-    bgImage: "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=1200"
+    bgImage: "https://s02.swdrive.fr/s/gEyGoY4aypgrE8H/preview?auto=format&fit=crop&q=80&w=1200"
   },
   {
+    id: 7,
     name: "Antichute",
     slug: "antichute",
     description: "Protection contre les chutes",
     icon: HandMetal,
-    bgImage: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80&w=1200"
+    bgImage: "https://s02.swdrive.fr/s/JQce4EAqFAAHnga/preview?auto=format&fit=crop&q=80&w=1200"
   },
   {
+    id: 9,
     name: "Chaussures",
     slug: "chaussures",
     description: "Protection des pieds",
     icon: Footprints,
-    bgImage: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&q=80&w=1200"
+    bgImage: "https://s02.swdrive.fr/s/nwbpjompfYS4LfJ/preview?auto=format&fit=crop&q=80&w=1200"
   },
   {
+    id: 5,
     name: "Protection Yeux",
     slug: "yeux",
     description: "Lunettes de sécurité",
     icon: Eye,
-    bgImage: "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?auto=format&fit=crop&q=80&w=1200"
+    bgImage: "https://s02.swdrive.fr/s/SJ9Xow9knme9G9n/preview?auto=format&fit=crop&q=80&w=1200"
   },
   {
+    id: 4,
     name: "Respiratoire",
     slug: "respiratoire",
     description: "Masques et filtres",
     icon: ShieldCheck,
-    bgImage: "https://images.unsplash.com/photo-1584634731339-252c581abfc5?auto=format&fit=crop&q=80&w=1200"
+    bgImage: "https://s02.swdrive.fr/s/2odwg8jfNfcA6N5/preview?auto=format&fit=crop&q=80&w=1200"
   }
 ];
 
@@ -66,7 +72,7 @@ export default function CategoriesSection() {
           {categories.map((category) => (
             <Link
               key={category.name}
-              href={`/products?category=${category.slug}`}
+              href={`/products?category=${category.id}`}
               className="group relative overflow-hidden rounded-2xl aspect-[4/3]"
             >
               <div className="absolute inset-0">
