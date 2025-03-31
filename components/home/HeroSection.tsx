@@ -101,7 +101,7 @@ export default function HeroSection() {
           <div className="relative space-y-8">
             {/* Rating Badge */}
             <div 
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary transition-all duration-700 ${
+              className={`inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/5 text-primary transition-all duration-700 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >

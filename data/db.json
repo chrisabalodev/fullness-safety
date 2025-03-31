@@ -2013,95 +2013,59 @@
             "icon": "Shield"
           }
         ]
+      },
+      {
+        "id": "44",
+        "name": "Casquettes de Sécurité",
+        "categoryId": "1",
+        "slug": "casquettes-securite",
+        "specificationFields": [
+          {
+            "id": "spec47",
+            "name": "norme",
+            "label": "Norme",
+            "type": "select",
+            "options": ["EN 812", "ANSI Z89.1", "CSA Z94.1"],
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "id":  "spec48",
+            "name": "materiau_coque",
+            "label": "Matériau coque",
+            "type": "select",
+            "options": ["ABS", "Polycarbonate", "Composite"],
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec49",
+            "name": "systeme_ventilation",
+            "label": "Ventilation",
+            "type": "select",
+            "options": ["Grille", "Orifices", "Aucun"],
+            "required": false,
+            "icon": "Wind"
+          }
+        ]
       }
       
     ],
     "products": [
-    {
-      "id": "2",
-      "name": "Bouchon d'oreille anti-bruit EARLINE",
-      "description": "Bouchons d'oreille en mousse de polyuréthane avec cordelette bleue, offrant une adaptation optimale au conduit auditif pour une protection efficace contre le bruit.",
-      "price": 9.99,
-      "imageUrl": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
-      "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue principale des bouchons d'oreille"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue rapprochée des bouchons d'oreille"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1625772297628-87a274f4a559?auto=format&fit=crop&q=80&w=800",
-          "alt": "Bouchons d'oreille portés"
-        }
-      ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-bouchon-oreille.pdf",
-      "specifications": {
-        "norme": "EN 352-2",
-        "materiau": "Mousse de polyuréthane",
-        "forme": "Conique",
-        "cordelette": "Oui (bleue)",
-        "attenuation": "26 dB",
-        "secteurs": ["Industries lourdes", "BTP", "Loisirs bruyants"]
-      },
-      "categoryId": "6",
-      "subCategoryId": "4",
-      "documentation": {
-        "technicalSheet": {
-          "url": "https://example.com/fiche-technique-bouchon-oreille.pdf",
-          "format": "PDF",
-          "size": "1.8 MB",
-          "lastUpdate": "2024-03-20"
-        },
-        "certifications": [
-          {
-            "name": "EN 352-2",
-            "number": "54321-DEF",
-            "validUntil": "2025-12-31",
-            "url": "https://example.com/certification-en352-2.pdf"
-          },
-          {
-            "name": "Règlement UE 2016",
-            "number": "EU-2016-425",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-ue2016.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation",
-            "url": "https://example.com/guide-utilisation-bouchons.pdf",
-            "language": "Français"
-          }
-        ]
-      }
-    },
+   
     {
       "id": "3",
       "name": "Casque antibruit professionnel",
       "description": "Casque antibruit conçu pour les environnements très bruyants avec atténuation de 28 dB, offrant confort et isolation électrique jusqu'à 1000Vac/1500Vdc. Idéal pour les secteurs industriels et travaux publics.",
       "price": 89.99,
-      "imageUrl": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/CWZXdbHGGEb6oZf/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant du casque antibruit"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des coquilles rembourrées"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
-          "alt": "Casque porté par un utilisateur"
-        }
+      
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-casque-antibruit.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/fT97pFaDCMr58QZ/download/FICHE%20TECHNIQUE%20CASQUE%20ANTI-BRUIT-compressed.pdf",
       "specifications": {
         "norme": "EN 352-1, EN 352-3, EN 50365",
-        "attenuation": "28 dB",
+        "attenuation": "28 dB", 
         "isolation electrique": "1000Vac / 1500Vdc",
         "type": "Passif",
         "poids": "420 g",
@@ -2118,31 +2082,13 @@
       "subCategoryId": "4",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-casque-antibruit.pdf",
+          "url": "https://s02.swdrive.fr/s/fT97pFaDCMr58QZ/download/FICHE%20TECHNIQUE%20CASQUE%20ANTI-BRUIT-compressed.pdf",
           "format": "PDF",
-          "size": "2.5 MB",
+          "size": "2.5 kb",
           "lastUpdate": "2024-04-10"
         },
         "certifications": [
-          {
-            "name": "EN 352-1",
-            "number": "EU-3521-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en352-1.pdf"
-          },
-          {
-            "name": "Règlement UE 2016/425",
-            "number": "UE-EPI-2024",
-            "validUntil": "2027-06-30",
-            "url": "https://example.com/certification-ue2016.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation et d'entretien",
-            "url": "https://example.com/guide-casque-antibruit.pdf",
-            "language": "Français"
-          }
+        
         ]
       }
     },
@@ -2151,22 +2097,11 @@
       "name": "Lunettes de sécurité fumée FULLNESS",
       "description": "Lunettes de protection extra légères et confortables avec verres fumés, offrant une protection latérale, anti-rayures, anti-buée et anti-UV. Idéales pour les secteurs industriels et le BTP.",
       "price": 24.99,
-      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/iCW8MDqRQTNMajn/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant des lunettes de sécurité"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des branches ajustables"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
-          "alt": "Lunettes portées par un utilisateur"
-        }
+      
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-lunettes-fumee.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/Bxg7pqFWxYybaif/download/FICHE%20TECHNIQUE%20LUNETTE%20SECURITE%20FUMEE-compressed.pdf",
       "specifications": {
         "norme": "EN 166, EN 170",
         "materiau_monture": "Polycarbonate + PVC",
@@ -2181,36 +2116,15 @@
           "Collectivités"
         ]
       },
-      "categoryId": "3",
-      "subCategoryId": "13",
+      "categoryId": "5",
+      "subCategoryId": "24",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-lunettes-fumee.pdf",
+          "url": "https://s02.swdrive.fr/s/Bxg7pqFWxYybaif/download/FICHE%20TECHNIQUE%20LUNETTE%20SECURITE%20FUMEE-compressed.pdf",
           "format": "PDF",
           "size": "1.5 MB",
           "lastUpdate": "2024-05-15"
-        },
-        "certifications": [
-          {
-            "name": "EN 166",
-            "number": "EN166-2024-FULL",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en166.pdf"
-          },
-          {
-            "name": "EN 170",
-            "number": "EN170-2024-FULL",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en170.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation et nettoyage",
-            "url": "https://example.com/guide-lunettes-securite.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2218,26 +2132,22 @@
       "name": "Lunettes-masque Ultra Vision",
       "description": "Lunettes-masque de protection avec oculaire en polycarbonate (2,4 mm), traitement anti-rayures et anti-buée. Conçues pour résister aux impacts, aux produits chimiques et aux poussières dans les environnements industriels.",
       "price": 34.99,
-      "imageUrl": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/NJjP4Lsbgt2nNay/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/mDgp3D9J8RtMKSf/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Vue avant des lunettes-masque"
         },
-        {
-          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
+        { 
+          "url": "https://s02.swdrive.fr/s/NJjP4Lsbgt2nNay/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Détail des aérations et monture"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
-          "alt": "Lunettes-masque portées en situation"
         }
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-lunettes-masque.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/7maQsy82gdRmPer/download/FICHE%20TECHNIQUE%20LUNETTE%20MASQUE%20ULTRA%20VISION-compressed.pdf",
       "specifications": {
         "norme": "EN 166, EN 170",
-        "materiau_monture": "PVC",
-        "materiau_oculaire": "Polycarbonate (2,4 mm)",
+        "monture": "PVC",
+        "oculaire": "Polycarbonate (2,4 mm)",
         "protection": "Anti-rayures, Anti-buée, Résistance aux impacts",
         "aérations": "4 (anti-poussière/éclaboussures)",
         "couleur": "Bleu",
@@ -2249,35 +2159,14 @@
         ]
       },
       "categoryId": "5",
-      "subCategoryId": "13",
+      "subCategoryId": "11",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-lunettes-masque.pdf",
+          "url": "https://s02.swdrive.fr/s/7maQsy82gdRmPer/download/FICHE%20TECHNIQUE%20LUNETTE%20MASQUE%20ULTRA%20VISION-compressed.pdf",
           "format": "PDF",
           "size": "2.0 MB",
           "lastUpdate": "2024-06-01"
-        },
-        "certifications": [
-          {
-            "name": "EN 166",
-            "number": "EN166-2024-UV",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en166.pdf"
-          },
-          {
-            "name": "EN 170",
-            "number": "EN170-2024-UV",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en170.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement et d'entretien",
-            "url": "https://example.com/guide-lunettes-masque.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2285,22 +2174,11 @@
       "name": "Lunette Masque Incolore",
       "description": "Masque de protection incolore avec oculaire en polycarbonate, résistant aux impacts (120 m/s) et aux températures extrêmes. Conçu pour une utilisation avec lunettes correctives et adapté aux risques mécaniques et chimiques.",
       "price": 29.99,
-      "imageUrl": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/r3w5LBk94rXXaDz/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant du masque incolore"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de l'élastique ajustable"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
-          "alt": "Masque porté avec lunettes correctives"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-masque-incolore.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/Ht656ndsHHRAtAa/download/FICHE%20TECHNIQUE%20LUNETTE%20MASQUE%20INCOLORE-compressed.pdf",
       "specifications": {
         "norme": "EN 166, EN 170",
         "materiau": "PVC (corps), Polycarbonate (oculaire)",
@@ -2316,35 +2194,14 @@
         ]
       },
       "categoryId": "5",
-      "subCategoryId": "13",
+      "subCategoryId": "11",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-masque-incolore.pdf",
+          "url": "https://s02.swdrive.fr/s/Ht656ndsHHRAtAa/download/FICHE%20TECHNIQUE%20LUNETTE%20MASQUE%20INCOLORE-compressed.pdf",
           "format": "PDF",
           "size": "1.8 MB",
           "lastUpdate": "2024-06-15"
-        },
-        "certifications": [
-          {
-            "name": "EN 166",
-            "number": "EN166-2024-INC",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en166.pdf"
-          },
-          {
-            "name": "EN 170",
-            "number": "EN170-2024-INC",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en170.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement et compatibilité",
-            "url": "https://example.com/guide-masque-incolore.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2352,22 +2209,11 @@
       "name": "Lunette de Sécurité Incolore",
       "description": "Lunettes de protection avec branches réglables en nylon et polycarbonate, offrant 99% de protection UV et résistance aux rayures. Adaptées aux environnements industriels et au bricolage.",
       "price": 22.99,
-      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/dnZ53XKzfKRoD5d/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant des lunettes de sécurité"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des branches réglables"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
-          "alt": "Lunettes portées en situation"
-        }
+     
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-lunettes-incolores.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/AfB5byopRo5KYQb/download/FICHE%20TECHNIQUE%20LUNETTE%20DE%20SECURITE%20INCOLORE-compressed.pdf",
       "specifications": {
         "norme": "EN 166, EN 170, EN 172",
         "materiau": "Nylon et polycarbonate",
@@ -2385,38 +2231,11 @@
       "subCategoryId": "24",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-lunettes-incolores.pdf",
+          "url": "https://s02.swdrive.fr/s/AfB5byopRo5KYQb/download/FICHE%20TECHNIQUE%20LUNETTE%20DE%20SECURITE%20INCOLORE-compressed.pdf",
           "format": "PDF",
           "size": "1.5 MB",
           "lastUpdate": "2024-06-25"
-        },
-        "certifications": [
-          {
-            "name": "EN 166",
-            "number": "EN166-2024-TRANS",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en166.pdf"
-          },
-          {
-            "name": "EN 170",
-            "number": "EN170-2024-TRANS",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en170.pdf"
-          },
-          {
-            "name": "EN 172",
-            "number": "EN172-2024-TRANS",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en172.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement des branches",
-            "url": "https://example.com/guide-lunettes-securite.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2424,22 +2243,11 @@
       "name": "Lunette de Sécurité Classic FULLNESS",
       "description": "Lunette de sécurité monobloc en polycarbonate avec branches réglables, offrant 99% de protection UV et une excellente protection latérale. Idéale pour tous types de travaux industriels.",
       "price": 24.99,
-      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/8YHiKP72xecWAgq/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la lunette Classic bleue"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des branches réglables"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
-          "alt": "Lunette portée avec cordon"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-lunette-classic.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/4cPPoC4L7Rfc5Q7/download/FICHE%20TECHNIQUE%20LUNETTE%20DE%20SECURITE%20CLASSIC-compressed.pdf",
       "specifications": {
         "norme": "EN 166, EN 170, EN 172",
         "materiau": "Polycarbonate",
@@ -2454,42 +2262,15 @@
           "Ateliers"
         ]
       },
-      "categoryId": "3",
-      "subCategoryId": "26",
+      "categoryId": "5",
+      "subCategoryId": "24",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-lunette-classic.pdf",
+          "url": "https://s02.swdrive.fr/s/4cPPoC4L7Rfc5Q7/download/FICHE%20TECHNIQUE%20LUNETTE%20DE%20SECURITE%20CLASSIC-compressed.pdf",
           "format": "PDF",
           "size": "1.6 MB",
           "lastUpdate": "2024-07-01"
-        },
-        "certifications": [
-          {
-            "name": "EN 166",
-            "number": "EN166-2024-CLASSIC",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en166.pdf"
-          },
-          {
-            "name": "EN 170",
-            "number": "EN170-2024-CLASSIC",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en170.pdf"
-          },
-          {
-            "name": "EN 172",
-            "number": "EN172-2024-CLASSIC",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en172.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation et d'entretien",
-            "url": "https://example.com/guide-lunette-classic.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2497,22 +2278,11 @@
       "name": "Lunette de Protection FULLNESS",
       "description": "Lunettes de protection incolores extra légères avec monture en polycarbonate+PVC, offrant une protection latérale, anti-rayures, anti-buée et anti-UV. Confort optimal grâce aux branches auto-ajustables et pont nasal réglable.",
       "price": 27.99,
-      "imageUrl": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/xGD5cCYyxLE5wky/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1607746882042-944635dfe10f?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant des lunettes de protection"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du pont nasal réglable"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581094688338-2314dddb7ece?auto=format&fit=crop&q=80&w=800",
-          "alt": "Lunettes portées en situation de travail"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-lunette-protection.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/pgXcq8Eq7ENjL6d/download/FICHE%20TECHNIQUE%20LUNETTE%20DE%20PROTECTION-compressed.pdf",
       "specifications": {
         "norme": "EN 166, EN 170",
         "materiau_monture": "Polycarbonate + PVC",
@@ -2528,36 +2298,15 @@
           "Collectivités"
         ]
       },
-      "categoryId": "3",
-      "subCategoryId": "26",
+      "categoryId": "5",
+      "subCategoryId": "24",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-lunette-protection.pdf",
+          "url": "https://s02.swdrive.fr/s/pgXcq8Eq7ENjL6d/download/FICHE%20TECHNIQUE%20LUNETTE%20DE%20PROTECTION-compressed.pdf",
           "format": "PDF",
           "size": "1.7 MB",
           "lastUpdate": "2024-07-10"
-        },
-        "certifications": [
-          {
-            "name": "EN 166",
-            "number": "EN166-2024-PRO",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en166.pdf"
-          },
-          {
-            "name": "EN 170",
-            "number": "EN170-2024-PRO",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en170.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement et d'entretien",
-            "url": "https://example.com/guide-lunette-protection.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2565,22 +2314,11 @@
       "name": "Coquilles Anti-Bruit",
       "description": "Coquilles de protection auditive à clipser offrant un excellent niveau d'atténuation sonore. Compatibles avec les casques Endurance et Endurance Monteur. Matériaux: ABS, Polystyrène et Acier.",
       "price": 49.99,
-      "imageUrl": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/9CAMRPwzxg74bjs/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1576559485982-4b2fe68aa0e1?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant des coquilles anti-bruit"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du mécanisme de clip"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
-          "alt": "Coquilles montées sur casque"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-coquilles-antibruit.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/pgXcq8Eq7ENjL6d/download/FICHE%20TECHNIQUE%20LUNETTE%20DE%20PROTECTION-compressed.pdf",
       "specifications": {
         "norme": "EN 352, EN 352-3",
         "materiaux": "ABS, Polystyrène, Acier",
@@ -2599,90 +2337,44 @@
       "subCategoryId": "4",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-coquilles-antibruit.pdf",
+          "url": "https://s02.swdrive.fr/s/pgXcq8Eq7ENjL6d/download/FICHE%20TECHNIQUE%20LUNETTE%20DE%20PROTECTION-compressed.pdf",
           "format": "PDF",
           "size": "2.1 MB",
           "lastUpdate": "2024-07-15"
-        },
-        "certifications": [
-          {
-            "name": "EN 352-3",
-            "number": "EN3523-2024-COQ",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en352-3.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'installation sur casque",
-            "url": "https://example.com/guide-coquilles-antibruit.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
       "id": "12",
-      "name": "Casquette Anti-Heurte FULLNESS",
-      "description": "Casquette de protection moderne avec ventilation optimale grâce à sa grille supérieure. Conçue en nylon avec coque intérieure ABS et coussin EVA pour un confort maximal. Visière de 5cm et liseré réfléchissant pour une meilleure visibilité.",
-      "price": 39.99,
-      "imageUrl": "https://images.unsplash.com/photo-1578874691223-64558a3ca096?auto=format&fit=crop&q=80&w=800",
+      "name": "Casquette Anti-Heurte (EN 812)",
+      "description": "Casquette de sécurité moderne avec coque ABS intérieure et visière de 5cm. Conforme à la norme EN 812. Grille de ventilation supérieure et liseré réfléchissant pour un confort et une visibilité optimale.",
+      "price": 24.99,
+      "imageUrl": "https://s02.swdrive.fr/s/2TXqEtkHiogdebA/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1578874691223-64558a3ca096?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la casquette anti-heurte"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la grille de ventilation"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
-          "alt": "Casquette portée en situation de travail"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-casquette-antiheurte.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/aNtpz5ATnfpqbma/download/FICHE%20TECHNIQUE%20CASQUETTE%20ANTI-HEURTE-compressed.pdf",
       "specifications": {
         "norme": "EN 812",
         "materiau_coque": "ABS",
-        "visiere": true,
-        "ventilation": "Grille",
-        "elements_reflechissants": true,
         "materiau_exterieur": "100% Nylon",
         "rembourrage": "EVA",
-        "longueur_visiere": "5cm",
+        "visiere": "5 cm",
+        "ventilation": "Grille supérieure",
+        "elements_reflechissants": "Liseré",
         "reglage": "Boucle ajustable",
-        "secteurs": [
-          "Industrie légère",
-          "BTP",
-          "Ateliers",
-          "Maintenance"
-        ]
+        "tailles": ["S-M", "M-L", "L-XL"],
+        "poids": "180 g"
       },
       "categoryId": "1",
-      "subCategoryId": "23",
+      "subCategoryId": "44",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-casquette-antiheurte.pdf",
+          "url": "https://s02.swdrive.fr/s/aNtpz5ATnfpqbma/download/FICHE%20TECHNIQUE%20CASQUETTE%20ANTI-HEURTE-compressed.pdf",
           "format": "PDF",
-          "size": "1.9 MB",
+          "size": "1.7 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 812",
-            "number": "EN812-2023-CAP",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en812.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement et d'entretien",
-            "url": "https://example.com/guide-casquette-antiheurte.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2690,22 +2382,15 @@
       "name": "Casque de Chantier Professionnel",
       "description": "Casque de sécurité en polypropylène haute densité avec harnais 4 points, isolation électrique jusqu'à 1000Vac/1500Vdc et bandeau anti-transpiration. Conforme aux normes EN 397 et EN 50365.",
       "price": 34.99,
-      "imageUrl": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/mmZFC4Rx6pACrXc/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/XYqfDHt5YDZz5Y6/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Vue avant du casque de chantier"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du harnais 4 points"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1574134935230-9f40a5a4d657?auto=format&fit=crop&q=80&w=800",
-          "alt": "Casque porté avec accessoires"
         }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-casque-chantier.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/gAoJ3HYZsYEPeDb/download/FICHE%20TECHNIQUE%20CASQUE%20CHANTIER-compressed.pdf",
       "specifications": {
         "norme": "EN 397, EN 50365",
         "materiau": "Polypropylène haute densité",
@@ -2726,32 +2411,11 @@
       "subCategoryId": "1",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-casque-chantier.pdf",
+          "url": "https://s02.swdrive.fr/s/gAoJ3HYZsYEPeDb/download/FICHE%20TECHNIQUE%20CASQUE%20CHANTIER-compressed.pdf",
           "format": "PDF",
           "size": "2.2 MB",
           "lastUpdate": "2024-07-20"
-        },
-        "certifications": [
-          {
-            "name": "EN 397",
-            "number": "EN397-2024-CHANTIER",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en397.pdf"
-          },
-          {
-            "name": "EN 50365",
-            "number": "EN50365-2024-CHANTIER",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en50365.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement du harnais",
-            "url": "https://example.com/guide-casque-chantier.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2759,28 +2423,28 @@
       "name": "Casque Baseball Diamond V",
       "description": "Casque de chantier style baseball en ABS avec forme innovante pour une meilleure vision verticale. Coiffe polyamide à 3 bandeaux textiles, système de serrage 'colour to colour' et ajustement de 53 à 63 cm. Conforme EN 397 et EN 50365.",
       "price": 44.99,
-      "imageUrl": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/DZ6mgdtHa6HAkLk/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1590142035743-08d7233d98f5?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/wnQRZyngF39Zgy8/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Vue avant du casque style baseball"
         },
         {
-          "url": "https://images.unsplash.com/photo-1581094794329-c8112c4e5190?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/ZGTmG53Ae9nDkbe/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Détail du système de serrage"
         },
         {
-          "url": "https://images.unsplash.com/photo-1574134935230-9f40a5a4d657?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/RMN6zHG4ypGpyrN/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Casque porté avec visière"
         }
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-casque-baseball.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/xZGXEotWSAfbbcj/download/FICHE%20TECHNIQUE%20CASQUE%20BASEBALL%20DIAMOND%20V-compressed.pdf",
       "specifications": {
         "norme": "EN 397, EN 50365",
         "materiau": "ABS",
         "style": "Baseball",
         "coiffe": "Polyamide (3 bandeaux textiles, 8 points de fixation)",
-        "serrage": "Système 'colour to colour'",
+        "serrage": "Système colour to colour",
         "ajustement": "53-63 cm",
         "isolation_electrique": "440V AC",
         "temperature": "-30°C à +50°C",
@@ -2792,35 +2456,14 @@
         ]
       },
       "categoryId": "1",
-      "subCategoryId": "24",
+      "subCategoryId": "22",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-casque-baseball.pdf",
+          "url": "https://s02.swdrive.fr/s/xZGXEotWSAfbbcj/download/FICHE%20TECHNIQUE%20CASQUE%20BASEBALL%20DIAMOND%20V-compressed.pdf",
           "format": "PDF",
           "size": "2.3 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 397",
-            "number": "EN397-2023-BB",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en397.pdf"
-          },
-          {
-            "name": "EN 50365",
-            "number": "EN50365-2023-BB",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en50365.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement et d'utilisation",
-            "url": "https://example.com/guide-casque-baseball.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2828,22 +2471,11 @@
       "name": "Bouchons d'Oreille EARLINE",
       "description": "Bouchons d'oreille en mousse polyuréthane avec cordelette bleue, forme conique pour une adaptation optimale au conduit auditif. Protection idéale contre les bruits industriels.",
       "price": 12.99,
-      "imageUrl": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/6J9sN4XsY2y2beH/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
-          "alt": "Paire de bouchons d'oreille avec cordelette"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1625772452859-1c1836a4cdfa?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la forme conique"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1625772297628-87a274f4a559?auto=format&fit=crop&q=80&w=800",
-          "alt": "Bouchons portés autour du cou"
-        }
+      
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-bouchons-oreille.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/dwdferDyaYKB9zF/download/FICHE%20TECHNIQUE%20BOUCHON%20D%27OREILLE%20ANTI-BRUIT-compressed.pdf",
       "specifications": {
         "norme": "EN 352-2",
         "materiau": "Mousse de polyuréthane",
@@ -2860,29 +2492,14 @@
         ]
       },
       "categoryId": "6",
-      "subCategoryId": "25",
+      "subCategoryId": "23",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-bouchons-oreille.pdf",
+          "url": "https://s02.swdrive.fr/s/dwdferDyaYKB9zF/download/FICHE%20TECHNIQUE%20BOUCHON%20D%27OREILLE%20ANTI-BRUIT-compressed.pdf",
           "format": "PDF",
           "size": "1.2 MB",
           "lastUpdate": "2024-07-30"
-        },
-        "certifications": [
-          {
-            "name": "EN 352-2",
-            "number": "EN3522-2024-EAR",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-en3522.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation et d'hygiène",
-            "url": "https://example.com/guide-bouchons-oreille.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -2890,22 +2507,11 @@
       "name": "Bottes de Pluie de Sécurité",
       "description": "Bottes de sécurité en caoutchouc avec semelle antidérapante, offrant une protection complète contre l'humidité et les environnements boueux. Conforme à la norme EN ISO 20345.",
       "price": 79.99,
-      "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/YKHP3ApZq5PEQA4/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant des bottes de pluie de sécurité"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la semelle antidérapante"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Bottes portées en situation de travail"
-        }
+      
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-bottes-pluie.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/b4iPoDoRbRbtbcE/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20BOTTES%20DE%20PLUIE-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20345",
         "materiau": "Caoutchouc",
@@ -2922,30 +2528,16 @@
           "Paysagisme"
         ]
       },
-      "categoryId": "5",
+      "categoryId": "9",
       "subCategoryId": "6",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-bottes-pluie.pdf",
+          "url": "https://s02.swdrive.fr/s/b4iPoDoRbRbtbcE/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20BOTTES%20DE%20PLUIE-compressed.pdf",
           "format": "PDF",
           "size": "2.0 MB",
           "lastUpdate": "2024-08-01"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20345",
-            "number": "ISO20345-2024-BP",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-iso20345.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien des bottes",
-            "url": "https://example.com/guide-bottes-pluie.pdf",
-            "language": "Français"
-          }
-        ]
+        }
+        
       }
     },
     {
@@ -2953,22 +2545,11 @@
       "name": "Chaussure de Sécurité Classic",
       "description": "Chaussure de sécurité légère et flexible avec embout 200J, semelle anti-perforation et propriétés anti-statiques. Conforme EN ISO 20345, idéale pour les environnements industriels et chimiques.",
       "price": 129.99,
-      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/Xnyt5DZMzAf4XA4/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la chaussure de sécurité"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la semelle anti-perforation"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Chaussure portée en situation industrielle"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-chaussure-classic.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/s2iNC3aBEmr6DZC/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20CLASSIC-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20345:2011 S3 SRC",
         "materiau": "Textile technique",
@@ -2992,29 +2573,14 @@
         ]
       },
       "categoryId": "9",
-      "subCategoryId": "6",
+      "subCategoryId": "10",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-chaussure-classic.pdf",
+          "url": "https://s02.swdrive.fr/s/s2iNC3aBEmr6DZC/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20CLASSIC-compressed.pdf",
           "format": "PDF",
           "size": "2.4 MB",
           "lastUpdate": "2024-08-05"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20345 S3 SRC",
-            "number": "ISO20345-2024-CL",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-iso20345.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien professionnel",
-            "url": "https://example.com/guide-chaussure-securite.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3022,22 +2588,11 @@
       "name": "Chaussure de Sécurité Fullness PRO",
       "description": "Chaussure de sécurité haute gamme S3 avec tige en cuir, semelle zéroperforation et coque composite. Protection supérieure (antichoc, antidérapante SRC, hydrofuge) et confort optimal (semelle intérieure antibactérienne amovible).",
       "price": 149.99,
-      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/WjKkx4wd7bmDWTS/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la chaussure PRO"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la semelle zéroperforation"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Chaussure portée avec biais réfléchissant"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-fullness-pro.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/ZHCMLfaZEbZiT9f/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20FULLNESS%20PRO-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20345:2011 S3 SRC",
         "materiau": "Cuir pleine fleur",
@@ -3067,35 +2622,15 @@
           "Travaux en hauteur"
         ]
       },
-      "categoryId": "5",
-      "subCategoryId": "6",
+      "categoryId": "9",
+      "subCategoryId": "8",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-fullness-pro.pdf",
+          "url": "https://s02.swdrive.fr/s/ZHCMLfaZEbZiT9f/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20FULLNESS%20PRO-compressed.pdf",
           "format": "PDF",
           "size": "2.8 MB",
           "lastUpdate": "2024-08-10"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20345 S3 SRC",
-            "number": "ISO20345-2024-PRO",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-iso20345-pro.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien professionnel",
-            "url": "https://example.com/guide-fullness-pro.pdf",
-            "language": "Français"
-          },
-          {
-            "title": "Notice remplacement semelle intérieure",
-            "url": "https://example.com/notice-semelle-fullness.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3103,22 +2638,11 @@
       "name": "Chaussure de Sécurité POWER FULL",
       "description": "Chaussure de sécurité à tige haute en cuir hydrofuge avec embout composite 200J et semelle anti-perforation. Conforme EN ISO 20345 S3, offrant protection maximale et confort respirant pour les environnements industriels exigeants.",
       "price": 139.99,
-      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/NWpStz4dBCoiKCd/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la chaussure POWER FULL"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la semelle anti-perforation"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Chaussure portée en situation industrielle"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-power-full.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/CWy7iQ4CmLcWyrp/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20POWER%20FULL-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20345:2011 S3 SRC",
         "materiau": {
@@ -3153,30 +2677,15 @@
           "Maintenance industrielle"
         ]
       },
-      "categoryId": "5",
-      "subCategoryId": "6",
+      "categoryId": "9",
+      "subCategoryId": "8",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-power-full.pdf",
+          "url": "https://s02.swdrive.fr/s/CWy7iQ4CmLcWyrp/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20POWER%20FULL-compressed.pdf",
           "format": "PDF",
           "size": "2.5 MB",
           "lastUpdate": "2024-08-15"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20345 S3 SRC",
-            "number": "ISO20345-2024-PF",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-iso20345-pf.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien professionnel",
-            "url": "https://example.com/guide-power-full.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3184,22 +2693,11 @@
       "name": "Chaussure de Sécurité S3 SRC Bleu",
       "description": "Chaussure de sécurité ultralégère avec embout aluminium et semelle PU nouvelle génération. Certification EN ISO 20345 S3 SRC, offrant protection maximale avec un poids minimal pour une liberté de mouvement exceptionnelle.",
       "price": 159.99,
-      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/mpwPn86Fcdx6LGJ/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la chaussure S3 SRC bleue"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la semelle PU nouvelle génération"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Chaussure portée en environnement industriel"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-s3-src-bleu.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/Ge58aadYW5bsZ8a/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20S3%20SRC%20BLEU-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20345:2011 S3 SRC",
         "embout": "Aluminium 200J",
@@ -3233,35 +2731,15 @@
           "Maintenance industrielle"
         ]
       },
-      "categoryId": "5",
-      "subCategoryId": "6",
+      "categoryId": "9",
+      "subCategoryId": "42",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-s3-src-bleu.pdf",
+          "url": "https://s02.swdrive.fr/s/Ge58aadYW5bsZ8a/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20S3%20SRC%20BLEU-compressed.pdf",
           "format": "PDF",
           "size": "2.7 MB",
           "lastUpdate": "2024-08-20"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20345 S3 SRC",
-            "number": "ISO20345-2024-SRC",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-iso20345-src.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation et d'entretien",
-            "url": "https://example.com/guide-s3-src.pdf",
-            "language": "Français"
-          },
-          {
-            "title": "Notice remplacement semelle U-Power",
-            "url": "https://example.com/notice-u-power.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3269,22 +2747,11 @@
       "name": "Chaussure de Sécurité S3 SRC Vert",
       "description": "Chaussure de sécurité ultralégère vert avec embout aluminium et semelle PU nouvelle génération. Certification EN ISO 20345 S3 SRC, combinant protection maximale et légèreté exceptionnelle pour les professionnels exigeants.",
       "price": 159.99,
-      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/kpQX2dxNrBZBHEB/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la chaussure S3 SRC verte"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la semelle PU nouvelle génération"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Chaussure verte portée en environnement industriel"
-        }
+     
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-s3-src-vert.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/9NDWbeqGagFWF2C/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20S3%20SRC%20VERT-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20345:2011 S3 SRC",
         "embout": "Aluminium 200J",
@@ -3318,35 +2785,15 @@
           "Maintenance industrielle"
         ]
       },
-      "categoryId": "5",
-      "subCategoryId": "6",
+      "categoryId": "9",
+      "subCategoryId": "42",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-s3-src-vert.pdf",
+          "url": "https://s02.swdrive.fr/s/9NDWbeqGagFWF2C/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20S3%20SRC%20VERT-compressed.pdf",
           "format": "PDF",
           "size": "2.7 MB",
           "lastUpdate": "2024-08-25"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20345 S3 SRC",
-            "number": "ISO20345-2024-SRC-VERT",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-iso20345-src-vert.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation et d'entretien",
-            "url": "https://example.com/guide-s3-src-vert.pdf",
-            "language": "Français"
-          },
-          {
-            "title": "Notice remplacement semelle U-Power",
-            "url": "https://example.com/notice-u-power-vert.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3354,22 +2801,11 @@
       "name": "Chaussure de Sécurité S3 SRC",
       "description": "Chaussure de sécurité ultralégère avec embout aluminium et semelle PU nouvelle génération. Certification EN ISO 20345 S3 SRC, offrant le parfait équilibre entre protection maximale et légèreté extrême pour les professionnels.",
       "price": 159.99,
-      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/ywd8wbAzS87sr2n/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la chaussure S3 SRC"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la technologie Save & Flex Air"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Démonstration de la légèreté"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-s3-src-base.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/c5S8Efox5Q7nKRo/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20S3%20SRC-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20345:2011 S3 SRC",
         "embout": "Aluminium 200J",
@@ -3403,35 +2839,15 @@
           "Maintenance industrielle"
         ]
       },
-      "categoryId": "5",
-      "subCategoryId": "6",
+      "categoryId": "9",
+      "subCategoryId": "42",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-s3-src-base.pdf",
+          "url": "https://s02.swdrive.fr/s/c5S8Efox5Q7nKRo/download/FICHE%20TECHNIQUE%20CHAUSSURE%20DE%20SECURITE%20S3%20SRC-compressed.pdf",
           "format": "PDF",
           "size": "2.8 MB",
           "lastUpdate": "2024-08-30"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20345 S3 SRC",
-            "number": "ISO20345-2024-SRC-BASE",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-iso20345-src-base.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation principal",
-            "url": "https://example.com/guide-s3-src-base.pdf",
-            "language": "Français"
-          },
-          {
-            "title": "Notice système U-Power",
-            "url": "https://example.com/notice-u-power-base.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3439,22 +2855,11 @@
       "name": "Fullness POWER Composite Ultra",
       "description": "Chaussure de sécurité haut de gamme avec embout acier et semelle résistante à 150°C. Conforme EN ISO 20345:2011 S3, offrant protection thermique, antidérapante SRC et confort optimal pour les environnements extrêmes.",
       "price": 179.99,
-      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/mx3LWPp7wxyj4L3/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant de la Fullness POWER"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605348530920-7e3d0765b4c9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la semelle résistante à 150°C"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Démonstration du rembourrage de cheville"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-fullness-power-v2.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/52GX2ErSG6C5dKo/download/Fiche%20Technique%20Fullness%20POWER%20Version%202-compressed.pdf",
       "specifications": {
         "collection": "Composite Ultra",
         "norme": "EN ISO 20345:2011 S3",
@@ -3490,35 +2895,15 @@
           "Chantiers haute température"
         ]
       },
-      "categoryId": "5",
-      "subCategoryId": "6",
+      "categoryId": "9",
+      "subCategoryId": "8",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-fullness-power-v2.pdf",
+          "url": "https://s02.swdrive.fr/s/52GX2ErSG6C5dKo/download/Fiche%20Technique%20Fullness%20POWER%20Version%202-compressed.pdf",
           "format": "PDF",
           "size": "3.0 MB",
           "lastUpdate": "2024-09-01"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20345:2011 S3",
-            "number": "ISO20345-2024-POWER2",
-            "validUntil": "2027-12-31",
-            "url": "https://example.com/certification-iso20345-power2.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation haute température",
-            "url": "https://example.com/guide-fullness-power-v2.pdf",
-            "language": "Français"
-          },
-          {
-            "title": "Notice sécurité thermique",
-            "url": "https://example.com/notice-thermique-power.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3526,22 +2911,11 @@
       "name": "Combinaison de Travail Haute Visibilité",
       "description": "Combinaison de protection haute visibilité avec bandes réfléchissantes sur les bras, jambes, poitrine et épaules. Dotée de 4 poches de rangement, d'une ceinture élastiquée et d'un tissu déperlant anti-tache pour un confort optimal au quotidien.",
       "price": 59.99,
-      "imageUrl": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/4cWYSjDXfDKrZyY/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&q=80&w=800",
-          "alt": "Combinaison haute visibilité - vue avant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Combinaison haute visibilité - vue arrière"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des bandes réfléchissantes"
-        }
+     
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-combinaison-hv.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/YJAoHmosAXQteZ4/download/FICHE%20TECHNIQUE%20COMBINAISON%20DE%20TRAVAIL%20HV-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20471",
         "materiau": "80% Polyester, 20% Coton",
@@ -3557,32 +2931,11 @@
       "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-combinaison-hv.pdf",
+          "url": "https://s02.swdrive.fr/s/YJAoHmosAXQteZ4/download/FICHE%20TECHNIQUE%20COMBINAISON%20DE%20TRAVAIL%20HV-compressed.pdf",
           "format": "PDF",
           "size": "2.1 MB",
           "lastUpdate": "2024-03-15"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "67890-GHI",
-            "validUntil": "2025-12-31",
-            "url": "https://example.com/certification-iso20471.pdf"
-          },
-          {
-            "name": "Règlement UE 2016/425",
-            "number": "EU-2016-425",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-ue2016.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien",
-            "url": "https://example.com/guide-entretien-combinaison.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3590,51 +2943,33 @@
       "name": "Gilet Haute Visibilité à Manches Longues (2 Bandes)",
       "description": "Gilet léger en polyester à manches longues avec bandes réfléchissantes pour une visibilité optimale. Confortable et polyvalent grâce à sa coupe ample et sa fermeture zippée continue. Conforme aux normes EN ISO 20471 et EN ISO 13688.",
       "price": 34.99,
-      "imageUrl": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/cN2LWotr4R7RJxw/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/cN2LWotr4R7RJxw/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Gilet HV - Vue avant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1584735422187-78335bf11cff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des bandes réfléchissantes"
         }
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-hv.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/9SftLM5KwjDK6mD/download/FICHE%20TECHNIQUE%20GILET%202%20BANDES%20MANCHE%20LONGUE%20HV-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20471, EN ISO 13688",
         "materiau": "100% Polyester (tissage en chaîne)",
-        "grammage": 120,
+        "grammage": "120",
         "couleur": "Vert",
         "classe_visibilite": "Classe 1",
         "fermeture": "Zip avant",
-        "bandes_reflechissantes": 2,
+        "bandes_reflechissantes": "2",
         "tailles": ["S", "M", "L", "XL"]
       },
       "categoryId": "2",
       "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gilet-hv.pdf",
+          "url": "https://s02.swdrive.fr/s/9SftLM5KwjDK6mD/download/FICHE%20TECHNIQUE%20GILET%202%20BANDES%20MANCHE%20LONGUE%20HV-compressed.pdf",
           "format": "PDF",
           "size": "1.5 MB",
           "lastUpdate": "2024-03-25"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "78901-JKL",
-            "validUntil": "2025-12-31",
-            "url": "https://example.com/certification-iso20471.pdf"
-          },
-          {
-            "name": "EN ISO 13688",
-            "number": "78902-MNO",
-            "validUntil": "2026-06-30",
-            "url": "https://example.com/certification-iso13688.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -3642,18 +2977,11 @@
       "name": "Gilet de Sauvetage (Norme EN ISO 12402-4)",
       "description": "Gilet de sauvetage ergonomique avec appuie-tête pour protéger la tête et le cou. Doté d'un sifflet d'urgence, d'un harnais, et d'un zip frontal pour un enfilage facile. Tissu non absorbant à séchage rapide, idéal pour les activités nautiques.",
       "price": 49.99,
-      "imageUrl": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/yYjJAXJti4TxiNm/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gilet de sauvetage - Vue avant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du sifflet et harnais"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-sauvetage.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/B7Hqy3nSjHoaSJA/download/FICHE%20TECHNIQUE%20GILET%20DE%20SAUVETAGE-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 12402-4, EN ISO 20471",
         "niveau_flottabilite": 100,
@@ -3668,26 +2996,11 @@
       "subCategoryId": "28",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gilet-sauvetage.pdf",
+          "url": "https://s02.swdrive.fr/s/B7Hqy3nSjHoaSJA/download/FICHE%20TECHNIQUE%20GILET%20DE%20SAUVETAGE-compressed.pdf",
           "format": "PDF",
           "size": "2.2 MB",
           "lastUpdate": "2024-04-10"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 12402-4",
-            "number": "89012-PQR",
-            "validUntil": "2027-05-31",
-            "url": "https://example.com/certification-iso12402.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation et d'entretien",
-            "url": "https://example.com/guide-gilet-sauvetage.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3695,18 +3008,11 @@
       "name": "Gilet Haute Visibilité Baudrier (Maillet Ajouré)",
       "description": "Gilet de sécurité réfléchissant en maille ajourée vert fluorescent, ajustable par velcro. Léger, respirant et résistant à l'usure avec bandes réfléchissantes pour une visibilité optimale. Conforme à la norme EN ISO 20471.",
       "price": 29.99,
-      "imageUrl": "https://images.unsplash.com/photo-1584735422187-78335bf11cff?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/7fPWRHwYeqJdG5m/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1584735422187-78335bf11cff?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gilet HV Baudrier - Vue avant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des bandes réfléchissantes et velcro"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-baudrier.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/MTEeagx4TfBRyNg/download/FICHE%20TECHNIQUE%20GILET%20HV%20BAUDRIER-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20471",
         "materiau": "Polyester/PVC (maille ajourée)",
@@ -3728,26 +3034,11 @@
       "subCategoryId": "27",  
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gilet-baudrier.pdf",
+          "url": "https://s02.swdrive.fr/s/MTEeagx4TfBRyNg/download/FICHE%20TECHNIQUE%20GILET%20HV%20BAUDRIER-compressed.pdf",
           "format": "PDF",
           "size": "1.7 MB",
           "lastUpdate": "2024-04-15"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "90123-STU",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien",
-            "url": "https://example.com/guide-entretien-baudrier.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3755,18 +3046,11 @@
       "name": "Gilet Haute Visibilité Multicolor (2 Poches, Porte-Badge)",
       "description": "Gilet de sécurité multicolor en polyester avec fermeture zippée, deux poches plaquées et porte-badge double entrée. Conforme à la norme AS/NZS 4602.1 pour une visibilité maximale sur les chantiers et espaces publics.",
       "price": 27.99,
-      "imageUrl": "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/TibF75DEMRdRpqe/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gilet Multicolor - Vue avant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1583947581924-a6d4a7e75a9f?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des poches et porte-badge"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-multicolor.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/ZG4xdsEmyZ7tyMC/download/FICHE%20TECHNIQUE%20GILET%20MULTICOLOR%20-compressed.pdf",
       "specifications": {
         "norme": "AS/NZS 4602.1",
         "materiau": "100% Polyester (tissage en chaîne)",
@@ -3788,26 +3072,11 @@
       "subCategoryId": "27", 
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gilet-multicolor.pdf",
+          "url": "https://s02.swdrive.fr/s/ZG4xdsEmyZ7tyMC/download/FICHE%20TECHNIQUE%20GILET%20MULTICOLOR%20-compressed.pdf",
           "format": "PDF",
           "size": "1.6 MB",
           "lastUpdate": "2024-04-20"
-        },
-        "certifications": [
-          {
-            "name": "AS/NZS 4602.1",
-            "number": "AS-4602-2024",
-            "validUntil": "2027-06-30",
-            "url": "https://example.com/certification-asnzs4602.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien",
-            "url": "https://example.com/guide-entretien-multicolor.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3815,18 +3084,11 @@
       "name": "Gilet Haute Visibilité Multipoche (Boucle Radio, Porte-Badge)",
       "description": "Gilet de sécurité multifonctionnel avec 2 poches plaquées, boucle radio et porte-badge à double entrée. Idéal pour les professionnels nécessitant un accès rapide aux outils et badges. Conforme à la norme AS/NZS 4602.1.",
       "price": 32.99,
-      "imageUrl": "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/wEGED4rGAi6Q8ez/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gilet Multipoche - Vue avant montrant les poches"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la boucle radio et porte-badge"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-multipoche.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/fKkQCztEWdzE6Zq/download/FICHE%20TECHNIQUE%20GILET%20MULTIPOCHE%20-compressed.pdf",
       "specifications": {
         "norme": "AS/NZS 4602.1",
         "materiau": "100% Polyester (tissage en chaîne)",
@@ -3849,26 +3111,11 @@
       "subCategoryId": "27", 
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gilet-multipoche.pdf",
+          "url": "https://s02.swdrive.fr/s/fKkQCztEWdzE6Zq/download/FICHE%20TECHNIQUE%20GILET%20MULTIPOCHE%20-compressed.pdf",
           "format": "PDF",
           "size": "1.9 MB",
           "lastUpdate": "2024-05-01"
-        },
-        "certifications": [
-          {
-            "name": "AS/NZS 4602.1",
-            "number": "AS-4602-2024-MP",
-            "validUntil": "2027-06-30",
-            "url": "https://example.com/certification-asnzs4602-multipoche.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'utilisation des poches et accessoires",
-            "url": "https://example.com/guide-multipoche.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -3876,29 +3123,22 @@
       "name": "Gilet Haute Visibilité Journaliste (11 Poches, Maille Respirante)",
       "description": "Gilet multifonctionnel conçu pour les journalistes et activités outdoor, avec 11 poches (9 avant + 2 latérales), fermeture éclair centrale et maille intérieure respirante. Tissu sergé 65% polyester/35% coton pour un confort durable. Conforme à la norme EN ISO 20471.",
       "price": 39.99,
-      "imageUrl": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/yGBfyEkPjQaGaBW/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gilet Journaliste - Vue avant montrant les poches multiples"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la maille intérieure et fermeture éclair"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-journaliste.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/mid43WYTXex3kb2/download/FICHE%20TECHNIQUE%20GILET%20MULTIPOCHE%20JOURNALISTE-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20471",
         "materiau": "65% Polyester, 35% Coton (sergé 200g/m²)",
-        "grammage": 200,
+        "grammage": "200",
         "couleur": "Gris",
         "classe_visibilite": "Classe 2",
         "fermeture": "Zip central",
         "poches": {
-          "total": 11,
-          "avant": 9,
-          "laterales": 2
+          "total": "11",
+          "avant": "9",
+          "laterales": "2"
         },
         "doublure": "Maille respirante",
         "tailles": ["S", "M", "L", "XL"],
@@ -3913,88 +3153,49 @@
       "subCategoryId": "27",  
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gilet-journaliste.pdf",
+          "url": "https://s02.swdrive.fr/s/mid43WYTXex3kb2/download/FICHE%20TECHNIQUE%20GILET%20MULTIPOCHE%20JOURNALISTE-compressed.pdf",
           "format": "PDF",
           "size": "2.3 MB",
           "lastUpdate": "2024-05-10"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "EN20471-JOUR-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-journaliste.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'organisation des poches",
-            "url": "https://example.com/guide-poches-journaliste.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
       "id": "32",
-      "name": "Gilet Haute Visibilité Ignifugé (Bande Parallèle)",
-      "description": "Gilet de sécurité ignifugé avec bande réfléchissante résistante aux flammes et fermeture par bandes auto-agrippantes. Conforme à la norme EN ISO 20471. Doit être porté sur des vêtements de protection index 2 ou 3 pour une protection optimale.",
-      "price": 45.99,
-      "imageUrl": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
+      "name": "Gilet Multipoche Bande Parallèle",
+      "description": "Gilet de sécurité haute visibilité avec bandes rétroréfléchissantes et multiples poches fonctionnelles. Conforme à la norme AS/NZS 4602.1 et au Règlement (UE) 2016. Idéal pour les chantiers, la logistique et les zones à risque.",
+      "price": 29.99,
+      "imageUrl": "https://s02.swdrive.fr/s/ws2w6BjrkEZdXiW/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gilet ignifugé - Vue avant montrant la bande parallèle"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1583947581924-a6d4a7e75a9f?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la fermeture auto-agrippante"
-        }
+      
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gilet-ignifuge.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/KDraRFKn7dTcTsN/download/FICHE%20TECHNIQUE%20GILET%20MULTIPOCHE%20BANDE%20PARALLELE-compressed.pdf",
       "specifications": {
-        "norme": "EN ISO 20471",
-        "materiau": "Tissu ignifugé (composition non spécifiée)",
-        "bandes_reflechissantes": 1,
-        "type_bande": "Parallèle résistante aux flammes",
-        "fermeture": "Bandes auto-agrippantes",
-        "ignifugation": {
-          "niveau": "Requiert vêtements index 2 ou 3",
-          "test": "Résistance aux flammes confirmée"
-        },
-        "couleur": "Orange",
-        "tailles": ["S", "M", "L", "XL", "XXL"],
-        "applications": [
-          "Industrie pétrochimique", 
-          "Travaux électriques", 
-          "Chantiers à risques"
-        ]
+        "norme": ["AS/NZS 4602.1", "Règlement (UE) 2016"],
+        "materiau": "100% polyester",
+        "tissage": "Chaîne",
+        "couleur": "Vert",
+        "classe_visibilite": "Classe 2",
+        "elements": [
+          "Porte-badge à double entrée",
+          "Boucle en D pour clés/badges",
+          "2 poches plaquées",
+          "Boucle radio intégrée"
+        ],
+        "tailles": ["S", "M", "L", "XL"],
+        "bandes_reflechissantes": 2,
+        "poches": 2,
+        "grammage": "150 g/m²"
       },
       "categoryId": "2",
-      "subCategoryId": "27", 
+      "subCategoryId": "25",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gilet-ignifuge.pdf",
+          "url": "https://s02.swdrive.fr/s/KDraRFKn7dTcTsN/download/FICHE%20TECHNIQUE%20GILET%20MULTIPOCHE%20BANDE%20PARALLELE-compressed.pdf",
           "format": "PDF",
-          "size": "2.1 MB",
-          "lastUpdate": "2024-05-15"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "EN20471-FR-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-ignifuge.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Notice d'utilisation ignifuge",
-            "url": "https://example.com/notice-ignifuge.pdf",
-            "language": "Français",
-            "warning": "À porter sur des vêtements de protection index 2 ou 3"
-          }
-        ]
+          "size": "1.2 MB",
+          "lastUpdate": "2023-05-10"
+        }
       }
     },
     {
@@ -4002,18 +3203,15 @@
       "name": "Polo Haute Visibilité Bicolore à Manches Longues",
       "description": "Polo de protection professionnel en polyester nid d'abeille (175g/m²), offrant confort, respirabilité et haute visibilité. Conforme à la norme EN ISO 20471. Idéal pour les chantiers BTP, la logistique et les artisans.",
       "price": 36.99,
-      "imageUrl": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/dWgcCHrDDi5eo6w/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/37FkcTGtZEmk6YA/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Polo HV bicolore - Vue avant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1620207418302-439b387441b0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la patte de boutonnage et ouverture dissimulée"
         }
+      
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-polo-hv.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/ndds2CWyW4NcrZg/download/FICHE%20TECHNIQUE%20POLO%20BICOLORE%20MANCHE%20LONGUE%20HV-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20471",
         "materiau": "100% Polyester nid d'abeille",
@@ -4035,26 +3233,11 @@
       "subCategoryId": "27", 
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-polo-hv.pdf",
+          "url": "https://s02.swdrive.fr/s/ndds2CWyW4NcrZg/download/FICHE%20TECHNIQUE%20POLO%20BICOLORE%20MANCHE%20LONGUE%20HV-compressed.pdf",
           "format": "PDF",
           "size": "1.8 MB",
           "lastUpdate": "2024-05-20"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "EN20471-POLO-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-polo.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien du polyester nid d'abeille",
-            "url": "https://example.com/guide-entretien-polo.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -4062,18 +3245,11 @@
       "name": "Polo Confort Haute Visibilité à Manches Longues (UV Protection)",
       "description": "Polo professionnel en coton/polyester (55%/45%) avec bande HIVsTex pour une visibilité optimale. Tissu respirant et absorbant l'humidité (175 g/m²) offrant une protection UPF 35+ contre les UV. Col contrastant pour un style professionnel. Conforme à la norme EN ISO 20471.",
       "price": 42.99,
-      "imageUrl": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/byL7Mid7rwSp4wZ/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
-          "alt": "Polo Confort HV - Vue avant montrant le col contrastant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du tissu et de la bande HIVsTex"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-polo-confort.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/sJdpDxARQordgJ8/download/FICHE%20TECHNIQUE%20POLO%20CONFORT%20MANCHE%20LONGUE%20HV-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20471",
         "materiau": "55% Coton, 45% Polyester (tricot 175g/m²)",
@@ -4099,101 +3275,11 @@
       "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-polo-confort.pdf",
+          "url": "https://s02.swdrive.fr/s/sJdpDxARQordgJ8/download/FICHE%20TECHNIQUE%20POLO%20CONFORT%20MANCHE%20LONGUE%20HV-compressed.pdf",
           "format": "PDF",
           "size": "2.0 MB",
           "lastUpdate": "2024-05-25"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "EN20471-CONF-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-confort.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien pour tissu technique",
-            "url": "https://example.com/guide-entretien-confort.pdf",
-            "language": "Français"
-          }
-        ]
-      }
-    },
-    {
-      "id": "35",
-      "name": "Polo de Travail Haute Visibilité (Manches Longues, 5 Bandes Réfléchissantes)",
-      "description": "Polo professionnel FULLNESS en coton/polyester avec 5 bandes réfléchissantes (corps + épaules), col élastiqué et bandeau de transpiration. Conforme aux normes EN ISO 20471 et 13688. Confort optimal grâce aux évents latéraux et tissu respirant. Couleur : Orange fluo.",
-      "price": 44.99,
-      "imageUrl": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
-      "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=800",
-          "alt": "Polo Travail HV - Vue avant montrant les bandes réfléchissantes"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du col élastiqué et évents latéraux"
         }
-      ],
-      "technicalSheetUrl": "https://s02.swdrive.fr/s/DF6ZWffPSfBTXad/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20Hi-Vis-compressed.pdf",
-      "specifications": {
-        "normes": ["EN ISO 20471", "EN ISO 13688"],
-        "materiau": "Coton/Polyester (ratio non spécifié)",
-        "grammage": 180,
-        "couleur": "Orange fluorescent",
-        "classe_visibilite": "Classe 2",
-        "bandes_reflechissantes": {
-          "total": 5,
-          "corps": 2,
-          "epaules": 2,
-          "manches": 1
-        },
-        "confort": [
-          "Bandeau de transpiration",
-          "Évents latéraux",
-          "Col et poignets élastiqués"
-        ],
-        "fermeture": "3 boutons",
-        "tailles": ["S", "M", "L", "XL", "XXL"],
-        "marque": "FULLNESS",
-        "applications": [
-          "Chantiers BTP", 
-          "Travaux artisanaux", 
-          "Manutention logistique"
-        ]
-      },
-      "categoryId": "2",
-      "subCategoryId": "27",
-      "documentation": {
-        "technicalSheet": {
-          "url": "https://s02.swdrive.fr/s/DF6ZWffPSfBTXad/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20Hi-Vis-compressed.pdf",
-          "format": "PDF",
-          "size": "2.2 MB",
-          "lastUpdate": "2024-06-01"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "EN20471-FULL-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-fullness.pdf"
-          },
-          {
-            "name": "EN ISO 13688",
-            "number": "EN13688-FULL-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso13688.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien professionnel",
-            "url": "https://example.com/guide-entretien-fullness.pdf",
-            "language": "Français"
-          }
-        ]
       }
     },
     {
@@ -4201,22 +3287,23 @@
       "name": "Polo Haute Visibilité Manches Courtes (UPF 50+, 3 Normes Internationales)",
       "description": "Polo technique en polyester nid d'abeille (175g/m²) avec col contrastant et protection UV 50+. Confort optimal grâce au tissu respirant et finition anti-taches. Conforme aux normes EN ISO 20471, AS/NZS 4602 et ANSI/ISEA 107 pour une utilisation mondiale.",
       "price": 47.99,
-      "imageUrl": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/jy5ipgN9KXYgCCQ/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1622372738946-62e02505feb3?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/gPj2LkNBsDR5Spd/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Polo Hi-Vis - Vue avant montrant le col contrastant"
         },
         {
-          "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du tissu nid d'abeille"
+          "url": "https://s02.swdrive.fr/s/jy5ipgN9KXYgCCQ/preview?auto=format&fit=crop&q=80&w=800",
+          "alt": "Polo Hi-Vis - Vue avant montrant le col contrastant"
         }
+
       ],
       "technicalSheetUrl": "https://s02.swdrive.fr/s/DF6ZWffPSfBTXad/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20Hi-Vis-compressed.pdf",
       "specifications": {
         "normes": ["EN ISO 20471", "AS/NZS 4602", "ANSI/ISEA 107"],
         "materiau": "100% Polyester nid d'abeille",
-        "grammage": 175,
+        "grammage": "175",
         "couleur": "Fluorescent (col contrastant)",
         "classe_visibilite": "Classe 2",
         "protection_uv": "UPF 50+ (98% UV bloqués)",
@@ -4243,34 +3330,7 @@
           "format": "PDF",
           "size": "2.4 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "EN20471-GLB-2023",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-global.pdf"
-          },
-          {
-            "name": "AS/NZS 4602",
-            "number": "AS4602-2023",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-asnzs4602.pdf"
-          },
-          {
-            "name": "ANSI/ISEA 107",
-            "number": "ANSI107-2023",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-ansi107.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide des normes internationales",
-            "url": "https://example.com/guide-normes-hi-vis.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -4278,17 +3338,13 @@
       "name": "Polo Haute Visibilité Manches Courtes (Anti-UV & Antibactérien)",
       "description": "Polo technique en coton/polyester piqué avec bandes réfléchissantes segmentées. Double certification EN ISO 20471 (visibilité) et EN 13758-2 (UV). Traitement antibactérien et propriétés d'évacuation de la transpiration pour un confort optimal en conditions chaudes.",
       "price": 49.99,
-      "imageUrl": "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/wGe3xZbKRoeJJip/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1591035897819-f4bdf739f446?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/wGe3xZbKRoeJJip/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Polo HV - Vue avant montrant les bandes segmentées"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du tissu piqué et fentes latérales"
         }
-      ],
+      ], 
       "technicalSheetUrl": "https://s02.swdrive.fr/s/H4NtcWb4Pi7EBLJ/download/FICHE%20TECHNIQUE%20POLO%20MANCHE%20COURTE%20HV-compressed.pdf",
       "specifications": {
         "normes": ["EN ISO 20471", "EN 13758-2"],
@@ -4323,28 +3379,7 @@
           "format": "PDF",
           "size": "2.3 MB",
           "lastUpdate": "2024-06-10"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "EN20471-AB-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-antibactérien.pdf"
-          },
-          {
-            "name": "EN 13758-2",
-            "number": "EN13758-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en13758.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Protocole d'entretien pour propriétés antibactériennes",
-            "url": "https://example.com/guide-antibactérien.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -4352,18 +3387,22 @@
       "name": "Tenue de Travail Professionnelle Haute Visibilité (Complet Veste/Pantalon)",
       "description": "Ensemble professionnel complet (veste + pantalon) en polyester-coton avec bandes rétro-réfléchissantes 360°. Conforme à la norme EN ISO 20471. Veste à fermeture glissière et coupe ergonomique pour les métiers exigeants. Idéal pour les travaux de voirie, BTP et maintenance.",
       "price": 89.99,
-      "imageUrl": "https://images.unsplash.com/photo-1595959183085-6b91b1f0c3c6?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/ZkHHxDHN7pq9AM6/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1595959183085-6b91b1f0c3c6?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/ZkHHxDHN7pq9AM6/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Tenue HV complète - Vue avant"
         },
         {
-          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/4tC74p2gF8AmCkd/preview?auto=format&fit=crop&q=80&w=800",
+          "alt": "Tenue HV complète - Vue avant"
+        },
+        {
+          "url": "https://s02.swdrive.fr/s/5L4AeFXWjZMkgM8/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Détail des bandes réfléchissantes bras/jambes"
         }
-      ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-tenue-professionnelle.pdf",
+      ], 
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/cc3gQs3sTgW8NFN/download/FICHE%20TECHNIQUE%20TENUE%20DE%20TRAVAIL%20PROFESSIONNELLE%20HV-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 20471",
         "composition": "Polyester-Coton (sergé)",
@@ -4394,26 +3433,11 @@
       "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-tenue-professionnelle.pdf",
+          "url": "https://s02.swdrive.fr/s/cc3gQs3sTgW8NFN/download/FICHE%20TECHNIQUE%20TENUE%20DE%20TRAVAIL%20PROFESSIONNELLE%20HV-compressed.pdf",
           "format": "PDF",
           "size": "2.5 MB",
           "lastUpdate": "2024-06-15"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471 Classe 3",
-            "number": "EN20471-PRO-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-pro.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'ajustement professionnel",
-            "url": "https://example.com/guide-ajustement-pro.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -4421,18 +3445,11 @@
       "name": "Veste de Soudage en Cuir (Norme EN ISO 11611)",
       "description": "Veste professionnelle en cuir de vachette 1.3mm avec coutures en fil para-aramide. Protection certifiée EN ISO 11611 contre les projections de soudage. Poignets réglables et fermeture auto-agrippante pour un ajustement sécurisé.",
       "price": 149.99,
-      "imageUrl": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/KH6ekxgAok6rCkm/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800",
-          "alt": "Veste de soudage - Vue avant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1581092334147-df362e2a3603?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des coutures renforcées"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-veste-soudage.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/brf86Lc2R4E2Eww/download/FICHE%20TECHNIQUE%20VETEMENT%20DE%20TRAVAIL%20SOUDEUR%20EN%20CUIR-compressed.pdf",
       "specifications": {
         "norme": "EN ISO 11611",
         "materiau": "Cuir de vachette fendu 1.3mm",
@@ -4447,26 +3464,11 @@
       "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-veste-soudage.pdf",
+          "url": "https://s02.swdrive.fr/s/brf86Lc2R4E2Eww/download/FICHE%20TECHNIQUE%20VETEMENT%20DE%20TRAVAIL%20SOUDEUR%20EN%20CUIR-compressed.pdf",
           "format": "PDF",
           "size": "2.5 MB",
           "lastUpdate": "2024-06-20"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 11611",
-            "number": "EN11611-SD-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso11611.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien du cuir de soudage",
-            "url": "https://example.com/guide-entretien-cuir.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {
@@ -4474,18 +3476,11 @@
       "name": "Ensemble HV Imperméable (Veste + Pantalon)",
       "description": "Ensemble complet anti-pluie haute visibilité en polyester 100%. Veste avec poignets élastiqués et bandes réfléchissantes sur le buste/jambes. Conforme aux normes EN ISO 20471 (HV) et EN 343 (imperméabilité). Idéal pour travaux extérieurs par intempéries.",
       "price": 129.99,
-      "imageUrl": "https://images.unsplash.com/photo-1595959183085-6b91b1f0c3c6?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/NydKZ6e5sFTaM6E/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1595959183085-6b91b1f0c3c6?auto=format&fit=crop&q=80&w=800",
-          "alt": "Ensemble complet - Vue avant"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1603398748227-86e6474f5d0a?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des poignets élastiqués"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-ensemble-impermeable.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/cTz96DEnkG4wfqD/download/FICHE%20TECHNIQUE%20VETEMENT%20IMPERMEABLE-compressed.pdf",
       "specifications": {
         "normes": ["EN ISO 20471", "EN 343"],
         "materiau": "100% Polyester",
@@ -4503,32 +3498,11 @@
       "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-ensemble-impermeable.pdf",
+          "url": "https://s02.swdrive.fr/s/cTz96DEnkG4wfqD/download/FICHE%20TECHNIQUE%20VETEMENT%20IMPERMEABLE-compressed.pdf",
           "format": "PDF",
           "size": "2.3 MB",
           "lastUpdate": "2024-06-25"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471",
-            "number": "EN20471-IMP-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-impermeable.pdf"
-          },
-          {
-            "name": "EN 343",
-            "number": "EN343-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en343.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien des vêtements imperméables",
-            "url": "https://example.com/guide-impermeable.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     }, 
     {
@@ -4536,18 +3510,18 @@
       "name": "Ensemble Pluie HV Imperméable (Classe 3)",
       "description": "Ensemble complet haute visibilité (veste + pantalon) en jaune fluo avec bandes rétro-réfléchissantes. Protection optimale contre la pluie et le froid tout en offrant une respirabilité maximale. Conforme EN ISO 20471 Classe 3 et EN 343.",
       "price": 139.99,
-      "imageUrl": "https://images.unsplash.com/photo-1620207418303-39a0d6d4c51b?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/oLXzGBtQmBnzybx/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1620207418303-39a0d6d4c51b?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/oLXzGBtQmBnzybx/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Ensemble pluie HV - Vue complète"
         },
         {
-          "url": "https://images.unsplash.com/photo-1620207418304-39a0d6d4c51c?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/t4yc8jDwfXYnZzd/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Détail des bandes réfléchissantes"
         }
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-ensemble-pluie.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/q2MMgnEMAtotPCZ/download/FICHE%20TECHNIQUE%20VESTE%20PANTALON%20HV%20IMPERMEABLE-compressed.pdf",
       "specifications": {
         "normes": ["EN ISO 20471 Classe 3", "EN 343"],
         "composition": "100% Polyester",
@@ -4565,32 +3539,11 @@
       "subCategoryId": "27",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-ensemble-pluie.pdf",
+          "url": "https://s02.swdrive.fr/s/q2MMgnEMAtotPCZ/download/FICHE%20TECHNIQUE%20VESTE%20PANTALON%20HV%20IMPERMEABLE-compressed.pdf",
           "format": "PDF",
           "size": "2.4 MB",
           "lastUpdate": "2024-06-28"
-        },
-        "certifications": [
-          {
-            "name": "EN ISO 20471 Classe 3",
-            "number": "EN20471-PLU-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-iso20471-pluie.pdf"
-          },
-          {
-            "name": "EN 343 Classe 3",
-            "number": "EN343-PLU-2024",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en343-pluie.pdf"
-          }
-        ],
-        "instructions": [
-          {
-            "title": "Guide d'entretien des vêtements de pluie",
-            "url": "https://example.com/guide-pluie.pdf",
-            "language": "Français"
-          }
-        ]
+        }
       }
     },
     {

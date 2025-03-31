@@ -36,6 +36,8 @@ import {
 } from "@/components/ui/dialog";
 import { MegaMenu } from "./MegaMenu";
 import { getProducts } from "@/lib/db";
+import logo from '../public/logo/logo.png';
+import Image from "next/image";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,7 +52,6 @@ export function Header() {
   const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
 
-  // Gestion du sticky header
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -61,7 +62,6 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Fermeture du mega menu en cliquant à l'extérieur
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (megaMenuRef.current && !megaMenuRef.current.contains(event.target as Node)) {
@@ -73,7 +73,6 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Réinitialisation des états quand la route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsMegaMenuOpen(false);
@@ -81,7 +80,6 @@ export function Header() {
     setIsSearchDialogOpen(false);
   }, [pathname]);
 
-  // Recherche de produits
   const handleSearch = async (query: string) => {
     if (query.trim().length < 2) {
       setSearchResults([]);
@@ -103,7 +101,6 @@ export function Header() {
     }
   };
 
-  // Items de navigation
   const navItems = [
     { href: "/products", label: "Produits", icon: Package, hasMegaMenu: true },
     { href: "/catalogs", label: "Catalogues", icon: Book },
@@ -116,21 +113,29 @@ export function Header() {
 
   return (
     <>
-      {/* Header principal */}
-      <header 
+      <header
         ref={headerRef}
-        className={`w-full z-50 border-b bg-background/95 backdrop-blur-md transition-all duration-300 ${
-          isSticky 
+        className={`
+          w-full z-50 border-b bg-background/95 backdrop-blur-md transition-all duration-300
+          ${isSticky 
             ? 'fixed top-0 shadow-lg animate-in slide-in-from-top' 
             : 'sticky top-0'
-        }`}
+          }
+          h-[90px] py-[10px]
+        `}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+        <div className="container mx-auto px-4 h-full">
+          <div className="flex h-full items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0">
-              <ShieldCheck className="h-6 w-6 text-primary" />
-              {/* <span className="text-xl font-bold hidden sm:inline">Fullness Safety</span> */}
+            <Link href="/" className="flex items-center gap-2 shrink-0 h-full">
+              <Image 
+                src={logo} 
+                alt="Fullness safety"
+                width={120}
+                height={70}
+                className="object-contain h-full"
+                priority
+              />
             </Link>
 
             {/* Navigation desktop */}
@@ -165,221 +170,144 @@ export function Header() {
 
             {/* Actions */}
             <div className="flex items-center gap-4">
-              {/* <Dialog open={isSearchDialogOpen} onOpenChange={setIsSearchDialogOpen}>
+              <Dialog open={isSearchDialogOpen} onOpenChange={setIsSearchDialogOpen}>
                 <DialogTrigger asChild>
-                  <Button variant="ghost" size="icon" className="hover:bg-primary/5">
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="hover:bg-primary/5 relative"
+                    aria-label="Rechercher un produit"
+                  >
                     <Search className="h-5 w-5" />
+                    {searchQuery.trim().length > 0 && (
+                      <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-xs text-white flex items-center justify-center">
+                        {searchResults.length}
+                      </span>
+                    )}
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[500px] p-0">
-                  <DialogTitle className="sr-only">Rechercher un produit</DialogTitle>
-                  <div className="p-4 space-y-4">
-                    <div className="flex items-center gap-2">
-                      {isSearching ? (
-                        <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
-                      ) : (
-                        <Search className="h-4 w-4 text-muted-foreground" />
-                      )}
-                      <Input 
-                        type="search" 
-                        placeholder="Rechercher un produit..." 
-                        className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
-                        value={searchQuery}
-                        onChange={(e) => {
-                          setSearchQuery(e.target.value);
-                          handleSearch(e.target.value);
-                        }}
-                      />
+                <DialogContent 
+                  className="sm:max-w-[600px] p-0 rounded-lg overflow-hidden"
+                  onInteractOutside={(e) => {
+                    if ((e.target as HTMLElement).closest('.search-result-item')) {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  <div className="relative">
+                    <div className="sticky top-0 bg-background z-10 p-4 border-b">
+                      <DialogTitle className="sr-only">Rechercher un produit</DialogTitle>
+                      <div className="relative">
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                          {isSearching ? (
+                            <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+                          ) : (
+                            <Search className="h-5 w-5 text-muted-foreground" />
+                          )}
+                        </div>
+                        <Input
+                          type="search"
+                          placeholder="Rechercher par nom, référence ou description..."
+                          className="pl-10 text-base py-6 border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+                          value={searchQuery}
+                          onChange={(e) => {
+                            setSearchQuery(e.target.value);
+                            handleSearch(e.target.value);
+                          }}
+                          autoFocus
+                          enterKeyHint="search"
+                        />
+                        {searchQuery && (
+                          <button
+                            onClick={() => setSearchQuery("")}
+                            className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                            aria-label="Effacer la recherche"
+                          >
+                            <X className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+                          </button>
+                        )}
+                      </div>
                     </div>
 
-                    {searchResults.length > 0 && (
-                      <div className="border-t pt-4 space-y-2">
-                        {searchResults.map((product) => (
-                          <Link
-                            key={product.id}
-                            href={`/products/${product.id}`}
-                            className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted transition-colors"
-                            onClick={() => {
-                              setIsSearchDialogOpen(false);
-                              setSearchQuery("");
-                            }}
-                          >
-                            <div className="w-10 h-10 rounded-lg bg-muted overflow-hidden shrink-0">
-                              {product.imageUrl ? (
-                                <img
-                                  src={product.imageUrl}
-                                  alt={product.name}
-                                  className="w-full h-full object-cover"
-                                />
-                              ) : (
-                                <div className="w-full h-full flex items-center justify-center">
-                                  <Package className="w-5 h-5 text-muted-foreground/50" />
-                                </div>
-                              )}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <p className="font-medium truncate">{product.name}</p>
-                              {product.description && (
-                                <p className="text-sm text-muted-foreground truncate">
-                                  {product.description}
-                                </p>
-                              )}
-                            </div>
-                            <ChevronRight className="w-4 h-4 text-muted-foreground/50 shrink-0" />
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                    <ScrollArea className="h-[60vh] max-h-[500px]">
+                      {searchResults.length > 0 ? (
+                        <div className="divide-y">
+                          {searchResults.map((product) => (
+                            <Link
+                              key={product.id}
+                              href={`/products/${product.id}`}
+                              className="search-result-item flex items-center gap-4 p-4 hover:bg-muted/50 transition-colors"
+                              onClick={() => {
+                                setIsSearchDialogOpen(false);
+                                setSearchQuery("");
+                              }}
+                            >
+                              <div className="flex-shrink-0 w-16 h-16 rounded-md bg-muted overflow-hidden">
+                                {product.imageUrl ? (
+                                  <img
+                                    src={product.imageUrl}
+                                    alt={product.name}
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                  />
+                                ) : (
+                                  <div className="w-full h-full flex items-center justify-center bg-muted">
+                                    <Package className="h-6 w-6 text-muted-foreground" />
+                                  </div>
+                                )}
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h3 className="font-medium truncate">{product.name}</h3>
+                                {product.description && (
+                                  <p className="text-sm text-muted-foreground line-clamp-2">
+                                    {product.description}
+                                  </p>
+                                )}
+                                {product.sku && (
+                                  <p className="text-xs text-muted-foreground mt-1">
+                                    Réf: {product.sku}
+                                  </p>
+                                )}
+                              </div>
+                              <ChevronRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                            </Link>
+                          ))}
+                        </div>
+                      ) : searchQuery.trim().length >= 2 && !isSearching ? (
+                        <div className="flex flex-col items-center justify-center py-12 text-center">
+                          <Search className="h-12 w-12 text-muted-foreground/30 mb-4" />
+                          <p className="text-lg text-muted-foreground">
+                            Aucun produit ne correspond à votre recherche
+                          </p>
+                          <p className="text-sm text-muted-foreground mt-2">
+                            Essayez avec d'autres termes
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="flex flex-col items-center justify-center py-12 text-center">
+                          <Search className="h-12 w-12 text-muted-foreground/30 mb-4" />
+                          <p className="text-lg text-muted-foreground">
+                            Recherchez des produits par nom, référence ou description
+                          </p>
+                          <p className="text-sm text-muted-foreground mt-2">
+                            Tapez au moins 2 caractères
+                          </p>
+                        </div>
+                      )}
+                    </ScrollArea>
 
-                    {searchQuery.trim().length >= 2 && searchResults.length === 0 && !isSearching && (
-                      <div className="text-center py-8 text-muted-foreground">
-                        Aucun résultat trouvé
+                    {searchQuery.trim().length > 0 && (
+                      <div className="sticky bottom-0 bg-background border-t p-3 text-right text-sm text-muted-foreground">
+                        {isSearching ? (
+                          <span>Recherche en cours...</span>
+                        ) : (
+                          <span>{searchResults.length} résultat{searchResults.length !== 1 ? 's' : ''}</span>
+                        )}
                       </div>
                     )}
                   </div>
                 </DialogContent>
-              </Dialog> */}
-
-                <Dialog open={isSearchDialogOpen} onOpenChange={setIsSearchDialogOpen}>
-                    <DialogTrigger asChild>
-                      <Button 
-                        variant="ghost" 
-                        size="icon" 
-                        className="hover:bg-primary/5 relative"
-                        aria-label="Rechercher un produit"
-                      >
-                        <Search className="h-5 w-5" />
-                        {/* Badge pour les résultats en temps réel */}
-                        {searchQuery.trim().length > 0 && (
-                          <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-xs text-white flex items-center justify-center">
-                            {searchResults.length}
-                          </span>
-                        )}
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent 
-                      className="sm:max-w-[600px] p-0 rounded-lg overflow-hidden"
-                      onInteractOutside={(e) => {
-                        // Empêche la fermeture lors de la navigation dans les résultats
-                        if ((e.target as HTMLElement).closest('.search-result-item')) {
-                          e.preventDefault();
-                        }
-                      }}
-                    >
-                      <div className="relative">
-                        <div className="sticky top-0 bg-background z-10 p-4 border-b">
-                          <DialogTitle className="sr-only">Rechercher un produit</DialogTitle>
-                          <div className="relative">
-                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                              {isSearching ? (
-                                <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
-                              ) : (
-                                <Search className="h-5 w-5 text-muted-foreground" />
-                              )}
-                            </div>
-                            <Input
-                              type="search"
-                              placeholder="Rechercher par nom, référence ou description..."
-                              className="pl-10 text-base py-6 border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
-                              value={searchQuery}
-                              onChange={(e) => {
-                                setSearchQuery(e.target.value);
-                                handleSearch(e.target.value);
-                              }}
-                              autoFocus
-                              enterKeyHint="search"
-                            />
-                            {searchQuery && (
-                              <button
-                                onClick={() => setSearchQuery("")}
-                                className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                                aria-label="Effacer la recherche"
-                              >
-                                <X className="h-5 w-5 text-muted-foreground hover:text-foreground" />
-                              </button>
-                            )}
-                          </div>
-                        </div>
-
-                        <ScrollArea className="h-[60vh] max-h-[500px]">
-                          {searchResults.length > 0 ? (
-                            <div className="divide-y">
-                              {searchResults.map((product) => (
-                                <Link
-                                  key={product.id}
-                                  href={`/products/${product.id}`}
-                                  className="search-result-item flex items-center gap-4 p-4 hover:bg-muted/50 transition-colors"
-                                  onClick={() => {
-                                    setIsSearchDialogOpen(false);
-                                    setSearchQuery("");
-                                  }}
-                                >
-                                  <div className="flex-shrink-0 w-16 h-16 rounded-md bg-muted overflow-hidden">
-                                    {product.imageUrl ? (
-                                      <img
-                                        src={product.imageUrl}
-                                        alt={product.name}
-                                        className="w-full h-full object-cover"
-                                        loading="lazy"
-                                      />
-                                    ) : (
-                                      <div className="w-full h-full flex items-center justify-center bg-muted">
-                                        <Package className="h-6 w-6 text-muted-foreground" />
-                                      </div>
-                                    )}
-                                  </div>
-                                  <div className="flex-1 min-w-0">
-                                    <h3 className="font-medium truncate">{product.name}</h3>
-                                    {product.description && (
-                                      <p className="text-sm text-muted-foreground line-clamp-2">
-                                        {product.description}
-                                      </p>
-                                    )}
-                                    {product.sku && (
-                                      <p className="text-xs text-muted-foreground mt-1">
-                                        Réf: {product.sku}
-                                      </p>
-                                    )}
-                                  </div>
-                                  <ChevronRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-                                </Link>
-                              ))}
-                            </div>
-                          ) : searchQuery.trim().length >= 2 && !isSearching ? (
-                            <div className="flex flex-col items-center justify-center py-12 text-center">
-                              <Search className="h-12 w-12 text-muted-foreground/30 mb-4" />
-                              <p className="text-lg text-muted-foreground">
-                                Aucun produit ne correspond à votre recherche
-                              </p>
-                              <p className="text-sm text-muted-foreground mt-2">
-                                Essayez avec d'autres termes
-                              </p>
-                            </div>
-                          ) : (
-                            <div className="flex flex-col items-center justify-center py-12 text-center">
-                              <Search className="h-12 w-12 text-muted-foreground/30 mb-4" />
-                              <p className="text-lg text-muted-foreground">
-                                Recherchez des produits par nom, référence ou description
-                              </p>
-                              <p className="text-sm text-muted-foreground mt-2">
-                                Tapez au moins 2 caractères
-                              </p>
-                            </div>
-                          )}
-                        </ScrollArea>
-
-                        {searchQuery.trim().length > 0 && (
-                          <div className="sticky bottom-0 bg-background border-t p-3 text-right text-sm text-muted-foreground">
-                            {isSearching ? (
-                              <span>Recherche en cours...</span>
-                            ) : (
-                              <span>{searchResults.length} résultat{searchResults.length !== 1 ? 's' : ''}</span>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+              </Dialog>
               
               <Button 
                 variant="default" 
@@ -402,8 +330,13 @@ export function Header() {
                 <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                   <SheetHeader>
                     <SheetTitle className="flex items-center gap-2">
-                      <ShieldCheck className="h-6 w-6" />
-                      <span>Menu</span>
+                      <Image 
+                        src={logo} 
+                        alt="Fullness safety"
+                        width={120}
+                        height={50}
+                        className="object-contain"
+                      />
                     </SheetTitle>
                   </SheetHeader>
                   <div className="mt-8 flex flex-col gap-4">
@@ -447,7 +380,7 @@ export function Header() {
           <div 
             ref={megaMenuRef}
             className={`absolute left-0 right-0 bg-background border-b shadow-lg animate-in slide-in-from-top-5 ${
-              isSticky ? 'fixed top-16' : ''
+              isSticky ? 'fixed top-[90px]' : ''
             }`}
           >
             <div className="container mx-auto px-4 py-6">
@@ -458,7 +391,7 @@ export function Header() {
       </header>
 
       {/* Espace réservé quand le header est fixe */}
-      {isSticky && <div className="h-16 w-full" />}
+      {isSticky && <div className="h-[90px] w-full" />}
     </>
   );
 }

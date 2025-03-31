@@ -1,13 +1,16 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
 import NewsletterForm from "./NewsletterForm";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { FileText, User, Mail, Phone, Package, MessageSquare, Send, Loader2, Clock } from "lucide-react";
+import { FileText, User, Mail, Phone, Package, MessageSquare, Send, Loader2, Clock, MapPin, ChevronRight } from "lucide-react";
+import logo from '../public/logo/logo.png';
+import Image from "next/image";
 
 export default function Footer() {
   const [loading, setLoading] = useState(false);
@@ -60,158 +63,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-muted mt-auto">
+    <footer className="bg-muted mt-auto border-t">
       <div className="container mx-auto px-4 py-12">
-        {/* Quote Form Section */}
-        {/* <div className="max-w-2xl mx-auto mb-16">
-          <Card className="overflow-hidden border-primary/10">
-            <div className="p-6 space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                  <FileText className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Demander un devis</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Recevez une offre personnalisée sous 24h
-                  </p>
-                </div>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      <div className="flex items-center gap-2">
-                        <User className="w-4 h-4 text-muted-foreground" />
-                        <span>Nom complet *</span>
-                      </div>
-                    </label>
-                    <Input
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      required
-                      className="h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      <div className="flex items-center gap-2">
-                        <Mail className="w-4 h-4 text-muted-foreground" />
-                        <span>Email *</span>
-                      </div>
-                    </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                      required
-                      className="h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                      <div className="flex items-center gap-2">
-                        <Phone className="w-4 h-4 text-muted-foreground" />
-                        <span>Téléphone</span>
-                      </div>
-                    </label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      className="h-12"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="quantity" className="block text-sm font-medium mb-2">
-                      <div className="flex items-center gap-2">
-                        <Package className="w-4 h-4 text-muted-foreground" />
-                        <span>Quantité souhaitée *</span>
-                      </div>
-                    </label>
-                    <div className="flex items-center gap-4">
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="icon"
-                        onClick={() => handleQuantityChange(selectedQuantity - 1)}
-                        disabled={selectedQuantity <= 1}
-                      >
-                        -
-                      </Button>
-                      <Input
-                        id="quantity"
-                        type="number"
-                        min="1"
-                        value={selectedQuantity}
-                        onChange={(e) => handleQuantityChange(parseInt(e.target.value) || 1)}
-                        required
-                        className="w-20 text-center"
-                      />
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="icon"
-                        onClick={() => handleQuantityChange(selectedQuantity + 1)}
-                        disabled={selectedQuantity >= 999}
-                      >
-                        +
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      <div className="flex items-center gap-2">
-                        <MessageSquare className="w-4 h-4 text-muted-foreground" />
-                        <span>Message</span>
-                      </div>
-                    </label>
-                    <Textarea
-                      id="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                      rows={4}
-                      placeholder="Précisez vos besoins spécifiques, personnalisation souhaitée, etc."
-                      className="resize-none"
-                    />
-                  </div>
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full h-12"
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Envoi en cours...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="mr-2 h-4 w-4" />
-                      Envoyer la demande
-                    </>
-                  )}
-                </Button>
-              </form>
-
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Clock className="w-4 h-4" />
-                <span>Réponse garantie sous 24h ouvrées</span>
-              </div>
-            </div>
-          </Card>
-        </div> */}
-
         {/* Newsletter Section */}
         <div className="max-w-2xl mx-auto mb-16 text-center">
           <h3 className="text-2xl font-bold mb-4">Restez informé</h3>
@@ -222,79 +75,109 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Logo et description */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-              <ShieldCheck className="h-6 w-6" />
-              {/* <span>Fullness Safety</span> */}
+            <Link href="/" className="flex items-center gap-2">
+              <Image 
+                src={logo} 
+                alt="Fullness safety"
+                width={150}
+                height={80}
+                className="object-contain"
+              />
             </Link>
             <p className="text-muted-foreground">
               Votre partenaire de confiance pour tous vos équipements de protection individuelle.
             </p>
           </div>
           
+          {/* Produits */}
           <div>
-            <h3 className="font-semibold mb-4">Produits</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-4 text-lg">Produits</h3>
+            <ul className="space-y-3">
               <li>
-                <Link href="/products" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/products" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                  <ChevronRight className="h-3 w-3 text-primary" />
                   Tous nos produits
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=casques" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/products?category=1" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                  <ChevronRight className="h-3 w-3 text-primary" />
                   Casques de Protection
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=vetements" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/products?category=2" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                  <ChevronRight className="h-3 w-3 text-primary" />
                   Vêtements de Travail
                 </Link>
               </li>
               <li>
-                <Link href="/products?category=antichute" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/products?category=7" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                  <ChevronRight className="h-3 w-3 text-primary" />
                   Équipements Antichute
                 </Link>
               </li>
             </ul>
           </div>
           
+          {/* Entreprise */}
           <div>
-            <h3 className="font-semibold mb-4">Entreprise</h3>
-            <ul className="space-y-2">
+            <h3 className="font-semibold mb-4 text-lg">Entreprise</h3>
+            <ul className="space-y-3">
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                  <ChevronRight className="h-3 w-3 text-primary" />
                   À propos
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                  <ChevronRight className="h-3 w-3 text-primary" />
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/faq" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                  <ChevronRight className="h-3 w-3 text-primary" />
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/legal" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="/legal" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2">
+                  <ChevronRight className="h-3 w-3 text-primary" />
                   Mentions légales
                 </Link>
               </li>
             </ul>
           </div>
           
+          {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>123 Rue de la Sécurité</li>
-              <li>75001 Paris, France</li>
-              <li>Tél: 01 23 45 67 89</li>
-              <li>Email: contact@fullness-safety.fr</li>
+            <h3 className="font-semibold mb-4 text-lg">Contact</h3>
+            <ul className="space-y-3 text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 mt-0.5 text-primary" />
+                <span>55 KTM Rue koketi immeuble st Hubert,<br/>01 BP 2440 Assivito lomé, Togo</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-primary" />
+                <span> 91 21 82 26</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary" />
+                <span> contact@fullness-safety.com</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Clock className="h-4 w-4 text-primary" />
+                <span>Lun-Ven: 8h-17h <br /> Sam : 8h-14h</span>
+              </li>
             </ul>
           </div>
         </div>
         
+        {/* Copyright */}
         <div className="mt-12 pt-8 border-t text-center text-muted-foreground">
           <p>© {new Date().getFullYear()} Fullness Safety. Tous droits réservés.</p>
         </div>

@@ -247,7 +247,7 @@ export default function ProductDetails({
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           
           {/* Colonne 1 - Galerie */}
-          <div className="lg:col-span-1">
+          {/* <div className="lg:col-span-1">
             <div className="space-y-6">
               <div className="aspect-square relative overflow-hidden rounded-xl bg-muted group">
                 {images.length > 0 && (
@@ -317,10 +317,118 @@ export default function ProductDetails({
                 </div>
               )}
             </div>
-          </div>
+          </div> */}
+          {/* Colonne 1 - Galerie améliorée */}
+<div className="lg:col-span-1 sticky top-24 h-fit">
+  <div className="space-y-6 bg-background rounded-lg border p-4 shadow-sm">
+    {/* Image principale avec zoom */}
+    <div className="aspect-square relative overflow-hidden rounded-xl bg-muted group">
+      {images.length > 0 && (
+        <>
+          <Image
+            src={images[activeImage].url}
+            alt={images[activeImage].alt}
+            fill
+            className="object-contain transition-transform duration-300 group-hover:scale-110 cursor-zoom-in"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            onClick={() => {
+              // Ouvrir une lightbox/modal pour zoomer
+              window.open(images[activeImage].url, '_blank');
+            }}
+          />
+          {/* Badge pour indiquer le nombre d'images */}
+          {images.length > 1 && (
+            <div className="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
+              {activeImage + 1}/{images.length}
+            </div>
+          )}
+          
+          {/* Navigation entre images */}
+          {images.length > 1 && (
+            <>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveImage((prev) => (prev - 1 + images.length) % images.length);
+                }}
+                aria-label="Image précédente"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveImage((prev) => (prev + 1) % images.length);
+                }}
+                aria-label="Image suivante"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </Button>
+            </>
+          )}
+        </>
+      )}
+    </div>
+
+    {/* Miniatures avec scroll horizontal amélioré */}
+    {images.length > 1 && (
+      <div className="relative">
+        <div className="flex space-x-3 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
+          {images.map((image, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveImage(index)}
+              className={`flex-shrink-0 relative rounded-lg overflow-hidden transition-all ${
+                activeImage === index 
+                  ? 'ring-2 ring-primary ring-offset-2' 
+                  : 'opacity-80 hover:opacity-100 border'
+              }`}
+              style={{ width: '80px', height: '80px' }}
+              aria-label={`Voir l'image ${index + 1}`}
+            >
+              <Image
+                src={image.url}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                sizes="80px"
+              />
+              {activeImage === index && (
+                <div className="absolute inset-0 bg-primary/20" />
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {/* Badges d'information sous la galerie */}
+    <div className="flex flex-wrap gap-2 justify-center">
+      <Badge variant="outline" className="flex items-center gap-1">
+        <Package className="h-3 w-3" />
+        <span>En stock</span>
+      </Badge>
+      <Badge variant="outline" className="flex items-center gap-1">
+        <Truck className="h-3 w-3" />
+        <span>Livraison 48h</span>
+      </Badge>
+      <Badge variant="outline" className="flex items-center gap-1">
+        <ShieldCheck className="h-3 w-3" />
+        <span>Garantie 2 ans</span>
+      </Badge>
+    </div>
+  </div>
+</div>
 
           {/* Colonne 2 - Fiche produit */}
-          <div className="lg:col-span-1 space-y-8">
+          {/* <div className="lg:col-span-1 space-y-8">
             <div className="space-y-4">
               <div className="flex flex-wrap items-center gap-2">
                 <Badge variant="secondary" className="text-sm">
@@ -359,7 +467,146 @@ export default function ProductDetails({
                 </div>
               ))}
             </div>
+          </div> */}
+
+            {/* Colonne 2 - Fiche produit améliorée */}
+<div className="lg:col-span-1 space-y-8 bg-background rounded-lg border p-6 shadow-sm">
+  {/* En-tête avec badges et partage */}
+  <div className="flex justify-between items-start">
+    <div className="flex flex-wrap items-center gap-2">
+      <Badge variant="secondary" className="text-sm">
+        {subCategory.name}
+      </Badge>
+      {product.documentation?.certifications?.length > 0 && (
+        <Badge variant="secondary" className="bg-amber-500/10 text-amber-500">
+          <Certificate className="w-3 h-3 mr-1" />
+          Certifié
+        </Badge>
+      )}
+      {product.isNew && (
+        <Badge variant="secondary" className="bg-green-500/10 text-green-500">
+          Nouveau
+        </Badge>
+      )}
+    </div>
+    
+    <div className="flex gap-2">
+      <Button
+        variant="ghost"
+        size="icon"
+        className="h-8 w-8 hover:bg-primary/5"
+        onClick={toggleFavorite}
+        aria-label={isFavorite ? "Retirer des favoris" : "Ajouter aux favoris"}
+      >
+        <Heart className={`h-4 w-4 ${isFavorite ? "fill-red-500 text-red-500" : "text-muted-foreground"}`} />
+      </Button>
+      <Button
+        variant="ghost"
+        size="icon"
+        className="h-8 w-8 hover:bg-primary/5"
+        onClick={handleShare}
+        aria-label="Partager"
+      >
+        <Share2 className="h-4 w-4" />
+      </Button>
+    </div>
+  </div>
+
+  {/* Titre et description */}
+  <div className="space-y-4">
+    <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+      {product.name}
+    </h1>
+
+    {product.reference && (
+      <div className="text-sm text-muted-foreground">
+        Référence: <span className="font-mono">{product.reference}</span>
+      </div>
+    )}
+
+    <div className="flex items-center gap-2">
+      {[...Array(5)].map((_, i) => (
+        <Star
+          key={i}
+          className={`h-4 w-4 ${i < 4 ? 'fill-yellow-400 text-yellow-400' : 'text-muted-foreground'}`}
+        />
+      ))}
+      <span className="text-sm text-muted-foreground ml-1">(12 avis)</span>
+    </div>
+
+    <p className="text-lg text-muted-foreground leading-relaxed">
+      {product.description}
+    </p>
+  </div>
+
+  {/* Caractéristiques principales */}
+  <div className="grid grid-cols-2 gap-3">
+    {features.map((feature) => (
+      <div
+        key={feature.label}
+        className={`${feature.bgColor} rounded-lg p-3 flex items-center gap-3`}
+      >
+        <div className={`p-2 rounded-full ${feature.bgColor}`}>
+          <feature.icon className={`h-5 w-5 ${feature.color}`} />
+        </div>
+        <div>
+          <div className="text-sm font-medium">{feature.label}</div>
+          <div className="text-xs text-muted-foreground">
+            {feature.label === "Certifié CE" 
+              ? "Normes européennes" 
+              : feature.label === "Garantie 2 ans" 
+                ? "Extension possible" 
+                : "Frais de port offerts"}
           </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {/* Spécifications clés */}
+  <div className="space-y-4">
+    <h3 className="font-semibold text-lg">Spécifications clés</h3>
+    <div className="grid grid-cols-2 gap-3">
+      {product.specifications?.dimensions && (
+        <div className="flex items-center gap-2 text-sm">
+          <Ruler className="h-4 w-4 text-muted-foreground" />
+          <div>
+            <div className="text-muted-foreground">Dimensions</div>
+            <div>{product.specifications.dimensions}</div>
+          </div>
+        </div>
+      )}
+      {product.specifications?.weight && (
+        <div className="flex items-center gap-2 text-sm">
+          <Scale className="h-4 w-4 text-muted-foreground" />
+          <div>
+            <div className="text-muted-foreground">Poids</div>
+            <div>{product.specifications.weight}</div>
+          </div>
+        </div>
+      )}
+      {product.specifications?.material && (
+        <div className="flex items-center gap-2 text-sm">
+          <Box className="h-4 w-4 text-muted-foreground" />
+          <div>
+            <div className="text-muted-foreground">Matériau</div>
+            <div>{product.specifications.material}</div>
+          </div>
+        </div>
+      )}
+      {product.specifications?.color && (
+        <div className="flex items-center gap-2 text-sm">
+          <Wind className="h-4 w-4 text-muted-foreground" />
+          <div>
+            <div className="text-muted-foreground">Couleur</div>
+            <div>{product.specifications.color}</div>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
+
 
           {/* Colonne 3 - Formulaire de devis */}
           <div className="sticky top-24 h-fit">
