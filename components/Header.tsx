@@ -36,7 +36,7 @@ import {
 } from "@/components/ui/dialog";
 import { MegaMenu } from "./MegaMenu";
 import { getProducts } from "@/lib/db";
-import logo from '../public/logo/logo.png';
+import logo from '@/public/logo.png'; 
 import Image from "next/image";
 
 export function Header() {

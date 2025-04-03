@@ -94,6 +94,7 @@ export default function ProductDetails({
   const [selectedQuantity, setSelectedQuantity] = useState(1);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [isFavorite, setIsFavorite] = useState(false);
+  const [showQuoteForm, setShowQuoteForm] = useState(false);
   const { toast } = useToast();
   const router = useRouter();
   
@@ -149,6 +150,7 @@ export default function ProductDetails({
         message: "",
         quantity: "1",
       });
+      setShowQuoteForm(false);
     } catch (error) {
       toast({
         title: "Erreur",
@@ -244,11 +246,12 @@ export default function ProductDetails({
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8 max-w-7xl">
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           
           {/* Colonne 1 - Galerie */}
-          {/* <div className="lg:col-span-1">
-            <div className="space-y-6">
+          <div className="sticky top-24 h-fit">
+            <div className="space-y-6 bg-background rounded-lg border p-4 shadow-sm">
+              {/* Image principale avec zoom */}
               <div className="aspect-square relative overflow-hidden rounded-xl bg-muted group">
                 {images.length > 0 && (
                   <>
@@ -256,35 +259,46 @@ export default function ProductDetails({
                       src={images[activeImage].url}
                       alt={images[activeImage].alt}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-contain transition-transform duration-300 group-hover:scale-110 cursor-zoom-in"
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      onClick={() => {
+                        window.open(images[activeImage].url, '_blank');
+                      }}
                     />
+                    {/* Badge pour indiquer le nombre d'images */}
+                    {images.length > 1 && (
+                      <div className="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
+                        {activeImage + 1}/{images.length}
+                      </div>
+                    )}
+                    
+                    {/* Navigation entre images */}
                     {images.length > 1 && (
                       <>
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg"
                           onClick={(e) => {
                             e.stopPropagation();
                             setActiveImage((prev) => (prev - 1 + images.length) % images.length);
                           }}
                           aria-label="Image précédente"
                         >
-                          <ChevronLeft className="h-4 w-4" />
+                          <ChevronLeft className="h-5 w-5" />
                         </Button>
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg"
                           onClick={(e) => {
                             e.stopPropagation();
                             setActiveImage((prev) => (prev + 1) % images.length);
                           }}
                           aria-label="Image suivante"
                         >
-                          <ChevronRight className="h-4 w-4" />
+                          <ChevronRight className="h-5 w-5" />
                         </Button>
                       </>
                     )}
@@ -292,451 +306,355 @@ export default function ProductDetails({
                 )}
               </div>
 
+              {/* Miniatures avec scroll horizontal amélioré */}
               {images.length > 1 && (
-                <div className="grid grid-cols-4 sm:grid-cols-6 gap-3">
-                  {images.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setActiveImage(index)}
-                      className={`aspect-square rounded-lg overflow-hidden relative transition-all ${
-                        activeImage === index 
-                          ? 'ring-2 ring-primary ring-offset-2' 
-                          : 'opacity-80 hover:opacity-100'
-                      }`}
-                      aria-label={`Voir l'image ${index + 1}`}
-                    >
-                      <Image
-                        src={image.url}
-                        alt={image.alt}
-                        fill
-                        className="object-cover"
-                        sizes="100px"
-                      />
-                    </button>
-                  ))}
+                <div className="relative">
+                  <div className="flex space-x-3 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
+                    {images.map((image, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setActiveImage(index)}
+                        className={`flex-shrink-0 relative rounded-lg overflow-hidden transition-all ${
+                          activeImage === index 
+                            ? 'ring-2 ring-primary ring-offset-2' 
+                            : 'opacity-80 hover:opacity-100 border'
+                        }`}
+                        style={{ width: '80px', height: '80px' }}
+                        aria-label={`Voir l'image ${index + 1}`}
+                      >
+                        <Image
+                          src={image.url}
+                          alt={image.alt}
+                          fill
+                          className="object-cover"
+                          sizes="80px"
+                        />
+                        {activeImage === index && (
+                          <div className="absolute inset-0 bg-primary/20" />
+                        )}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               )}
-            </div>
-          </div> */}
-          {/* Colonne 1 - Galerie améliorée */}
-<div className="lg:col-span-1 sticky top-24 h-fit">
-  <div className="space-y-6 bg-background rounded-lg border p-4 shadow-sm">
-    {/* Image principale avec zoom */}
-    <div className="aspect-square relative overflow-hidden rounded-xl bg-muted group">
-      {images.length > 0 && (
-        <>
-          <Image
-            src={images[activeImage].url}
-            alt={images[activeImage].alt}
-            fill
-            className="object-contain transition-transform duration-300 group-hover:scale-110 cursor-zoom-in"
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
-            onClick={() => {
-              // Ouvrir une lightbox/modal pour zoomer
-              window.open(images[activeImage].url, '_blank');
-            }}
-          />
-          {/* Badge pour indiquer le nombre d'images */}
-          {images.length > 1 && (
-            <div className="absolute bottom-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded-full">
-              {activeImage + 1}/{images.length}
-            </div>
-          )}
-          
-          {/* Navigation entre images */}
-          {images.length > 1 && (
-            <>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveImage((prev) => (prev - 1 + images.length) % images.length);
-                }}
-                aria-label="Image précédente"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setActiveImage((prev) => (prev + 1) % images.length);
-                }}
-                aria-label="Image suivante"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </Button>
-            </>
-          )}
-        </>
-      )}
-    </div>
 
-    {/* Miniatures avec scroll horizontal amélioré */}
-    {images.length > 1 && (
-      <div className="relative">
-        <div className="flex space-x-3 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
-          {images.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveImage(index)}
-              className={`flex-shrink-0 relative rounded-lg overflow-hidden transition-all ${
-                activeImage === index 
-                  ? 'ring-2 ring-primary ring-offset-2' 
-                  : 'opacity-80 hover:opacity-100 border'
-              }`}
-              style={{ width: '80px', height: '80px' }}
-              aria-label={`Voir l'image ${index + 1}`}
-            >
-              <Image
-                src={image.url}
-                alt={image.alt}
-                fill
-                className="object-cover"
-                sizes="80px"
-              />
-              {activeImage === index && (
-                <div className="absolute inset-0 bg-primary/20" />
-              )}
-            </button>
-          ))}
-        </div>
-      </div>
-    )}
-
-    {/* Badges d'information sous la galerie */}
-    <div className="flex flex-wrap gap-2 justify-center">
-      <Badge variant="outline" className="flex items-center gap-1">
-        <Package className="h-3 w-3" />
-        <span>En stock</span>
-      </Badge>
-      <Badge variant="outline" className="flex items-center gap-1">
-        <Truck className="h-3 w-3" />
-        <span>Livraison 48h</span>
-      </Badge>
-      <Badge variant="outline" className="flex items-center gap-1">
-        <ShieldCheck className="h-3 w-3" />
-        <span>Garantie 2 ans</span>
-      </Badge>
-    </div>
-  </div>
-</div>
+              {/* Badges d'information sous la galerie */}
+              <div className="flex flex-wrap gap-2 justify-center">
+                <Badge variant="outline" className="flex items-center gap-1">
+                  <Package className="h-3 w-3" />
+                  <span>En stock</span>
+                </Badge>
+                <Badge variant="outline" className="flex items-center gap-1">
+                  <Truck className="h-3 w-3" />
+                  <span>Livraison 48h</span>
+                </Badge>
+                <Badge variant="outline" className="flex items-center gap-1">
+                  <ShieldCheck className="h-3 w-3" />
+                  <span>Garantie 2 ans</span>
+                </Badge>
+              </div>
+            </div>
+          </div>
 
           {/* Colonne 2 - Fiche produit */}
-          {/* <div className="lg:col-span-1 space-y-8">
-            <div className="space-y-4">
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="secondary" className="text-sm">
-                  {subCategory.name}
-                </Badge>
-                {product.documentation?.certifications?.length > 0 && (
-                  <Badge variant="secondary" className="bg-amber-500/10 text-amber-500">
-                    <Certificate className="w-3 h-3 mr-1" />
-                    Certifié
+          <div className="space-y-8">
+            <div className="bg-background rounded-lg border p-6 shadow-sm">
+              {/* En-tête avec badges et partage */}
+              <div className="flex justify-between items-start">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge variant="secondary" className="text-sm">
+                    {subCategory.name}
                   </Badge>
-                )}
-                {product.isNew && (
-                  <Badge variant="secondary" className="bg-green-500/10 text-green-500">
-                    Nouveau
-                  </Badge>
-                )}
+                  {product.documentation?.certifications?.length > 0 && (
+                    <Badge variant="secondary" className="bg-amber-500/10 text-amber-500">
+                      <Certificate className="w-3 h-3 mr-1" />
+                      Certifié
+                    </Badge>
+                  )}
+                  {product.isNew && (
+                    <Badge variant="secondary" className="bg-green-500/10 text-green-500">
+                      Nouveau
+                    </Badge>
+                  )}
+                </div>
+                
+                <div className="flex gap-2">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8 hover:bg-primary/5"
+                    onClick={toggleFavorite}
+                    aria-label={isFavorite ? "Retirer des favoris" : "Ajouter aux favoris"}
+                  >
+                    <Heart className={`h-4 w-4 ${isFavorite ? "fill-red-500 text-red-500" : "text-muted-foreground"}`} />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8 hover:bg-primary/5"
+                    onClick={handleShare}
+                    aria-label="Partager"
+                  >
+                    <Share2 className="h-4 w-4" />
+                  </Button>
+                </div>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                {product.name}
-              </h1>
+              {/* Titre et description */}
+              <div className="space-y-4 mt-4">
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+                  {product.name}
+                </h1>
 
-              <p className="text-lg text-muted-foreground">
-                {product.description}
-              </p>
-            </div>
+                {product.reference && (
+                  <div className="text-sm text-muted-foreground">
+                    Référence: <span className="font-mono">{product.reference}</span>
+                  </div>
+                )}
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              {features.map((feature) => (
-                <div
-                  key={feature.label}
-                  className={`${feature.bgColor} rounded-lg p-3 flex items-center gap-2`}
-                >
-                  <feature.icon className={`h-5 w-5 ${feature.color}`} />
-                  <span className="text-sm font-medium">{feature.label}</span>
+                <div className="flex items-center gap-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`h-4 w-4 ${i < 4 ? 'fill-yellow-400 text-yellow-400' : 'text-muted-foreground'}`}
+                    />
+                  ))}
+                  <span className="text-sm text-muted-foreground ml-1">(12 avis)</span>
                 </div>
-              ))}
+
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {product.description}
+                </p>
+              </div>
+
+              {/* Caractéristiques principales */}
+              <div className="grid grid-cols-2 gap-3 mt-6">
+                {features.map((feature) => (
+                  <div
+                    key={feature.label}
+                    className={`${feature.bgColor} rounded-lg p-3 flex items-center gap-3`}
+                  >
+                    <div className={`p-2 rounded-full ${feature.bgColor}`}>
+                      <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                    </div>
+                    <div>
+                      <div className="text-sm font-medium">{feature.label}</div>
+                      <div className="text-xs text-muted-foreground">
+                        {feature.label === "Certifié CE" 
+                          ? "Normes européennes" 
+                          : feature.label === "Garantie 2 ans" 
+                            ? "Extension possible" 
+                            : "Frais de port offerts"}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Spécifications clés */}
+              {/* <div className="space-y-4 mt-8">
+                <h3 className="font-semibold text-lg">Spécifications clés</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {product.specifications?.dimensions && (
+                    <div className="flex items-center gap-2 text-sm">
+                      <Ruler className="h-4 w-4 text-muted-foreground" />
+                      <div>
+                        <div className="text-muted-foreground">Dimensions</div>
+                        <div>{product.specifications.dimensions}</div>
+                      </div>
+                    </div>
+                  )}
+                  {product.specifications?.weight && (
+                    <div className="flex items-center gap-2 text-sm">
+                      <Scale className="h-4 w-4 text-muted-foreground" />
+                      <div>
+                        <div className="text-muted-foreground">Poids</div>
+                        <div>{product.specifications.weight}</div>
+                      </div>
+                    </div>
+                  )}
+                  {product.specifications?.material && (
+                    <div className="flex items-center gap-2 text-sm">
+                      <Box className="h-4 w-4 text-muted-foreground" />
+                      <div>
+                        <div className="text-muted-foreground">Matériau</div>
+                        <div>{product.specifications.material}</div>
+                      </div>
+                    </div>
+                  )}
+                  {product.specifications?.color && (
+                    <div className="flex items-center gap-2 text-sm">
+                      <Wind className="h-4 w-4 text-muted-foreground" />
+                      <div>
+                        <div className="text-muted-foreground">Couleur</div>
+                        <div>{product.specifications.color}</div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div> */}
             </div>
-          </div> */}
 
-            {/* Colonne 2 - Fiche produit améliorée */}
-<div className="lg:col-span-1 space-y-8 bg-background rounded-lg border p-6 shadow-sm">
-  {/* En-tête avec badges et partage */}
-  <div className="flex justify-between items-start">
-    <div className="flex flex-wrap items-center gap-2">
-      <Badge variant="secondary" className="text-sm">
-        {subCategory.name}
-      </Badge>
-      {product.documentation?.certifications?.length > 0 && (
-        <Badge variant="secondary" className="bg-amber-500/10 text-amber-500">
-          <Certificate className="w-3 h-3 mr-1" />
-          Certifié
-        </Badge>
-      )}
-      {product.isNew && (
-        <Badge variant="secondary" className="bg-green-500/10 text-green-500">
-          Nouveau
-        </Badge>
-      )}
-    </div>
-    
-    <div className="flex gap-2">
-      <Button
-        variant="ghost"
-        size="icon"
-        className="h-8 w-8 hover:bg-primary/5"
-        onClick={toggleFavorite}
-        aria-label={isFavorite ? "Retirer des favoris" : "Ajouter aux favoris"}
-      >
-        <Heart className={`h-4 w-4 ${isFavorite ? "fill-red-500 text-red-500" : "text-muted-foreground"}`} />
-      </Button>
-      <Button
-        variant="ghost"
-        size="icon"
-        className="h-8 w-8 hover:bg-primary/5"
-        onClick={handleShare}
-        aria-label="Partager"
-      >
-        <Share2 className="h-4 w-4" />
-      </Button>
-    </div>
-  </div>
-
-  {/* Titre et description */}
-  <div className="space-y-4">
-    <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-      {product.name}
-    </h1>
-
-    {product.reference && (
-      <div className="text-sm text-muted-foreground">
-        Référence: <span className="font-mono">{product.reference}</span>
-      </div>
-    )}
-
-    <div className="flex items-center gap-2">
-      {[...Array(5)].map((_, i) => (
-        <Star
-          key={i}
-          className={`h-4 w-4 ${i < 4 ? 'fill-yellow-400 text-yellow-400' : 'text-muted-foreground'}`}
-        />
-      ))}
-      <span className="text-sm text-muted-foreground ml-1">(12 avis)</span>
-    </div>
-
-    <p className="text-lg text-muted-foreground leading-relaxed">
-      {product.description}
-    </p>
-  </div>
-
-  {/* Caractéristiques principales */}
-  <div className="grid grid-cols-2 gap-3">
-    {features.map((feature) => (
-      <div
-        key={feature.label}
-        className={`${feature.bgColor} rounded-lg p-3 flex items-center gap-3`}
-      >
-        <div className={`p-2 rounded-full ${feature.bgColor}`}>
-          <feature.icon className={`h-5 w-5 ${feature.color}`} />
-        </div>
-        <div>
-          <div className="text-sm font-medium">{feature.label}</div>
-          <div className="text-xs text-muted-foreground">
-            {feature.label === "Certifié CE" 
-              ? "Normes européennes" 
-              : feature.label === "Garantie 2 ans" 
-                ? "Extension possible" 
-                : "Frais de port offerts"}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-
-  {/* Spécifications clés */}
-  <div className="space-y-4">
-    <h3 className="font-semibold text-lg">Spécifications clés</h3>
-    <div className="grid grid-cols-2 gap-3">
-      {product.specifications?.dimensions && (
-        <div className="flex items-center gap-2 text-sm">
-          <Ruler className="h-4 w-4 text-muted-foreground" />
-          <div>
-            <div className="text-muted-foreground">Dimensions</div>
-            <div>{product.specifications.dimensions}</div>
-          </div>
-        </div>
-      )}
-      {product.specifications?.weight && (
-        <div className="flex items-center gap-2 text-sm">
-          <Scale className="h-4 w-4 text-muted-foreground" />
-          <div>
-            <div className="text-muted-foreground">Poids</div>
-            <div>{product.specifications.weight}</div>
-          </div>
-        </div>
-      )}
-      {product.specifications?.material && (
-        <div className="flex items-center gap-2 text-sm">
-          <Box className="h-4 w-4 text-muted-foreground" />
-          <div>
-            <div className="text-muted-foreground">Matériau</div>
-            <div>{product.specifications.material}</div>
-          </div>
-        </div>
-      )}
-      {product.specifications?.color && (
-        <div className="flex items-center gap-2 text-sm">
-          <Wind className="h-4 w-4 text-muted-foreground" />
-          <div>
-            <div className="text-muted-foreground">Couleur</div>
-            <div>{product.specifications.color}</div>
-          </div>
-        </div>
-      )}
-    </div>
-  </div>
-</div>
-
-
-          {/* Colonne 3 - Formulaire de devis */}
-          <div className="sticky top-24 h-fit">
-            <Card className="border-primary/20 shadow-lg">
-              <div className="p-6 space-y-6">
+            {/* Section de contact et devis */}
+            <div className="bg-background rounded-lg border p-6 shadow-sm">
+              <div className="space-y-6">
                 <div className="text-center">
-                  <h3 className="font-semibold text-xl">Demander un devis</h3>
+                  <h3 className="font-semibold text-xl">Vous souhaitez plus d'informations ?</h3>
                   <p className="text-sm text-muted-foreground mt-1">
-                    Réponse sous 24h ouvrées
+                    Notre équipe est à votre disposition pour répondre à vos questions
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Input
-                      placeholder="Nom complet *"
-                      value={formData.name}
-                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                      required
-                      className="h-12"
-                      icon={<User className="w-4 h-4 text-muted-foreground" />}
-                    />
-                  </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <Button
+                    variant={showQuoteForm ? "secondary" : "default"}
+                    className="h-12"
+                    onClick={() => setShowQuoteForm(true)}
+                  >
+                    <Send className="mr-2 h-5 w-5" />
+                    Demander un devis
+                  </Button>
 
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Email *"
-                      value={formData.email}
-                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                      required
-                      className="h-12"
-                      icon={<Mail className="w-4 h-4 text-muted-foreground" />}
-                    />
-                  </div>
-
-                  <div>
-                    <Input
-                      type="tel"
-                      placeholder="Téléphone"
-                      value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      className="h-12"
-                      icon={<Phone className="w-4 h-4 text-muted-foreground" />}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Quantité souhaitée *</label>
-                    <div className="flex items-center gap-2">
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="icon"
-                        onClick={() => handleQuantityChange(selectedQuantity - 1)}
-                        disabled={selectedQuantity <= 1}
-                        aria-label="Réduire la quantité"
-                      >
-                        -
-                      </Button>
-                      <Input
-                        type="number"
-                        min="1"
-                        max="999"
-                        value={selectedQuantity}
-                        onChange={(e) => handleQuantityChange(parseInt(e.target.value) || 1)}
-                        required
-                        className="w-20 text-center"
-                      />
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="icon"
-                        onClick={() => handleQuantityChange(selectedQuantity + 1)}
-                        disabled={selectedQuantity >= 999}
-                        aria-label="Augmenter la quantité"
-                      >
-                        +
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div>
-                    <Textarea
-                      placeholder="Message (optionnel)"
-                      value={formData.message}
-                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                      rows={3}
-                    />
-                  </div>
+                  <Button
+                    variant="outline"
+                    className="h-12"
+                    onClick={() => {
+                      const message = `Bonjour, je suis intéressé par le produit "${product.name}" (Réf: ${product.id}). Pouvez-vous me donner plus d'informations ?`;
+                      window.open(`https://wa.me/33612345678?text=${encodeURIComponent(message)}`, '_blank');
+                    }}
+                  >
+                    <MessageCircle className="mr-2 h-5 w-5" />
+                    WhatsApp
+                  </Button>
 
                   <Button 
-                    type="submit" 
-                    className="w-full h-12"
-                    disabled={loading}
+                    variant="outline" 
+                    className="h-12 sm:col-span-2"
+                    asChild
                   >
-                    {loading ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Envoi en cours...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="mr-2 h-4 w-4" />
-                        Envoyer la demande
-                      </>
-                    )}
+                    <Link href={`tel:+33123456789`}>
+                      <Phone className="mr-2 h-5 w-5" />
+                      Appeler un conseiller
+                    </Link>
                   </Button>
-                </form>
-              </div>
-            </Card>
+                </div>
 
-            <div className="mt-6 space-y-3">
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={() => {
-                  const message = `Bonjour, je suis intéressé par le produit "${product.name}" (Réf: ${product.id}). Pouvez-vous me donner plus d'informations ?`;
-                  window.open(`https://wa.me/33612345678?text=${encodeURIComponent(message)}`, '_blank');
-                }}
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Contact WhatsApp
-              </Button>
-              <Button variant="outline" className="w-full" asChild>
-                <Link href={`tel:+33123456789`}>
-                  <Phone className="w-4 h-4 mr-2" />
-                  Appeler un conseiller
-                </Link>
-              </Button>
+                {showQuoteForm && (
+                  <Card className="border-primary/20 mt-6">
+                    <div className="p-6 space-y-6">
+                      <div className="flex justify-between items-center">
+                        <h3 className="font-semibold text-lg">Formulaire de devis</h3>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          onClick={() => setShowQuoteForm(false)}
+                          aria-label="Fermer le formulaire"
+                        >
+                          <ChevronLeft className="w-5 h-5" />
+                        </Button>
+                      </div>
+
+                      <form onSubmit={handleSubmit} className="space-y-4">
+                        <div>
+                          <Input
+                            placeholder="Nom complet *"
+                            value={formData.name}
+                            onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                            required
+                            className="h-12"
+                            icon={<User className="w-4 h-4 text-muted-foreground" />}
+                          />
+                        </div>
+
+                        <div>
+                          <Input
+                            type="email"
+                            placeholder="Email *"
+                            value={formData.email}
+                            onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                            required
+                            className="h-12"
+                            icon={<Mail className="w-4 h-4 text-muted-foreground" />}
+                          />
+                        </div>
+
+                        <div>
+                          <Input
+                            type="tel"
+                            placeholder="Téléphone"
+                            value={formData.phone}
+                            onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                            className="h-12"
+                            icon={<Phone className="w-4 h-4 text-muted-foreground" />}
+                          />
+                        </div>
+
+                        <div className="space-y-2">
+                          <label className="text-sm font-medium">Quantité souhaitée *</label>
+                          <div className="flex items-center gap-2">
+                            <Button
+                              type="button"
+                              variant="outline"
+                              size="icon"
+                              onClick={() => handleQuantityChange(selectedQuantity - 1)}
+                              disabled={selectedQuantity <= 1}
+                              aria-label="Réduire la quantité"
+                            >
+                              -
+                            </Button>
+                            <Input
+                              type="number"
+                              min="1"
+                              max="999"
+                              value={selectedQuantity}
+                              onChange={(e) => handleQuantityChange(parseInt(e.target.value) || 1)}
+                              required
+                              className="w-20 text-center"
+                            />
+                            <Button
+                              type="button"
+                              variant="outline"
+                              size="icon"
+                              onClick={() => handleQuantityChange(selectedQuantity + 1)}
+                              disabled={selectedQuantity >= 999}
+                              aria-label="Augmenter la quantité"
+                            >
+                              +
+                            </Button>
+                          </div>
+                        </div>
+
+                        <div>
+                          <Textarea
+                            placeholder="Message (optionnel)"
+                            value={formData.message}
+                            onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                            rows={3}
+                          />
+                        </div>
+
+                        <Button 
+                          type="submit" 
+                          className="w-full h-12"
+                          disabled={loading}
+                        >
+                          {loading ? (
+                            <>
+                              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                              Envoi en cours...
+                            </>
+                          ) : (
+                            <>
+                              <Send className="mr-2 h-4 w-4" />
+                              Envoyer la demande
+                            </>
+                          )}
+                        </Button>
+                      </form>
+                    </div>
+                  </Card>
+                )}
+              </div>
             </div>
           </div>
         </div>

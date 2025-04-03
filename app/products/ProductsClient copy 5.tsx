@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Category, Product, SubCategory, getSubCategories } from "@/lib/db";
@@ -564,15 +564,6 @@ export default function ProductsClient({
                     >
                       <div className="flex h-full flex-col overflow-hidden rounded-lg border transition-all duration-300 hover:shadow-md">
                         <div className="relative h-72 w-full bg-gray-50 sm:h-72">
-                          {/* Badge Nouveau */}
-                          {product.isNew && (
-                            <div className="absolute top-2 right-2 z-10">
-                              <Badge className="bg-green-600 hover:bg-green-600/90 text-white shadow-md">
-                                Nouveau
-                              </Badge>
-                            </div>
-                          )}
-
                           {product.imageUrl ? (
                             <>
                               <img

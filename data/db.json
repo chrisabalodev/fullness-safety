@@ -2048,6 +2048,24 @@
             "icon": "Wind"
           }
         ]
+      },
+      {
+        "id": "45",
+        "name": "Masques FFP",
+        "categoryId": "4",
+        "slug": "masques-ffp"
+      },
+      {
+        "id": "46",
+        "name": "Masques Médicaux",
+        "categoryId": "4",
+        "slug": "masques-medicaux"
+      },
+      {
+        "id": "47",
+        "name": "Masques à Gaz",
+        "categoryId": "4",
+        "slug": "masques-gaz"
       }
       
     ],
@@ -3551,22 +3569,11 @@
       "name": "Gant Anti-Chaleur Rouge",
       "description": "Gants en cuir épais avec double tissus pour une protection optimale contre les flammes, les étincelles et la chaleur. Excellente résistance à l'abrasion. Conforme aux normes EN 388 et EN 407.",
       "price": 49.99,
-      "imageUrl": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/8LFXCPRHRw92MGj/preview?https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
-          "alt": "Vue avant des gants anti-chaleur rouges"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du cuir épais et du double tissus"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1604176354204-92633f6a6e1c?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gants utilisés dans un environnement industriel"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gants-anti-chaleur.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/ksFJemE5YQ7RxFd/download/FICHE%20TECHNIQUE%20GANT%20ANTI-CHALEUR%20R-compressed.pdf",
       "specifications": {
         "norme": "EN 388, EN 407, Règlement (UE) 2016",
         "materiau": "Cuir épais avec double tissus",
@@ -3584,25 +3591,11 @@
       "subCategoryId": "29",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gants-anti-chaleur.pdf",
+          "url": "https://s02.swdrive.fr/s/ksFJemE5YQ7RxFd/download/FICHE%20TECHNIQUE%20GANT%20ANTI-CHALEUR%20R-compressed.pdf",
           "format": "PDF",
           "size": "1.5 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GAC",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          },
-          {
-            "name": "EN 407",
-            "number": "EN407-2023-GAC",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en407.pdf"
-          }
-        ]
+        }
       }
       
     },
@@ -3611,18 +3604,11 @@
       "name": "Gant Anti-Coupure Gris",
       "description": "Gant tricoté jauge 13 sans couture en fibres techniques pour une résistance maximale à la coupure (niveau 4543). Confort, souplesse et accroche optimale. Conforme à la norme EN 388. Idéal pour la manutention en milieu sec.",
       "price": 34.99,
-      "imageUrl": "https://images.unsplash.com/photo-1590152881280-7532d7f4c2c1?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/zsXa9wzDy9xdnLY/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1590152881280-7532d7f4c2c1?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant anti-coupure gris en situation d'utilisation"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du tricotage sans couture"
-        }
-      ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-anti-coupure.pdf",
+    
+      ], 
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/a6sgz3WLRFfWH7f/download/FICHE%20TECHNIQUE%20GANT%20ANTI-COUPURE-compressed.pdf",
       "specifications": {
         "norme": [
           "EN 388", 
@@ -3644,19 +3630,11 @@
       "subCategoryId": "30",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-anti-coupure.pdf",
+          "url": "https://s02.swdrive.fr/s/a6sgz3WLRFfWH7f/download/FICHE%20TECHNIQUE%20GANT%20ANTI-COUPURE-compressed.pdf",
           "format": "PDF",
           "size": "1.2 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GAC",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          }
-        ]
+        }
       }
       
     },
@@ -3665,18 +3643,11 @@
       "name": "Gant Coton Enduit PVC",
       "description": "Gant tricoté 5 doigts sans couture (65% Polyester, 35% Coton) avec enduction PVC pour une adhérence optimale. Résistance à la déchirure. Idéal pour la manutention d'objets glissants en milieu sec. Conforme aux normes EN 388 et EN 420.",
       "price": 12.99,
-      "imageUrl": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/2L9LHj7zdqAFjDy/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant coton/PVC bleu et blanc"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1584735422184-97bb1e3a56a5?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de l'enduction PVC sur la paume"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-coton-pvc.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/jdE5yHgQR6385Fb/download/FICHE%20TECHNIQUE%20GANT%20COTON-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "composition": "65% Polyester, 35% Coton (poignet), 100% Polyamide (corps)",
@@ -3696,25 +3667,11 @@
       "subCategoryId": "31",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-coton-pvc.pdf",
+          "url": "https://s02.swdrive.fr/s/jdE5yHgQR6385Fb/download/FICHE%20TECHNIQUE%20GANT%20COTON-compressed.pdf",
           "format": "PDF",
           "size": "1.0 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GCOT",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          },
-          {
-            "name": "EN 420",
-            "number": "EN420-2023-GCOT",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en420.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -3722,18 +3679,11 @@
       "name": "Gant Docker Croûte Bovin",
       "description": "Gant de protection lourd en cuir croûte bovin avec renforts sur le dos, pouce palmé et doigts rapportés. Doublure intérieure en coton pour un confort optimal. Montage américain avec manchette renforcée. Conforme aux normes EN 388 et EN 420. Idéal pour les travaux industriels et la manutention lourde.",
       "price": 45.99,
-      "imageUrl": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/5g5SGjstNRptBQB/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant docker en cuir bovin avec toile bleue"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1584735422184-97bb1e3a56a5?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des renforts et coutures"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-docker.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/BXeM7B9rG56tsMp/download/FICHE%20TECHNIQUE%20GANT%20DOCKER%20CROUTE%20BOVIN-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "type_cuir": "Croûte bovin",
@@ -3759,19 +3709,11 @@
       "subCategoryId": "32",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-docker.pdf",
+          "url": "https://s02.swdrive.fr/s/BXeM7B9rG56tsMp/download/FICHE%20TECHNIQUE%20GANT%20DOCKER%20CROUTE%20BOVIN-compressed.pdfhttps://example.com/fiche-technique-gant-docker.pdf",
           "format": "PDF",
           "size": "1.5 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GDOC",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          }
-        ]
+        }
       }
       
     },
@@ -3780,18 +3722,11 @@
       "name": "Gant Maîtrise en Cuir Vachette",
       "description": "Gant haut de gamme en cuir tout fleur de vachette offrant une dextérité exceptionnelle et une sensation seconde peau. Pouce palmé et élastique de serrage pour un maintien optimal. Idéal pour les travaux de précision et la manutention courante en environnement sec. Conforme aux normes EN 388 et EN 420.",
       "price": 39.99,
-      "imageUrl": "https://images.unsplash.com/photo-1596727147705-61a532a659bd?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/pdDPiARxnjAbCNC/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1596727147705-61a532a659bd?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant maîtrise en cuir vachette gris/naturel"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du pouce palmé et de l'élastique"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-maitrise.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/BysZ63bT3iFzcmR/download/FICHE%20TECHNIQUE%20GANT%20MAITRISE%20EN%20CUIR-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "type_cuir": "Tout fleur vachette",
@@ -3815,19 +3750,11 @@
       "subCategoryId": "33",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-maitrise.pdf",
+          "url": "https://s02.swdrive.fr/s/BysZ63bT3iFzcmR/download/FICHE%20TECHNIQUE%20GANT%20MAITRISE%20EN%20CUIR-compressed.pdf",
           "format": "PDF",
           "size": "1.3 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GMAI",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -3835,18 +3762,22 @@
       "name": "Gant Manutention Léger Enduit PU",
       "description": "Gant tricoté sans couture en 100% polyamide avec enduction polyuréthane sur la paume et les doigts pour une adhérence optimale. Poignet élastique et conception respirante. Idéal pour la maintenance, l'automobile et les ateliers. Conforme aux normes EN 388 et EN 420.",
       "price": 15.99,
-      "imageUrl": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/q3w3pmXmfZnD3B4/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/q3w3pmXmfZnD3B4/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Gant orange enduit PU en situation d'atelier"
         },
         {
-          "url": "https://images.unsplash.com/photo-1605034313761-73ea4a0cfbf3?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/ZtFfmd4qtdTf3Bf/preview?auto=format&fit=crop&q=80&w=800",
+          "alt": "Gant orange enduit PU en situation d'atelier"
+        },
+        {
+          "url": "https://s02.swdrive.fr/s/DB8cK5MTi5pzJ4p/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Détail de l'enduction polyuréthane"
         }
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-pu.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/nxtmzXYGdJpRW4W/download/FICHE%20TECHNIQUE%20GANT%20MANUTENTION%20LEGER-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "materiau_tricot": "100% Polyamide",
@@ -3871,19 +3802,11 @@
       "subCategoryId": "34",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-pu.pdf",
+          "url": "https://s02.swdrive.fr/s/nxtmzXYGdJpRW4W/download/FICHE%20TECHNIQUE%20GANT%20MANUTENTION%20LEGER-compressed.pdf",
           "format": "PDF",
           "size": "1.1 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GPU",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -3891,18 +3814,11 @@
       "name": "Gant Manutention Lourde VE799 Latex",
       "description": "Gant anatomique en tricot polyester/coton enduit de latex épais pour une protection renforcée. Résistant aux déchirures, fissures, acides et détergents. Conception sans couture pour éviter les irritations. Idéal pour la construction et la manipulation de matériaux abrasifs. Conforme aux normes EN 388 et EN 420.",
       "price": 27.99,
-      "imageUrl": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/ZEJrn3tZEDCpYJN/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant jaune enduit latex en situation chantier"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de l'enduction latex épais"
-        }
+       
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-ve799.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/cC6HCbpkmY7YCSZ/download/FICHE%20TECHNIQUE%20GANT%20MANUTENTION%20VE799-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "materiau_tricot": "Polyester/Coton",
@@ -3926,19 +3842,11 @@
       "subCategoryId": "35",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-ve799.pdf",
+          "url": "https://s02.swdrive.fr/s/cC6HCbpkmY7YCSZ/download/FICHE%20TECHNIQUE%20GANT%20MANUTENTION%20VE799-compressed.pdf",
           "format": "PDF",
           "size": "1.4 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GVE799",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -3946,18 +3854,11 @@
       "name": "Gant Nitrile à Picots Gris/Argent",
       "description": "Gant technique enduit de nitrile en mousse avec picots sur la paume pour une adhérence optimale en milieux secs ou humides. Doublure sans couture respirante pour un confort prolongé. Idéal pour les travaux de mécanique de précision. Conforme aux normes EN 388 et EN 420.",
       "price": 22.99,
-      "imageUrl": "https://images.unsplash.com/photo-1621972750741-1470a6b20e24?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/8QFQB9b6s4WJGjQ/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1621972750741-1470a6b20e24?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant nitrile gris/argent avec picots"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1596727147705-61a532a659bd?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des picots et enduction nitrile"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-nitrile.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/bYR45dHLnENQsHm/download/FICHE%20TECHNIQUE%20GANT%20NITRILE-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "type_enduction": "Mousse",
@@ -3981,19 +3882,11 @@
       "subCategoryId": "36",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-nitrile.pdf",
+          "url": "https://s02.swdrive.fr/s/bYR45dHLnENQsHm/download/FICHE%20TECHNIQUE%20GANT%20NITRILE-compressed.pdf",
           "format": "PDF",
           "size": "1.2 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GNIT",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -4001,18 +3894,18 @@
       "name": "Gant Chimique PVC Double Trempage",
       "description": "Gant de protection chimique en PVC à double trempage avec finition sablée pour une adhérence optimale. Doublure jersey coton pour un confort prolongé. Résistant aux huiles, graisses et produits chimiques. Conforme aux normes EN 388, EN 374-1 et EN 374-2.",
       "price": 19.99,
-      "imageUrl": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/eyr2Ksw6yCid5e6/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/eyr2Ksw6yCid5e6/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Gant PVC vert/rouge en situation industrielle"
         },
         {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+          "url": "https://s02.swdrive.fr/s/sWaKJSRdYpQanyf/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Détail de la finition sablée et de la doublure"
         }
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-pvc.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/MSE8krcEKDrYARg/download/FICHE%20TECHNIQUE%20GANT%20PVC-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 374-1", "EN 374-2"],
         "type_pvc": "Double trempage",
@@ -4032,19 +3925,11 @@
       "subCategoryId": "37",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-pvc.pdf",
+          "url": "https://s02.swdrive.fr/s/MSE8krcEKDrYARg/download/FICHE%20TECHNIQUE%20GANT%20PVC-compressed.pdf",
           "format": "PDF",
           "size": "1.3 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 374-1",
-            "number": "EN374-2023-GPVC",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en374.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -4052,18 +3937,11 @@
       "name": "Gant Anti-Coupure Niveau 5 Noir/Gris",
       "description": "Gant haute performance en tricot jauge 10 avec fibres d'acier inoxydable et polyéthylène haute densité pour une protection maximale contre les coupures (niveau 5 EN 388). Enduction CLEAN PU® grise sur la paume et les doigts pour une adhérence optimale. Renfort entre pouce et index. Conforme aux normes EN 388 et EN 420.",
       "price": 59.99,
-      "imageUrl": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/T6JxqPzq5j8bpZP/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant noir/gris avec fibres métalliques visibles"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de l'enduction CLEAN PU® et des renforts"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-niveau5.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/NZSN3tiYd6wagQe/download/FICHE%20TECHNIQUE%20Gants%20anti-coupure%20niveau%205-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "niveau_coupure": "Niveau 5",
@@ -4085,19 +3963,11 @@
       "subCategoryId": "38",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-niveau5.pdf",
+          "url": "https://s02.swdrive.fr/s/NZSN3tiYd6wagQe/download/FICHE%20TECHNIQUE%20Gants%20anti-coupure%20niveau%205-compressed.pdf",
           "format": "PDF",
           "size": "1.6 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388 Niveau 5",
-            "number": "EN388-5-2023-GAC5",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388-n5.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -4105,18 +3975,11 @@
       "name": "Gant Manutention Cuir Croûte Jaune",
       "description": "Gant robuste en cuir de vache avec paume renforcée en croûte de cuir pour une durabilité accrue. Montage américain et poignet élastique pour un ajustement sécurisé. Idéal pour les travaux agricoles, la logistique et les déménagements. Conforme aux normes EN 388 et EN 420.",
       "price": 34.99,
-      "imageUrl": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/kTM8Mn3LZS5dE7C/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant jaune en cuir croûte avec détails de couture"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail de la paume renforcée et du poignet élastique"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-cuir-croute.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/8pjqNJXMZwczzJM/download/FICHE%20TECHNIQUE%20Gants%20de%20manutention%20en%20cuir%20cro%C3%BBte-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "type_cuir": "Croûte de vache",
@@ -4138,19 +4001,11 @@
       "subCategoryId": "39",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-cuir-croute.pdf",
+          "url": "https://s02.swdrive.fr/s/8pjqNJXMZwczzJM/download/FICHE%20TECHNIQUE%20Gants%20de%20manutention%20en%20cuir%20cro%C3%BBte-compressed.pdf",
           "format": "PDF",
           "size": "1.4 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 388",
-            "number": "EN388-2023-GCCR",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en388.pdf"
-          }
-        ]
+        }
       }
     },
     {
@@ -4158,18 +4013,11 @@
       "name": "Gant Docker Cuir Croûte - Paume Renforcée",
       "description": "Gant professionnel en cuir croûte de bovin avec renforts stratégiques (paume, dos, pouce palmé) et doigts rapportés pour une protection maximale. Montage américain avec manchette en toile Bayadère et serrage élastique. Idéal pour les travaux lourds en construction ou industrie. Conforme EN 388/420.",
       "price": 47.99,
-      "imageUrl": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/5zWqR7pqxQ9DTpN/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant docker cuir naturel avec toile bleue"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail des renforts et coutures renforcées"
-        }
+        
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-docker-pro.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/8nM4JTEdm5za4cc/download/FICHE%20TECHNIQUE%20Gants%20docker%20cuir%20cro%C3%BBte%20renfort%20paume-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 420"],
         "type_cuir": "Croûte de bovin",
@@ -4194,7 +4042,7 @@
       "subCategoryId": "32",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-docker-pro.pdf",
+          "url": "https://s02.swdrive.fr/s/8nM4JTEdm5za4cc/download/FICHE%20TECHNIQUE%20Gants%20docker%20cuir%20cro%C3%BBte%20renfort%20paume-compressed.pdf",
           "format": "PDF",
           "size": "1.7 MB",
           "lastUpdate": "2023-06-16"
@@ -4206,18 +4054,11 @@
       "name": "Gant Soudeur Argon - Cuir Fleur d'Agneau",
       "description": "Gant professionnel pour soudage TIG/Argon en cuir fleur d'agneau offrant dextérité et protection thermique (EN 407). Manchette longue en croûte de bovin et montage 'tourchette' pour un retrait rapide. Conforme aux normes EN 388, EN 407 et EN 420. Idéal pour la métallurgie et le BTP.",
       "price": 89.99,
-      "imageUrl": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "https://s02.swdrive.fr/s/9ProBE9HA2Hga7y/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
-        {
-          "url": "https://images.unsplash.com/photo-1605000797499-95e51c5336c0?auto=format&fit=crop&q=80&w=800",
-          "alt": "Gant soudeur blanc/gris avec manchette longue"
-        },
-        {
-          "url": "https://images.unsplash.com/photo-1589984662646-e7f2ff17bd35?auto=format&fit=crop&q=80&w=800",
-          "alt": "Détail du cuir fleur d'agneau et des coutures"
-        }
+    
       ],
-      "technicalSheetUrl": "https://example.com/fiche-technique-gant-argon.pdf",
+      "technicalSheetUrl": "https://s02.swdrive.fr/s/fTTN3q8p54Q4B22/download/FICHE%20TECHNIQUE%20Gants%20soudeur%20Argon-compressed.pdf",
       "specifications": {
         "norme": ["EN 388", "EN 407", "EN 420"],
         "type_soudage": "TIG/Argon",
@@ -4242,19 +4083,11 @@
       "subCategoryId": "40",
       "documentation": {
         "technicalSheet": {
-          "url": "https://example.com/fiche-technique-gant-argon.pdf",
+          "url": "https://s02.swdrive.fr/s/fTTN3q8p54Q4B22/download/FICHE%20TECHNIQUE%20Gants%20soudeur%20Argon-compressed.pdf",
           "format": "PDF",
           "size": "1.8 MB",
           "lastUpdate": "2023-06-16"
-        },
-        "certifications": [
-          {
-            "name": "EN 407 Classe 2",
-            "number": "EN407-2023-GARG",
-            "validUntil": "2026-12-31",
-            "url": "https://example.com/certification-en407.pdf"
-          }
-        ]
+        }
       }
     }
   ]

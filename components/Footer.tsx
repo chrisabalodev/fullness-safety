@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { FileText, User, Mail, Phone, Package, MessageSquare, Send, Loader2, Clock, MapPin, ChevronRight } from "lucide-react";
-import logo from '../public/logo/logo.png';
+import logo from '@/public/logo.png';
 import Image from "next/image";
 
 export default function Footer() {
