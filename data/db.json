@@ -38,9 +38,9 @@
       },
       {
         "id": "7",
-        "name": "Signalisation et Accessoires",
-        "description": "Équipements de signalisation et accessoires de sécurité",
-        "slug": "signalisation-accessoires",
+        "name": "Signalisation & Balisage",
+        "description": "Équipements de signalisation et balisage de chantier",
+        "slug": "signalisation",
         "imageUrl": "https://images.unsplash.com/photo-1568910837157-7c10c89917a2?auto=format&fit=crop&q=80&w=800"
       },
       {
@@ -56,7 +56,23 @@
         "description": "Chaussures et bottes de sécurité conformes aux normes pour protéger contre les risques mécaniques, chimiques et thermiques.",
         "slug": "protection-pieds",
         "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800"
+      },
+      
+      {
+        "id": "10",
+        "name": "Secours & Premiers Soins",
+        "description": "Kits de premiers secours et équipements d'urgence",
+        "slug": "secours",
+        "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "id": "11",
+        "name": "Protection Antichute",
+        "description": "Harnais et équipements de sécurité en hauteur",
+        "slug": "antichute",
+        "imageUrl": "https://images.unsplash.com/photo-1627855437693-dcc7b0c4ba7a?auto=format&fit=crop&q=80&w=800"
       }
+
     ],
     "subCategories": [
       {
@@ -489,39 +505,7 @@
           }
         ]
       },
-      {
-        "id": "12",
-        "name": "Panneaux de signalisation",
-        "categoryId": "7",
-        "slug": "panneaux-signalisation",
-        "specificationFields": [
-          {
-            "id": "spec1",
-            "name": "norme",
-            "label": "Norme",
-            "type": "text",
-            "required": true,
-            "icon": "Shield"
-          },
-          {
-            "id": "spec2",
-            "name": "dimension",
-            "label": "Dimension",
-            "type": "text",
-            "required": true,
-            "icon": "Ruler"
-          },
-          {
-            "id": "spec3",
-            "name": "type",
-            "label": "Type",
-            "type": "select",
-            "required": true,
-            "options": ["Avertissement", "Interdiction", "Obligation", "Information"],
-            "icon": "Signpost"
-          }
-        ]
-      },
+      
       {
         "id": "13",
         "name": "Chaussures de sécurité imperméables",
@@ -622,40 +606,7 @@
           }
         ]
       },
-      {
-        "id": "16",
-        "name": "Harnais de sécurité avec coussins",
-        "categoryId": "7",
-        "slug": "harnais-securite-coussins",
-        "specificationFields": [
-          {
-            "id": "spec1",
-            "name": "norme",
-            "label": "Norme",
-            "type": "text",
-            "required": true,
-            "icon": "Shield"
-          },
-          {
-            "id": "spec2",
-            "name": "taille",
-            "label": "Taille",
-            "type": "select",
-            "required": true,
-            "options": ["S", "M", "L", "XL"],
-            "icon": "Ruler"
-          },
-          {
-            "id": "spec3",
-            "name": "poids_max",
-            "label": "Poids maximal supporté",
-            "type": "number",
-            "required": true,
-            "unit": "kg",
-            "icon": "Scale"
-          }
-        ]
-      },
+     
       {
         "id": "17",
         "name": "Gilets haute visibilité rétroréfléchissants",
@@ -690,40 +641,7 @@
           }
         ]
       },
-      {
-        "id": "18",
-        "name": "Cônes de signalisation en caoutchouc",
-        "categoryId": "7",
-        "slug": "cones-signalisation-caoutchouc",
-        "specificationFields": [
-          {
-            "id": "spec1",
-            "name": "norme",
-            "label": "Norme",
-            "type": "text",
-            "required": true,
-            "icon": "Shield"
-          },
-          {
-            "id": "spec2",
-            "name": "hauteur",
-            "label": "Hauteur",
-            "type": "number",
-            "required": true,
-            "unit": "cm",
-            "icon": "Ruler"
-          },
-          {
-            "id": "spec3",
-            "name": "diametre_base",
-            "label": "Diamètre de la base",
-            "type": "number",
-            "required": true,
-            "unit": "cm",
-            "icon": "Ruler"
-          }
-        ]
-      },
+     
       {
         "id": "19",
         "name": "Blouses de protection chimique",
@@ -882,7 +800,7 @@
             "icon": "User"
           }
         ]
-      },
+      }, 
       {
         "id": "23",
         "name": "Bouchons d'Oreille",
@@ -2053,19 +1971,103 @@
         "id": "45",
         "name": "Masques FFP",
         "categoryId": "4",
-        "slug": "masques-ffp"
+        "slug": "masques-ffp",
+        "specificationFields": [
+          {
+            "name": "type_ffp",
+            "label": "Type FFP",
+            "type": "select",
+            "options": ["FFP1", "FFP2", "FFP3"],
+            "required": true
+          },
+          {
+            "name": "valve",
+            "label": "Avec valve",
+            "type": "boolean",
+            "required": false
+          }
+        ]
       },
       {
         "id": "46",
-        "name": "Masques Médicaux",
+        "name": "Masques Chirurgicaux",
         "categoryId": "4",
-        "slug": "masques-medicaux"
+        "slug": "masques-chirurgicaux"
       },
       {
         "id": "47",
-        "name": "Masques à Gaz",
+        "name": "Demi-Masques",
         "categoryId": "4",
-        "slug": "masques-gaz"
+        "slug": "demi-masques",
+        "specificationFields": [
+          {
+            "name": "compatible_filtres",
+            "label": "Filtres compatibles",
+            "type": "multiselect",
+            "options": ["A1", "A2", "B1", "B2", "P1", "P2", "P3"]
+          }
+        ]
+      },
+      {
+        "id": "48",
+        "name": "Masques à Gaz Complets",
+        "categoryId": "4",
+        "slug": "masques-gaz-complets"
+      },
+      {
+        "id": "49",
+        "name": "Panneaux de Chantier",
+        "categoryId": "7",
+        "slug": "panneaux-chantier",
+        "specificationFields": [
+          {
+            "name": "type",
+            "label": "Type de signalisation",
+            "type": "select",
+            "options": ["Danger", "Obligation", "Interdiction", "Équipement"]
+          },
+          {
+            "name": "materiau",
+            "label": "Matériau",
+            "type": "select",
+            "options": ["PVC", "Aluminium", "Acrylique"]
+          }
+        ]
+      },
+    
+      {
+        "id": "50",
+        "name": "Kits d'Aide",
+        "categoryId": "10",
+        "slug": "kits-aide",
+        "specificationFields": [
+          {
+            "name": "type_kit",
+            "label": "Type de kit",
+            "type": "select",
+            "options": ["Premiers Soins", "Brûlures", "Anti-Chute", "Évacuation"]
+          }
+        ]
+      },
+      {
+        "id": "51",
+        "name": "Harnais de Sécurité",
+        "categoryId": "11",
+        "slug": "harnais",
+        "specificationFields": [
+          {
+            "name": "norme",
+            "label": "Norme",
+            "type": "select",
+            "options": ["EN 361", "EN 358", "EN 813"]
+          },
+          {
+            "name": "poids_max",
+            "label": "Charge max (kg)",
+            "type": "number",
+            "min": 100
+          }
+        ]
       }
       
     ],
@@ -4089,6 +4091,205 @@
           "lastUpdate": "2023-06-16"
         }
       }
-    }
+    },
+    {
+      "id": "55",
+      "name": "Demi-Masque de Protection 6200",
+      "description": "Demi-masque réutilisable en silicone avec système de filtres interchangeables. Conforme EN 140. Compatible avec les filtres ABEK1P3. Joint facial ergonomique.",
+      "price": 45.99,
+      "imageUrl": "https://example.com/images/demi-masque.jpg",
+      "images": [
+        {
+          "url": "https://example.com/images/demi-masque-avant.jpg",
+          "alt": "Vue avant du demi-masque"
+        },
+        {
+          "url": "https://example.com/images/demi-masque-filtres.jpg",
+          "alt": "Détail des raccords de filtres"
+        }
+      ],
+      "technicalSheetUrl": "https://example.com/fiche-demi-masque.pdf",
+      "specifications": {
+        "norme": "EN 140:1998",
+        "materiau": "Silicone médical",
+        "filtres": "ABEK1P3 compatibles",
+        "poids": "230g",
+        "couleurs": ["Noir", "Bleu"],
+        "tailles": ["S", "M", "L"]
+      },
+      "categoryId": "4",
+      "subCategoryId": "47",
+      "documentation": {
+        "manuel_utilisation": "https://example.com/manuel-demi-masque.pdf",
+        "compatibilite_filtres": "https://example.com/compatibilite-filtres.pdf"
+      }
+    },
+    {
+      "id": "56",
+      "name": "Masque FFP3 Valve - Pack 10",
+      "description": "Masque de protection FFP3 avec valve d'expiration. Filtration ≥99% des particules. Conforme EN 149:2001. Bandes élastiques confortables.",
+      "price": 49.90,
+      "imageUrl": "https://example.com/images/ffp3-valve.jpg",
+      "specifications": {
+        "norme": "EN 149:2001 FFP3 NR",
+        "filtration": "≥99%",
+        "valve": true,
+        "quantite": "10 unités"
+      },
+      "categoryId": "4",
+      "subCategoryId": "45"
+    },
+    {
+      "id": "57",
+      "name": "Masque Chirurgical Enfant Type I",
+      "description": "Masque 3 plis taille enfant. Filtration bactérienne >95%. Conforme EN 14683:2019 Type I. Élastiques doux pour les oreilles.",
+      "price": 7.90,
+      "specifications": {
+        "norme": "EN 14683:2019 Type I",
+        "age": "6-12 ans",
+        "couleurs": ["Rose", "Bleu"],
+        "quantite": "20 masques/paquet"
+      },
+      "categoryId": "4",
+      "subCategoryId": "46"
+    },
+    {
+      "id": "58",
+      "name": "Filtres ABEK1P3 - Pack 2",
+      "description": "Filtres combinés pour protection contre gaz organiques, acides et particules. Compatible avec les demi-masques standard. Durée de vie ≈48h.",
+      "price": 29.90,
+      "specifications": {
+        "norme": "EN 14387:2004",
+        "compatibilite": ["6200", "7500", "SecureFit"],
+        "duree_vie": "48h (selon usage)"
+      },
+      "categoryId": "4",
+      "subCategoryId": "47"
+    },
+    {
+      "id": "59",
+      "name": "Masque Gaz Full Face 6800",
+      "description": "Masque complet avec visière panoramique et système de filtration ABEK2P3. Conforme EN 136:1998 Classe 3. Pour environnements industriels extrêmes.",
+      "price": 289.00,
+      "specifications": {
+        "norme": "EN 136 Classe 3",
+        "champ_vision": "180°",
+        "poids": "890g"
+      },
+      "categoryId": "4",
+      "subCategoryId": "48"
+    },
+    {
+      "id": "60",
+      "name": "Kit Nettoyage Demi-Masque",
+      "description": "Lotion nettoyante et désinfectante spéciale silicone. Compatible avec tous les demi-masques réutilisables.",
+      "price": 12.90,
+      "categoryId": "4",
+      "subCategoryId": "47"
+    },
+    {
+      "id": "61",
+      "name": "Sac de Transport Étanche",
+      "description": "Sac de protection pour masques réutilisables. Matière imperméable avec fermeture ZIP.",
+      "price": 8.50,
+      "categoryId": "4",
+      "subCategoryId": "47"
+    },
+    {
+      "id": "62",
+      "name": "Masque FFP2 NR avec Valve - Boîte de 10",
+      "description": "Masque jetable FFP2 avec valve d'expiration. Filtration ≥94% des particules. Conforme EN 149:2001.",
+      "price": 24.90,
+      "specifications": {
+        "norme": "EN 149:2001 FFP2 NR",
+        "filtration": "≥94%",
+        "valve": true,
+        "duree": "8h max"
+      },
+      "categoryId": "4",
+      "subCategoryId": "45"
+    },
+    {
+      "id": "63",
+      "name": "Panneau Danger - Chantier",
+      "description": "Panneau triangulaire en PVC 3mm avec pictogramme noir sur fond jaune. Dimensions 300x300mm.",
+      "price": 8.90,
+      "specifications": {
+        "type": "Danger",
+        "materiau": "PVC",
+        "dimensions": "300x300mm",
+        "couleur": "Jaune/Noir"
+      },
+      "categoryId": "7",
+      "subCategoryId": "49"
+    },
+    {
+      "id": "64",
+      "name": "Kit Premiers Soins 25 Personnes",
+      "description": "Kit conforme à la norme DIN 13157. Contient 72 articles pour soins d'urgence.",
+      "price": 89.00,
+      "specifications": {
+        "type_kit": "Premiers Soins",
+        "norme": "DIN 13157",
+        "contenu": "72 articles",
+        "capacite": "25 personnes"
+      },
+      "categoryId": "10",
+      "subCategoryId": "50"
+    },
+    {
+      "id": "65",
+      "name": "Harnais Antichute 3 Points",
+      "description": "Harnais complet EN 361 avec sangles réglables et points d'attache dorsaux. Charge max 140kg.",
+      "price": 129.00,
+      "specifications": {
+        "norme": "EN 361",
+        "poids_max": 140,
+        "points_attache": 3,
+        "poids": "1.2 kg"
+      },
+      "categoryId": "11",
+      "subCategoryId": "51"
+    },
+    {
+      "id": "66",
+      "name": "Cône de Signalisation 75cm",
+      "description": "Cône en PVC avec bande réfléchissante. Poids lesté pour stabilité.",
+      "price": 12.50,
+      "specifications": {
+        "hauteur": "75 cm",
+        "couleur": "Orange/Blanc",
+        "materiau": "PVC"
+      },
+      "categoryId": "7",
+      "subCategoryId": "49"
+    },
+    {
+      "id": "67",
+      "name": "Kit Anti-Chute 5 Personnes",
+      "description": "Kit d'évacuation d'urgence avec harnais et descendeur. Conforme EN 1496.",
+      "price": 450.00,
+      "specifications": {
+        "type_kit": "Anti-Chute",
+        "norme": "EN 1496",
+        "capacite": "5 personnes"
+      },
+      "categoryId": "11",
+      "subCategoryId": "50"
+    },
+    {
+      "id": "68",
+      "name": "Longe de Sécurité 2m",
+      "description": "Longe amortisseur EN 354 avec absorbeur d'énergie. Charge max 140kg.",
+      "price": 59.00,
+      "specifications": {
+        "norme": "EN 354",
+        "longueur": "2 m",
+        "absorption": "≤6 kN"
+      },
+      "categoryId": "11",
+      "subCategoryId": "51"
+    } 
+
   ]
 }
