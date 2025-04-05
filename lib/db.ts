@@ -37,6 +37,9 @@ export interface Product {
   description: string | null;
   price: number;
   imageUrl: string | null;
+  isNew: string | null;
+  brand: string | null;
+  reference: string | null;
   images: ProductImage[];
   technicalSheetUrl: string | null;
   specifications: Record<string, any>;

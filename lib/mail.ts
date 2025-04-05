@@ -42,8 +42,8 @@ export async function sendQuoteRequest(data: {
   try {
     // Send email to admin
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || '"Fullness Safety" <contact@fullness-safety.com>',
-      to: process.env.SMTP_USER || 'contact@fullness-safety.com',
+      from: process.env.SMTP_FROM || '"Fullness Safety" <devis@fullness-safety.com>',
+      to: process.env.SMTP_USER || 'deis@fullness-safety.com',
       subject: 'Nouvelle demande de devis',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -77,7 +77,7 @@ export async function sendQuoteRequest(data: {
 
     // Send confirmation email to client
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || '"Fullness Safety" <contact@fullness-safety.com>',
+      from: process.env.SMTP_FROM || '"Fullness Safety" <devis@fullness-safety.com>',
       to: data.email,
       subject: 'Confirmation de votre demande de devis',
       html: `
@@ -111,7 +111,7 @@ export async function sendQuoteRequest(data: {
 export async function sendNewsletterConfirmation(email: string) {
   try {
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || '"Fullness Safety" <contact@fullness-safety.com>',
+      from: process.env.SMTP_FROM || '"Fullness Safety" <devis@fullness-safety.com>',
       to: email,
       subject: 'Confirmation d\'inscription à la newsletter',
       html: `
@@ -133,8 +133,8 @@ export async function sendNewsletterConfirmation(email: string) {
 export async function sendChatbotNotification(message: string) {
   try {
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || '"Fullness Safety Chatbot" <contact@fullness-safety.com>',
-      to: process.env.SMTP_USER || 'contact@fullness-safety.com',
+      from: process.env.SMTP_FROM || '"Fullness Safety Chatbot" <devis@fullness-safety.com>',
+      to: process.env.SMTP_USER || 'devis@fullness-safety.com',
       subject: 'Nouvelle conversation chatbot',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

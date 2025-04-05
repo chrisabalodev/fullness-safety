@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Metadata } from "next";
 import { getCategories, getProducts, getSubCategories } from "@/lib/db";
 import ProductsClient from "./ProductsClient";

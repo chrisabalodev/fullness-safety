@@ -14,90 +14,82 @@ import { useState, useEffect } from "react";
 
 const faqs = [
   {
-    category: "Commandes et Devis",
-    icon: "💼",
-    questions: [
-      {
-        q: "Comment demander un devis ?",
-        a: "Vous pouvez demander un devis directement depuis la page du produit qui vous intéresse en cliquant sur le bouton 'Demander un devis'. Vous pouvez également nous contacter par téléphone ou par email."
-      },
-      {
-        q: "Quel est le délai de réponse pour un devis ?",
-        a: "Nous nous engageons à vous répondre dans un délai de 24 à 48 heures ouvrées."
-      },
-      {
-        q: "Quels sont les modes de paiement acceptés ?",
-        a: "Nous acceptons les paiements par virement bancaire, chèque et carte bancaire. Pour les professionnels, nous proposons également le paiement à 30 jours."
-      },
-      {
-        q: "Comment suivre ma commande ?",
-        a: "Une fois votre commande confirmée, vous recevrez un email avec un numéro de suivi vous permettant de suivre votre colis en temps réel."
-      }
-    ]
-  },
-  {
-    category: "Produits et Certifications",
+    category: "Produits EPI",
     icon: "🛡️",
     questions: [
       {
-        q: "Vos produits sont-ils certifiés ?",
-        a: "Oui, tous nos produits sont certifiés CE et répondent aux normes européennes en vigueur. Les certifications spécifiques sont indiquées sur chaque fiche produit."
+        q: "Quels types d'EPI proposez-vous ?",
+        a: "Nous proposons une gamme complète d'Équipements de Protection Individuelle : casques de sécurité, gants anti-coupures, chaussures de sécurité, lunettes de protection, masques respiratoires, harnais antichute, et vêtements de protection haute visibilité."
       },
       {
-        q: "Puis-je personnaliser les équipements ?",
-        a: "Oui, nous proposons des services de personnalisation pour la plupart de nos équipements. Contactez-nous pour plus d'informations."
+        q: "Vos EPI sont-ils certifiés ?",
+        a: "Tous nos EPI répondent aux normes en vigueur au Togo et sont certifiés CE ou ANSI selon les produits. Les certifications spécifiques sont indiquées sur chaque fiche produit."
       },
       {
-        q: "Quelle est la durée de vie des EPI ?",
-        a: "La durée de vie varie selon le type d'EPI. Elle est indiquée dans la documentation technique de chaque produit. Un entretien régulier permet d'optimiser leur durée de vie."
+        q: "Comment choisir la bonne taille pour mes EPI ?",
+        a: "Des guides de tailles détaillés sont disponibles sur chaque fiche produit. Pour les commandes en volume, nous pouvons envoyer un technico-commercial pour des mesures précises."
       },
       {
-        q: "Comment choisir la bonne taille ?",
-        a: "Des guides de tailles détaillés sont disponibles sur chaque fiche produit. En cas de doute, notre équipe est là pour vous conseiller."
+        q: "Proposez-vous des EPI adaptés aux secteurs spécifiques ?",
+        a: "Oui, nous avons des solutions spécialisées pour le BTP, l'industrie pétrolière, l'agroalimentaire, le secteur médical et les services électriques."
       }
     ]
   },
   {
-    category: "Livraison et Retours",
+    category: "Commandes et Paiements",
+    icon: "💳",
+    questions: [
+      {
+        q: "Comment commander des EPI ?",
+        a: "Vous pouvez passer commande via notre site web, par WhatsApp au +228 91 21 82 26, ou directement dans notre showroom à Lomé. Pour les entreprises, nous proposons des visites commerciales sur demande."
+      },
+      {
+        q: "Quels sont vos modes de paiement ?",
+        a: "Nous acceptons les paiements en FCFA (cash), mobile money (Mix By Yas, Moov), virements bancaires et cartes bancaires. Les commandes supérieures à 1 million FCFA nécessitent un acompte de 50%."
+      },
+      {
+        q: "Proposez-vous des tarifs dégressifs ?",
+        a: "Oui, nous accordons des remises progressives à partir de 10 unités commandées. Contactez notre service commercial pour un devis personnalisé."
+      },
+      {
+        q: "Facturez-vous avec TVA ?",
+        a: "Oui, toutes nos factures incluent la TVA en vigueur au Togo. Nous fournissons des documents fiscaux conformes pour votre comptabilité."
+      }
+    ]
+  },
+  {
+    category: "Livraison et Transport",
     icon: "🚚",
     questions: [
       {
-        q: "Quels sont les délais de livraison ?",
-        a: "Les délais de livraison standards sont de 2 à 5 jours ouvrés. Pour les commandes urgentes, nous proposons une livraison express sous 24/48h."
+        q: "Quels sont vos frais de livraison ?",
+        a: "Toutes les livraisons sont payantes. Pour les autres villes: devis selon le poids et la destination. Les commandes volumineuses bénéficient d'un transport sécurisé."
       },
       {
-        q: "Livrez-vous à l'international ?",
-        a: "Oui, nous livrons dans toute l'Union Européenne. Les délais et frais de livraison varient selon la destination."
+        q: "Quels sont vos délais de livraison ?",
+        a: "À Lomé: 24-48h après confirmation de paiement. Pour l'intérieur du pays: 3-7 jours ouvrés. Les commandes urgentes peuvent être traitées en express avec majoration."
       },
       {
-        q: "Quelle est votre politique de retour ?",
-        a: "Vous disposez d'un délai de 14 jours pour retourner un produit non utilisé dans son emballage d'origine. Les frais de retour sont à votre charge."
+        q: "Livrez-vous dans tout le Togo ?",
+        a: "Oui, nous expédions dans toutes les régions via notre réseau de transporteurs partenaires. Les commandes pour les zones reculées peuvent nécessiter des délais supplémentaires."
       },
       {
-        q: "Comment retourner un produit ?",
-        a: "Contactez notre service client pour obtenir un numéro de retour. Emballez soigneusement le produit dans son emballage d'origine et joignez le formulaire de retour."
+        q: "Puis-je récupérer ma commande en magasin ?",
+        a: "Oui, le retrait gratuit est possible dans notre entrepôt à Lomé sur rendez-vous. Vous bénéficierez d'une vérification complète de votre commande avant emport."
       }
     ]
   },
   {
-    category: "Service Après-Vente",
+    category: "Garantie et SAV",
     icon: "🔧",
     questions: [
       {
-        q: "Proposez-vous des formations pour l'utilisation des EPI ?",
-        a: "Oui, nous proposons des formations sur l'utilisation et l'entretien des EPI. Ces formations peuvent être réalisées dans vos locaux ou dans notre centre de formation."
-      },
-      {
-        q: "Comment entretenir mes EPI ?",
-        a: "Les instructions d'entretien sont fournies avec chaque produit. Nous proposons également des guides d'entretien détaillés sur notre site."
+        q: "Quelle est votre politique de garantie ?",
+        a: "Nos EPI bénéficient d'une garantie constructeur de 6 mois à 2 ans selon les articles. La garantie couvre les défauts de fabrication mais pas l'usure normale."
       },
       {
         q: "Que faire en cas de produit défectueux ?",
-        a: "Contactez immédiatement notre service après-vente. Nous procéderons à un échange ou à un remboursement selon la situation."
-      },
-      {
-        q: "Proposez-vous un service de maintenance ?",
-        a: "Oui, nous proposons des contrats de maintenance pour certains équipements spécifiques. Contactez-nous pour en savoir plus."
+        a: "Contactez immédiatement notre SAV au +228 91 21 82 26 avec photos du défaut. Nous organiserons l'échange ou le remboursement selon les conditions de garantie."
       }
     ]
   }
@@ -106,7 +98,7 @@ const faqs = [
 export default function FAQPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isVisible, setIsVisible] = useState(false);
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [expandedItem, setExpandedItem] = useState<string>();
 
   useEffect(() => {
     setIsVisible(true);
@@ -131,43 +123,27 @@ export default function FAQPage() {
           <div className="max-w-4xl mx-auto">
             {/* Hero Section */}
             <div className="text-center mb-12">
-              <div 
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary mb-8 transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary mb-8">
                 <HelpCircle className="w-4 h-4" />
-                <span className="text-sm font-medium">Centre d'aide</span>
+                <span className="text-sm font-medium">Support Technique EPI</span>
               </div>
-              <h1 
-                className={`text-4xl font-bold mb-6 transition-all duration-700 delay-100 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
-                Questions Fréquentes
+              <h1 className="text-4xl font-bold mb-6">
+                FAQ - Équipements de Protection
               </h1>
-              <p 
-                className={`text-lg text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-200 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
-                Trouvez rapidement des réponses à vos questions
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Trouvez des réponses à vos questions sur nos équipements de sécurité et EPI
               </p>
             </div>
 
             {/* Search Bar */}
-            <div 
-              className={`relative max-w-xl mx-auto mb-12 transition-all duration-700 delay-300 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              }`}
-            >
+            <div className="relative max-w-xl mx-auto mb-12">
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Search className="h-4 w-4 text-muted-foreground" />
                 </div>
                 <Input
                   type="search"
-                  placeholder="Rechercher une question..."
+                  placeholder="Rechercher une question sur les EPI..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10 pr-10 h-12 w-full bg-card"
@@ -191,13 +167,10 @@ export default function FAQPage() {
             {/* FAQ Categories */}
             <div className="space-y-8">
               {filteredFaqs.length > 0 ? (
-                filteredFaqs.map((category, categoryIndex) => (
+                filteredFaqs.map((category) => (
                   <div 
                     key={category.category}
-                    className={`bg-card rounded-xl p-6 shadow-lg border hover:border-primary/20 transition-all duration-300 ${
-                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                    }`}
-                    style={{ transitionDelay: `${(categoryIndex + 4) * 100}ms` }}
+                    className="bg-card rounded-xl p-6 shadow-lg border hover:border-primary/20 transition-all duration-300"
                   >
                     <div className="flex items-center gap-3 mb-6">
                       <div className="text-2xl">{category.icon}</div>
@@ -205,10 +178,9 @@ export default function FAQPage() {
                     </div>
                     <Accordion 
                       type="single" 
-                      collapsible 
-                      className="w-full"
-                      value={expandedCategory}
-                      onValueChange={setExpandedCategory}
+                      collapsible
+                      value={expandedItem}
+                      onValueChange={setExpandedItem}
                     >
                       {category.questions.map((faq, index) => (
                         <AccordionItem 
@@ -246,17 +218,13 @@ export default function FAQPage() {
             </div>
 
             {/* CTA Section */}
-            <div 
-              className={`mt-16 text-center transition-all duration-700 delay-1000 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              }`}
-            >
+            <div className="mt-16 text-center">
               <p className="text-muted-foreground mb-6">
-                Vous n'avez pas trouvé la réponse à votre question ?
+                Vous avez une question spécifique sur nos équipements de protection ?
               </p>
               <Button size="lg" className="h-12" asChild>
                 <Link href="/contact">
-                  Contactez-nous
+                  Contactez notre expert EPI
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

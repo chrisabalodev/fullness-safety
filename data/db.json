@@ -1977,14 +1977,95 @@
             "name": "type_ffp",
             "label": "Type FFP",
             "type": "select",
-            "options": ["FFP1", "FFP2", "FFP3"],
-            "required": true
+            "options": [
+              {"value": "FFP1", "label": "FFP1 (Filtration ≥80%)"},
+              {"value": "FFP2", "label": "FFP2 (Filtration ≥94%)"}, 
+              {"value": "FFP3", "label": "FFP3 (Filtration ≥99%)"}
+            ],
+            "required": true,
+            "icon": "Filter",
+            "description": "Classification selon EN 149:2001"
           },
           {
             "name": "valve",
-            "label": "Avec valve",
-            "type": "boolean",
-            "required": false
+            "label": "Système de valve",
+            "type": "select",
+            "options": [
+              {"value": "sans", "label": "Sans valve"},
+              {"value": "simple", "label": "Valve simple"},
+              {"value": "coolflow", "label": "Valve Cool Flow®"}
+            ],
+            "required": false,
+            "icon": "Wind"
+          },
+          {
+            "name": "norme",
+            "label": "Normes",
+            "type": "multiselect",
+            "options": [
+              "EN 149:2001+A1:2009",
+              "NIOSH 42 CFR 84 (Équivalent US)",
+              "GB 2626-2006 (Chine)"
+            ],
+            "required": true,
+            "icon": "Shield"
+          },
+          {
+            "name": "materiau",
+            "label": "Composition",
+            "type": "text",
+            "placeholder": "Ex: 3 couches de polypropylène",
+            "required": true,
+            "icon": "Layers"
+          },
+          {
+            "name": "duree_utilisation",
+            "label": "Durée d'utilisation",
+            "type": "select",
+            "options": [
+              "8 heures (NR - Non Réutilisable)",
+              "40 heures (R - Réutilisable)"
+            ],
+            "required": true,
+            "icon": "Clock"
+          },
+          {
+            "name": "confort",
+            "label": "Éléments de confort",
+            "type": "multiselect",
+            "options": [
+              "Bandeau élastique",
+              "Mousse nasale",
+              "Texture 3D",
+              "Bordure faciale en mousse"
+            ],
+            "required": false,
+            "icon": "User"
+          },
+          {
+            "name": "compatibilite",
+            "label": "Compatibilité",
+            "type": "multiselect",
+            "options": [
+              "Lunettes de sécurité",
+              "Visage barbu",
+              "Visière de protection"
+            ],
+            "required": false,
+            "icon": "CheckCircle"
+          },
+          {
+            "name": "conditionnement",
+            "label": "Conditionnement",
+            "type": "select",
+            "options": [
+              "Unité scellée",
+              "Boîte de 10",
+              "Boîte de 20",
+              "Carton de 100"
+            ],
+            "required": true,
+            "icon": "Package"
           }
         ]
       },
@@ -1992,7 +2073,72 @@
         "id": "46",
         "name": "Masques Chirurgicaux",
         "categoryId": "4",
-        "slug": "masques-chirurgicaux"
+        "slug": "masques-chirurgicaux",
+        "specificationFields": [
+          {
+            "id": "spec50",
+            "name": "type",
+            "label": "Type",
+            "type": "select",
+            "options": ["Type I", "Type II", "Type IIR"],
+            "required": true,
+            "icon": "MedicalCross",
+            "description": "Classification EN 14683"
+          },
+          {
+            "id": "spec51",
+            "name": "filtration",
+            "label": "Filtration Bactérienne (BFE)",
+            "type": "select",
+            "options": [">95%", ">98%", ">99%"],
+            "required": true,
+            "icon": "Filter"
+          },
+          {
+            "id": "spec52",
+            "name": "resistance",
+            "label": "Résistance aux Éclaboussures",
+            "type": "boolean",
+            "required": false,
+            "icon": "Droplet",
+            "description": "Type IIR uniquement"
+          },
+          {
+            "id": "spec53",
+            "name": "pliages",
+            "label": "Nombre de plis",
+            "type": "select",
+            "options": ["3 plis", "4 plis", "Duckbill"],
+            "default": "3 plis",
+            "icon": "Layers"
+          },
+          {
+            "id": "spec54",
+            "name": "attache",
+            "label": "Système d'attache",
+            "type": "select",
+            "options": ["Élastiques oreilles", "Liens tête"],
+            "required": true,
+            "icon": "Headphones"
+          },
+          {
+            "id": "spec55",
+            "name": "sterile",
+            "label": "Stérile",
+            "type": "boolean",
+            "required": false,
+            "icon": "Sterilization"
+          },
+          {
+            "id": "spec56",
+            "name": "quantite",
+            "label": "Quantité par paquet",
+            "type": "number",
+            "min": 1,
+            "default": 50,
+            "icon": "Package"
+          }
+        ]
       },
       {
         "id": "47",
@@ -2011,8 +2157,93 @@
       {
         "id": "48",
         "name": "Masques à Gaz Complets",
-        "categoryId": "4",
-        "slug": "masques-gaz-complets"
+        "categoryId": "4",  
+        "slug": "masques-gaz-complets",
+        "specificationFields": [
+          {
+            "id": "spec_grp1",
+            "name": "normes",
+            "label": "Normes Conformes",
+            "type": "multiselect",
+            "options": [
+              "EN 136 (Masques complets)", 
+              "EN 143 (Filtres à particules)",
+              "EN 148-1 (Filetage filtres)",
+              "NIOSH TC-84A (Équivalent US)",
+              "STANAG 4155 (CBRN)"
+            ],
+            "required": true,
+            "icon": "Shield",
+            "description": "Certifications obligatoires"
+          },
+          {
+            "id": "spec_grp2",
+            "name": "materiau",
+            "label": "Matériau Principal",
+            "type": "select",
+            "options": [
+              "Silicone médical", 
+              "Élastomère thermoplastique", 
+              "Caoutchouc butyle",
+              "Polycarbonate (visière)"
+            ],
+            "required": true,
+            "icon": "Box"
+          },
+          {
+            "id": "spec_grp3",
+            "name": "compatibilite_filtres",
+            "label": "Filtres Compatibles",
+            "type": "multiselect",
+            "options": [
+              "ABEK (Gaz/Vapeurs)",
+              "P3 (Particules)",
+              "A2B2E2K2 (Gaz spécifiques)",
+              "CO (Monoxyde de carbone)",
+              "NO (Oxydes d'azote)"
+            ],
+            "required": true,
+            "icon": "Filter"
+          },
+          {
+            "id": "spec_grp4",
+            "name": "etancheite",
+            "label": "Système d'Étanchéité",
+            "type": "select",
+            "options": [
+              "Joint facial double bourrelet", 
+              "Membrane auto-collante", 
+              "Sangle occipitale"
+            ],
+            "required": true,
+            "icon": "Droplet"
+          },
+          {
+            "id": "spec_grp5",
+            "name": "options",
+            "label": "Options Intégrées",
+            "type": "multiselect",
+            "options": [
+              "Visière anti-rayure", 
+              "Porte-microphone", 
+              "Kit hydratation", 
+              "Raccord air comprimé"
+            ],
+            "required": false,
+            "icon": "PlusCircle"
+          },
+          {
+            "id": "spec_grp6",
+            "name": "duree_vie",
+            "label": "Durée de Vie Moyenne",
+            "type": "number",
+            "unit": "années",
+            "min": 1,
+            "max": 10,
+            "required": true,
+            "icon": "Calendar"
+          }
+        ]
       },
       {
         "id": "49",
@@ -2066,6 +2297,32 @@
             "label": "Charge max (kg)",
             "type": "number",
             "min": 100
+          }
+        ]
+      },
+      {
+        "id": "52",
+        "name": "Extincteurs Mobiles",
+        "categoryId": "10",  
+        "slug": "extincteurs-mobiles",
+        "specificationFields": [
+          {
+            "name": "type_extincteur",
+            "label": "Type d'extincteur",
+            "type": "select",
+            "options": ["Poudre ABC", "CO₂", "Mousse", "Eau pulvérisée"]
+          },
+          {
+            "name": "capacite",
+            "label": "Capacité (kg)",
+            "type": "number",
+            "step": 0.5
+          },
+          {
+            "name": "norme",
+            "label": "Norme",
+            "type": "select",
+            "options": ["EN 3", "NF S 61-939"]
           }
         ]
       }
@@ -4097,18 +4354,18 @@
       "name": "Demi-Masque de Protection 6200",
       "description": "Demi-masque réutilisable en silicone avec système de filtres interchangeables. Conforme EN 140. Compatible avec les filtres ABEK1P3. Joint facial ergonomique.",
       "price": 45.99,
-      "imageUrl": "https://example.com/images/demi-masque.jpg",
+      "imageUrl": "https://s02.swdrive.fr/s/PgXpR327sEHFaeA/preview?auto=format&fit=crop&q=80&w=800",
       "images": [
         {
-          "url": "https://example.com/images/demi-masque-avant.jpg",
+          "url": "https://s02.swdrive.fr/s/PgXpR327sEHFaeA/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Vue avant du demi-masque"
         },
         {
-          "url": "https://example.com/images/demi-masque-filtres.jpg",
+          "url": "https://s02.swdrive.fr/s/m4DFwTmPiJjH837/preview?auto=format&fit=crop&q=80&w=800",
           "alt": "Détail des raccords de filtres"
         }
       ],
-      "technicalSheetUrl": "https://example.com/fiche-demi-masque.pdf",
+      "technicalSheetUrl": "#",
       "specifications": {
         "norme": "EN 140:1998",
         "materiau": "Silicone médical",
@@ -4120,8 +4377,8 @@
       "categoryId": "4",
       "subCategoryId": "47",
       "documentation": {
-        "manuel_utilisation": "https://example.com/manuel-demi-masque.pdf",
-        "compatibilite_filtres": "https://example.com/compatibilite-filtres.pdf"
+        "manuel_utilisation": "#",
+        "compatibilite_filtres": "#"
       }
     },
     {
@@ -4129,7 +4386,7 @@
       "name": "Masque FFP3 Valve - Pack 10",
       "description": "Masque de protection FFP3 avec valve d'expiration. Filtration ≥99% des particules. Conforme EN 149:2001. Bandes élastiques confortables.",
       "price": 49.90,
-      "imageUrl": "https://example.com/images/ffp3-valve.jpg",
+      "imageUrl": "https://s02.swdrive.fr/s/zY2ZcKgqeggMxJj/preview?auto=format&fit=crop&q=80&w=800",
       "specifications": {
         "norme": "EN 149:2001 FFP3 NR",
         "filtration": "≥99%",
@@ -4142,22 +4399,52 @@
     {
       "id": "57",
       "name": "Masque Chirurgical Enfant Type I",
-      "description": "Masque 3 plis taille enfant. Filtration bactérienne >95%. Conforme EN 14683:2019 Type I. Élastiques doux pour les oreilles.",
+      "description": "Masque 3 plis spécial enfants (6-12 ans) avec filtration bactérienne >95%. Élastiques doux pour les oreilles. Conforme EN 14683:2019.",
       "price": 7.90,
+      "imageUrl": "https://s02.swdrive.fr/s/99RRdzAgba7SJ4N/preview?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://s02.swdrive.fr/s/99RRdzAgba7SJ4N/preview?auto=format&fit=crop&q=80&w=800",
+          "alt": "Masque enfant bleu - vue avant"
+        },
+        {
+          "url": "https://s02.swdrive.fr/s/KxPmgWJ8CbXKBSF/preview?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des élastiques adaptés"
+        }
+      ],
+      "technicalSheetUrl": "#",
       "specifications": {
-        "norme": "EN 14683:2019 Type I",
+        "type": "Type I",
+        "filtration": ">95%",
+        "pliages": "3 plis",
+        "attache": "Élastiques oreilles",
         "age": "6-12 ans",
-        "couleurs": ["Rose", "Bleu"],
-        "quantite": "20 masques/paquet"
+        "dimensions": "135x90mm",
+        "couleurs": ["Bleu", "Rose", "Vert"],
+        "quantite": 20,
+        "norme": "EN 14683:2019"
       },
       "categoryId": "4",
       "subCategoryId": "46"
+      
     },
+     
     {
       "id": "58",
       "name": "Filtres ABEK1P3 - Pack 2",
       "description": "Filtres combinés pour protection contre gaz organiques, acides et particules. Compatible avec les demi-masques standard. Durée de vie ≈48h.",
       "price": 29.90,
+      "imageUrl": "https://s02.swdrive.fr/s/WpNgWjHocYm9Ppk/preview?auto=format&fit=crop&q=80&w=800",
+      "images": [
+        {
+          "url": "https://s02.swdrive.fr/s/WpNgWjHocYm9Ppk/preview?auto=format&fit=crop&q=80&w=800",
+          "alt": "Vue avant du demi-masque"
+        },
+        {
+          "url": "https://s02.swdrive.fr/s/8AmtJJpyx8na56M/preview?auto=format&fit=crop&q=80&w=800",
+          "alt": "Détail des raccords de filtres"
+        }
+      ],
       "specifications": {
         "norme": "EN 14387:2004",
         "compatibilite": ["6200", "7500", "SecureFit"],
@@ -4169,51 +4456,55 @@
     {
       "id": "59",
       "name": "Masque Gaz Full Face 6800",
-      "description": "Masque complet avec visière panoramique et système de filtration ABEK2P3. Conforme EN 136:1998 Classe 3. Pour environnements industriels extrêmes.",
+      "description": "Masque complet industriel avec visière panoramique 180° et système de filtration ABEK2P3. Conforme EN 136:1998 Classe 3. Joint facial en silicone hypoallergénique, sangle réglable 5 points. Pour risques chimiques, particulaires et biologiques.",
       "price": 289.00,
+      "imageUrl": "https://s02.swdrive.fr/s/AQ6gFrwkPKtSRxq/preview?auto=format&fit=crop&q=80&w=800",
+      "images": [
+      
+      ],
+      "technicalSheetUrl": "#",
       "specifications": {
-        "norme": "EN 136 Classe 3",
+        "normes": ["EN 136 Classe 3", "EN 143 (Filtres P3)", "EN 148-1"],
+        "materiau": "Silicone médical + Polycarbonate",
+        "compatibilite_filtres": ["ABEK2", "P3", "A2B2E2K2"],
+        "etancheite": "Joint facial double bourrelet",
+        "options": ["Visière anti-rayure", "Sangle 5 points"],
+        "duree_vie": 5,
         "champ_vision": "180°",
-        "poids": "890g"
+        "poids": "890g",
+        "couleur_disponible": ["Noir", "Bleu industriel"],
+        "entretien": "Nettoyage à l'eau savonneuse ou désinfectant alcoolique <70%"
       },
       "categoryId": "4",
       "subCategoryId": "48"
-    },
-    {
-      "id": "60",
-      "name": "Kit Nettoyage Demi-Masque",
-      "description": "Lotion nettoyante et désinfectante spéciale silicone. Compatible avec tous les demi-masques réutilisables.",
-      "price": 12.90,
-      "categoryId": "4",
-      "subCategoryId": "47"
-    },
-    {
-      "id": "61",
-      "name": "Sac de Transport Étanche",
-      "description": "Sac de protection pour masques réutilisables. Matière imperméable avec fermeture ZIP.",
-      "price": 8.50,
-      "categoryId": "4",
-      "subCategoryId": "47"
+      
     },
     {
       "id": "62",
-      "name": "Masque FFP2 NR avec Valve - Boîte de 10",
-      "description": "Masque jetable FFP2 avec valve d'expiration. Filtration ≥94% des particules. Conforme EN 149:2001.",
+      "name": "Masque FFP2 NR avec Valve ",
+      "description": "Masque de protection respiratoire jetable (NR) avec valve d'expiration. Filtration ≥94% des aérosols. Conforme EN 149:2001. Pour professionnels de santé et industrie.",
       "price": 24.90,
-      "specifications": {
-        "norme": "EN 149:2001 FFP2 NR",
-        "filtration": "≥94%",
-        "valve": true,
-        "duree": "8h max"
-      },
+      "imageUrl": "https://s02.swdrive.fr/s/yT8ctRmdoSCCk9y/preview?auto=format&fit=crop&q=80&w=800",
       "categoryId": "4",
-      "subCategoryId": "45"
+      "subCategoryId": "45",
+      "specifications": {
+        "type_ffp": [
+          "FFP2 (Filtration ≥94%)"],
+        "valve": [ "Valve simple"],
+        "norme": ["EN 149:2001+A1:2009"],
+        "materiau": "3 couches : polypropylène non-tissé (extérieur), meltblown (filtre), douceur (intérieur)",
+        "duree_utilisation": "8 heures (NR - Non Réutilisable)",
+        "confort": ["Bandeau élastique", "Mousse nasale ajustable"],
+        "compatibilite": ["Lunettes de sécurité", "Visière de protection"],
+        "conditionnement": "Boîte de 10 (unités scellées individuellement)"
+      }
     },
     {
       "id": "63",
       "name": "Panneau Danger - Chantier",
       "description": "Panneau triangulaire en PVC 3mm avec pictogramme noir sur fond jaune. Dimensions 300x300mm.",
       "price": 8.90,
+      "imageUrl": "https://s02.swdrive.fr/s/9ProBE9HA2Hga7y/preview?auto=format&fit=crop&q=80&w=800",
       "specifications": {
         "type": "Danger",
         "materiau": "PVC",
@@ -4228,6 +4519,7 @@
       "name": "Kit Premiers Soins 25 Personnes",
       "description": "Kit conforme à la norme DIN 13157. Contient 72 articles pour soins d'urgence.",
       "price": 89.00,
+      "imageUrl": "https://s02.swdrive.fr/s/9ProBE9HA2Hga7y/preview?auto=format&fit=crop&q=80&w=800",
       "specifications": {
         "type_kit": "Premiers Soins",
         "norme": "DIN 13157",
@@ -4242,6 +4534,7 @@
       "name": "Harnais Antichute 3 Points",
       "description": "Harnais complet EN 361 avec sangles réglables et points d'attache dorsaux. Charge max 140kg.",
       "price": 129.00,
+      "imageUrl": "https://s02.swdrive.fr/s/9ProBE9HA2Hga7y/preview?auto=format&fit=crop&q=80&w=800",
       "specifications": {
         "norme": "EN 361",
         "poids_max": 140,
@@ -4256,6 +4549,7 @@
       "name": "Cône de Signalisation 75cm",
       "description": "Cône en PVC avec bande réfléchissante. Poids lesté pour stabilité.",
       "price": 12.50,
+      "imageUrl": "https://s02.swdrive.fr/s/9ProBE9HA2Hga7y/preview?auto=format&fit=crop&q=80&w=800",
       "specifications": {
         "hauteur": "75 cm",
         "couleur": "Orange/Blanc",
@@ -4269,6 +4563,7 @@
       "name": "Kit Anti-Chute 5 Personnes",
       "description": "Kit d'évacuation d'urgence avec harnais et descendeur. Conforme EN 1496.",
       "price": 450.00,
+      "imageUrl": "https://s02.swdrive.fr/s/9ProBE9HA2Hga7y/preview?auto=format&fit=crop&q=80&w=800",
       "specifications": {
         "type_kit": "Anti-Chute",
         "norme": "EN 1496",
@@ -4282,6 +4577,7 @@
       "name": "Longe de Sécurité 2m",
       "description": "Longe amortisseur EN 354 avec absorbeur d'énergie. Charge max 140kg.",
       "price": 59.00,
+      "imageUrl": "https://s02.swdrive.fr/s/9ProBE9HA2Hga7y/preview?auto=format&fit=crop&q=80&w=800",
       "specifications": {
         "norme": "EN 354",
         "longueur": "2 m",
@@ -4289,7 +4585,53 @@
       },
       "categoryId": "11",
       "subCategoryId": "51"
-    } 
+    } ,
+    {
+      "id": "300",
+      "name": "Extincteur Voiture 1kg ABC",
+      "description": "Extincteur portatif poudre ABC 1kg avec support voiture. Certification EN3. Pour feux de classes A, B, C (liquides, solides, gaz).",
+      "price": 29.90,
+      "imageUrl": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=800",
+      "specifications": {
+        "type_extincteur": "Poudre ABC",
+        "capacite": 1,
+        "norme": "EN 3",
+        "classes_feu": ["A", "B", "C"],
+        "pression": "15 bars",
+        "temperature": "-30°C à +60°C",
+        "kit_inclus": ["Support voiture", "Gant thermique"]
+      },
+      "categoryId": "10",
+      "subCategoryId": "52",
+      "documentation": {
+        "notice": "https://example.com/notice-extincteur-voiture.pdf",
+        "certificat": "https://example.com/certificat-en3.pdf"
+      }
+    },
+    {
+      "id": "70",  
+      "name": "Masque Respiratoire Intégral Réutilisable",
+      "description": "Masque complet en silicone médical avec système de filtration interchangeable. Confort optimisé, étanche, compatible avec les filtres P3/ABEK. Conforme aux normes EN 136 (masques complets) et EN 143 (filtres). Idéal pour les risques chimiques, biologiques ou particulaires.",
+      "price": 149.90, 
+      "imageUrl": "https://s02.swdrive.fr/s/ceSrp9qASadqTbp/preview?auto=format&fit=crop&q=80&w=800",
+      "images": [
+       
+      ],
+      "technicalSheetUrl": "#",
+      "specifications": {
+        "norme": "EN 136 + EN 143",
+        "materiau": "Silicone médical",
+        "compatibilite_filtres": ["P3", "ABEK", "A2B2E2K2"],
+        "poids": "450g",
+        "taille": "Unique (ajustable)",
+        "champ_vision": "Large (optimisé anti-buée)",
+        "entretien": "Nettoyable à l'eau et désinfectant",
+        "duree_vie": "5 ans (selon utilisation)",
+        "accessoires": ["Sangle réglable", "Kit de joints de rechange"]
+      },
+      "categoryId": "4", 
+      "subCategoryId": "48" 
+    }
 
   ]
 }

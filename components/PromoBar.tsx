@@ -30,7 +30,7 @@ export default function PromoBar() {
           <div className="flex items-center gap-2 text-sm">
             <Megaphone className="h-4 w-4 animate-bounce" />
             <span className="hidden sm:inline">Offre spéciale :</span>
-            <span className="font-medium animate-blink">-15% sur tous les casques de protection jusqu'au 31 mars</span>
+            <span className="font-medium animate-blink">-15% sur tous les casques de protection jusqu'au 31 juin</span>
           </div>
           <div className="flex items-center gap-4">
             <Button
