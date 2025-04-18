@@ -330,7 +330,7 @@ export function Header() {
                   <SheetHeader>
                     <SheetTitle className="flex items-center gap-2">
                       <Image 
-                        src={logo} 
+                        src={"/logo.png"} 
                         alt="Fullness safety"
                         width={120}
                         height={50}

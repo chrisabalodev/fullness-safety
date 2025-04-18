@@ -178,7 +178,12 @@ export default function Footer() {
         
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t text-center text-muted-foreground">
-          <p>© {new Date().getFullYear()} Fullness Safety. Tous droits réservés.- edité par abalo dev</p>
+          {/* <p>© {new Date().getFullYear()} Fullness Safety. Tous droits réservés.- design par abalo dev</p> */}
+          <p className="text-sm text-center text-gray-500 py-4">
+  © {new Date().getFullYear()} Fullness Safety. Tous droits réservés — Site réalisé par  
+  <a href="#" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"> Abalo Dev</a>.
+</p>
+
         </div>
       </div>
     </footer>
