@@ -1,34 +1,18 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   eslint: {
-//     ignoreDuringBuilds: true,
-//   },
-//   images: { unoptimized: true },
-//   experimental: {
-//     serverActions: true
-//   }
-// };
-
-// module.exports = nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  images: { 
-    unoptimized: true,
-    domains: [], // Add any external image domains here
-  },
-  // Enable if you need trailing slashes for o2switch's server config
-  // trailingSlash: true,
+  output: 'standalone',
   experimental: {
-    serverActions: false // Disable if using static export
+    appDir: true,
   },
-  // Add if deploying to subdirectory (e.g., /blog)
-  // basePath: '/subdirectory',
+  eslint: {
+    ignoreDuringBuilds: true,  // Désactive la vérification ESLint pendant le build
+  },
+  /* images: {
+    disableStaticImages: true, // Désactive les avertissements sur l'utilisation de <img>
+  }, */
   typescript: {
-    ignoreBuildErrors: true, // Ignore les erreurs de type pendant le build
+    // Désactive la vérification des types pour le build
+    ignoreBuildErrors: true,
   },
 };
 

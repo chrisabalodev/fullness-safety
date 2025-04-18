@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 import { getProducts } from '@/lib/db';
 
+// Force cette route à être dynamique (SSR)
+export const dynamic = 'force-dynamic'; // <-- Solution clé
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);

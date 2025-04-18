@@ -100,14 +100,14 @@ export default function CatalogSection() {
           <div className="relative mt-8 lg:mt-0">
             <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl relative group hover-lift transition-all duration-300">
               <img
-                src="https://s02.swdrive.fr/s/jPAYeToEcDmamad/preview?auto=format&fit=crop&q=80&w=1000"
-                alt="Catalogue 2024 Fullness Protection"
+                src="https://s02.swdrive.fr/s/SZW5QWWH2oEzEZb/preview?auto=format&fit=crop&q=80&w=1000"
+                alt="Catalogue 2025 Fullness Protection"
                 className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                 loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-lg md:text-xl font-semibold">Catalogue Professionnel 2024</p>
+                <p className="text-lg md:text-xl font-semibold">Catalogue Professionnel 2025</p>
                 <p className="text-sm md:text-base text-white/80 mt-1">
                   Toutes nos solutions EPI en un seul document
                 </p>

@@ -36,7 +36,6 @@ import {
 } from "@/components/ui/dialog";
 import { MegaMenu } from "./MegaMenu";
 import { getProducts } from "@/lib/db";
-import logo from '@/public/logo.png'; 
 import Image from "next/image";
 
 export function Header() {
@@ -129,7 +128,7 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0 h-full">
               <Image 
-                src={logo} 
+                src={"/logo.png"} 
                 alt="Fullness safety"
                 width={120}
                 height={70}
