@@ -103,7 +103,7 @@ export default function CatalogSection() {
                 src="https://s02.swdrive.fr/s/SZW5QWWH2oEzEZb/preview?auto=format&fit=crop&q=80&w=1000"
                 alt="Catalogue 2025 Fullness Protection"
                 className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
-                loading="eager"
+                loading="eager" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
