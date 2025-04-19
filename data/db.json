@@ -4797,36 +4797,54 @@
   ],
   "catalogs": [
     {
-      "id": "catalog-2025-gen",
-      "title": "Catalogue Général 2025",
-      "description": "Notre catalogue complet d'équipements de protection pour l'année 2025",
+      "id": "epi-2025-full",
+      "title": "Catalogue EPI Fullness 2025 - Protection Professionnelle",
+      "description": "Nouvelle collection 2025 d'Équipements de Protection Individuelle certifiés CE",
       "year": 2025,
-      "fileUrl": "/docs/catalogs/general-2025.pdf",
-      "coverImage": "/images/catalog-covers/2025-general.jpg",
-      "pages": 156,
-      "fileSize": "15.2 MB",
-      "updatedAt": "2024-06-01T00:00:00Z",
+      "fileUrl": "#",
+      "coverImage": "https://s02.swdrive.fr/s/68J47DJ2jafq52f/preview",
+      "pages": 50,
+      "fileSize": "10.4 MB",
+      "updatedAt": "2024-09-01T00:00:00Z",
       "category": "general",
-      "productsFeatured": ["prod-123", "prod-456"],
+      "productsFeatured": [
+        "epi-2025-helm-xt",
+        "epi-2025-gloves-pro",
+        "epi-2025-boots-s3"
+      ],
       "metadata": {
-        "isNew": true,
-        "hasDigitalVersion": true,
-        "availableLanguages": ["fr", "en"]
+        "isCurrent": true,
+        "version": "2.1",
+        "standards": ["EN ISO 20345:2022", "EN 397:2012+A1"],
+        "sectors": ["BTP", "Industrie", "Logistique"],
+        "languages": {
+          "fr": "https://drive.fullness.fr/epi/catalogue-2025-fr.pdf",
+          "en": "https://drive.fullness.fr/epi/catalogue-2025-en.pdf"
+        }
       }
     },
     {
-      "id": "catalog-2025-btp",
-      "title": "Catalogue BTP 2025",
-      "description": "Solutions de protection spécifiques pour le secteur du BTP",
-      "year": 2025,
-      "fileUrl": "/docs/catalogs/btp-2025.pdf",
-      "coverImage": "/images/catalog-covers/2025-btp.jpg",
-      "pages": 98,
-      "fileSize": "9.8 MB",
-      "updatedAt": "2024-05-15T00:00:00Z",
-      "category": "specialized",
+      "id": "epi-2024-legacy",
+      "title": "Catalogue EPI Fullness 2024 - Édition Spéciale",
+      "description": "Collection 2024 d'équipements de sécurité professionnels",
+      "year": 2024,
+      "fileUrl": "https://s02.swdrive.fr/s/ZRxBcJ4X4neGwqP/download/Catalogue%20Fullness%202023.pdf",
+      "coverImage": "https://s02.swdrive.fr/s/jPAYeToEcDmamad/preview",
+      "pages": 15,
+      "fileSize": "5.1 MB", 
+      "updatedAt": "2023-08-15T00:00:00Z",
+      "category": "legacy",
+      "productsFeatured": [
+        "epi-2024-helm-v2",
+        "epi-2024-vest-eu"
+      ],
       "metadata": {
-        "hasDigitalVersion": true
+        "isCurrent": false,
+        "replacedBy": "epi-2025-full",
+        "notice": "Certains produits peuvent être obsolètes",
+        "languages": {
+          "fr": "https://drive.fullness.fr/epi/archive/catalogue-2024-fr.pdf"
+        }
       }
     }
   ]

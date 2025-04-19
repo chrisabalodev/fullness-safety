@@ -6,6 +6,7 @@ const initialData = {
   categories: data.categories || [],
   subCategories: data.subCategories || [],
   products: data.products || [],
+  catalogs: data.catalogs || [],
   quotes: []
 };
 

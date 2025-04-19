@@ -77,6 +77,25 @@ export interface Quote {
   createdAt: string;
 }
 
+export interface Catalog {
+  id: string;
+  title: string;
+  description: string;
+  year: number;
+  fileUrl: string;
+  coverImage: string;
+  pages: number;
+  fileSize: string;
+  updatedAt: string;
+  category?: 'general' | 'specialized' | 'technical';
+  productsFeatured?: string[]; // IDs des produits mis en avant
+  metadata?: {
+    isNew?: boolean;
+    hasDigitalVersion?: boolean;
+    availableLanguages?: string[];
+  };
+}
+
 // Export storage functions
 export {
   getCategories,
@@ -100,5 +119,6 @@ export {
   getSpecificationFields,
   addSpecificationField,
   updateSpecificationField,
-  deleteSpecificationField
+  deleteSpecificationField,
+  getCatalogs
 } from './storage';
