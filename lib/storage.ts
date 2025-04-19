@@ -278,3 +278,8 @@ export async function deleteSpecificationField(
   writeDb(db);
   return Promise.resolve(db.subCategories[subCategoryIndex].specificationFields.length < initialLength);
 }
+
+export async function getCatalogs(): Promise<Catalog[]> {
+  const db = readDb();
+  return Promise.resolve(db.catalogs || []);
+}

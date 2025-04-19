@@ -2255,13 +2255,13 @@
             "name": "type",
             "label": "Type de signalisation",
             "type": "select",
-            "options": ["Danger", "Obligation", "Interdiction", "Équipement"]
+            "options": ["Danger", "Obligation", "Interdiction", "Équipement", "Directionnel", "Balisage", "Personnalisé"]
           },
           {
-            "name": "materiau",
-            "label": "Matériau",
+            "name": "forme",
+            "label": "Forme",
             "type": "select",
-            "options": ["PVC", "Aluminium", "Acrylique"]
+            "options": ["Rond", "Triangle", "Rectangle", "Carré"]
           }
         ]
       },
@@ -4631,7 +4631,203 @@
       },
       "categoryId": "4", 
       "subCategoryId": "48" 
+    },
+    {
+      "id": "PS-2F-001",
+      "name": "Panneau Danger Chantier 2 Faces - Aluminium",
+      "description": "Panneau triangulaire double face pour signalisation de danger sur chantier. Visibilité optimale depuis toutes les directions. Structure en aluminium avec film rétroréfléchissant classe 2.",
+      "price": 39.90,
+      "imageUrl": "https://example.com/images/panneau-danger-2faces.jpg",
+      "specifications": {
+        "type": "Danger",
+        "materiau": "Aluminium",
+        "faces": 2,
+        "normes": ["EN ISO 7010"]
+      },
+      "categoryId": "7",  
+      "subCategoryId": "49"  
+    },
+    {
+      "id": "PS-2F-002",
+      "name": "Panneau Obligation Casque 2 Faces",
+      "description": "Panneau rond bleu double face pour obligation du port du casque. PVC rigide résistant aux UV.",
+      "price": 29.50,
+      "categoryId": "7", 
+      "subCategoryId": "49",  
+      "specifications": {
+        "type": "Obligation",
+        "materiau": "PVC",
+        "faces": 2,
+        "pictogramme": "Casque"
+      }
+    },
+    {
+      "id": "PS-2F-003",
+      "name": "Panneau Extincteur 2 Faces - Acrylique",
+      "description": "Panneau rectangulaire rouge double face pour extincteur. Acrylique 5mm résistant aux chocs.",
+      "price": 45.00,
+      "categoryId": "7",  
+      "subCategoryId": "49", 
+      "specifications": {
+        "type": "Équipement",
+        "materiau": "Acrylique",
+        "faces": 2,
+        "couleur": "Rouge/Blanc"
+      }
+    },
+    {
+      "id": "PS-2F-KIT01",
+      "name": "Kit Chantier 2 Faces (5 Panneaux)",
+      "description": "Pack de 5 panneaux 2 faces essentiels pour chantier. Supports inclus.",
+      "price": 199.00,
+      "categoryId": "7",  
+      "subCategoryId": "49",  
+      "specifications": {
+        "composition": ["Danger", "Obligation", "Interdiction", "Secours", "Équipement"],
+        "faces": 2,
+        "materiau": "Aluminium/PVC"
+      }
+    },
+    {
+      "id": "PS-2F-004",
+      "name": "Panneau Personnalisé 2 Faces - Aluminium",
+      "description": "Panneau double face personnalisable pour messages spécifiques.",
+      "price": 59.90,
+      "categoryId": "7",  
+      "subCategoryId": "49",  
+      "specifications": {
+        "type": "Personnalisé",
+        "faces": 2,
+        "options": ["Logo", "Texte", "QR Code"]
+      }
+    },
+    {
+      "id": "PS-REG-001",
+      "name": "Panneau Interdiction de Fumer - 2 Faces",
+      "description": "Panneau rond rouge à bande diagonale pour interdiction de fumer. Aluminium 2mm avec fixation universelle.",
+      "price": 27.80,
+      "categoryId": "7", 
+      "subCategoryId": "49", 
+      "specifications": {
+        "type": "Interdiction",
+        "forme": "Rond",
+        "couleur": "Rouge/Blanc",
+        "pictogramme": "Cigarette barrée",
+        "normes": ["EN ISO 7010"]
+      }
+    },
+    {
+      "id": "PS-REG-002",
+      "name": "Panneau Obligation EPI - 2 Faces",
+      "description": "Panneau rond bleu pour obligation du port des Équipements de Protection Individuelle.",
+      "categoryId": "7",
+      "subCategoryId": "49",
+      "specifications": {
+        "type": "Obligation",
+        "pictogramme": "Casque + Gants"
+      }
+    },
+    {
+      "id": "PS-DAN-001",
+      "name": "Panneau Danger Haute Tension - 2 Faces",
+      "description": "Triangle jaune/noir pour signaler les risques électriques. PVC 3mm résistant aux intempéries.",
+      "categoryId": "7",
+      "subCategoryId": "49",
+      "specifications": {
+        "type": "Danger",
+        "forme": "Triangle",
+        "pictogramme": "Éclair"
+      }
+    },
+    {
+      "id": "PS-EQP-001",
+      "name": "Panneau Premier Secours - 2 Faces",
+      "description": "Carré vert pour localisation du poste de secours. Acrylique avec pictogramme blanc.",
+      "categoryId": "7",
+      "subCategoryId": "49",
+      "specifications": {
+        "type": "Équipement",
+        "forme": "Carré",
+        "couleur": "Vert/Blanc"
+      }
+    },
+    {
+      "id": "PS-EQP-002",
+      "name": "Panneau Extincteur - 2 Faces",
+      "description": "Rectangle rouge pour localisation des extincteurs. Aluminium avec flèche directionnelle optionnelle.",
+      "specifications": {
+        "type": "Équipement",
+        "forme": "Rectangle"
+      }
+    },
+    {
+      "id": "PS-BAL-001",
+      "name": "Panneau Flèche Directionnelle - 2 Faces",
+      "description": "Flèche bleue sur fond blanc pour guidage sur chantier. PVC flexible pour utilisation temporaire.",
+      "categoryId": "7",
+      "subCategoryId": "49",
+      "specifications": {
+        "type": "Directionnel",
+        "forme": "Rectangle",
+        "couleur": "Bleu/Blanc"
+      }
+    },
+    {
+      "id": "PS-BAL-002",
+      "name": "Panneau 'Chantier en Cours' - 2 Faces",
+      "description": "Panneau orange/blanc avec texte réfléchissant pour délimitation de zone.",
+      "specifications": {
+        "type": "Balisage",
+        "texte": "CHANTIER EN COURS"
+      }
+    },
+    {
+      "id": "PS-PERSO-001",
+      "name": "Panneau Personnalisé Entreprise - 2 Faces",
+      "description": "Panneau sur-mesure avec logo et texte personnalisés. Matériau au choix.",
+      "categoryId": "7",
+      "subCategoryId": "49",
+      "specifications": {
+        "type": "Personnalisé",
+        "options": ["Logo", "Texte multilingue", "QR Code"],
+        "materiau": ["Aluminium", "PVC", "Acrylique"]
+      }
     }
 
+  ],
+  "catalogs": [
+    {
+      "id": "catalog-2025-gen",
+      "title": "Catalogue Général 2025",
+      "description": "Notre catalogue complet d'équipements de protection pour l'année 2025",
+      "year": 2025,
+      "fileUrl": "/docs/catalogs/general-2025.pdf",
+      "coverImage": "/images/catalog-covers/2025-general.jpg",
+      "pages": 156,
+      "fileSize": "15.2 MB",
+      "updatedAt": "2024-06-01T00:00:00Z",
+      "category": "general",
+      "productsFeatured": ["prod-123", "prod-456"],
+      "metadata": {
+        "isNew": true,
+        "hasDigitalVersion": true,
+        "availableLanguages": ["fr", "en"]
+      }
+    },
+    {
+      "id": "catalog-2025-btp",
+      "title": "Catalogue BTP 2025",
+      "description": "Solutions de protection spécifiques pour le secteur du BTP",
+      "year": 2025,
+      "fileUrl": "/docs/catalogs/btp-2025.pdf",
+      "coverImage": "/images/catalog-covers/2025-btp.jpg",
+      "pages": 98,
+      "fileSize": "9.8 MB",
+      "updatedAt": "2024-05-15T00:00:00Z",
+      "category": "specialized",
+      "metadata": {
+        "hasDigitalVersion": true
+      }
+    }
   ]
 }

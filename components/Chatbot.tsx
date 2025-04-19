@@ -25,10 +25,10 @@ const initialMessages: Message[] = [
 ];
 
 const suggestions = [
-  "Comment puis-je commander ?",
-  "Quels sont les délais de livraison ?",
-  "Je cherche des équipements spécifiques",
-  "J'ai besoin d'un devis"
+  "Comment commander ?",
+  "Délais livraison ?",
+  "Équipements spécifiques",
+  "Besoin d'un devis"
 ];
 
 export default function Chatbot() {
@@ -108,26 +108,26 @@ export default function Chatbot() {
     const lowerInput = input.toLowerCase();
     
     if (lowerInput.includes('commander') || lowerInput.includes('acheter')) {
-      return "Pour commander, vous pouvez utiliser le bouton 'Demander un devis' sur la page du produit qui vous intéresse. Notre équipe commerciale vous contactera rapidement.";
+      return "Pour commander, utilisez le bouton 'Devis' sur la page produit. Notre équipe vous contactera rapidement.";
     }
     
     if (lowerInput.includes('livraison')) {
-      return "Nos délais de livraison standards sont de 2 à 5 jours ouvrés. Pour les commandes urgentes, nous proposons une livraison express sous 24/48h.";
+      return "Délais standards : 2-5 jours. Express : 24-48h.";
     }
     
     if (lowerInput.includes('devis')) {
-      return "Je peux vous aider à obtenir un devis. Pourriez-vous me préciser quels types d'équipements vous intéressent ?";
+      return "Je peux vous aider à obtenir un devis. Quels équipements vous intéressent ?";
     }
     
     if (lowerInput.includes('contact') || lowerInput.includes('commercial')) {
-      return "Vous pouvez nous contacter par téléphone au 01 23 45 67 89 ou par email à contact@fullness-safety.fr. Un commercial vous répondra dans les plus brefs délais.";
+      return "Contactez-nous au 01 23 45 67 89 ou email contact@fullness-safety.fr";
     }
 
-    return "Je comprends votre demande. Pour vous apporter la réponse la plus précise possible, je vous invite à contacter notre service client au 01 23 45 67 89 ou par email à contact@fullness-safety.fr";
+    return "Pour une réponse précise, contactez-nous au 01 23 45 67 89 ou email contact@fullness-safety.fr";
   };
 
   const handleWhatsAppClick = () => {
-    const message = "Bonjour, j'ai une question concernant vos produits.";
+    const message = "Bonjour, question sur vos produits.";
     window.open(`https://wa.me/33123456789?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -139,91 +139,91 @@ export default function Chatbot() {
     <>
       {/* Chat Button */}
       <Button
-        className={`fixed bottom-4 right-4 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ${
+        className={`fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ${
           isOpen ? 'bg-destructive hover:bg-destructive/90' : 'bg-primary hover:bg-primary/90'
         }`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
-          <X className="h-6 w-6" />
+          <X className="h-5 w-5" />
         ) : (
-          <MessageCircle className="h-6 w-6" />
+          <MessageCircle className="h-5 w-5" />
         )}
       </Button>
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-20 right-4 w-[380px] h-[600px] shadow-xl flex flex-col animate-in slide-in-from-bottom-5 bg-background/95 backdrop-blur-sm border-primary/10">
+        <Card className="fixed bottom-16 right-4 w-[320px] h-[500px] shadow-lg flex flex-col animate-in slide-in-from-bottom-5 bg-background/95 backdrop-blur-sm border-primary/10">
           {/* Header */}
-          <div className="p-4 border-b bg-primary/5 backdrop-blur-sm">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                <Bot className="h-6 w-6 text-primary" />
+          <div className="p-3 border-b bg-primary/5 backdrop-blur-sm">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <Bot className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <h3 className="font-semibold">Assistant Fullness</h3>
-                <p className="text-sm text-muted-foreground">Toujours là pour vous aider</p>
+                <h3 className="font-semibold text-sm">Assistant Fullness</h3>
+                <p className="text-xs text-muted-foreground">Prêt à vous aider</p>
               </div>
             </div>
             
             {/* Contact buttons */}
-            <div className="flex gap-2 mt-4">
+            <div className="flex gap-2 mt-3">
               <Button
                 variant="outline"
-                size="sm"
-                className="flex-1 bg-green-500/10 hover:bg-green-500/20 text-green-600"
+                size="xs"
+                className="flex-1 bg-green-500/10 hover:bg-green-500/20 text-green-600 h-8"
                 onClick={handleWhatsAppClick}
               >
-                <MessageCircle className="w-4 h-4 mr-2" />
+                <MessageCircle className="w-3 h-3 mr-1" />
                 WhatsApp
               </Button>
               <Button
                 variant="outline"
-                size="sm"
-                className="flex-1"
+                size="xs"
+                className="flex-1 h-8"
                 onClick={handleEmailClick}
               >
-                <Mail className="w-4 h-4 mr-2" />
+                <Mail className="w-3 h-3 mr-1" />
                 Email
               </Button>
             </div>
           </div>
 
           {/* Messages */}
-          <ScrollArea className="flex-1 p-4">
-            <div className="space-y-4">
+          <ScrollArea className="flex-1 p-3">
+            <div className="space-y-3">
               {messages.map((message) => (
                 <div
                   key={message.id}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`flex items-start gap-2 max-w-[80%] ${
+                    className={`flex items-start gap-1.5 max-w-[85%] ${
                       message.type === 'user' ? 'flex-row-reverse' : ''
                     }`}
                   >
                     <div
-                      className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
+                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${
                         message.type === 'user' 
                           ? 'bg-primary text-primary-foreground' 
                           : 'bg-muted'
                       }`}
                     >
                       {message.type === 'user' ? (
-                        <User className="h-5 w-5" />
+                        <User className="h-4 w-4" />
                       ) : (
-                        <Bot className="h-5 w-5" />
+                        <Bot className="h-4 w-4" />
                       )}
                     </div>
                     <div
-                      className={`rounded-2xl px-4 py-2 ${
+                      className={`rounded-xl px-3 py-1.5 ${
                         message.type === 'user'
                           ? 'bg-primary text-primary-foreground'
                           : 'bg-muted'
                       }`}
                     >
-                      <p className="text-sm">{message.content}</p>
-                      <p className="text-[10px] opacity-70 mt-1">
+                      <p className="text-xs">{message.content}</p>
+                      <p className="text-[9px] opacity-70 mt-0.5">
                         {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </p>
                     </div>
@@ -232,15 +232,15 @@ export default function Chatbot() {
               ))}
               {isTyping && (
                 <div className="flex justify-start">
-                  <div className="flex items-start gap-2 max-w-[80%]">
-                    <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
-                      <Bot className="h-5 w-5" />
+                  <div className="flex items-start gap-1.5 max-w-[85%]">
+                    <div className="w-7 h-7 rounded-full bg-muted flex items-center justify-center">
+                      <Bot className="h-4 w-4" />
                     </div>
-                    <div className="rounded-2xl px-4 py-2 bg-muted">
+                    <div className="rounded-xl px-3 py-1.5 bg-muted">
                       <div className="flex gap-1">
-                        <span className="w-2 h-2 rounded-full bg-primary/40 animate-bounce" style={{ animationDelay: '0ms' }} />
-                        <span className="w-2 h-2 rounded-full bg-primary/40 animate-bounce" style={{ animationDelay: '150ms' }} />
-                        <span className="w-2 h-2 rounded-full bg-primary/40 animate-bounce" style={{ animationDelay: '300ms' }} />
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 animate-bounce" style={{ animationDelay: '0ms' }} />
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 animate-bounce" style={{ animationDelay: '150ms' }} />
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40 animate-bounce" style={{ animationDelay: '300ms' }} />
                       </div>
                     </div>
                   </div>
@@ -252,15 +252,15 @@ export default function Chatbot() {
 
           {/* Suggestions */}
           {messages.length <= 2 && (
-            <div className="p-4 border-t bg-muted/50">
-              <p className="text-sm text-muted-foreground mb-2">Suggestions :</p>
-              <div className="flex flex-wrap gap-2">
+            <div className="p-3 border-t bg-muted/50">
+              <p className="text-xs text-muted-foreground mb-1.5">Suggestions :</p>
+              <div className="flex flex-wrap gap-1.5">
                 {suggestions.map((suggestion) => (
                   <Button
                     key={suggestion}
                     variant="outline"
-                    size="sm"
-                    className="text-xs bg-background hover:bg-primary/5"
+                    size="xs"
+                    className="text-xs bg-background hover:bg-primary/5 h-7 px-2"
                     onClick={() => handleSubmit(suggestion)}
                   >
                     {suggestion}
@@ -271,28 +271,28 @@ export default function Chatbot() {
           )}
 
           {/* Input */}
-          <div className="p-4 border-t bg-background">
+          <div className="p-3 border-t bg-background">
             <form
               onSubmit={(e) => {
                 e.preventDefault();
                 handleSubmit(input);
               }}
-              className="flex gap-2"
+              className="flex gap-1.5"
             >
               <Input
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Écrivez votre message..."
-                className="flex-1"
+                className="flex-1 h-8 text-xs"
               />
               <Button 
                 type="submit" 
                 size="icon"
-                className="bg-primary hover:bg-primary/90"
+                className="bg-primary hover:bg-primary/90 h-8 w-8"
                 disabled={!input.trim()}
               >
-                <Send className="h-4 w-4" />
+                <Send className="h-3.5 w-3.5" />
               </Button>
             </form>
           </div>
@@ -300,4 +300,4 @@ export default function Chatbot() {
       )}
     </>
   );
-}
+} 
