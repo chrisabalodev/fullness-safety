@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code",
+    google: "google-site-verification=5Ui95PyG4zgnWsuMPV6XVOBxiMeowsawX-J7-e-FSuc",
   },
   alternates: {
     canonical: "https://www.fullness-safety.com",
@@ -82,7 +82,13 @@ export default function RootLayout({
       <head>
         <link rel="image" href="/logo.png" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="/manifest.json" /> 
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Fullness " />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={inter.className}>
         <Suspense fallback={<Loading />}>
