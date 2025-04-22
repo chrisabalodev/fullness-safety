@@ -12,7 +12,7 @@ const nextConfig = {
       'fullness-safety.com',
       'www.fullness-safety.com',
       'images.unsplash.com',
-      's02.swdrive.fr' // Ajoutez d'autres domaines si nécessaire
+      's02.swdrive.fr'
     ],
   },
   typescript: {

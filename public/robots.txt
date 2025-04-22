@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://fullness-safety.com/sitemap.xml
+# Host
+Host: https://www.fullness-safety.com
+
+# Sitemaps
+Sitemap: https://www.fullness-safety.com/sitemap.xml
