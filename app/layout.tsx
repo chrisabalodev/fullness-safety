@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   description: "Spécialiste des équipements de sécurité et de protection individuelle (EPI). Plus de 500 produits certifiés pour votre sécurité au travail.",
   keywords: ["EPI", "sécurité", "protection", "équipement", "travail", "professionnel", "casque", "gants", "vêtements"],
-  authors: [{ name: "Fullness Safety" }],
-  creator: "Fullness Safety",
-  publisher: "Fullness Safety",
+  authors: [{ name: "Abalo dev" }],
+  creator: "Abalo dev",
+  publisher: "Abalo dev",
   formatDetection: {
     email: false,
     address: false,
