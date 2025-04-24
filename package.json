@@ -1,10 +1,12 @@
 {
-  "name": "Fullness-safety",
+  "name": "Fullness safety",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
+    "sitemap": "next-sitemap",
     "start": "next start"
   },
   "dependencies": {
@@ -58,7 +60,6 @@
     "lucide-react": "^0.294.0",
     "mysql2": "^3.9.2",
     "next": "13.5.1",
-    "next-sitemap": "^4.2.3",
     "next-themes": "^0.3.0",
     "nodemailer": "^6.9.12",
     "postcss": "8.4.30",
@@ -75,5 +76,8 @@
     "typescript": "5.2.2",
     "vaul": "^0.9.9",
     "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "next-sitemap": "^4.2.3"
   }
 }

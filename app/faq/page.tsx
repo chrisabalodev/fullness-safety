@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { HelpCircle, ArrowRight, Search, X } from "lucide-react";
+import { HelpCircle, ArrowRight, Search, X, Shield, CreditCard, Truck, Settings } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -15,7 +15,7 @@ import { useState, useEffect } from "react";
 const faqs = [
   {
     category: "Produits EPI",
-    icon: "🛡️",
+    icon: <Shield className="w-5 h-5 text-blue-500" />,
     questions: [
       {
         q: "Quels types d'EPI proposez-vous ?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     category: "Commandes et Paiements",
-    icon: "💳",
+    icon: <CreditCard className="w-5 h-5 text-emerald-500" />,
     questions: [
       {
         q: "Comment commander des EPI ?",
@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     category: "Livraison et Transport",
-    icon: "🚚",
+    icon: <Truck className="w-5 h-5 text-amber-500" />,
     questions: [
       {
         q: "Quels sont vos frais de livraison ?",
@@ -81,7 +81,7 @@ const faqs = [
   },
   {
     category: "Garantie et SAV",
-    icon: "🔧",
+    icon: <Settings className="w-5 h-5 text-purple-500" />,
     questions: [
       {
         q: "Quelle est votre politique de garantie ?",
@@ -116,64 +116,66 @@ export default function FAQPage() {
   return (
     <div className="min-h-screen bg-background">
       <div className="relative">
-        <div className="absolute inset-0 bg-grid-white/10 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-transparent" />
-
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
+        
         <div className="container mx-auto px-4 py-16 relative">
           <div className="max-w-4xl mx-auto">
-            {/* Hero Section */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary mb-8">
+            {/* Hero Section with Animation */}
+            <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8">
                 <HelpCircle className="w-4 h-4" />
                 <span className="text-sm font-medium">Support Technique EPI</span>
               </div>
-              <h1 className="text-4xl font-bold mb-6">
-                FAQ - Équipements de Protection
+              <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+                Centre d'Aide
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Trouvez des réponses à vos questions sur nos équipements de sécurité et EPI
+                Réponses aux questions fréquentes sur nos équipements de protection
               </p>
             </div>
 
-            {/* Search Bar */}
-            <div className="relative max-w-xl mx-auto mb-12">
-              <div className="relative">
+            {/* Enhanced Search Bar */}
+            <div className={`relative max-w-2xl mx-auto mb-12 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <div className="relative shadow-sm rounded-lg">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Search className="h-4 w-4 text-muted-foreground" />
                 </div>
                 <Input
                   type="search"
-                  placeholder="Rechercher une question sur les EPI..."
+                  placeholder="Rechercher une question (ex: 'livraison', 'paiement')..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 pr-10 h-12 w-full bg-card"
+                  className="pl-10 pr-10 h-12 w-full bg-background border-primary/20 focus:border-primary/50"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center hover:text-primary transition-colors"
                   >
-                    <X className="h-4 w-4 text-muted-foreground hover:text-foreground transition-colors" />
+                    <X className="h-4 w-4 text-muted-foreground" />
                   </button>
                 )}
               </div>
               {searchQuery && (
-                <div className="absolute left-0 right-0 mt-2 text-sm text-muted-foreground">
-                  {filteredFaqs.reduce((total, category) => total + category.questions.length, 0)} résultat(s) trouvé(s)
+                <div className="absolute left-0 right-0 mt-2 text-sm text-muted-foreground animate-fade-in">
+                  {filteredFaqs.reduce((total, category) => total + category.questions.length, 0)} réponse(s) trouvée(s)
                 </div>
               )}
             </div>
 
-            {/* FAQ Categories */}
-            <div className="space-y-8">
+            {/* FAQ Categories with Improved Design */}
+            <div className={`space-y-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               {filteredFaqs.length > 0 ? (
-                filteredFaqs.map((category) => (
+                filteredFaqs.map((category, catIndex) => (
                   <div 
                     key={category.category}
-                    className="bg-card rounded-xl p-6 shadow-lg border hover:border-primary/20 transition-all duration-300"
+                    className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transition-all duration-300"
                   >
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="text-2xl">{category.icon}</div>
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        {category.icon}
+                      </div>
                       <h2 className="text-xl font-semibold">{category.category}</h2>
                     </div>
                     <Accordion 
@@ -181,20 +183,23 @@ export default function FAQPage() {
                       collapsible
                       value={expandedItem}
                       onValueChange={setExpandedItem}
+                      className="space-y-2"
                     >
                       {category.questions.map((faq, index) => (
                         <AccordionItem 
                           key={index} 
                           value={`${category.category}-${index}`}
-                          className="border-b-0 [&[data-state=open]]:bg-muted/50 rounded-lg mb-2 last:mb-0"
+                          className="overflow-hidden border-none"
                         >
-                          <AccordionTrigger className="hover:no-underline py-4 px-4 text-left [&[data-state=open]>div]:text-primary">
-                            <div className="flex items-start">
-                              <span className="text-base font-medium">{faq.q}</span>
+                          <AccordionTrigger className="hover:no-underline py-3 px-4 rounded-lg hover:bg-muted/50 transition-colors [&[data-state=open]]:bg-muted/30">
+                            <div className="flex items-start text-left">
+                              <span className="font-medium">{faq.q}</span>
                             </div>
                           </AccordionTrigger>
-                          <AccordionContent className="px-4 pb-4 pt-0">
-                            <p className="text-muted-foreground">{faq.a}</p>
+                          <AccordionContent className="px-4 pb-2 pt-0 text-muted-foreground">
+                            <div className="prose prose-sm prose-primary max-w-none">
+                              {faq.a}
+                            </div>
                           </AccordionContent>
                         </AccordionItem>
                       ))}
@@ -202,36 +207,41 @@ export default function FAQPage() {
                   </div>
                 ))
               ) : (
-                <div className="text-center py-12 bg-card rounded-xl border">
-                  <HelpCircle className="w-12 h-12 mx-auto text-muted-foreground/50 mb-4" />
+                <div className={`text-center py-16 bg-card rounded-xl border border-dashed transition-all duration-300 ${searchQuery ? 'animate-pulse' : ''}`}>
+                  <HelpCircle className="w-12 h-12 mx-auto text-muted-foreground/30 mb-4" />
                   <p className="text-lg text-muted-foreground mb-4">
-                    Aucun résultat ne correspond à votre recherche
+                    Aucune question ne correspond à votre recherche
                   </p>
                   <Button 
                     variant="outline"
                     onClick={() => setSearchQuery("")}
+                    className="gap-2"
                   >
+                    <X className="w-4 h-4" />
                     Réinitialiser la recherche
                   </Button>
                 </div>
               )}
             </div>
 
-            {/* CTA Section */}
-            <div className="mt-16 text-center">
-              <p className="text-muted-foreground mb-6">
-                Vous avez une question spécifique sur nos équipements de protection ?
-              </p>
-              <Button size="lg" className="h-12" asChild>
-                <Link href="/contact">
-                  Contactez notre expert EPI
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+            {/* Enhanced CTA Section */}
+            <div className={`mt-16 text-center transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <div className="bg-primary/5 rounded-xl p-6 border border-primary/10 inline-block mb-6">
+                <HelpCircle className="w-8 h-8 mx-auto text-primary mb-3" />
+                <p className="text-muted-foreground mb-4 max-w-md">
+                  Vous ne trouvez pas la réponse à votre question ?
+                </p>
+                <Button size="lg" className="h-12 gap-2" asChild>
+                  <Link href="/contact">
+                    Contactez notre équipe
+                    <ArrowRight className="h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+} 

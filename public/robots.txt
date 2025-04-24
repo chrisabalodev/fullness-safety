@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.fullness-safety.com
+Host: https://fullness-safety.com
 
 # Sitemaps
-Sitemap: https://www.fullness-safety.com/sitemap.xml
+Sitemap: https://fullness-safety.com/sitemap.xml

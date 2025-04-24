@@ -14,156 +14,44 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="relative">
-        <div className="absolute inset-0 bg-grid-white/10 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-transparent" />
-
-        <div className="container mx-auto px-4 py-16 relative">
-          <div className="max-w-3xl mx-auto">
-            {/* Hero Section */}
-            <div className="text-center mb-16">
-              <div 
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary mb-8 transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
-                <Building2 className="w-4 h-4" />
-                <span className="text-sm font-medium">Notre Histoire</span>
-              </div>
-              <h1 
-                className={`text-4xl font-bold mb-6 transition-all duration-700 delay-100 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
-                À propos de Fullness Safety
-              </h1>
-              <p 
-                className={`text-xl text-muted-foreground transition-all duration-700 delay-200 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
-                Votre partenaire de confiance pour tous vos équipements de protection individuelle depuis plus de 15 ans.
-              </p>
-            </div>
-
-            {/* Stats Section */}
+      {/* Hero Section */}
+      <div className="relative overflow-hidden py-24">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-background" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl">
             <div 
-              className={`grid grid-cols-3 gap-6 mb-16 transition-all duration-700 delay-300 ${
+              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8 transition-all duration-700 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
-              {[
-                {
-                  icon: Users,
-                  value: "2000+",
-                  label: "Clients Satisfaits",
-                  color: "text-blue-500",
-                  bgColor: "bg-blue-500/10"
-                },
-                {
-                  icon: Globe2,
-                  value: "15+",
-                  label: "Pays Desservis",
-                  color: "text-emerald-500",
-                  bgColor: "bg-emerald-500/10"
-                },
-                {
-                  icon: Scale,
-                  value: "500+",
-                  label: "Produits Certifiés",
-                  color: "text-amber-500",
-                  bgColor: "bg-amber-500/10"
-                }
-              ].map((stat, index) => (
-                <div 
-                  key={stat.label}
-                  className={`${stat.bgColor} rounded-xl p-6 text-center transition-all duration-300 hover:scale-105`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <stat.icon className={`h-8 w-8 ${stat.color} mx-auto mb-4`} />
-                  <div className={`text-2xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
+              <Building2 className="w-4 h-4" />
+              <span className="text-sm font-medium">Expertise locale depuis 2009</span>
             </div>
-
-            {/* Main Content */}
-            <div className="grid gap-8">
-              {[
-                {
-                  icon: Target,
-                  title: "Notre Mission",
-                  content: "Assurer la sécurité et le confort des professionnels en leur fournissant des équipements de protection de haute qualité, conformes aux normes les plus strictes.",
-                  color: "bg-blue-500/10",
-                  textColor: "text-blue-500"
-                },
-                {
-                  icon: Building2,
-                  title: "Notre Entreprise",
-                  content: "Fondée en 2009, Fullness Safety s'est imposée comme un leader dans la distribution d'équipements de protection individuelle en France. Notre expertise et notre engagement envers la qualité nous ont permis de gagner la confiance de plus de 2000 clients professionnels.",
-                  color: "bg-emerald-500/10",
-                  textColor: "text-emerald-500"
-                },
-                {
-                  icon: Users,
-                  title: "Notre Équipe",
-                  content: "Une équipe d'experts passionnés, dédiée à vous conseiller et à vous accompagner dans le choix des équipements adaptés à vos besoins spécifiques. Nos conseillers techniques sont formés régulièrement pour vous offrir le meilleur service possible.",
-                  color: "bg-purple-500/10",
-                  textColor: "text-purple-500"
-                },
-                {
-                  icon: Trophy,
-                  title: "Nos Valeurs",
-                  content: "L'excellence, l'innovation et la satisfaction client sont au cœur de notre démarche. Nous nous engageons à fournir des solutions de protection optimales tout en respectant les normes environnementales et sociales les plus exigeantes.",
-                  color: "bg-amber-500/10",
-                  textColor: "text-amber-500"
-                },
-                {
-                  icon: Award,
-                  title: "Nos Certifications",
-                  content: "Certifiés ISO 9001:2015, nous garantissons des processus rigoureux et une qualité constante dans la sélection et la distribution de nos produits. Notre système de management de la qualité est audité régulièrement pour assurer une amélioration continue de nos services.",
-                  color: "bg-red-500/10",
-                  textColor: "text-red-500"
-                },
-                {
-                  icon: Sparkles,
-                  title: "Notre Engagement",
-                  content: "Nous nous engageons à fournir un service personnalisé et des conseils experts pour chaque client. Notre objectif est de devenir votre partenaire privilégié en matière de sécurité au travail.",
-                  color: "bg-indigo-500/10",
-                  textColor: "text-indigo-500"
-                }
-              ].map((section, index) => (
-                <div 
-                  key={section.title}
-                  className={`bg-card rounded-xl p-8 shadow-lg border hover:border-primary/20 transition-all duration-300 group ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  }`}
-                  style={{ transitionDelay: `${(index + 4) * 100}ms` }}
-                >
-                  <div className="flex items-start gap-6">
-                    <div className={`w-16 h-16 rounded-xl ${section.color} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                      <section.icon className={`w-8 h-8 ${section.textColor}`} />
-                    </div>
-                    <div>
-                      <h2 className="text-xl font-semibold mb-4">{section.title}</h2>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {section.content}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Section */}
-            <div 
-              className={`mt-16 text-center transition-all duration-700 delay-1000 ${
+            
+            <h1 
+              className={`text-4xl md:text-5xl font-bold mb-6 transition-all duration-700 delay-100 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
-              <Button size="lg" className="h-12" asChild>
+              Protection individuelle <span className="text-primary">adaptée</span> au marché togolais
+            </h1>
+            
+            <p 
+              className={`text-xl text-muted-foreground mb-8 transition-all duration-700 delay-200 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+            >
+              Fournisseur leader d'équipements de sécurité pour les professionnels au Togo.
+            </p>
+            
+            <div 
+              className={`transition-all duration-700 delay-300 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+            >
+              <Button size="lg" className="h-12 px-8" asChild>
                 <Link href="/contact">
-                  Contactez-nous
+                  Contactez notre équipe locale
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -171,6 +59,200 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+
+      {/* Stats Section */}
+      <div className="container mx-auto px-4 -mt-12 relative z-20">
+        <div 
+          className={`grid grid-cols-2 md:grid-cols-4 gap-4 bg-background rounded-xl shadow-md p-6 border transition-all duration-700 delay-400 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
+          {[
+            { value: "15", label: "Ans d'expérience", icon: Clock },
+            { value: "200+", label: "Clients locaux", icon: Building2 },
+            { value: "500+", label: "Produits certifiés", icon: ShieldCheck },
+            { value: "100%", label: "Disponibilité locale", icon: CheckCircle2 }
+          ].map((stat, index) => (
+            <div key={stat.label} className="text-center p-3">
+              <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
+              <div className="text-sm text-muted-foreground flex items-center justify-center gap-1">
+                <stat.icon className="w-4 h-4" />
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Local Expertise Section */}
+      <div className="container mx-auto px-4 py-24">
+        <div className="flex flex-col md:flex-row gap-12 items-center">
+          <div className="md:w-1/2">
+            <div className="rounded-xl overflow-hidden shadow-lg aspect-video bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center">
+              <Target className="w-20 h-20 text-white" />
+            </div>
+          </div>
+          
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold mb-6">
+              Expertise <span className="text-primary">togolaise</span>
+            </h2>
+            
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              Nous comprenons les défis spécifiques des professionnels au Togo et proposons des solutions adaptées.
+            </p>
+            
+            <ul className="space-y-4">
+              {[
+                "Normes adaptées aux conditions locales",
+                "Stock disponible à Lomé",
+                "Service après-vente local",
+                "Conseils techniques personnalisés"
+              ].map((item, index) => (
+                <li 
+                  key={item}
+                  className={`flex items-center gap-3 transition-all duration-700 ${
+                    isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
+                  }`}
+                  style={{ transitionDelay: `${500 + index * 100}ms` }}
+                >
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* History Timeline */}
+      <div className="bg-primary/5 py-24">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center">
+            Notre <span className="text-primary">histoire</span>
+          </h2>
+          
+          <div className="relative max-w-3xl mx-auto">
+            <div className="absolute left-8 top-0 h-full w-0.5 bg-primary/20" />
+
+            {[
+              {
+                icon: Building2,
+                year: "2009",
+                title: "Fondation à Lomé",
+                content: "Création de Fullness Safety pour répondre aux besoins croissants en EPI au Togo.",
+                color: "bg-blue-500"
+              },
+              {
+                icon: Scale,
+                year: "2012",
+                title: "Agrandissement",
+                content: "Extension de nos entrepôts et diversification de notre catalogue produits.",
+                color: "bg-emerald-500"
+              },
+              {
+                icon: Award,
+                year: "2016",
+                title: "Certifications",
+                content: "Obtention des certifications qualité pour l'ensemble de notre gamme.",
+                color: "bg-purple-500"
+              },
+              {
+                icon: Sparkles,
+                year: "2020",
+                title: "Innovation",
+                content: "Introduction de gammes techniques adaptées aux secteurs miniers et industriels locaux.",
+                color: "bg-amber-500"
+              }
+            ].map((item, index) => (
+              <div 
+                key={item.year}
+                className={`relative pl-24 pb-12 group transition-all duration-700 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                }`}
+                style={{ transitionDelay: `${800 + index * 200}ms` }}
+              >
+                <div className={`absolute left-0 w-16 h-16 rounded-full ${item.color} flex items-center justify-center text-white font-bold text-lg z-10`}>
+                  {item.year}
+                </div>
+                <div className={`absolute left-8 top-8 w-8 h-8 rounded-full ${item.color} flex items-center justify-center text-white -ml-4 z-20`}>
+                  <item.icon className="w-4 h-4" />
+                </div>
+                <div className="bg-card p-8 rounded-xl shadow-sm border hover:shadow-md transition-all duration-300">
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.content}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Values Section */}
+      <div className="container mx-auto px-4 py-24">
+        <h2 className="text-3xl font-bold mb-12 text-center">
+          Nos <span className="text-primary">engagements</span>
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              icon: ShieldCheck,
+              title: "Qualité garantie",
+              description: "Produits conformes aux normes internationales et locales",
+              color: "text-blue-500"
+            },
+            {
+              icon: Users,
+              title: "Service client",
+              description: "Une équipe locale à votre écoute pour des conseils personnalisés",
+              color: "text-emerald-500"
+            },
+            {
+              icon: Trophy,
+              title: "Excellence",
+              description: "Sélection rigoureuse de nos fournisseurs et produits",
+              color: "text-amber-500"
+            }
+          ].map((value, index) => (
+            <div 
+              key={value.title}
+              className={`bg-card p-8 rounded-xl border transition-all duration-300 hover:shadow-md ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+              style={{ transitionDelay: `${1600 + index * 100}ms` }}
+            >
+              <div className={`${value.color} mb-6`}>
+                <value.icon className="w-10 h-10" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+              <p className="text-muted-foreground">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-primary/5 py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Besoin de conseils pour vos équipements de protection ?
+            </h2>
+            
+            <p className="text-xl text-muted-foreground mb-8">
+              Notre équipe à Lomé est à votre disposition pour évaluer vos besoins.
+            </p>
+            
+            <Button size="lg" className="h-12 px-8" asChild>
+              <Link href="/contact">
+                Contactez nos experts
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+} 

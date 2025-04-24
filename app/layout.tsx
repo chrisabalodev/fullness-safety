@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.fullness-safety.com'),
+  metadataBase: new URL('https://fullness-safety.com'),
   title: {
     default: "Fullness Safety - Équipements de Protection Individuelle",
     template: "%s | Fullness Safety"
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://www.fullness-safety.com",
+    url: "https://fullness-safety.com",
     siteName: "Fullness Safety",
     title: "Fullness Safety - Équipements de Protection Individuelle",
     description: "Spécialiste des équipements de sécurité et de protection individuelle (EPI). Plus de 500 produits certifiés pour votre sécurité au travail.",
     images: [{
-      url: "https://www.fullness-safety.com/og-image.jpg",
+      url: "https://fullness-safety.com/og-image.jpg",
       width: 1200,
       height: 630,
       alt: "Fullness Safety - Protection et sécurité au travail"
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fullness Safety - Équipements de Protection Individuelle",
     description: "Spécialiste des équipements de sécurité et de protection individuelle (EPI). Plus de 500 produits certifiés pour votre sécurité au travail.",
-    images: ["https://www.fullness-safety.com/og-image.jpg"],
+    images: ["https://fullness-safety.com/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     google: "google-site-verification=5Ui95PyG4zgnWsuMPV6XVOBxiMeowsawX-J7-e-FSuc",
   },
   alternates: {
-    canonical: "https://www.fullness-safety.com",
+    canonical: "https://fullness-safety.com",
   },
 };
 

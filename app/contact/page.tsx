@@ -5,8 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, Send, Loader2, Building2, ArrowUpRight } from "lucide-react";
-import { Category, getCategories } from "@/lib/db";
+import { Mail, Phone, MapPin, Clock, Send, Loader2, Building2, ArrowRight } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -18,7 +17,6 @@ import Link from "next/link";
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
-  const [categories, setCategories] = useState<Category[]>([]);
   const [isVisible, setIsVisible] = useState(false);
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -30,11 +28,6 @@ export default function ContactPage() {
   });
 
   useEffect(() => {
-    const fetchCategories = async () => {
-      const data = await getCategories();
-      setCategories(data);
-    };
-    fetchCategories();
     setIsVisible(true);
   }, []);
 
@@ -67,245 +60,214 @@ export default function ContactPage() {
       title: "Email",
       value: "contact@fullness-safety.com",
       link: "mailto:contact@fullness-safety.com",
-      color: "text-blue-500",
-      bgColor: "bg-blue-500/10"
+      color: "text-blue-500"
     },
     {
       icon: Phone,
       title: "Téléphone",
-      value: "91 21 82 26",
-      link: "tel:0022891218226",
-      color: "text-emerald-500",
-      bgColor: "bg-emerald-500/10"
+      value: "+228 91 21 82 26",
+      link: "tel:+22891218226",
+      color: "text-emerald-500"
     },
     {
       icon: MapPin,
       title: "Adresse",
-      value: "immeuble st Hubert, 01 BP 2440, 55 KTM, Rue Koketi, Lomé",
-      link: "https://maps.google.com",
-      color: "text-amber-500",
-      bgColor: "bg-amber-500/10"
+      value: "Immeuble St Hubert, 01 BP 2440, 55 KTM, Rue Koketi, Lomé",
+      link: "https://goo.gl/maps/example",
+      color: "text-amber-500"
     },
     {
       icon: Clock,
       title: "Horaires",
-      value: "Lun-Ven: 9h-18h",
-      color: "text-purple-500",
-      bgColor: "bg-purple-500/10"
+      value: "Lundi-Vendredi: 8h-17h",
+      color: "text-purple-500"
     }
   ];
 
   const subjects = [
-    "Service client",
     "Demande de devis",
-    "Informations produits",
+    "Information produit",
     "Support technique",
-    "Autres"
+    "Service après-vente",
+    "Partenariat",
+    "Autre demande"
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="relative">
-        <div className="absolute inset-0 bg-grid-white/10 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-transparent" />
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold mb-6">
+            Contactez <span className="text-primary">Fullness Safety</span>
+          </h1>
+          <p className="text-xl text-muted-foreground">
+            Notre équipe à Lomé est à votre disposition pour répondre à vos questions sur nos équipements de protection.
+          </p>
+        </div>
 
-        <div className="container mx-auto px-4 py-16 relative">
-          <div className="max-w-5xl mx-auto">
-            {/* Hero Section */}
-            <div className="text-center mb-16">
-              <div 
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary mb-8 transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
-                <Building2 className="w-4 h-4" />
-                <span className="text-sm font-medium">Contactez-nous</span>
-              </div>
-              <h1 
-                className={`text-4xl font-bold mb-6 transition-all duration-700 delay-100 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
-                Nous Sommes à Votre Écoute
-              </h1>
-              <p 
-                className={`text-xl text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-200 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                }`}
-              >
-                Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos projets
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Information */}
-              <div 
-                className={`space-y-8 transition-all duration-700 delay-300 ${
-                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-20px]'
-                }`}
-              >
-                <div className="grid gap-6">
-                  {contactInfo.map((item, index) => (
-                    <div
-                      key={item.title}
-                      className={`group relative overflow-hidden rounded-xl ${item.bgColor} p-6 transition-all duration-300 hover:scale-[1.02] ${
-                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                      }`}
-                      style={{ transitionDelay: `${(index + 4) * 100}ms` }}
-                    >
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                          <item.icon className={`w-6 h-6 ${item.color}`} />
-                        </div>
-                        <div>
-                          <h3 className="font-medium mb-1">{item.title}</h3>
-                          {item.link ? (
-                            <Link
-                              href={item.link}
-                              className={`${item.color} hover:underline flex items-center gap-1 group-hover:gap-2 transition-all duration-300`}
-                              target={item.link.startsWith("http") ? "_blank" : undefined}
-                              rel={item.link.startsWith("http") ? "noopener noreferrer" : undefined}
-                            >
-                              {item.value}
-                              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-                            </Link>
-                          ) : (
-                            <p className={item.color}>{item.value}</p>
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div className="bg-gradient-to-br from-primary/5 to-background p-8 rounded-2xl border">
+              <h2 className="text-2xl font-semibold mb-6">Nos coordonnées</h2>
+              
+              <div className="space-y-6">
+                {contactInfo.map((item) => (
+                  <div key={item.title} className="flex items-start gap-4">
+                    <div className={`p-3 rounded-lg ${item.color}/10 ${item.color}`}>
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium mb-1">{item.title}</h3>
+                      {item.link ? (
+                        <Link
+                          href={item.link}
+                          className="text-muted-foreground hover:text-primary hover:underline flex items-center gap-1 transition-all"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.value}
+                          {item.link.startsWith("http") && (
+                            <ArrowRight className="w-4 h-4" />
                           )}
-                        </div>
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    </div>
-                  ))}
-                </div>
-
-                {/* Map Preview */}
-                <div 
-                  className={`aspect-video rounded-xl overflow-hidden bg-muted relative group transition-all duration-700 delay-700 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  }`}
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1000"
-                    alt="Location map"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="font-semibold mb-2">Notre boutique</h3>
-                    <p className="text-sm text-white/80">
-                    immeuble st Hubert, 01 BP 2440, 55 KTM, Rue Koketi, Lomé Togo
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Contact Form */}
-              <div 
-                className={`bg-card rounded-xl p-8 shadow-lg border transition-all duration-700 delay-500 ${
-                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[20px]'
-                }`}
-              >
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-4">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">
-                        Nom complet
-                      </label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                        required
-                        className="h-12"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2">
-                        Email
-                      </label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        required
-                        className="h-12"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                        Téléphone
-                      </label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                        className="h-12"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                        Objet
-                      </label>
-                      <Select
-                        value={formData.subject}
-                        onValueChange={(value) => setFormData(prev => ({ ...prev, subject: value }))}
-                      >
-                        <SelectTrigger className="h-12">
-                          <SelectValue placeholder="Sélectionnez un objet" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {subjects.map((subject) => (
-                            <SelectItem key={subject} value={subject}>
-                              {subject}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2">
-                        Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                        required
-                        rows={5}
-                      />
+                        </Link>
+                      ) : (
+                        <p className="text-muted-foreground">{item.value}</p>
+                      )}
                     </div>
                   </div>
-
-                  <Button 
-                    type="submit" 
-                    className="w-full h-12"
-                    disabled={loading}
-                  >
-                    {loading ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Envoi en cours...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="mr-2 h-4 w-4" />
-                        Envoyer le message
-                      </>
-                    )}
-                  </Button>
-                </form>
+                ))}
               </div>
             </div>
+
+            {/* Localisation */}
+            <div className="rounded-2xl overflow-hidden border">
+              <div className="aspect-video bg-muted relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d1.2217428152945893!3d6.201661645506397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e3936a3e4083%3A0x1772e4a1c9f4a0a8!2sImmeuble%20St%20Hubert%2C%20Lom%C3%A9!5e0!3m2!1sen!2stg!4v1620000000000!5m2!1sen!2stg"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  className="absolute inset-0"
+                ></iframe>
+              </div>
+              <div className="p-6 bg-card">
+                <h3 className="font-semibold mb-2">Notre siège à Lomé</h3>
+                <p className="text-sm text-muted-foreground">
+                  Immeuble St Hubert, 01 BP 2440, 55 KTM, Rue Koketi
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-card rounded-2xl p-8 shadow-sm border">
+            <h2 className="text-2xl font-semibold mb-6">Envoyez-nous un message</h2>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    Nom complet *
+                  </label>
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                    required
+                    className="h-12"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      Email *
+                    </label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                      required
+                      className="h-12"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                      Téléphone
+                    </label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                      className="h-12"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                    Objet *
+                  </label>
+                  <Select
+                    value={formData.subject}
+                    onValueChange={(value) => setFormData(prev => ({ ...prev, subject: value }))}
+                    required
+                  >
+                    <SelectTrigger className="h-12">
+                      <SelectValue placeholder="Sélectionnez un objet" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {subjects.map((subject) => (
+                        <SelectItem key={subject} value={subject}>
+                          {subject}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    Message *
+                  </label>
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                    required
+                    rows={5}
+                  />
+                </div>
+              </div>
+
+              <Button 
+                type="submit" 
+                className="w-full h-12"
+                disabled={loading}
+              >
+                {loading ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Envoi en cours...
+                  </>
+                ) : (
+                  <>
+                    <Send className="mr-2 h-4 w-4" />
+                    Envoyer le message
+                  </>
+                )}
+              </Button>
+            </form>
           </div>
         </div>
       </div>
     </div>
   );
-}
+} 
