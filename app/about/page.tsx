@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Users, Award, Clock, ArrowRight, Building2, Trophy, Target, Sparkles, CheckCircle2, Globe2, Scale } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -11,6 +12,7 @@ export default function AboutPage() {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+  
 
   return (
     <div className="min-h-screen bg-background">

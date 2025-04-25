@@ -11,6 +11,24 @@ import { HelpCircle, ArrowRight, Search, X, Shield, CreditCard, Truck, Settings 
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Metadata } from "next";
+
+// app/faq/page.tsx
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Vos produits sont-ils conformes aux normes européennes ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, tous nos EPI respectent les normes EN ISO et CE."
+      }
+    }
+  ]
+};
+ 
 
 const faqs = [
   {
@@ -244,4 +262,4 @@ export default function FAQPage() {
       </div>
     </div>
   );
-} 
+}

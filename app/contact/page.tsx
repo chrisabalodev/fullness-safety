@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import Link from "next/link";
+ 
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
@@ -72,14 +73,14 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Adresse",
-      value: "Immeuble St Hubert, 01 BP 2440, 55 KTM, Rue Koketi, Lomé",
-      link: "https://goo.gl/maps/example",
+      value: "Assivito, Immeuble St Hubert, 01 BP 2440, 55 KTM, Rue Koketi, Lomé",
+      link: "https://maps.app.goo.gl/fXbjTaFtQfq16Ukg6",
       color: "text-amber-500"
     },
     {
       icon: Clock,
       title: "Horaires",
-      value: "Lundi-Vendredi: 8h-17h",
+      value: "Lundi-Samedi: 8h-17h",
       color: "text-purple-500"
     }
   ];
@@ -145,7 +146,7 @@ export default function ContactPage() {
             <div className="rounded-2xl overflow-hidden border">
               <div className="aspect-video bg-muted relative">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d1.2217428152945893!3d6.201661645506397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e3936a3e4083%3A0x1772e4a1c9f4a0a8!2sImmeuble%20St%20Hubert%2C%20Lom%C3%A9!5e0!3m2!1sen!2stg!4v1620000000000!5m2!1sen!2stg"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.0208532778433!2d1.2256947000000002!3d6.1278958999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e16ff5d6097d%3A0x2d2be3f0a722d939!2sFullness%20safety!5e0!3m2!1sfr!2stg!4v1745592722492!5m2!1sfr!2stg"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -157,7 +158,7 @@ export default function ContactPage() {
               <div className="p-6 bg-card">
                 <h3 className="font-semibold mb-2">Notre siège à Lomé</h3>
                 <p className="text-sm text-muted-foreground">
-                  Immeuble St Hubert, 01 BP 2440, 55 KTM, Rue Koketi
+                  Assivito, Immeuble St Hubert, 01 BP 2440, 55 KTM, Rue Koketi
                 </p>
               </div>
             </div>
